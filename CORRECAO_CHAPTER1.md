@@ -22,7 +22,7 @@ Edite o arquivo `chapter1.html` e substitua as linhas 411-465 pelo código corre
                 </div>
             </div>
         </section>
-
+ 
         <!-- SAIBA MAIS -->
         <section class="content-section">
             <div class="section-icon">🎥</div>
