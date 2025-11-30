@@ -1,0 +1,2517 @@
+A01_LARS0000_06_SE_C00.indd   2 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Tradução 
+José Fernando Pereira Gonçalves
+Revisão técnica
+Manoel Henrique Salgado
+Prof. Dr. do Departamento de Engenharia 
+de Produção – UNESP Bauru
+ESTAT ÍSTICA
+APLICADA 6e
+betsy FARBERron LARSON
+A01_LARS0000_06_SE_C00.indd   3 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+©2016 by Pearson Education do Brasil Ltda.
+Copyright © 2016, 2014, 2012 by Pearson, Inc.
+Todos os direitos reservados. Nenhuma parte desta publicação poderá ser reproduzida ou transmitida de 
+qualquer modo ou por qualquer outro meio, eletrônico ou mecânico, incluindo fotocópia, gravação ou qualquer 
+outro tipo de sistema de armazenamento e transmissão de informação, sem prévia autorização, por escrito, da 
+Pearson Education do Brasil.
+Gerente editorial Thiago Anacleto
+Supervisora de produção editorial Silvana Afonso
+Coordenador de produção editorial Jean Xavier
+Editor de aquisições Vinícius Souza
+Editor de texto Luiz Salla
+Editores assistentes Marcos Guimarães e Karina Ono
+Preparação Gisele Gonçalves
+Revisão Lígia Nakayama
+Capa Solange Rennó
+Projeto gráfico e diagramação Casa de Ideias
+Dados Internacionais de Catalogação na Publicação (CIP)
+(Câmara Brasileira do Livro, SP, Brasil)
+Larson, Ron
+Estatística aplicada / Ron Larson, Betsy 
+Farber ; tradução José Fernando Pereira 
+Gonçalves ; revisão técnica Manoel Henrique 
+Salgado. -- São Paulo : Pearson Education do 
+Brasil, 2015.
+Título original: Elementary statistics : 
+picturing the world.
+ISBN 978-85-4301-811-9
+1. Estatística I. Farber, Betsy. II. Título.
+15-10684 CDD-519.5
+Índices para catálogo sistemático:
+1. Estatística 519.5
+2015
+Direitos exclusivos para a língua portuguesa cedidos à  
+Pearson Education do Brasil Ltda.,  
+uma empresa do grupo Pearson Education
+Avenida Santa Marina, 1193
+CEP 05036-001 – São Paulo – SP – Brasil
+Fone: 11 3821-3542
+vendas@pearson.com
+A01_LARS0000_06_SE_C00.indd   4 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Sumário
+Prefácio x
+Agradecimentos xiii
+Como estudar estatística xiv
+1 Introdução à estatística 1
+Onde estamos | Para onde vamos 1
+1.1 Uma visão geral da estatística  2
+1.2 Classificação dos dados  9
+Estudo de caso 15
+1.3 Coleta de dados e planejamento de experimentos  16
+Atividade – Números aleatórios 26
+Usos e abusos – Estatística no mundo real 27
+Resumo do capítulo 28
+Exercícios de revisão 29
+Problemas 30
+Teste do capítulo 31
+Estatísticas reais – Decisões reais: juntando tudo 32
+História da estatística – Linha do tempo 33
+Tecnologia 34
+2 Estatística descritiva 36
+Onde estamos | Para onde vamos 36
+2.1 Distribuições de frequência e seus gráficos  37
+2.2 Mais gráficos e representações  52
+2.3 Medidas de tendência central  64
+Atividade – Média versus mediana 78
+2.4 Medidas de variação  79
+Atividade – Desvio padrão 98
+Estudo de caso 99
+2.5 Medidas de posição  100
+Usos e abusos – Estatística no mundo real 112
+Resumo do capítulo 113
+Exercícios de revisão 114
+Problemas 116
+Teste do capítulo 117
+Estatísticas reais – Decisões reais: juntando tudo 118
+Tecnologia 119
+Usando tecnologia para determinar estatísticas descritivas 120
+Capítulos 1 e 2 – Revisão acumulada 122
+PARTE 1 Estatística descritiva
+Sumário v
+A01_LARS0000_06_SE_C00.indd   5 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+3 Probabilidade 124
+Onde estamos | Para onde vamos 124
+3.1 Conceitos básicos de probabilidade e contagem  125
+Atividade – Simulando o mercado de ações 139
+3.2 Probabilidade condicional e  a regra da multiplicação  140
+3.3 A regra da adição  149
+Atividade – Simulando a probabilidade de sair 3 ou 4 no 
+lançamento de um dado 157
+Estudo de caso 158
+3.4 T ópicos adicionais sobre probabilidade e contagem  159
+Usos e abusos – Estatística no mundo real 168
+Resumo do capítulo 169
+Exercícios de revisão 170
+Problemas 172
+Teste do capítulo 173
+Estatísticas reais – Decisões reais: juntando tudo 174
+Tecnologia 174
+4 Distribuições discretas de probabilidade 176
+Onde estamos | Para onde vamos 176
+4.1 Distribuições de probabilidade  177
+4.2 Distribuições binomiais  187
+Atividade 4.2 – Distribuição binomial 200
+Estudo de caso 201
+4.3 Mais distribuições discretas de probabilidade  202
+Usos e abusos – Estatística no mundo real 208
+Resumo do capítulo 210
+Exercícios de revisão 210
+Problemas 212
+Teste do capítulo 213
+Estatísticas reais – Decisões reais: juntando tudo 214
+Tecnologia 215
+5 Distribuição normal de probabilidade 217
+Onde estamos | Para onde vamos 217
+5.1 Introdução às distribuições normais e à distribuição 
+normal padrão  218
+5.2 Distribuições normais: encontrando probabilidades  230
+5.3 Distribuições normais: calculando valores  236
+Estudo de caso 243
+5.4 Distribuições amostrais e o teorema do limite central  245
+Atividade – Distribuições amostrais 257
+PARTE 2  Probabilidade e distribuições de probabilidade
+vi Estatística aplicada
+A01_LARS0000_06_SE_C00.indd   6 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+5.5 Aproximações normais para distribuições binomiais  258
+Usos e abusos – Estatística no mundo real 266
+Resumo do capítulo 266
+Exercícios de revisão 267
+Problemas 270
+Teste do capítulo 271
+Estatísticas reais – Decisões reais: juntando tudo 272
+Tecnologia 273
+Capítulos 3 a 5 – Revisão acumulada 2 74
+PARTE 3 Estatística inferencial
+6 Intervalos de confiança 276
+Onde estamos | Para onde vamos 276
+6.1 Intervalos de confiança para a média (S conhecido)  277
+6.2 Intervalos de confiança para a média (S desconhecido)  288
+Atividade – Intervalos de confiança para uma média (o impacto de não 
+conhecer o desvio padrão) 296
+Estudo de caso 297
+6.3 Intervalos de confiança para a proporção  298
+Atividade – Intervalos de confiança para uma proporção 306
+6.4 Intervalos de confiança para variância e desvio padrão  307
+Usos e abusos – Estatística no mundo real 312
+Resumo do capítulo 313
+Exercícios de revisão 314
+Problemas 316
+Teste do capítulo 316
+Estatísticas reais – Decisões reais: juntando tudo 317
+Tecnologia 318
+Usando tecnologia para construir intervalos de confiança 319
+7 Teste de hipótese com uma amostra 322
+Onde estamos | Para onde vamos 322
+7 .1 Introdução ao teste de hipótese  323
+7 .2 T este de hipótese para a média (S conhecido)  338
+7 .3 T este de hipótese para a média (S desconhecido)  352
+Atividade – Testes de hipótese para uma média 361
+Estudo de caso 362
+7 .4 T este de hipótese para a proporção  363
+Atividade – Testes de hipótese para uma proporção  368
+7 .5 T este de hipótese para variância e desvio padrão  369
+Um resumo dos testes de hipóteses 377
+Usos e abusos – Estatística no mundo real 379
+Resumo do capítulo 380
+Exercícios de revisão 381
+Sumário vii
+A01_LARS0000_06_SE_C00.indd   7 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Problemas 384
+Teste do capítulo 385
+Estatísticas reais – Decisões reais: juntando tudo 385
+Tecnologia 386
+Usando tecnologia para realizar testes de hipótese 387
+8 Teste de hipótese usando duas amostras 390
+Onde estamos | Para onde vamos 390
+8.1 T estando a diferença entre médias (amostras independentes, 
+S1 e S2 conhecidos)  391
+8.2 T estando a diferença entre médias (amostras independentes, 
+S1 e S2 desconhecidos)  401
+Estudo de caso 409
+8.3 T estando a diferença entre médias (amostras dependentes)  410
+8.4 T estando a diferença entre proporções  419
+Usos e abusos – Estatística no mundo real 425
+Resumo do capítulo 426
+Exercícios de revisão 427
+Problemas 430
+Teste do capítulo 430
+Estatísticas reais – Decisões reais: juntando tudo 431
+Tecnologia 432
+Usando tecnologia para realizar testes de hipótese para duas amostras 433
+Capítulos 6 a 8 – Revisão acumulada 435
+PARTE 4 Mais inferências estatísticas
+9 Correlação e regressão 437
+Onde estamos  437
+Para onde vamos 438
+9.1 Correlação 438
+Atividade – Correlação por tentativa e erro 453
+9.2 Regressão linear  454
+Atividade – Regressão por tentativa e erro 463
+Estudo de caso 464
+9.3 Medidas de regressão e intervalos de previsão  465
+9.4 Regressão múltipla  475
+Usos e abusos – Estatística no mundo real 479
+Resumo do capítulo 480
+Exercícios de revisão 481
+Problemas 484
+Teste do capítulo 484
+Estatísticas reais – Decisões reais: juntando tudo 485
+Tecnologia 486
+viii Estatística aplicada
+A01_LARS0000_06_SE_C00.indd   8 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+10 Teste qui-quadrado e a distribuição F 488
+Onde estamos  488
+Para onde vamos 489
+10.1 T este de qualidade do ajuste  489
+10.2 Independência  499
+Estudo de caso 509
+10.3 Comparando duas variâncias  510
+10.4 Análise de variância  518
+Usos e abusos – Estatística no mundo real 529
+Resumo do capítulo 529
+Exercícios de revisão 530
+Problemas 533
+Teste do capítulo 534
+Estatísticas reais – Decisões reais: juntando tudo 534
+Tecnologia 535
+Capítulos 9 e 10 – Revisão acumulada 537
+11 Testes não paramétricos (somente na Sala Virtual)
+Onde estamos | Para onde vamos
+11.1 T este dos sinais
+11.2  T este de Wilcoxon
+Estudo de caso
+11.3 T este de Kruskal-Wallis
+11.4 Correlação de postos
+11.5 T estes de corridas
+Usos e abusos – Estatística no mundo real 
+Resumo do capítulo
+Exercícios de revisão
+Problemas
+Teste do capítulo
+Estatística real – Decisões reais: juntando tudo
+Tecnologia
+Apêndices
+Apêndice A Apresentação alternativa da distribuição normal padrão  539
+Apêndice B T abelas 545
+Apêndice C Gráficos da probabilidade normal  566
+Respostas dos exercícios T ente você mesmo  569
+Respostas dos exercícios selecionados  588
+Índice de aplicações  642
+Índice remissivo  648
+Sobre os autores  653
+Fórmulas-chave  654
+Sumário ix
+A01_LARS0000_06_SE_C00.indd   9 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Bem-vindo à sexta edição de Estatística aplicada. Você 
+verá que este livro foi escrito com equilíbrio entre 
+rigor e simplicidade. Ele combina instruções passo a 
+passo, exemplos e exercícios da vida real, complemen-
+tos desenvolvidos cuidadosamente, e tecnologia que 
+torna a estatística acessível a todos.
+Somos gratos pela impressionante aceitação das edi -
+ções anteriores. É gratificante saber que nossa visão de 
+combinar teoria, didática e planejamento para exem -
+plificar como a estatística é usada para retratar e des -
+crever o mundo tem ajudado estudantes a aprender 
+sobre estatística e tomar decisões fundamentadas.
+Novidades desta edição
+O objetivo da sexta edição é uma completa atualiza -
+ção das principais características, exemplos e exercí -
+cios do livro.
+Exemplos Essa edição inclui mais de 210 exemplos 
+sendo, aproximadamente, 40% novos ou revisados.
+Exercícios Aproximadamente 45% dos mais de 
+2.300 exercícios são novos ou revisados.
+T este do capítulo São testes compreensivos apre-
+sentados ao final de cada capítulo. Esses testes permi -
+tem que o estudante avalie sua compreensão dos con -
+ceitos do capítulo. As questões são apresentadas em 
+ordem aleatória.
+Ampla atualização da apresentação  Aproxima-
+damente 65% dos elementos a seguir são novos ou 
+revisados, tornando esta edição nova e apropriada aos 
+estudantes.
+•	 Abertura dos capítulos.
+•	 Estudos de casos.
+•	 Estatísticas reais – Decisões reais: juntando tudo.
+Conteúdo revisado  As seguintes seções foram 
+modificadas:
+•	 Seção 1.3, Coleta de dados e planejamento de ex -
+perimentos, agora inclui um exemplo distinguindo 
+entre um estudo observacional e um experimento.
+•	 Seção 2.4, Medidas de variação, agora define coe-
+ficiente de variação e contém exemplo.
+•	 Seção 2.5, Medidas de posição , agora inclui pro-
+cedimentos e exemplo do uso do intervalo inter -
+quartílico para identificar outliers. A seção define 
+e inclui exemplo de como encontrar um percen -
+til que corresponde a um dado específico, assim 
+como um exemplo da comparação dos escores-z 
+de diferentes conjuntos de dados.
+•	 Seção 5.5, Aproximações normais para distribui -
+ções binomiais, agora inclui uma discussão sobre 
+quando adicionar ou subtrair ao usar a correção 
+de continuidade.
+•	 Seções 6.1, 6.2, 7.2, 7.3, 8.1 e 8.2, foram alteradas 
+para uma abordagem mais moderna do uso da 
+distribuição normal padrão, quando o desvio pa-
+drão populacional é conhecido, e o uso da distri-
+buição t, quando o desvio padrão populacional é 
+desconhecido.
+•	 Capítulo 11, Testes não paramétricos, agora está 
+disponível apenas on-line na Sala Virtual.
+Características da sexta edição
+Guiando o aprendizado do estudante
+Onde estamos e para onde vamos Cada capítulo 
+começa com uma imagem e uma descrição de no má-
+ximo duas páginas de um problema da vida real. Onde 
+estamos conecta o capítulo aos tópicos aprendidos nos 
+capítulos anteriores. Para onde vamos dá aos estudan-
+tes uma visão geral do capítulo.
+O que você deve aprender  Cada seção está orga -
+nizada por objetivos de aprendizado, apresentado em 
+linguagem cotidiana no quadro O que você deve apren-
+der. Os mesmos objetivos são usados como títulos das 
+subseções de cada seção.
+Definições e fórmulas são claramente apresentadas 
+em caixas destacadas. Elas são frequentemente seguidas 
+por Instruções
+ que explicam em palavras e em símbolos 
+como aplicar a fórmula ou compreender a definição.
+Quadros nas margens  ajudam a reforçar o 
+entendimento:
+•	 Dicas de estudo mostram como ler uma tabela, 
+usar a tecnologia ou interpretar um resultado ou 
+um gráfico. Além disso, guia o estudante durante 
+os cálculos.
+•	 Entenda ajuda a direcionar uma interpretação im-
+portante ou conectar conceitos diferentes.
+•	 Retratando o mundo apresenta conceitos impor -
+tantes ilustrados em minicasos de estudo. Cada 
+minicaso se encerra com uma questão e pode 
+ser usado para discussão em sala ou trabalho  
+em grupo.
+Exemplos e exercícios
+Exemplos Todo conceito no livro é claramente 
+ilustrado com um ou mais exemplos passo a passo. A 
+maioria dos exemplos possui uma etapa de interpre-
+Prefácio
+x Estatística aplicada
+A01_LARS0000_06_SE_C00.indd   10 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+tação, que indica ao estudante como a solução pode 
+ser interpretada no contexto da vida real, além de pro-
+mover um pensamento crítico e habilidades de escrita. 
+Cada exemplo, numerado e intitulado para fácil refe -
+rência, é seguido de um exercício similar denominado 
+Tente você mesmo, de modo que se possa praticar ime-
+diatamente o que foi aprendido. As respostas desses 
+exercícios estão no final do livro.
+Exemplos de tecnologia  Muitas seções trazem 
+exemplos que mostram como a tecnologia pode ser 
+usada no cálculo de fórmulas, para realizar testes ou 
+mostrar dados. São apresentadas as telas do Minitab 
+versão 16, Excel 2013 e da calculadora gráfica TI-84 
+plus (sistema operacional versão 2.55). Telas adicionais 
+são apresentadas ao final de capítulos selecionados e 
+instruções detalhadas são fornecidas em manuais tec-
+nológicos (em inglês) disponíveis na Sala Virtual.
+Exercícios A sexta edição inclui mais de 2.300 exer-
+cícios, oferecendo aos estudantes a prática na realiza-
+ção de cálculos, tomada de decisões, fornecimento de 
+explicações e aplicação de resultados em situações da 
+vida real. Aproximadamente 45% desses exercícios 
+são novos ou revisados. Os exercícios no final de cada 
+seção são divididos em três partes:
+•	 Construindo habilidades básicas e vocabulário são 
+exercícios de respostas curtas, do tipo verdadeiro 
+ou falso, e de vocabulário, cuidadosamente escri-
+tos para estimular a compreensão.
+•	 Usando e interpretando conceitos  são problemas 
+que envolvem habilidades ou palavras que variam 
+do desenvolvimento de habilidades básicas a pro -
+blemas mais desafiadores e interpretativos.
+•	 Expandindo conceitos são exercícios que vão além 
+do material apresentado na seção. Tendem a ser 
+mais desafiadores e não são pré-requisitos para as 
+seções seguintes.
+Respostas usando tecnologia  As respostas ao fi-
+nal do livro são obtidas por cálculos manuais ou com 
+o uso de tabelas. As respostas encontradas com o uso 
+de tecnologia (normalmente a calculadora TI-84 plus) 
+também são incluídas quando há diferença de resulta-
+dos em consequência de arredondamento.
+Revisão e avaliação
+Resumo do capítulo  cada capítulo é encerrado 
+com um resumo que demonstra O que aprendemos. Os 
+objetivos listados estão relacionados aos exemplos de 
+cada seção, assim como aos exercícios de revisão.
+Exercícios de revisão  Um conjunto de exercícios 
+de revisão segue cada resumo do capítulo. A sequência 
+dos exercícios segue a organização do capítulo. Res -
+postas para exercícios selecionados encontram-se no 
+final do livro.
+Problemas Cada capítulo possui um conjunto de 
+problemas com as respostas no final do livro.
+T este do capítulo Cada capítulo possui um teste 
+cujas perguntas estão em ordem aleatória.
+Revisão acumulada Revisões acumuladas, no final 
+dos capítulos 2, 5, 8 e 10, concluem cada parte do livro. 
+Os exercícios da revisão acumulada estão em ordem 
+aleatória e podem incorporar ideias múltiplas. Ao final 
+do livro são fornecidas as respostas destes exercícios.
+Estatística no mundo real
+Usos e abusos: estatística no mundo real  Cada 
+capítulo discute como as técnicas estatísticas devem 
+ser usadas, enquanto alerta os estudantes sobre os 
+abusos comuns. A discussão inclui questões éticas, 
+quando apropriadas, e exercícios que ajudam os estu -
+dantes a aplicar seus conhecimentos.
+Atividades com applets  Seções selecionadas con-
+têm atividades que estimulam a investigação intera-
+tiva conceitual em exercícios que requerem que os 
+estudantes cheguem a conclusões por meio do uso de 
+applets específicos para a solução de cada atividade. O 
+acesso aos applets está disponível na Sala Virtual.
+Estudo de caso Cada capítulo possui um estudo de 
+caso com dados reais, em um contexto da vida real, e per-
+guntas que ilustram os conceitos importantes do capítulo.
+Estatísticas reais – Decisões reais: juntando tudo   
+Esta parte encoraja os estudantes a pensarem criti-
+camente e a tomarem decisões embasadas em dados 
+reais. Os exercícios guiam os estudantes desde a inter-
+pretação até a conclusão.
+T ecnologia Cada capítulo tem um projeto tecnoló-
+gico usando Minitab, Excel e a calculadora TI-84 plus, 
+que dão ao estudante uma visão de como a tecnologia 
+é usada para lidar com grandes quantidades de dados 
+ou situações da vida real.
+Mantendo a forte didática da última edição
+Cobertura versátil do curso  O sumário foi desen-
+volvido para dar aos professores diversas opções. Por 
+exemplo, os exercícios das seções Expandindo con -
+ceitos, Atividade, Estatísticas reais – Decisões reais e 
+Usos e abusos fornecem conteúdo suficiente para o 
+livro ser usado em um curso de mais de um semestre. 
+Abordagem gráfica Como a maioria dos livros de 
+introdução à estatística, começamos o capítulo Estatís-
+tica descritiva (Capítulo 2) com uma discussão sobre as 
+diferentes formas de se representar dados graficamen-
+te. Uma diferença entre este livro e muitos outros é 
+que continuamos a incorporar a representação gráfica 
+por toda a obra. Por exemplo, veja o uso do diagrama 
+de ramo e folhas na representação de dados na página 
+363. Essa ênfase na representação gráfica é benéfica 
+para todos os estudantes, especialmente para aqueles 
+que utilizam estratégias visuais de aprendizagem.
+Abordagem ponderada O livro alcança um equilí-
+brio entre cálculo, tomada de decisão e entendimento 
+conceitual. Fornece muitos exemplos e exercícios, in -
+cluindo os do tipo Tente você mesmo, que vão além de 
+meros cálculos.
+Prefácio xi
+A01_LARS0000_06_SE_C00.indd   11 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Variedade de aplicações da vida real Escolhemos 
+aplicações da vida real que são representativas para 
+a maioria dos estudantes dos cursos introdutórios de 
+estatística. Queremos que a estatística seja viva e re -
+levante para os estudantes, de modo que eles compre-
+endam a importância e a razão fundamental para o es-
+tudo da estatística. Queremos que as aplicações sejam 
+autênticas — mas também precisam ser acessíveis.
+Dados e fontes  Os conjuntos de dados deste livro 
+foram escolhidos por interesse, variedade e capacidade 
+de ilustrar os conceitos. A maioria dos mais de 240 con-
+juntos de dados contém dados reais e suas fontes. Os 
+conjuntos de dados restantes contêm dados simulados 
+que são representativos de situações da vida real. To-
+dos os conjuntos de dados que possuem 20 ou mais 
+registros estão disponíveis em vários formatos na Sala 
+Virtual. Nos exercícios, os conjuntos de dados que es -
+tão disponíveis eletronicamente são indicados pelo 
+ícone da Sala Virtual 
+.
+T ecnologia flexível Embora a maioria das fórmulas 
+no livro seja ilustrada com cálculos “manuais” ,  supomos 
+que a maioria dos estudantes tenha acesso a algum tipo 
+de tecnologia, tal como Minitab, Excel, ou a calculadora 
+TI-84 Plus. Como a tecnologia varia muito, o texto é fle-
+xível. Ele pode ser usado em cursos que utilizam apenas 
+uma calculadora científica ou em cursos que requerem 
+uso frequente de ferramentas tecnológicas sofisticadas. 
+Qualquer que seja a tecnologia disponível, temos certe-
+za de que você concorda que o objetivo do curso não é 
+cálculo, mas sim ajudar os estudantes na compreensão 
+dos conceitos básicos e usos da estatística.
+Pré-requisitos Fizemos esforços para manter as ma-
+nipulações algébricas ao mínimo — frequentemente 
+mostramos versões informais das fórmulas usando pa-
+lavras no lugar de ou em adição a variáveis.
+Escolha das tabelas  Nossa experiência mostrou 
+que os estudantes acham mais fácil usar uma tabela de 
+função de distribuição acumulada (FDA) do que uma 
+tabela “0 a z” . O uso da tabela FDA para encontrar a 
+área sob a curva normal padrão é um tópico da Seção 
+5.1, nas páginas 222-227 . Sabendo que alguns profes -
+sores preferem usar a tabela “0 a z” , fornecemos uma 
+apresentação alternativa desse tópico no Apêndice A.
+Atendendo os padrões
+Padrões MAA, AMATYC e NCTM Este livro atende 
+a exigência de um texto amigável ao estudante e que 
+enfatiza os usos da estatística. Nosso trabalho como 
+professores não é criar estatísticos, mas sim usuários 
+informados de relatórios estatísticos. Por essa razão, 
+incluímos exercícios que requerem que os estudantes 
+interpretem resultados, forneçam explicações escritas, 
+encontrem padrões e tomem decisões.
+Recomendações GAISE  Fundada pela American 
+Statistical Association, o projeto Guias para Avaliação 
+e Instrução na Educação Estatística (GAISE) desen-
+volveu seis recomendações para o ensino de estatística 
+introdutória em cursos superiores. São elas:
+•	 Enfatizar a alfabetização estatística e desenvolver 
+o pensamento estatístico.
+•	 Usar dados reais.
+•	 Enfatizar o entendimento conceitual em vez de 
+um mero conhecimento de procedimentos.
+•	 Estimular o aprendizado ativo em sala de aula.
+•	 Utilizar tecnologia para desenvolver o entendi-
+mento conceitual e a análise de dados.
+•	 Usar avaliações para melhorar e mensurar o 
+aprendizado do aluno.
+Os exemplos, exercícios e características deste livro aten-
+dem a todas essas recomendações.
+Sala Virtual
+Download do Capítulo 11 – Testes não paramétricos.
+Recursos para estudantes
+•	 Exercícios de múltipla escolha adicionais exclusi-
+vos para a edição brasileira.
+•	 Acesso aos applets (desenvolvidos por Webster 
+West) para solucionar atividades de determinadas 
+seções.
+•	 Conjuntos de dados selecionados do livro, dispo-
+níveis em Excel, Minitab (v.14), calculadora TI-84 
+Plus e formato .txt (com delimitação tab). A dispo-
+nibilidade dos conjuntos de dados estão indicados 
+ao longo do livro pelo ícone da Sala Virtual 
+.
+•	 Manual da calculadora gráfica (em inglês), que 
+oferece tutorial e exemplos resolvidos para a cal -
+culadora gráfica TI-84 Plus.
+•	 Manual do Excel (em inglês), que oferece tutorial 
+e exemplos resolvidos para Excel.
+•	 Manual do Minitab (em inglês), que oferece tuto-
+rial e exemplos resolvidos para Minitab.
+Recursos para professores
+•	 Manual de soluções do professor (em inglês) in-
+clui as soluções completas para todos os exercícios 
+das seções Tente você mesmo, Estudo de caso, Tec-
+nologia, Usos e abusos e Estatísticas reais – Deci -
+sões reais.
+•	 Banco de exercícios que contém inúmeros exercí-
+cios adicionais que o professor pode dar em aula 
+ou utilizar em provas.
+•	 Apresentações em PowerPoint totalmente editá-
+veis e prontas para impressão que seguem o con -
+teúdo do livro. Para uso durante a aula ou disponi-
+bilizar em cursos on-line.
+xii
+ Estatística aplicada
+A01_LARS0000_06_SE_C00.indd   12 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Revisores desta edição
+Dawn Dabney, Northeast State Community College
+Patricia Foard, South Plains College
+Larry Green, Lake Tahoe Community College
+Austin Lovenstein, Pulaski Technical College
+Abdallah Shuaibi, Harry S. Truman College
+Jennifer Strehler, Oakton Community College
+Millicent Thomas, Northwest University
+Cathy Zucco-Tevelloff, Rider University
+Revisores das edições anteriores
+Rosalie Abraham, Florida Community College at Jacksonville
+Ahmed Adala, Metropolitan Community College
+Olcay Akman, College of Charleston
+Polly Amstutz, University of Nebraska, Kearney
+John J. Avioli, Christopher Newport University
+David P . Benzel, Montgomery College
+John Bernard, University of Texas — Pan American
+G. Andy Chang, Youngstown State University
+Keith J. Craswell, Western Washington University
+Carol Curtis, Fresno City College
+Dawn Dabney, Northeast State Community College
+Cara DeLong, Fayetteville Technical Community College
+Ginger Dewey, York Technical College
+David DiMarco, Neumann College
+Gary Egan, Monroe Community College
+Charles Ehler, Anne Arundel Community College
+Harold W. Ellingsen, Jr., SUNY — Potsdam
+Michael Eurgubian, Santa Rosa Jr. College
+Jill Fanter, Walters State Community College
+Douglas Frank, Indiana University of Pennsylvania
+Frieda Ganter, California State University
+David Gilbert, Santa Barbara City College
+Donna Gorton, Butler Community College
+Dr. Larry Green, Lake Tahoe Community College
+Sonja Hensler, St. Petersburg Jr. College
+Sandeep Holay, Southeast Community College, Lincoln Campus
+Lloyd Jaisingh, Morehead State
+Nancy Johnson, Manatee Community College
+Martin Jones, College of Charleston
+David Kay, Moorpark College
+Mohammad Kazemi, University of North Carolina — Charlotte
+Jane Keller, Metropolitan Community College
+Susan Kellicut, Seminole Community College
+Hyune-Ju Kim, Syracuse University
+Rita Kolb, Cantonsville Community College
+Rowan Lindley, Westchester Community College
+Jeffrey Linek, St. Petersburg Jr. College
+Benny Lo, DeVry University, Fremont
+Diane Long, College of DuPage
+Austin Lovenstein, Pulaski Technical College
+Rhonda Magel, North Dakota State University
+Mike McGann, Ventura Community College
+Vicki McMillian, Ocean County College
+Lynn Meslinsky, Erie Community College
+Lyn A. Noble, Florida Community College at Jacksonville — 
+ South Campus
+Julie Norton, California State University — Hayward
+Lynn Onken, San Juan College
+Lindsay Packer, College of Charleston
+Nishant Patel, Northwest Florida State
+Jack Plaggemeyer, Little Big Horn College
+Eric Preibisius, Cuyamaca Community College
+Melonie Rasmussen, Pierce College
+Neal Rogness, Grand Valley State University
+Elisabeth Schuster, Benedictine University
+Jean Sells, Sacred Heart University
+John Seppala, Valdosta State University
+Carole Shapero, Oakton Community College
+Abdullah Shuaibi, Truman College
+Aileen Solomon, Trident Technical College
+Sandra L. Spain, Thomas Nelson Community College
+Michelle Strager-McCarney, Penn State — Erie, 
+ The Behrend College
+Deborah Swiderski, Macomb Community College
+William J. Thistleton, SUNY—Institute of Technology, Utica
+Agnes Tuska, California State University — Fresno
+Clark Vangilder, DeVry University
+Ting-Xiu Wang, Oakton Community
+Dex Whittinghall, Rowan University
+Cathleen Zucco-Teveloff, Rowan University
+Agradecimentos
+Devemos agradecer aos vários revisores que nos ajudaram a for-
+matar e refinar Estatística aplicada, sexta edição.
+Também agradecemos, especialmente, ao pessoal da Pearson Education que trabalhou conosco no desenvolvimento desta 
+sexta edição de Estatística aplicada: Marianne Stepanian, Sonia Ashraf, Chere Bemelmans, Erin Lane, Jackie Flynn, Kathleen 
+DeChavez, Audra Walsh, Tamela Ambush, Joyce Kneuer, e Rich Williams. Também agradecemos à Allison Campbell, Integra 
+— Chicago, e ao pessoal da Larson Texts, Inc., que nos auxiliaram no desenvolvimento e produção do livro. Pessoalmente, 
+agradecemos a nossos cônjuges, Deanna Gilbert Larson e Richard Farber, pelo amor, paciência e apoio. Também, um agrade-
+cimento especial para R. Scott O’Neal.
+Trabalhamos muito para fazer de Estatística aplicada, sexta edição, um livro limpo, claro e agradável, que possa ser usado 
+para o ensino e a aprendrendizagem da estatística. Apesar de todos os nossos esforços para garantir a acuidade e facilidade de 
+uso, muitos leitores terão, sem dúvidas, sugestões de melhorias, as quais serão bem-vindas.
+Ron Larson, odx@psu.edu
+A01_LARS0000_06_SE_C00.indd   13 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Estratégias de estudo
+Parabéns! Você está prestes a começar seu estudo de 
+estatística. Conforme for avançando pelo curso, você 
+deve descobrir como usar a estatística no seu cotidiano 
+e na sua carreira. Além dos conhecimentos matemáti-
+cos, os pré-requisitos para este curso são uma mente 
+aberta e disposição para estudar. Quando se está es -
+tudando estatística, o conteúdo que se aprende a cada 
+dia se baseia no conteúdo aprendido anteriormente. 
+Não existem atalhos — você deve prosseguir com seus 
+estudos todos os dias. Antes de começar, leia as suges-
+tões a seguir que ajudarão em seu sucesso.
+Planeje Faça seu próprio plano de curso agora mes -
+mo! Uma boa regra prática é estudar pelo menos duas 
+horas para cada hora de aula. Após sua primeira prova, 
+saberá se os esforços foram suficientes. Se você não tirou 
+a nota que esperava, então deve aumentar seu tempo de 
+estudo, melhorar sua eficiência no estudo ou ambos.
+Prepare-se para a aula  Antes de cada aula, revise 
+seus apontamentos da aula anterior e leia a parte do 
+livro que será coberta. Preste atenção às definições e 
+regras destacadas. Leia os exemplos e faça os exercí -
+cios Tente você mesmo que acompanham cada exem -
+plo. Esses passos exigem disciplina, mas eles valerão a 
+pena, porque você se beneficiará muito mais das aulas.
+Assista a aula  Assista todas as aulas. Chegue na 
+hora com seu livro, caderno e calculadora. Se você per-
+der uma aula, obtenha as anotações de outro aluno, 
+procure a ajuda de um monitor ou do seu professor. 
+Tente compreender o conteúdo da aula que você per -
+deu antes da próxima aula.
+Participe em aula Ao ler o livro antes da aula, revi-
+sar suas anotações da aula anterior ou fazer seu traba-
+lho de casa, escreva qualquer dúvida que surgir sobre 
+o conteúdo e pergunte ao seu professor durante a aula. 
+Isso o ajudará (e a outros da turma) a compreender 
+melhor o conteúdo.
+Anote Durante a aula, certifique-se de tomar nota 
+das definições, exemplos, conceitos e regras. Concen-
+tre-se nas dicas do professor para identificar material 
+importante. Então, assim que possível, após a aula, re-
+vise suas anotações e acrescente quaisquer explicações 
+que ajudem a tornar suas anotações mais compreensí-
+veis para você.
+Desenhe uma
+linha vertical
+no seu caderno.
+Faça
+anotações
+aqui. Após a aula, releia
+suas anotações e
+escreva comentários,
+perguntas ou
+explicações aqui.
+Faça o dever de casa  Aprender estatística é como 
+aprender a tocar piano ou jogar basquete. Você não 
+consegue desenvolver as habilidades apenas assistindo 
+alguém fazer; você mesmo deve fazer. O melhor mo -
+mento para fazer o dever de casa é logo após a aula, 
+quando os conceitos ainda estão frescos na mente. Fa-
+zer o dever neste momento aumenta suas chances de 
+reter a informação na memória de longo prazo.
+Encontre um colega de estudo  Caso fique em-
+perrado em um problema, você pode perceber que 
+estudar com um colega é de grande ajuda. Mesmo 
+que você ache que está ajudando mais do que sendo 
+ajudado, você perceberá que ensinar aos outros é uma 
+excelente forma de aprender.
+Mantenha o ritmo Não fique para trás no curso. Se 
+estiver com dificuldades, procure ajuda imediatamen-
+te — do seu professor, monitor ou colega de estudo. 
+Lembre-se, se você tiver dificuldade com uma seção 
+do seu livro de estatística, há uma boa chance de você 
+ter dificuldade em seções futuras, ao menos que você 
+tome medidas para melhorar seu entendimento.
+Se ficar emperrado  Todo estudante de estatística 
+passou por essa experiência: Você faz um exercício e 
+não consegue chegar à solução, ou a resposta obtida 
+não é igual à do livro. Quando isso acontecer, cogite 
+pedir ajuda ou dar uma pausa para arejar a cabeça. 
+Você pode até se debruçar sobre ele, refazê-lo ou reler 
+a seção do livro, mas evite ficar frustrado ou perdendo 
+muito tempo em um único exercício.
+Prepare-se para os testes  Estudar rapidamente 
+para um teste de estatística raramente funciona. Se 
+você mantiver o ritmo de estudo e seguir as sugestões 
+dadas aqui, você deverá estar quase pronto para o 
+teste. Para se preparar para o teste do capítulo, revi -
+Como estudar estatística
+xiv Estatística aplicada
+A01_LARS0000_06_SE_C00.indd   14 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+se o resumo, faça os exercícios de revisão e de revisão 
+acumulada. Depois, reserve algum tempo para os Pro-
+blemas do capítulo e para o Teste do capítulo. Analise 
+seus resultados para localizar e corrigir os erros.
+Fazendo um teste  A maioria dos professores não 
+recomenda estudar em cima da hora do teste. Isso pode 
+causar ansiedade. O melhor remédio para a ansieda -
+de pré-teste é estar bem preparado antecipadamente. 
+Uma vez começado o teste, leia as instruções cuidado-
+samente e trabalhe de forma moderada. (Você pode 
+ler todo o teste primeiro e então resolver as questões 
+na ordem que lhe é mais confortável). Não se afobe! 
+Quem tem pressa tende a cometer erros por falta de 
+atenção. Se você terminar cedo, tire alguns minutos 
+para limpar sua mente e então revise as questões.
+Aprendendo com os erros Depois que seu teste for 
+devolvido, revise os erros que você possa ter cometido. 
+Isso ajuda a evitar que se repitam erros sistemáticos ou 
+conceituais. Não descarte qualquer erro como somente 
+um “erro bobo” .  Tome vantagem de qualquer erro, bus-
+cando por alternativas de melhorar suas habilidades.
+Como estudar estatística xv
+A01_LARS0000_06_SE_C00.indd   15 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+A01_LARS0000_06_SE_C00.indd   16 11/12/15   09:46
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Onde estamos
+Você já está familiarizado com muitas das práticas 
+da estatística, tais como realização de pesquisas, coleta 
+de dados e descrição de populações. O que você pode 
+não saber é que coletar dados estatísticos acurados é 
+frequentemente difícil e de alto custo. Considere, por 
+exemplo, a tarefa monumental de contar e descrever a 
+população inteira dos Estados Unidos. Se você fosse o 
+responsável por tal censo, como faria? Como assegura -
+ria que seus resultados são acurados? Essas e muitas 
+outras preocupações são de responsabilidade do United 
+States Census Bureau (Bureau do Censo dos Estados 
+Unidos), que conduz o censo a cada década.
+Para onde vamos
+No Capítulo 1 você será apresentado aos conceitos 
+básicos e objetivos da estatística. Por exemplo a esta -
+tística foi usada para construir os gráficos da Figura 1 .1, 
+que mostram as cidades americanas (com população aci-
+ma de 50.000) com maior crescimento relativo em 2011, 
+aquelas com o maior crescimento absoluto e as regiões 
+em que se localizam.
+Para o Censo de 2010 o Census Bureau enviou ques-
+tionários curtos a cada domicílio, com perguntas a to -
+dos os membros residentes, tais como: gênero, idade, 
+raça e etnia. Anteriormente, um questionário maior, que 
+cobria tópicos adicionais, era enviado a cerca de 17% 
+da população. Porém, pela primeira vez desde 1940, o 
+questionário longo foi substituído pela Pesquisa da Co -
+munidade Americana, a qual pesquisará cerca de 3 mi-
+lhões de domicílios por ano ao longo da década. Esses 
+3 milhões de domicílios formarão uma amostra. Neste 
+texto você aprenderá como os dados coletados de uma 
+amostra são usados para inferir características sobre a 
+população inteira.
+1.1 Uma visão geral da estatística 
+1.2 Classificação dos dados
+ • Estudo de caso
+1.3 Coleta de dados e planejamento de experimentos
+ • Atividade
+ • Usos e abusos
+ • Estatísticas reais – Decisões reais
+ • História da estatística – linha do tempo
+ • Tecnologia
+Introdução à 
+estatística1
+PARTE  I
+Em 2011, da terceira à décima quinta cidades com população acima 
+de 50.000 habitantes e com maior percentual de crescimento po -
+pulacional dos Estados Unidos eram do Texas.
+Matthew Carroll/Fotolia.
+M01_LARS0000_06_SE_C01.indd   1 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+1.1 Uma visão geral da estatística
+Uma definição de estatística • Conjuntos de dados • Ramos da estatística
+Uma definição de estatística
+Quase todos os dias você está exposto à estatística. Por exemplo, consi-
+dere as seguintes afirmações:
+ • “[Mulheres] que fumaram de um a 14 cigarros por dia tinham, aproxi -
+madamente, o dobro de risco de morte cardíaca repentina do que as não 
+fumantes.” (Fonte: American Heart Association.)
+ • “O desperdício de alimentos [nos Estados Unidos], em relação ao su -
+primento disponível, tem aumentado progressivamente de aproximada-
+mente 30% em 1974 para quase 40% em anos recentes.” (Fonte: Natio-
+nal Institute of Diabetes and Digestive and Kidney Diseases.)
+ • “O percentual de estudantes de Detroit que alcançaram nível igual 
+ou acima de proficiência [em leitura] foi de 7% [em um ano recente].” 
+(Fonte: U.S. Department of Education.)
+Ao aprender os conceitos deste livro, você terá ferramentas para se tor-
+nar um consumidor informado, compreender estudos estatísticos, conduzir 
+pesquisa estatística e aprimorar seu pensamento crítico.
+Muitas estatísticas são apresentadas graficamente. Por exemplo, consi -
+dere a Figura 1.2.
+O que você deve aprender
+ • Uma definição de estatística.
+ • Como distinguir entre 
+população e amostra e 
+entre um parâmetro e uma 
+estatística.
+ • Como distinguir entre 
+estatística descritiv
+a e 
+estatística inferencial.
+12%
+88%
+Oeste
+Sul 
+52%
+Nordeste
+Centro-Oeste32%
+Sul  
+8%
+8%
+Oeste
+Crescimento (número)
+10.000
+20.000
+30.000
+40.000
+50.000
+60.000
+Nova York, NY
+Houston, TX
+Los Angeles, CASan Antonio, TX
+Austin, TX
+70.000 Crescimento (percentual)
+1
+2
+3
+4
+6
+5
+Pasco, W A
+Nova Orleans, LACedar Park, TXRound Rock, TX
+Allen, TX
+Figura 1.1  Crescimento populacional em cidades americanas com população acima de 50.000 habitantes (2011).
+(a) Cidades americanas com maior  cresciment o 
+populacional relativo. 
+(c) Cidades americanas com maior cr escimento 
+populacional absoluto. 
+(d) Localização das 25 cidades americanas com 
+maior crescimento populacional absoluto.
+(b) Localização das 25 cidades americanas com 
+maior crescimento populacional relativo.
+2 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   2 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Figura 1.2 Lucros de grandes empresas = grande ajuda?
+V ocê acredita que quando grandes empresas lucram isso ajuda 
+a economia americana?
+Ajuda a economia
+Não afeta a economia
+Prejudica a economia
+Não opinaram
+Fonte: Gallup.
+A informação na figura é baseada em uma coleta de dados.
+Definição 
+Dados consistem em informações provenientes de observações, contagens, 
+medições ou respostas.
+O uso de dados estatísticos remonta aos censos realizados na antiga 
+Babilônia, Egito e, mais tarde, no Império Romano, quando os dados cole-
+tados eram sobre assuntos relacionados ao Estado, tais como nascimentos 
+e óbitos. Na verdade, a palavra estatística é derivada da palavra latina status, 
+que significa “estado” . A prática moderna da estatística envolve mais que 
+contar nascimentos e óbitos, conforme se vê na próxima definição.
+Definição 
+Estatística é a ciência que trata da coleta, organização, análise e interpretação 
+dos dados para a tomada de decisões.
+Conjuntos de dados
+Há dois tipos de conjuntos de dados usados em estatística. Esses con -
+juntos são chamados de população e amostra.
+Definição 
+Uma população é a coleção de todos os resultados, respostas, medições ou 
+contagens que são de interesse.
+Uma amostra é um subconjunto ou parte de uma população.
+Uma amostra deve ser representativa de uma população de modo que 
+seus dados possam ser usados para tirar conclusões sobre aquela popula -
+ção. Os dados amostrais devem ser coletados usando-se um método apro -
+priado, tal como a amostragem aleatória. Quando os dados amostrais são 
+coletados usando-se um método inapropriado, eles não podem ser usados 
+para tirar conclusões sobra a população.
+Entenda
+Um censo consiste em obter 
+os dados de interesse de uma 
+população inteira. Mas, a menos 
+que a população seja pequena, é 
+normalmente impraticável obter 
+todos os dados da população. 
+Na maioria dos estudos, as 
+informações devem ser obtidas 
+de uma amostra aleatória. 
+(Você aprenderá mais sobre 
+amostragem aleatória e coleta de 
+dados na Seção 1 .3.)
+Capítulo 1 Introdução à estatística 3
+M01_LARS0000_06_SE_C01.indd   3 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+1Exemplo
+Identificando conjuntos de dados
+Em uma pesquisa recente, foi perguntado a 614 proprietários de pe-
+quenas empresas nos Estados Unidos se eles achavam que a presença 
+de sua empresa no Facebook tinha valor. Duzentos e cinquenta e oito 
+dos 614 responderam que sim. Identifique a população e a amostra. 
+Descreva o conjunto de dados da amostra. (Adaptado de: Manta.)
+Solução
+A população consiste nas respostas de todos os proprietários de pe-
+quenas empresas dos Estados Unidos, e a amostra consiste nas respos-
+tas dos 614 pequenos empresários pesquisados. Note na Figura 1.3 que 
+a amostra é um subconjunto das respostas de todos os pequenos em -
+presários dos Estados Unidos. O conjunto de dados da amostra consiste 
+em 258 proprietários que responderam sim e 356 que responderam não.
+Figura 1.3  População e amostra dos proprietários de pequenas empresas 
+dos EUA.
+Respostas dos 614 proprietários
+de pequenas empresas na
+pesquisa (amostra)
+Respostas de todos os proprietários de pequenas empresas nos
+Estados Unidos (população)
+Tente você mesmo 1
+O departamento de energia dos Estados Unidos conduz pesquisas 
+semanais em aproximadamente 800 postos de gasolina para determinar 
+o preço médio por galão de gasolina comum. Em 10 de dezembro de 
+2012, o preço médio era US$ 3,35 por galão. Identifique a população 
+e a amostra. Descreva o conjunto de dados da amostra. ( Fonte: Energy 
+Information Administration.)
+a.
+ Identifique a população e a amostra.
+b. No que consiste o conjunto de dados da amostra?
+Um conjunto de dados é definido como uma população ou como uma 
+amostra, dependendo do contexto da vida real. No caso do Exemplo 1, a 
+população era o conjunto de respostas de todos os proprietários de peque-
+nas empresas dos Estados Unidos. Dependendo do propósito da pesquisa, 
+a população poderia ter sido o grupo de respostas de todos os proprietários 
+de pequenas empresas que moram na Califórnia ou daqueles que têm ne -
+gócios na internet.
+Dois termos importantes usados neste livro são parâmetro e estatística.
+Definição 
+Um parâmetro é a descrição numérica de uma característica populacional.
+Uma estatística é a descrição numérica de uma característica amostral.
+É importante notar que uma estatística amostral pode diferir de uma 
+amostra para outra, enquanto um parâmetro populacional é constante para 
+uma população.
+Retratando o mundo
+Quão precisa é a contagem da 
+população americana conduzida, 
+a cada década, pelo Census 
+Bureau?
+De acordo com as estimativas, a 
+contagem da população do censo 
+de 1940 subestimou a população 
+em 5,4%. A precisão do censo 
+melhorou muito desde então. A 
+subestimação no censo de 2010 
+foi – 0,01%. (Isso significa que o 
+senso de 2010 contou a mais a 
+população dos Estados Unidos 
+em 0,01%, o que representa 
+cerca de 36.000 pessoas.)
+1%
+0%
+−1%
+1980 20001960
+Ano
+Percentual da população subestimada1940
+2%
+3%
+4%
+5%
+6%
+Contagem do censo
+dos EUA para menos.
+5,4%
+4,1%
+1,8%
+3,1%
+2,7%
+1,2%
+−0,49%
+−0,01%
+(Fonte: Energy U.S. Census Bureau.)
+Quais são algumas das 
+dificuldades de se coletarem 
+dados de uma população?
+4 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   4 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+1Exemplo
+Identificando conjuntos de dados
+Em uma pesquisa recente, foi perguntado a 614 proprietários de pe-
+quenas empresas nos Estados Unidos se eles achavam que a presença 
+de sua empresa no Facebook tinha valor. Duzentos e cinquenta e oito 
+dos 614 responderam que sim. Identifique a população e a amostra. 
+Descreva o conjunto de dados da amostra. (Adaptado de: Manta.)
+Solução
+A população consiste nas respostas de todos os proprietários de pe-
+quenas empresas dos Estados Unidos, e a amostra consiste nas respos-
+tas dos 614 pequenos empresários pesquisados. Note na Figura 1.3 que 
+a amostra é um subconjunto das respostas de todos os pequenos em -
+presários dos Estados Unidos. O conjunto de dados da amostra consiste 
+em 258 proprietários que responderam sim e 356 que responderam não.
+Figura 1.3  População e amostra dos proprietários de pequenas empresas 
+dos EUA.
+Respostas dos 614 proprietários
+de pequenas empresas na
+pesquisa (amostra)
+Respostas de todos os proprietários de pequenas empresas nos
+Estados Unidos (população)
+Tente você mesmo 1
+O departamento de energia dos Estados Unidos conduz pesquisas 
+semanais em aproximadamente 800 postos de gasolina para determinar 
+o preço médio por galão de gasolina comum. Em 10 de dezembro de 
+2012, o preço médio era US$ 3,35 por galão. Identifique a população 
+e a amostra. Descreva o conjunto de dados da amostra. ( Fonte: Energy 
+Information Administration.)
+a.
+ Identifique a população e a amostra.
+b. No que consiste o conjunto de dados da amostra?
+Um conjunto de dados é definido como uma população ou como uma 
+amostra, dependendo do contexto da vida real. No caso do Exemplo 1, a 
+população era o conjunto de respostas de todos os proprietários de peque-
+nas empresas dos Estados Unidos. Dependendo do propósito da pesquisa, 
+a população poderia ter sido o grupo de respostas de todos os proprietários 
+de pequenas empresas que moram na Califórnia ou daqueles que têm ne -
+gócios na internet.
+Dois termos importantes usados neste livro são parâmetro e estatística.
+Definição 
+Um parâmetro é a descrição numérica de uma característica populacional.
+Uma estatística é a descrição numérica de uma característica amostral.
+É importante notar que uma estatística amostral pode diferir de uma 
+amostra para outra, enquanto um parâmetro populacional é constante para 
+uma população.
+Retratando o mundo
+Quão precisa é a contagem da 
+população americana conduzida, 
+a cada década, pelo Census 
+Bureau?
+De acordo com as estimativas, a 
+contagem da população do censo 
+de 1940 subestimou a população 
+em 5,4%. A precisão do censo 
+melhorou muito desde então. A 
+subestimação no censo de 2010 
+foi –
+ 0,01%. (Isso significa que o 
+senso de 20
+10 contou a mais a 
+população dos Estados Unidos 
+em 0,01%, o que representa 
+cerca de 36.000 pessoas.)
+1%
+0%
+−1%
+1980 20001960
+Ano
+Percentual da população subestimada1940
+2%
+3%
+4%
+5%
+6%
+Contagem do censo
+dos EUA para menos.
+5,4%
+4,1%
+1,8%
+3,1%
+2,7%
+1,2%
+−0,49%
+−0,01%
+(Fonte: Energy U.S. Census Bureau.)
+Quais são algumas das 
+dificuldades de se coletarem 
+dados de uma população?
+2Exemplo
+Distinguindo entre um parâmetro e uma estatística
+Determine se o valor numérico descreve um parâmetro populacio -
+nal ou uma estatística amostral. Explique seu raciocínio.
+1. Uma pesquisa recente com apr oximadamente 400.000 emprega -
+dores reportou que o salário médio inicial para um especialista em 
+marketing é de US$ 53.400 por ano. (Fonte: National Association of 
+Colleges and Employers.)
+2.
+ A nota média de matemática obtida no vestibular pelos calouros de 
+uma universidade é 514.
+3. Em uma checagem aleatória de 400 lojas v arejistas, o FDA (Food 
+and Drug Administration) descobriu que 34% das lojas não estavam 
+estocando peixes na temperatura apropriada.
+Solução
+1. Em razão de a média de US$ 53.400 por ano ser baseada em um 
+subconjunto da população, ela é uma estatística amostral.
+2. Em razão de a nota média de matemática de 514 ser baseada em 
+todos os calouros, ela é um parâmetro populacional.
+3. Em razão de o percentual (34%) ser baseado em um subconjunto da 
+população, ele é uma estatística amostral.
+Tente você mesmo 2
+No ano passado, uma empresa com 65 funcionários teve um gasto 
+total de US$ 5.150.694 com salários. A quantia gasta descreve um parâ-
+metro populacional ou uma estatística amostral?
+a. Determine se a quantia gasta é de uma população ou uma amostra.
+b. Especifique se a quantia gasta é um parâmetr o ou uma estatística.
+Neste texto você verá como o uso da estatística pode ajudá-lo a to -
+mar decisões fundamentadas que afetam sua vida. Considere o censo 
+que o governo americano realiza a cada década. Quando realiza o censo, 
+o Census Bureau tenta contatar todos os moradores dos Estados Uni -
+dos. Embora seja impossível contar cada um, é importante que o censo 
+seja o mais preciso possível, pois os gestores públicos tomam muitas de-
+cisões baseadas na informação do censo. Os dados coletados indicarão 
+como atribuir assentos no congresso e como distribuir recursos públicos.
+Ramos da estatística
+O estudo de estatística tem dois ramos principais: estatística descritiva 
+e estatística inferencial.
+Definição 
+Estatística descritiva é o ramo da estatística que envolve a organização, o 
+resumo e a representação dos dados.
+Estatística inferencial é o ramo da estatística que envolve o uso de uma 
+amostra para chegar a conclusões sobre uma população. Uma ferramenta bá-
+sica no estudo da estatística inferencial é a probabilidade. (Você verá mais 
+sobre probabilidade no Capítulo 3.)
+Capítulo 1 Introdução à estatística 5
+M01_LARS0000_06_SE_C01.indd   5 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+3Exemplo
+Estatística descritiva e inferencial
+Determine qual parte do estudo representa o ramo descritivo da es-
+tatística. Que conclusões podem ser tomadas do estudo usando estatís-
+tica inferencial?
+1. Uma grande amostra de homens com 48 anos de idade foi estuda -
+da durante 18 anos. Observa-se na Figura 1.4 que, para os solteiros, 
+aproximadamente 70% estavam vivos aos 65 anos, e para os casados, 
+90%. (Fonte: The Journal of Family Issues.)
+Figura 1.4  Estatísticas percentuais de homens solteiros e casados ainda 
+vivos aos 65 anos.
+90%90%
+70%70%
+Ainda vivos aos 65 anosAinda vivos aos 65 anos
+Solteiros
+Casados
+2. Em uma amostra de analistas de Wall Street, a percentagem dos que 
+previram incorretamente os lucros de empresas de alta tecnologia 
+em um ano recente foi de 44%. (Fonte: Bloomberg News.)
+Solução
+1. A estatística descritiva en volve afirmações tais como “Para os 
+solteiros da grande amostra de homens, aproximadamente 70% 
+estavam vivos aos 65 anos” e “Para os casados, 90% ainda esta -
+vam vivos aos 65 anos” . A Figura 1.4 também representa o ramo 
+descritivo da estatística. Uma inferência possível tirada do estudo 
+é que estar casado está associado a uma vida mais longa para  
+os homens.
+2.
+ A parte do estudo que repr esenta o ramo descritivo da estatística 
+envolve a afirmação “A percentagem [da amostra de analistas de 
+Wall Street] que previram incorretamente os lucros de empresas 
+de alta tecnologia em um ano recente foi de 44%” . Uma inferência 
+possível com base no estudo é que o mercado de ações é difícil de 
+ser previsto, até mesmo para os profissionais. 
+Tente você mesmo 3
+Uma pesquisa conduzida com 750 pais descobriu que 31% ajudam fi-
+nanceiramente seus filhos até eles concluírem a faculdade e 6% fornecem 
+apoio financeiro até eles começarem a faculdade. (Fonte: Yahoo Finance.)
+a.
+ Determine que parte da pesquisa repr esenta o ramo descritivo da 
+estatística.
+b. Que conclusões podem ser tiradas da pesquisa usando estatística 
+inferencial?
+Neste texto você verá aplicações de ambos os ramos. Um tema prin-
+cipal será como usar estatísticas amostrais para fazer inferências sobre 
+parâmetros populacionais desconhecidos.
+6 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   6 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+1.1 Exercícios
+Construindo habilidades básicas e vocabulário
+ 1. Como uma amostra é relacionada a uma população?
+ 2. Por que a amostra é usada mais frequentemente do que 
+a população?
+ 3. Qual é a diferença entre um parâmetro e uma estatística?
+ 4. Quais são as duas ramificações principais da estatística? 
+Verdadeiro ou falso? Nos exercícios 5 a 10, deter -
+mine se a afirmação é verdadeira ou falsa. Se for falsa, 
+reescreva-a de forma que seja verdadeira.
+ 5. Uma estatística é um valor numérico que descreve uma 
+característica da população.
+ 6. Uma amostra é um subconjunto de uma população.
+ 7. É impossível para o Census Bureau obter todos os da -
+dos censitários sobre a população americana.
+ 8. A estatística inferencial envolve o uso de uma po -
+pulação para chegar a conclusões sobre a amostra 
+correspondente. 
+ 9. Uma população é a coleção de alguns resultados, res -
+postas, medições ou contagens que são de interesse.
+ 10. Uma estatística amostral não mudará de amostra para 
+amostra.
+Classificando um conjunto de dados  Nos exercí-
+cios 11 a 20, determine se o conjunto de dados é uma 
+população ou uma amostra. Explique seu raciocínio.
+ 11. A receita de cada uma das 30 companhias na média in -
+dustrial do Dow Jones.
+ 12. A quantidade de energia acumulada por cada turbina 
+de vento em um campo eólico.
+ 13. Uma pesquisa com 500 espectadores em um estádio 
+com 42.000 espectadores.
+ 14. O salário anual de cada farmacêutico em uma farmácia.
+ 15. Os níveis de colesterol de 20 pacientes em um hospital 
+com 100 pacientes.
+ 16. O número de televisores em cada residência nos Esta -
+dos Unidos.
+ 17. O resultado final de cada jogador de golfe em um torneio.
+ 18. A idade de cada terceira pessoa que entra em uma loja 
+de roupas.
+ 19. O partido político de cada presidente americano.
+ 20. Os níveis de contaminação do solo em 10 localidades 
+próximas a um aterro.
+Análise gráfica Nos exercícios 21 a 24, use o diagra-
+ma de Venn para identificar a população e a amostra.
+ 21. Partidos dos eleitores registrados no condado de Warren
+Partidos dos
+eleitores do condado
+de Warren que
+responderam à
+pesquisa on-line
+ 22. 
+Número de
+estudantes que
+doaram e possuem
+tipo sanguíneo O+
+Número de estudantes que doaram sangue em uma
+campanha
+ 23. Idade dos adultos nos EUA que possuem
+telefone celular
+Idade dos adultos
+nos EUA que
+possuem telefone
+celular Samsung
+ 24. Renda dos proprietários de imóveis no Texas
+Renda dos
+proprietários de
+imóveis com
+hipoteca no
+Texas
+Usando e interpretando conceitos
+Identificando populações e amostras Nos exercí-
+cios 25 a 34, identifique a população e a amostra.
+ 25. Uma pesquisa com 1.015 adultos nos Estados Unidos 
+descobriu que 32% tiveram que adiar consulta médica 
+para si próprios ou seus familiares no ano passado por 
+causa do custo. (Fonte: Gallup.)
+Capítulo 1 Introdução à estatística 7
+M01_LARS0000_06_SE_C01.indd   7 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 26. Um estudo com 33.043 crianças na Itália foi conduzido 
+para encontrar uma ligação entre uma anormalidade no 
+ritmo cardíaco e a síndrome de morte súbita infantil. 
+(Fonte: New England Journal of Medicine.)
+ 27. Uma pesquisa com 12.082 adultos descobriu que 45,5% 
+tomaram a vacina conta a gripe. (Fonte: U.S Centers for 
+Disease Control and Prevention.)
+ 28. Uma pesquisa com 1.012 adultos descobriu que 5% 
+consideram a aceitação de animais de estimação um fa-
+tor importante na hora de escolher um hotel.
+ 29. Uma pesquisa com 55 escritórios de advocacia dos Esta-
+dos Unidos descobriu que os honorários médios por hora 
+eram de US$ 425. (Fonte: The National Law Journal.)
+ 30. Uma pesquisa com 496 estudantes em uma faculdade 
+descobriu que 10% planejavam viajar para fora do país 
+durante o recesso escolar.
+ 31. Uma pesquisa com 202 pilotos descobriu que 20% ad -
+mitem que já cometeram um erro grave por causa do 
+sono. (Fonte: National Sleep Foundation.)
+ 32. Uma pesquisa com 961 consumidores que adquiriram 
+eletrodomésticos descobriu que 23% contrataram a ga-
+rantia estendida.
+ 33. Para coletar informação sobre os salários iniciais de em-
+presas listadas entre as 500 ações mais importantes do 
+mercado financeiro levantadas pela Standard & Poor, 
+um pesquisador contatou 65 das 500 empresas.
+ 34. Uma pesquisa com 2.002 alunos dos ensinos fundamental 
+e médio descobriu que eles dedicam uma média de 7 ho-
+ras e 38 minutos por dia usando mídias de entretenimento.
+Distinguindo entre um parâmetro e uma estatís -
+tica Nos exercícios 35 a 42, determine se o valor nu -
+mérico é um parâmetro ou uma estatística. Explique seu 
+raciocínio.
+ 35. O salário médio anual para 35 dos 1.200 contadores de 
+uma empresa é de US$ 68.000.
+ 36. Uma pesquisa com 2.514 membros do conselho de facul-
+dades descobriu que 38% acham que a educação superior 
+tem custo justo relativamente ao seu valor. (Fonte: Asso-
+ciation of Governing Boards of Universities and Colleges.)
+ 37. Sessenta e dois dos 97 passageiros a bordo da aeronave 
+Hinderburg sobreviveram à sua explosão.
+ 38. Em janeiro de 2013, 60% dos governadores dos 50 esta-
+dos norte-americanos eram republicanos. (Fonte: Natio-
+nal Governors Association.)
+ 39. Em uma pesquisa com 300 usuários de computador, 8% 
+disseram que seus computadores tinham mau funciona-
+mento e requeriam reparos técnicos.
+ 40. Os registros de eleitores mostram que 78% de todos os 
+eleitores em um distrito são registrados como democratas.
+ 41. Uma pesquisa com 1.004 adultos americanos descobriu 
+que 52% acham que a elevação da China à potência 
+mundial é uma grande ameaça ao bem-estar dos Esta -
+dos Unidos. (Fonte: Pew Research Center.)
+ 42. Em um ano recente, a nota média de matemática para to-
+dos os graduandos no ACT1 era 21,1. (Fonte: ACT, Inc.)
+ 43. Qual parte da pesquisa descrita no Exercício 31 repre -
+senta o ramo descritivo da estatística? Faça uma infe -
+rência com base nos resultados da pesquisa.
+ 44. Qual parte da pesquisa descrita no Exercício 32 repre -
+senta o ramo descritivo da estatística? Faça uma infe -
+rência com base nos resultados da pesquisa.
+Expandindo conceitos
+ 45. Identificando conjunt os de dados em artigos Encontre 
+um artigo de jornal ou revista que descreva uma pesquisa.
+(a) Identifique a amostra usada na pesquisa.
+(b) Qual é a população correspondente a essa amostr a?
+(c) Faça uma inferência baseada nos resultados da 
+pesquisa.
+ 46. Privação de sono  Em um estudo recente , voluntários 
+que dormiram 8 horas eram três vezes mais capazes de 
+responder corretamente às questões de um teste de ma-
+temática em relação aos que não tiveram horas de sono 
+suficientes. (Fonte: CBS News.)
+(a) Identifique a amostra usada no estudo .
+(b) Qual era a população correspondente a essa amostra?
+(c) Que parte do estudo representa o ramo descritivo 
+da estatística?
+(d) Faça uma inferência com base nos resultados do  
+estudo.
+ 47. Morando na Flórida  Um estudo mostra que os cida -
+dãos mais velhos que vivem na Flórida têm melhor me-
+mória do que aqueles que não vivem na Flórida.
+(a) Faça uma inferência com base nos resultados do 
+estudo.
+(b) O que há de errado com esse tipo de r aciocínio?
+ 48. Aumento no índice de obesidade  Um estudo mostra 
+que o índice de obesidade entre meninos com idades 
+entre 2 e 19 anos aumentou nos últimos anos . (Fonte: 
+Washington Post.)
+(a) Faça uma inferência com base nos resultados do 
+estudo.
+(b) O que há de errado com esse tipo de r aciocínio?
+ 49. Escrita Escreva um texto sobre a importância da esta-
+tística para um dos seguintes tópicos:
+(a) Um estudo sobre a eficácia de uma nov a droga.
+(b) Uma análise de um processo de fabricação .
+(c) Chegar a conclusões sobre as opiniões de eleitores 
+usando pesquisas.
+1 N. do T .: ACT (American College Testing) é um exame educacional utilizado como critério para admissão nas universidades norte-americanas 
+e que avalia o que o estudante aprendeu na escola.
+8 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   8 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+1.2 Classificação dos dados
+Tipos de dados • Níveis de mensuração
+Tipos de dados
+Quando realizamos um estudo, é importante saber o tipo de dado envol-
+vido. A natureza dos dados com os quais estamos trabalhando determinará 
+qual procedimento estatístico pode ser usado. Nesta seção você aprenderá 
+como classificar dados por tipo e nível de mensuração. Os conjuntos de 
+dados consistem em dois tipos: qualitativo e quantitativo.
+Definição 
+Dados qualitativos consistem em atributos, rótulos ou entradas não numéricas.
+Dados quantitativos consistem em medidas numéricas ou contagens.
+1Exemplo
+Classificando dados por tipo 
+Os preços de venda sugeridos para diversos veículos Honda são 
+apresentados na Tabela 1.1. Quais dados são qualitativos e quais 
+são quantitativos? Explique seu raciocínio. ( Fonte: American Honda 
+Motor Company, Inc.)
+T abela 1.1 Preços de venda sugeridos para veículos Honda.
+Modelo Preço de venda sugerido
+Accord Sedan US$ 21.680
+Civic Hybrid US$ 24.200
+Civic Sedan US$ 18.165
+Crosstour US$ 27 . 230
+CR-V US$ 22.795
+Fit US$ 15.425
+Odyssey US$ 28.675
+Pilot US$ 29.520
+Ridgeline US$ 29.450
+Solução 
+A informação mostrada na Tabela 1.1 pode ser separada em dois 
+conjuntos de dados. Um conjunto contém os nomes dos modelos dos 
+veículos e o outro os preços de venda sugeridos. Os nomes são entradas 
+não numéricas, portanto são dados qualitativos. Os preços de venda são 
+entradas de medidas numéricas, portanto são dados quantitativos.
+Tente você mesmo 1 
+As populações de diversas cidades norte-americanas são apresenta-
+das na Tabela 1.2. Quais dados são qualitativos e quais são quantitativos? 
+(Fonte: U.S. Census Bureau.)
+O que você deve aprender
+ • Como distinguir entre dados 
+qualitativ
+os e quantitativos.
+ • Como classificar dados 
+em relação aos 4 níveis de 
+mensuração: nominal, ordinal, 
+inter
+valar e de razão.
+Capítulo 1 Introdução à estatística 9
+M01_LARS0000_06_SE_C01.indd   9 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+T abela 1.2 População de cidades norte-americanas.
+Cidade População
+Baltimore, MD 619.493
+Chicago, IL 2.707 .120
+Glendale, AZ 230.482
+Miami, FL 408.750
+Portland, OR 593.820
+São Francisco, CA 812.826
+a.  Identifique os dois conjuntos de dados.
+b. Decida se cada conjunto de dados consiste em entradas numéricas 
+ou não numéricas.
+c. Especifique os dados qualitativos e os quantitativos.
+Níveis de mensuração
+Outra característica dos dados é o nível de mensuração. O nível de men-
+suração determina quais operações estatísticas são apropriadas. Os quatro 
+níveis de medida, em ordem do mais baixo para o mais alto, são: nominal, 
+ordinal, intervalar e de razão.
+Definição 
+Dados no nível nominal de mensuração são apenas qualitativos. Dados 
+nesse nível são categorizados usando-se nomes, rótulos ou qualidades. Não 
+é possível realizar cálculos matemáticos nesse nível.
+Dados no nível ordinal de mensuração são qualitativos ou quantitativos. 
+Dados nesse nível podem ser postos em ordem ou classificados, mas as 
+diferenças entre as entradas de dados não têm sentido matemático.
+Quando números estão no nível nominal de mensuração, eles simples-
+mente representam um rótulo. Exemplos de números usados como rótulos 
+incluem o número da seguridade social e os números nos uniformes espor-
+tivos. Por exemplo, não faria sentido somar os números dos uniformes do 
+Chicago Bears (time de futebol americano).
+2Exemplo
+Classificando dados por nível
+Nas tabelas 1.3 e 1.4 temos dois conjuntos de dados. Que conjunto de 
+dados consiste em dados no nível nominal? Que conjunto de dados consiste 
+em dados no nível ordinal? Explique seu raciocínio. (Fonte: The Numbers.)
+T abela 1.3 Cinco maiores bilheterias de 2012.T abela 1.4 Gêneros de filme.
+1. Os Vingadores Ação
+2. Batman: O cavaleiro das trevas ressurge Aventura
+3. Jogos vorazes Comédia
+4. 007 – Operação Skyfall Drama
+5. A saga crepúsculo: Amanhecer – Parte 2 Terror
+10 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   10 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Solução
+O primeiro conjunto de dados lista a posição de cinco filmes. Os da-
+dos consistem nas posições 1, 2, 3, 4 e 5. Em razão de as posições pode-
+rem ser listadas em ordem, esses dados estão no nível ordinal. Note que 
+a diferença entre a posição de 1 a 5 não tem significado matemático. O 
+segundo grupo consiste nos nomes dos gêneros de filmes. Não se pode 
+realizar cálculo matemático com os nomes nem ordená-los. Logo, esses 
+dados estão no nível nominal.
+Tente você mesmo 2 
+Determine se os dados estão no nível nominal ou ordinal.
+1. As posições finais para a Divisão do P acífico da NBA ( National 
+Basketball Association).
+2. Uma coleção de números de telefone .
+a. Identifique o que cada conjunto de dados repr esenta.
+b. Especifique o nível de mensuração e justifique sua r esposta.
+Os dois níveis mais altos de mensuração consistem somente em dados 
+quantitativos.
+Definição 
+Dados no nível de mensuração intervalar podem ser ordenados e é 
+possível calcular diferenças que tenham sentido matemático entre as 
+entradas de dados. No nível intervalar, um registro zero simplesmente 
+representa uma posição em uma escala; a entrada não é um zero natural.
+Dados no nível de mensuração de razão são similares aos dados no nível 
+intervalar, com a propriedade adicional de que, nesse nível, um registro 
+zero é um zero natural. Uma razão de dois valores pode ser formada de 
+modo que um dado possa ser expresso significativamente como um 
+múltiplo de outro.
+Um zero natural é um zero que significa “nenhum” . Por exemplo, a quan-
+tia de dinheiro que você tem em uma conta de poupança pode ser de zero 
+real. Nesse caso, o zero representa nenhum dinheiro; é um zero natural. Por 
+outro lado, a temperatura de 0 ºC não representa uma condição na qual 
+não há calor. A temperatura de 0 ºC é simplesmente uma posição na escala 
+Celsius; não é um zero natural.
+Para distinguir entre dados no nível intervalar e no nível de razão, de -
+termine se a expressão “duas vezes mais” tem algum sentido no contexto 
+dos dados. Por exemplo, US$ 2 é duas vezes mais que US$ 1, então esses 
+dados estão no nível de razão. Por outro lado, 2 ºC não é duas vezes mais 
+quente que 1 ºC, então esses dados estão no nível intervalar.
+3Exemplo
+Classificando dados por nível
+Dois conjuntos de dados são apresentados nas tabelas 1.5 e 1.6. Qual 
+conjunto consiste em dados no nível intervalar? Qual conjunto consis-
+te em dados no nível de razão? Explique seu raciocínio. ( Fonte: Major 
+League Baseball.)
+Retratando o mundo
+Em 2012, a revista Forbes 
+escolheu as 100 maiores 
+instituições de caridade nos 
+Estados Unidos. A revista baseou 
+sua classificação no valor das 
+doações privadas. A United Way 
+recebeu US$ 3,9 bilhões em 
+doações privadas, mais que o 
+dobro das doações recebidas pela 
+Salvation Army. 
+Cinco maiores instituições de 
+caridade segundo a Forbes.
+1. United Wa
+y
+2. Salvation Army
+3. Catholic Charities USA
+4. Feeding America
+5. 
+ American National Red Cr
+oss
+Nessa lista, qual é o nível de 
+mensuração?
+Capítulo 1 Introdução à estatística 11
+M01_LARS0000_06_SE_C01.indd   11 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+T abela 1.5 Anos das vitórias do New Y ork Yankees na Série Mundial.
+1923, 1927 , 1928, 1932, 1936, 1937 , 
+1938, 1939, 1941, 1943, 1947 , 1949, 
+1950, 1951, 1952, 1953, 1956, 1958, 
+1961, 1962, 1977 , 1978, 1996, 1998, 
+1999, 2000, 2009
+T abela 1.6 Total de home runs da Liga Americana em 2012 (por time).
+Baltimore 214 Minnesota 131
+Boston 165 Nova York 245
+Chicago 211 Oakland 195
+Cleveland 136 Seattle 149
+Detroit 163 Tampa Bay 175
+Kansas City 131 Texas 200
+Los Angeles 187 Toronto 198
+Solução
+Ambos os conjuntos contêm dados quantitativos. Considere as datas 
+das vitórias dos Yankees na Série Mundial. Faz sentido encontrar dife-
+renças entre datas específicas. Por exemplo, o tempo entre a primeira e 
+a última vitória dos Yankees é
+2009 – 1923 = 86 anos.
+Mas não faz sentido dizer que um ano é múltiplo do outro. Então, 
+esses dados estão no nível intervalar. Contudo, usando o total de home 
+runs, podemos encontrar diferenças e escrever razões. Com base nos da-
+dos, podemos ver que o Baltimore atingiu 39 home runs a mais do que o 
+Tampa Bay, e que o New York Yankees atingiu cerca de 1,5 vez a quanti-
+dade registrada pelo Detroit. Então, esses dados estão no nível de razão.
+Tente você mesmo 3
+Determine se os dados estão no nível intervalar ou de razão.
+1. A temperatur a corporal (em graus Celsius) de um atleta durante 
+uma sessão de exercícios.
+2. Os índices cardíacos (em batidas por minuto) de um atleta dur ante 
+uma sessão de exercícios.
+a. Identifique o que cada conjunto de dados repr esenta.
+b. Especifique o nível de mensuração e justifique sua r esposta.
+As tabelas 1.7 e 1.8 resumem quais operações são apropriadas em cada 
+um dos quatro níveis de mensuração. Quando identificar o nível de mensu-
+ração do conjunto de dados, use o nível mais alto que for adequado.
+T abela 1.7 Operações apropriadas nos níveis de mensuração.
+Nível de 
+mensuração
+Categorizar 
+os dados
+Ordenar os 
+dados
+Subtrair os 
+dados
+Determinar se um 
+dado é múltiplo 
+do outro
+Nominal Sim Não Não Não
+Ordinal Sim Sim Não Não
+Intervalar Sim Sim Sim Não
+Razão Sim Sim Sim Sim
+12 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   12 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+T abela 1.8 Resumo dos quatro níveis de mensuração.
+Exemplo de conjunto de dados Operações apropriadas
+Nível nominal 
+(dados qualitativos)
+Tipos de programas exibidos por uma rede de 
+televisão
+Comédia Documentários
+Drama Culinária
+Reality show Novelas
+Esportes Entrevistas
+Coloque em uma categoria
+Por exemplo, um programa exibido pela rede 
+poderia ser colocado em uma das oito categorias 
+mostradas.
+Nível ordinal 
+(dados qualitativos 
+ou quantitativos)
+Descrição da classificação de filmes dada pela 
+Motion Picture Association of America
+G
+ Livre
+PG Acompanhamento dos pais é sugerido
+PG-13 Acompanhamento dos pais
+ é muito necessário
+R Restrito
+NC-17 Proibido para menores de 17 anos
+Coloque em uma categoria e ordene.
+Por exemplo, uma classificação PG tem uma res-
+trição maior do que uma classificação G.
+Nível intervalar 
+(dados 
+quantitativos)
+Temperatura média mensal (em graus 
+Fahrenheit) para Denver, Colorado
+Jan 30,7 J ul 74,2
+Fev 32,5 Ago 72,5
+Mar 40,4 Set 63,4
+Abr 47 ,4 Out 50,9
+Mai 57 ,1 Nov 38,3
+Jun 67 ,4 Dez 30,0
+(Fonte: National Climatic Data Center.)
+Coloque em uma categoria, ordene e encontre 
+diferenças entre os valores.
+Por exemplo, 72,5 – 63,4 = 9,1ºF.
+Então, agosto é 9,1ºF mais quente que setembro.
+Nível de razão 
+(dados 
+quantitativos)
+Precipitação média mensal (em polegadas) para 
+Orlando, Flórida
+Jan 2,35 J ul 7 ,27
+Fev 2,38 Ago 7 ,13
+Mar 3,77 Set 6,06
+Abr 2,68 Out 3,31
+Mai 3,45 Nov 2,1 7
+Jun 7 ,58 Dez 2,58
+(Fonte: National Climatic Data Center.)
+Coloque em uma categoria, ordene, encontre 
+diferenças entre os valores e encontre razões de 
+valores.
+Por exemplo, 
+7 ,58≈2
+3,77  . Então, há cerca de duas 
+vezes mais chuva em junho do que em março.
+1.2 Exercícios
+Construindo habilidades básicas e vocabulário
+ 1. Nomeie cada nível de mensuração para o qual os dados 
+podem ser qualitativos.
+ 2. Nomeie cada nível de mensuração para o qual os dados 
+podem ser quantitativos.
+Verdadeiro ou falso? Nos exercícios 3 a 6, determine 
+se a afirmação é verdadeira ou falsa. Se for falsa, rees -
+creva-a de forma que seja verdadeira.
+ 3. Dados no nível ordinal são somente quantitativos.
+ 4. Para os dados no nível intervalar, você não pode calcular 
+diferenças matemáticas entre os valores dos dados. 
+ 5. Mais tipos de cálculos podem ser realizados com dados 
+no nível nominal do que com dados no nível intervalar.
+ 6. Dados no nível de razão não podem ser ordenados.
+Capítulo 1 Introdução à estatística 13
+M01_LARS0000_06_SE_C01.indd   13 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Usando e interpretando conceitos
+Classificando dados por tipo Nos exercícios 7 a 14, 
+determine se os dados são qualitativos ou quantitativos. 
+Explique seu raciocínio.
+7. Alturas de balões de ar quente.
+8. Capacidades de carga de caminhonetes.
+9. Cores dos olhos de modelos.
+10. Números de identidade de estudantes.
+11. Pesos de bebês em um hospital.
+12. Espécies de árvores em uma floresta.
+13. Respostas em uma pesquisa de opinião.
+14. Tempos de espera em um mercado.
+Classificando dados por nível  Nos exercícios 15 a 
+20, determine o nível de mensuração dos conjuntos de 
+dados. Explique seu raciocínio.
+ 15. Seriados de comédia Os anos em que um programa de 
+televisão da ABC ganhou o prêmio Emmy de melhor
+seriado de comédia estão listados a seguir. ( Fonte: Aca-
+demy of Television Arts and Sciences.)
+1955 1979 1980 1981 1982
+1988 2010 2011 2012
+16. Faculdades de negócios As cinco melhores faculdades de
+negócios dos Estados Unidos em um ano recente, de acor-
+do com a Forbes, estão listadas a seguir. (Fonte: Forbes.)
+1. Harvard.
+2. Stanford.
+3. Chicago (Booth).
+4. Pensilvânia (Wharton).
+5. Columbia.
+17. Futebol Os números das camisas dos jogadores de um
+time de futebol estão listados a seguir.
+5 9 78 11 14 4 15
+10 31 19 23 21 18 27
+7 6 1 13 3 37 20
+22 17 16 2 88 8
+18. Músicas O tempo (em segundos) de músicas de um
+álbum está listado a seguir.
+228 233 268 265 252
+335 103 338 252 371
+586 290 532 282
+19. Lista de best sellers Os cinco livros de ficção mais ven-
+didos nos Estados Unidos segundo a lista do The New
+York Times de 23 de dezembro de 2012 são os seguintes. 
+(Fonte: The New York Times.)
+1. Threat Vector.
+2. Gone Girl.
+3. The Forgotten.
+4. The Racketeer.
+5. Private London.
+20. E-mail Os horários em que uma pessoa checa seus
+e-mails estão listados a seguir. 
+7:28 8:30 8:43 9:18
+10:25 10:46 11:27 13:18
+13:26 13:49 14:05 15:18
+16:28 16:57 19:17
+Análise gráfica Nos exercícios de 21 a 24, determine 
+o nível de mensuração dos dados listados nos eixos ho-
+rizontal e vertical dos gráficos.
+ 21. Quão sério é o problema do aquecimento global?
+ (Fonte: Pew Research Center )
+Não sabe
+Não é um
+problema
+Não tão
+sério
+Um pouco
+sério
+Muito
+sério
+5
+10
+Resposta
+15
+20
+25
+30
+35
+40
+Percentual
+ 22. Quantas folgas você planeja tirar no verão?
+ (Fonte: Harris Interactive )
+Percentual
+50
+40
+30
+20
+10
+0 1–2 3–4 5 ou mais
+Número de folgas
+ 23. Perfil de gênero  do 112o Congresso dos EUA.
+ (Fonte: Congressional Research Service )
+Número
+500
+400
+300
+200
+100
+HomensMulheres
+Gênero
+24. Mortes por acidente de veículos por ano.
+ (Fonte: National Highway Traffic Safety Administration )
+40
+38
+36
+34
+32
+2011 2010 2009 2008 2007
+Ano
+Número (em milhares)
+42
+14 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   14 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 25. Os itens a seguir aparecem em uma ficha de admissão 
+de um consultório médico. Determine o nível de men -
+suração dos dados.
+(a) Temperatura.
+(b) Alergias.
+(c) Peso.
+(d) Nível de dor (escala de 0 a 10).
+ 26. Os itens a seguir aparecem em uma ficha de emprego. 
+Determine o nível de mensuração dos dados.
+(a) Graduação máxima atingida.
+(b) Gênero.
+(c) Ano de graduação universitária.
+(d) Número de anos no último emprego.
+Classificando dados por tipo e nível  Nos exercí-
+cios 27 a 32, determine se os dados são qualitativos ou 
+quantitativos e o nível de mensuração.
+ 27. Futebol americano Os cinco maiores times na última 
+pesquisa sobre times universitários, divulgada em janeiro 
+de 2013, estão listados a seguir. (Fonte: Associated Press.)
+1. Alabama.
+2. Oregon.
+3. Ohio State.
+4. Notre Dame.
+5. Georgia/Texas A&M.
+ 28. Política Os três partidos políticos no 112 o Congresso 
+dos Estados Unidos estão listados a seguir.
+Republicano Democrata Independente
+ 29. Melhores vendedores As regiões representando o me-
+lhor vendedor de uma empresa nos últimos seis anos 
+nos Estados Unidos estão listadas a seguir.
+Sudeste Noroeste
+Nordeste Sudeste
+Sudoeste Sudoeste
+ 30. Mergulho As pontuações para os ganhador es mascu-
+linos da medalha de ouro de salto ornamental, platafor-
+ma de 10 metros, nos Jogos Olímpicos de Verão de 2012 
+estão listadas a seguir. ( Fonte: International Olympic 
+Committee.)
+97 ,20 86,40 99,90
+90,75 91,80 102,60
+ 31. Discos Os cinco álbuns mais vendidos de 2012 estão 
+listados a seguir. (Fonte: Billboard.)
+1. Adele “21” .
+2. Michael Bublé “Christmas” .
+3. Drake “Take Care” .
+4. Taylor Swift “Red” .
+5. One Direction “Up All Night” .
+ 32. Preços dos ingressos  Os preços médios dos ingressos 
+para dez shows da Broadway, em 2012, estão listados a 
+seguir. (Fonte: The Broadway League.)
+US$ 110 US$ 88 US$ 181 US$ 97 US$ 67
+US$ 133 US$ 72 US$ 103 US$ 62 US$ 79
+Expandindo conceitos
+ 33. Escrita O que é um zero natural? Descreva três exem-
+plos de conjuntos de dados que contenham um zero na-
+tural e três exemplos que não contenham.
+ 34. Descreva dois exemplos de conjuntos de dados para 
+cada um dos quatro níveis de mensuração. Justifique sua 
+resposta.
+Medindo a audiência dos programas de TV nos Estados Unidos
+O grupo Nielsen mede a audiência de programas 
+de TV nos Estados Unidos há mais de 60 anos. Ele uti-
+liza diversos procedimentos amostrais, mas o principal 
+é o rastreamento dos padrões de audiência de cerca 
+de 20.000 domicílios, como mostra a Figura 1.5. Esses 
+domicílios contêm aproximadamente 45.000 pessoas 
+e são escolhidos de modo a formar uma amostra re -
+presentativa da população geral. Os domicílios repre-
+sentam diversas localidades, grupos étnicos e faixas  
+de renda. Os dados coletados da amostra da Nielsen de 
+cerca de 20.000 domicílios, como mostra a Tabela 1.9, 
+são usados para fazer inferências sobre a população de 
+todos os domicílios nos Estados Unidos.
+Figura 1.5  População e amostra da Nielsen para 
+rastreamento dos padrões de audiência 
+da TV nos domicílios norte-americanos.
+Programas de TV vistos por todos os domicílios com TV nos
+Estados Unidos (114,2 milhões de domicílios)
+Programas de
+TV vistos pela
+amostra da Nielsen
+(cerca de 20.000
+domicílios) 
+Estudo de caso
+Capítulo 1 Introdução à estatística 15
+M01_LARS0000_06_SE_C01.indd   15 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+1.3  Coleta de dados e planejamento 
+de experimentos
+Planejamento de um estudo estatístico • Coleta de dados • Planejamento experimental 
+• Técnicas de amostragem
+Planejamento de um estudo estatístico
+O objetivo de todo estudo estatístico é coletar dados e então usá-los 
+para tomar uma decisão. Qualquer decisão que seja tomada usando os re -
+sultados de um estudo estatístico será tão boa quanto o processo utilizado 
+para obtenção desses dados. Quando o processo é falho, a decisão resultan-
+te é questionável.
+Embora você possa nunca desenvolver um estudo estatístico, é prová -
+vel que tenha que interpretar os resultados de um. E, antes disso, deve se 
+determinar se os resultados são confiáveis. Em outras palavras, devemos 
+estar familiarizados com a forma de se planejar um estudo estatístico.
+O que você deve aprender
+ • Como planejar um estudo 
+est
+atístico e como distinguir 
+entre um estudo observacional 
+e um experimental.
+ • Como coletar dados f
+azendo 
+uma pesquisa ou uma 
+simulação.
+ • Como planejar um 
+experimento.
+ • Como criar uma amostra 
+usando as amostragens 
+aleatória, aleatória 
+simples, estratificada, por 
+conglomerado e sistemática, e 
+como identificar uma amostra 
+tendenciosa.
+T abela1.9  Medição para a semana de 03/12/2012 a 09/12/2012.
+Posição Nome do programa Canal Dia e horário Audiência
+Audiência 
+entre 18 e 
+49 anos
+Telespectadores
+1 NBC Sunday Night Football NBC Domingo, 20:30 12,8 7, 8 21.537 .000
+2 The Big Bang Theory CBS Quinta-feira, 20:00 10,3 5,2 16.945.000
+3 Person of Interest CBS Quinta-feira, 21:00 8,7 2,9 14.175.000
+4 Two and a Half Man CBS Quinta-feira, 20:30 8,4 4,0 13.502.000
+5 Football Night in America Part 3 NBC Domingo, 20:00 7, 4 4,0 12.124.000
+6 The Voice NBC Segunda-feira, 20:00 7, 4 3,9 12.108.000
+7 60 Minutes CBS Domingo, 19:00 7, 7 1,9 11.867 .000
+8 The Voice NBC Terça-feira, 20:00 7, 1 3,5 11.516.000
+9 The OT FOX Domingo, 19:00 7, 1 4,4 11.450.000
+10 Criminal Minds CBS Quarta-feira, 21:00 7, 1 3,0 11.326.000
+Exercícios
+ 1. Índices de audiência  Cada ponto percentual de 
+audiência representa 1.142.000 domicílios, ou 1% 
+dos domicílios nos Estados Unidos com televisão. 
+Um programa com índice de 8,4 tem o dobro do 
+número de domicílios que um programa com índi-
+ce de 4,2? Explique seu raciocínio.
+ 2. Percentagem amostral  Qual percentagem do 
+número total de domicílios americanos com tele-
+visão é usada na amostra da Nielsen?
+ 3. Nível nominal de mensuração  Identifique se há 
+coluna(s) na tabela com dados no nível nominal.
+ 4. Nível ordinal de mensuração  Identifique se há 
+coluna(s) na tabela com dados no nível ordinal. 
+Descreva duas maneiras nas quais os dados po -
+dem ser ordenados.
+ 5. Nível intervalar de mensuração Identifique se há 
+coluna(s) na tabela com dados no nível intervalar. 
+Como esses dados podem ser ordenados? 
+ 6. Nível de razão Identifique se há coluna(s) na ta-
+bela com dados no nível de razão. 
+ 7. Classific ação Como os progr amas estão classifi -
+cados na tabela? Por que é feito dessa maneira? 
+Explique seu raciocínio. 
+ 8. Inferências Quais decisões (inferências) podem 
+ser tomadas com base nas medições da Nielsen?
+16 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   16 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Instruções
+Planejando um estudo estatístico 
+1. Identifique a(s) variá vel(is) de interesse (o foco) e a população do estudo. 
+2. Desenv
+olva um plano detalhado para a coleta de dados. Se usar uma amos-
+tra, certifique-se de que a amostra é representativa da população. 
+3. Colete os dados. 
+4.  Descrev
+a os dados usando técnicas de estatística descritiva. 
+5. Interprete os 
+dados e tome as decisões sobre a população usando estatís-
+tica inferencial. 
+6. Identifique quaisquer erros possív
+eis.
+Um estudo estatístico pode, geralmente, ser categorizado como um estudo 
+observacional ou experimental. Em um estudo observacional, um pesquisador 
+não influencia as respostas. Em um experimento, um pesquisador, delibera-
+damente, aplica um tratamento antes de observar as respostas. Apresenta-
+mos a seguir um breve resumo desses tipos de estudo.
+ • Em um estudo observacional, um pesquisador observa e mede as carac-
+terísticas de interesse de parte de uma população, mas não muda as con-
+dições existentes. Por exemplo, foi realizado um estudo observacional 
+no qual os pesquisadores observaram e registraram o comportamento 
+oral de crianças acima de 3 anos de idade com objetos não alimentícios. 
+(Fonte: Pediatrics Magazine.)
+ • Ao realizar um experimento, um tratamento é aplicado em uma par -
+te da população, chamada de grupo de tratamento, e as respostas são 
+observadas. Outra parte da população pode ser usada como um grupo 
+controle, no qual nenhum tratamento é aplicado. (Os indivíduos nos 
+grupos de tratamento e controle são chamados de unidades experimen-
+tais.) Em muitos casos, os indivíduos no grupo controle recebem um 
+placebo, que é um tratamento falso, inofensivo, feito para parecer o tra-
+tamento real. As respostas do grupo de tratamento e do grupo controle 
+podem ser comparadas e estudadas. Na maioria dos casos, é uma boa 
+ideia usar o mesmo número de indivíduos em cada grupo. Por exemplo, 
+foi realizado um experimento no qual diabéticos tomaram extrato de 
+canela diariamente enquanto o grupo controle não tomou nada. Depois 
+de 40 dias, os diabéticos que tomaram o extrato de canela reduziram 
+seu risco de problemas cardíacos, enquanto o grupo controle não sofreu 
+mudanças. (Fonte: Diabetes Care.)
+1Exemplo
+Distinguindo entre um estudo observacional e um experimento
+Determine se o estudo é observacional ou um experimento.
+1. Pesquisadores estudam o efeito da complementação de vitamina D3 
+em pacientes com deficiência de anticorpos ou com infecções fre -
+quentes do trato respiratório. Para realizar o estudo, 70 pacientes 
+recebem 4.000 UI de vitamina D
+3 diariamente por um ano. Outro 
+grupo de 70 pacientes recebe um placebo diariamente por um ano. 
+(Fonte: British Medical Journal.)
+2
+. Pesquisadores conduzem um estudo para determinar o índice de 
+aprovação pública nacional do presidente dos Estados Unidos. Para 
+realizar o estudo, os pesquisadores ligaram para 1.500 residentes no 
+país e perguntaram se eles aprovavam ou não o trabalho realizado 
+pelo presidente. (Fonte: Gallup.)
+Capítulo 1 Introdução à estatística 17
+M01_LARS0000_06_SE_C01.indd   17 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Solução
+1. Uma vez que o estudo aplica um tratamento (vitamina D3) aos indi-
+víduos, o estudo é um experimento.
+2. Uma vez que o estudo não tenta influenciar as respostas dos indiví -
+duos (não há tratamento), o estudo é observacional.
+Tente você mesmo 1
+A Comissão de Caça da Pensilvânia conduziu um estudo para contar 
+o número de alces no estado. A comissão capturou e soltou 636 alces, 
+dos quais 350 eram fêmeas adultas, 125 filhotes, 110 machos com chifres 
+ramificados e 51 machos com chifres pontudos. Esse estudo é observa -
+cional ou um experimento? (Fonte: Pennsylvania Game Commission.)
+a
+. Determine se o estudo aplicou um tratamento aos indivíduos .
+b. Escolha um tipo de estudo apropriado .
+Coleta de dados
+Há várias maneiras de se coletarem dados. Frequentemente, o foco do 
+estudo determina a melhor maneira de fazer a coleta. A seguir, há um bre-
+ve resumo de dois métodos de coleta de dados.
+ • Uma simulação é o uso de um modelo matemático ou físico para repro-
+duzir as condições de uma situação ou processo. A coleta de dados fre-
+quentemente envolve o uso de computadores. As simulações permitem 
+que você estude situações que são impraticáveis ou mesmo perigosas 
+para serem criadas na vida real, e frequentemente economizam tempo 
+e dinheiro. Por exemplo, os fabricantes de automóveis usam simulações 
+com bonecos para estudar os efeitos das colisões em humanos. 
+ • Uma pesquisa é uma investigação de uma ou mais características de 
+uma população. Mais frequentemente, as pesquisas são conduzidas com 
+pessoas, por meio de perguntas. Os tipos mais comuns de pesquisas são 
+realizados por meio de entrevistas, internet, telefone ou correio. Ao pla-
+nejar uma pesquisa, é importante escolher bem as perguntas para não 
+obter resultados tendenciosos, que não são representativos de uma po-
+pulação. Por exemplo, uma pesquisa é conduzida em uma amostra de 
+médicas para determinar se o argumento principal para a escolha profis-
+sional é a estabilidade financeira. Ao planejar a pesquisa, seria aceitável 
+fazer uma lista de razões e pedir a cada indivíduo na amostra para sele-
+cionar sua principal razão.
+Planejamento experimental
+Para produzir resultados significativos e não tendenciosos, os experi -
+mentos devem ser cuidadosamente planejados e executados. É importante 
+saber quais passos devem ser realizados para que os resultados sejam váli-
+dos. Três elementos-chave de um experimento bem planejado são controle, 
+aleatorização e replicação.
+Em razão de os resultados poderem ser arruinados por uma variedade 
+de fatores, a capacidade de controlá-los é importante. Um desses fatores é 
+uma variável de confusão.
+Definição 
+Uma variável de confusão ocorre quando um pesquisador não pode distinguir 
+um ou mais fatores que causaram os efeitos provocados sobre a variável em 
+estudo, gerando confusão.
+18 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   18 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Por exemplo, para atrair mais consumidores, o dono de uma cafeteria 
+realiza um experimento ao pintar sua loja usando cores vibrantes. Ao mes-
+mo tempo, um shopping center da região realiza sua grande inauguração. 
+Se os negócios aumentarem na cafeteria, não podemos determinar se isso 
+ocorreu por causa das novas cores ou do novo shopping. Os efeitos das 
+cores e do shopping center se confundem.
+Outro fator que pode afetar os resultados experimentais é o efeito pla-
+cebo. O efeito placebo ocorre quando um indivíduo reage favoravelmen -
+te a um tratamento quando, na verdade, ele(a) recebeu um placebo. Para 
+ajudar a controlar ou minimizar o efeito placebo, uma técnica chamada 
+cegamento pode ser usada.
+Definição 
+O experimento cego (ou cegamento) é uma técnica na qual o indivíduo não 
+sabe se está recebendo um tratamento ou um placebo. Em um experimento 
+duplo-cego, nem o pesquisador nem os indivíduos sabem quem está rece-
+bendo um tratamento ou um placebo. O pesquisador é informado depois que 
+todos os dados forem coletados. Esse tipo de planejamento experimental é 
+preferido pelos pesquisadores.
+Outro elemento de um experimento bem planejado é a aleatorização.
+Definição 
+Aleatorização é o processo de se designar indivíduos aleatoriamente para 
+diferentes grupos de tratamento.
+Em um planejamento completamente aleatorizado, os indivíduos são 
+designados para diferentes grupos de tratamento por meio de seleção 
+aleatória. Em alguns experimentos, pode ser necessário usar blocos, que 
+são grupos de indivíduos com características similares. Um planejamento 
+experimental comumente usado é o planejamento em blocos aleatoriza -
+dos. Para usá-lo, o pesquisador separa os indivíduos com características 
+similares em blocos e, então, dentro de cada bloco, designa-os aleatoria -
+mente para os grupos. Por exemplo, um pesquisador que está testando os 
+efeitos de uma nova bebida para perda de peso pode, primeiro, dividir os 
+indivíduos por faixa etária, tal como 30 a 39 anos, 40 a 49 anos e acima 
+de 50 anos. Então, dentro de cada faixa, designar aleatoriamente os in -
+divíduos ou para o grupo de tratamento ou para o grupo controle (veja 
+a Figura 1.6).
+Figura 1.6 Planejamento em blocos aleatorizados.
+Controle
+Tratamento
+30 a 39
+anos
+Controle
+Tratamento
+40 a 49
+anos
+Controle
+Tratamento
+acima de
+50 anos
+Todos os
+indivíduos
+Entenda
+O efeito Hawthorne ocorre 
+em um experimento quando 
+os indivíduos mudam seu 
+comportamento simplesmente 
+porque sabem que estão 
+participando de um experimento.
+Capítulo 1 Introdução à estatística 19
+M01_LARS0000_06_SE_C01.indd   19 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Outro tipo de planejamento experimental é o planejamento de pares 
+combinados, no qual os indivíduos são colocados em pares de acordo com a 
+similaridade. Um indivíduo em cada par é selecionado aleatoriamente para 
+receber um tratamento enquanto o outro indivíduo recebe um tratamento 
+diferente. Por exemplo, dois indivíduos podem ser colocados em pares por 
+causa da idade, de uma localização geográfica ou de uma característica fí-
+sica em particular. 
+O tamanho da amostra , que é o número de indivíduos em um estudo, 
+é outra parte importante do planejamento experimental. Para melhorar a 
+validade dos resultados experimentais, a replicação é necessária.
+Definição 
+Replicação é a repetição de um experimento sob condições iguais ou 
+semelhantes.
+Por exemplo, suponha que um experimento seja planejado para testar 
+uma vacina contra gripe. No experimento, 10.000 pessoas recebem a vacina 
+e outras 10.000 recebem um placebo. Por conta do tamanho da amostra, a 
+eficácia da vacina seria provavelmente observada. Mas, se os indivíduos no 
+experimento não forem selecionados de modo que ambos os grupos sejam 
+similares (de acordo com gênero e idade), os resultados serão de menor valor.
+2Exemplo
+Analisando um planejamento experimental
+Uma empresa quer testar a eficácia de uma nova goma de mascar 
+desenvolvida para ajudar as pessoas a pararem de fumar. Identifique 
+um problema em potencial com o planejamento experimental dado e 
+sugira uma maneira de melhorá-lo.
+1
+. A empresa identifica dez adultos que são fumantes há bastante tem-
+po. Cinco deles recebem a nova goma de mascar e os outros cin -
+co recebem um placebo. Depois de dois meses, eles são avaliados e 
+descobre-se que os cinco indivíduos que estão usando a nova goma 
+pararam de fumar.
+2
+. A empresa identifica mil adultos que são fumantes há bastante tempo. 
+Eles são divididos em blocos de acordo com o gênero. As mulheres 
+recebem a nova goma e os homens recebem o placebo. Depois de dois 
+meses, um número significante de mulheres tinha parado de fumar.
+Solução
+1. O tamanho da amostra não é grande o suficiente para validar os 
+resultados. O experimento deve ser replicado, com amostra suficien-
+temente maior, para melhorar a validade.
+2. Os grupos não são similares . A nova goma de mascar pode ter mais 
+efeito nas mulheres do que nos homens ou vice-versa. Os indivíduos 
+podem ser divididos em blocos de acordo com gênero, mas depois, 
+dentro de cada bloco, eles precisam ser aleatoriamente designados 
+para estar no grupo de tratamento ou controle.
+Tente você mesmo 2
+A empresa do Exemplo 2 identifica 240 adultos fumantes. Eles são 
+aleatoriamente designados para estar em um grupo de tratamento ou 
+controle. Cada indivíduo recebe um DVD sobre os perigos do fumo. 
+Entenda
+A validade de um experimento 
+refere-se à acurácia e à 
+confiabilidade dos resultados. 
+Os resultados de um 
+experimento válido são mais 
+prováveis de serem aceitos na 
+comunidade científica.
+20 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   20 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Depois de quatro meses, a maioria dos indivíduos no grupo de trata -
+mento parou de fumar.
+a. Identifique um problema em potencial com o planejamento 
+experimental.
+b. Como o planejamento poderia ser melhorado?
+Técnicas de amostragem
+Um censo é uma contagem ou medição de toda a população. A reali -
+zação de um censo fornece informações completas, mas é frequentemente 
+caro e difícil de realizar. Uma amostragem é uma contagem ou medição 
+de parte de uma população e é mais comumente usada nos estudos es -
+tatísticos. Para coletar dados não viesados, um pesquisador deve assegu -
+rar que a amostra é representativa da população. Técnicas de amostragem 
+apropriadas devem ser utilizadas para garantir que as inferências sobre a 
+população sejam válidas. Lembre-se de que, quando um estudo é realizado 
+com dados falhos, os resultados são questionáveis. Mesmo com os melhores 
+métodos de amostragem, um erro de amostragem pode acontecer. Um erro 
+de amostragem é a diferença entre os resultados da amostra e os da popu-
+lação. Quando aprendemos sobre estatística inferencial, também aprende-
+mos técnicas para controlar esses erros de amostragem.
+Uma amostragem aleatória é aquela na qual todos os elementos de uma 
+população têm chances iguais de serem selecionados. Uma amostragem ale-
+atória simples é aquela na qual cada amostra possível de mesmo tamanho 
+tem a mesma chance de ser selecionada. Uma maneira de coletar uma amos-
+tra aleatória simples é designar um número diferente para cada membro da 
+população e então usar uma tabela de números aleatórios, como a Tabela 
+B.1 do Apêndice B, aqui representada pela Tabela 1.10. As respostas, conta-
+gens ou medições provenientes de elementos da população cujos números 
+correspondem àqueles gerados com o uso da tabela farão parte da amostra. 
+Calculadoras e programas de computador também são utilizados para gerar 
+números aleatórios (veja a seção Tecnologia no final deste capítulo).
+T abela 1.10 Números aleatórios.
+92630 78240 19267 95457 53497 23894 37708 79862
+79445 78735 71549 44843 26104 67318 00701 34986
+59654 71966 27386 50004 05358 94031 29281 18544
+31524 49587 76612 39789 13537 48086 59483 60680
+06348 76938 90379 51392 55887 71015 09209 79157
+Parte da Tabela B.1 do Apêndice B.
+Considere um estudo para estimar o número de pessoas que moram no 
+Condado de West Ridge. Para usar uma amostra aleatória simples, no intui-
+to de contar o número de pessoas que moram nos domicílios do condado, 
+você poderia designar um número diferente para cada domicílio, usar uma 
+ferramenta tecnológica ou uma tabela de números aleatórios para gerar 
+uma amostra de números e então contar o número de pessoas que moram 
+em cada domicílio selecionado.
+3Exemplo
+Obtendo uma amostra aleatória simples
+Há 731 estudantes matriculados em um curso de estatística em uma 
+faculdade. Você deseja formar uma amostra de oito estudantes para 
+responder às questões de uma pesquisa. Selecione os estudantes que 
+pertencerão à amostra aleatória simples.
+Entenda
+Uma amostra tendenciosa é 
+a que não é representativa da 
+população da qual é extraída. 
+Por exemplo, uma amostra 
+consistindo apenas em 
+estudantes universitários entre 18 
+e 22 anos não seria representativa 
+de toda a população entre 18 e 22 
+anos do país.
+ Para explorar mais esse tópico, 
+veja a Atividade 1 .3.
+Capítulo 1 Introdução à estatística 21
+M01_LARS0000_06_SE_C01.indd   21 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Solução
+Designe números de 1 a 731 para cada estudante do curso. Na tabela 
+de números aleatórios, escolha um ponto de partida aleatoriamente e 
+leia os dígitos em grupos de 3 (porque 731 é um número de 3 dígitos). 
+Por exemplo, se você começar na terceira fileira da tabela, no começo da 
+segunda coluna, você agruparia os números como a seguir:
+719|66 2|738|6  50|004| 053|58 9|403|1  29|281| 185|44
+Ignorando os números maiores do que 731, os primeiros oito núme-
+ros são 719, 662, 650, 4, 53, 589, 403 e 129. Os estudantes que receberam 
+esses números formarão a amostra. Para encontrar a amostra usando a 
+calculadora TI-84 plus, siga as instruções do box “Dica de estudo” .
+Tente você mesmo 3
+Uma empresa emprega 79 pessoas. Escolha uma amostra aleatória 
+simples composta de cinco para pesquisar.
+a. Na Tabela B.1 de números aleatórios no Apêndice B, escolha aleato-
+riamente um ponto de partida.
+b. Leia os dígitos em grupos de dois.
+c. Escreva os cinco números aleatórios menores que 80.
+Quando você escolhe os elementos de uma amostra, você deve decidir 
+se é aceitável ter o mesmo elemento da população mais de uma vez. Se for 
+aceitável, então o processo amostral é com reposição. Se não for aceitável, 
+o processo é sem reposição.
+Existem muitas outras técnicas de amostragem comumente usadas. 
+Cada uma tem vantagens e desvantagens.
+ • Amostragem estratificada  Quando é importante que uma amostra 
+tenha elementos de cada segmento da população, devemos usar uma 
+amostra estratificada. Dependendo do foco do estudo, elementos de 
+uma população são divididos em dois ou mais subconjuntos, chamados 
+de estratos, que compartilham uma característica similar como idade, 
+sexo, grupo étnico ou até mesmo preferência política. Uma amostra é 
+então selecionada aleatoriamente de cada um dos estratos. O uso de 
+uma amostra estratificada assegura que cada segmento da população 
+está representado. Por exemplo, para coletar uma amostra estratificada 
+do número de pessoas que moram no Condado de West Ridge, você 
+poderia dividir os domicílios em níveis socioeconômicos e, então, sele -
+cionar aleatoriamente residências de cada nível (veja a Figura 1.7).
+Ao usar uma amostragem estratificada, alguns cuidados devem ser to -
+mados, de modo a assegurar que todos os estratos forneçam amostras 
+proporcionais às suas reais porcentagens de ocorrência na população. 
+Por exemplo, se 40% das pessoas no Condado de West Ridge perten -
+cem ao grupo de renda mais baixa, então a amostra (amostragem es -
+tratificada proporcional) deve ter uma proporção de 40% desse grupo.
+Figura 1.7 Amostragem estratificada.
+Grupo 1:
+renda baixa
+Grupo 2:
+renda média
+Grupo 3:
+renda alta
+Dica de estudo
+Aqui constam instruções para 
+usar um gerador de números 
+aleatórios inteiros em uma 
+calculadora TI-84 plus para o 
+Exemplo 3.
+MATH
+Escolha o menu PRB.
+5:randl(
+1  ,  7  3  1  ,  8  )
+ENTER
+Se você continuar pressionando 
+ENTER , mais amostras 
+aleatórias de oito números 
+inteiros serão geradas.
+22 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   22 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ • Amostragem por conglomerado  Quando a população recai em sub -
+grupos que ocorrem naturalmente, cada um tendo características simi -
+lares, uma amostragem por conglomerado pode ser a mais apropriada. 
+Para selecionar uma amostragem em tal procedimento, divida a popula-
+ção em grupos, chamados conglomerados, e selecione todos os elemen-
+tos em um ou mais (mas não em todos) conglomerados sorteados. Tipos 
+de conglomerados poderiam ser seções diferentes do mesmo curso ou 
+diferentes filiais de um banco. Por exemplo, para coletar uma amostra 
+por conglomerado do número de pessoas que moram nos domicílios do 
+Condado de West Ridge, divida os domicílios em grupos de acordo com 
+os códigos postais, então, selecione todas as residências em um ou mais, 
+mas não todos, códigos postais e conte o número de pessoas que vivem 
+em cada domicílio (veja a Figura 1.8). Ao usar uma amostragem por 
+conglomerado, devemos ter cuidado para assegurar que todos tenham 
+características similares. Por exemplo, se um dos grupos de código pos-
+tal tem uma proporção maior de pessoas de alta renda, os dados podem 
+não ser representativos da população.
+Figura 1.8  Amostragem por conglomerado — Zonas de códigos postais no 
+Condado de West Ridge.
+Zona 1
+Zona 3
+Zona 4
+Zona 2
+ • Amostragem sistemática Uma amostragem sistemática é aquela na 
+qual é atribuído um número a cada elemento da população ordenada. 
+Essa ordenação é dividida segundo o número de elementos definidos 
+para a amostra, gerando grupos. Um número é selecionado aleatoria-
+mente no primeiro grupo, e, então, os demais elementos da amostra são 
+selecionados em intervalos regulares a partir do número inicial. (Isto é, 
+cada 3
+o, 5o ou 100 o membro é selecionado.) Por exemplo, para coletar 
+uma amostra sistemática do número de pessoas que moram em West 
+Ridge, poderíamos designar um número diferente para cada domicílio, 
+escolher aleatoriamente um número no primeiro grupo (por exemplo, 
+domicílios de 1 a 100, sorteando o número 80) e, a partir dele, selecionar 
+a cada 100
+o domicílio (80, 180, 280 e assim por diante) e contar o núme-
+ro de pessoas vivendo em cada um (veja a Figura 1.9). Uma vantagem 
+da amostragem sistemática é que ela é fácil de ser usada. Contudo, caso 
+ocorra qualquer padrão de regularidade nos dados, esse tipo de amos -
+tragem deve ser evitado.
+Figura 1.9 Amostragem sistemática.
+Um tipo de amostragem que frequentemente leva a estudos tendencio-
+sos (portanto, não é recomendada) é a amostragem por conveniência. Uma 
+amostra por conveniência consiste somente em membros da população 
+que são fáceis de contatar.
+Entenda
+Para uma amostragem 
+estratificada, cada um dos estratos 
+contém elementos com certas 
+características (por exemplo, 
+uma faixa etária em particular). 
+Em contraste, os conglomerados 
+consistem em grupamentos 
+geográficos, e cada um deve 
+conter elementos com todas 
+as características (por exemplo, 
+todas as faixas etárias). 
+Com amostras estratificadas, 
+alguns elementos de cada grupo 
+(estrato) são selecionados. Na 
+amostragem por conglomerado, 
+todos os elementos de um ou 
+mais grupos são selecionados.
+Retratando o mundo
+A organização Gallup 
+conduz muitas pesquisas 
+(ou levantamentos) sobre o 
+presidente, o congresso e 
+assuntos políticos e não políticos. 
+Uma pesquisa Gallup comumente 
+citada é o índice de aprovação 
+pública do presidente. Por 
+exemplo, os índices de aprovação 
+para o presidente Barack Obama 
+em 2012 são mostrados no gráfico 
+a seguir. (O índice é da pesquisa 
+conduzida ao final de cada mês.) 
+10
+20
+30
+40
+50
+60
+OutJulAbr
+Meses
+Percentual de aprovaçãoJan
+Índice de aprovação
+do presidente, 2012.
+44
+514648
+Discuta algumas maneiras nas 
+quais a Gallup poderia selecionar 
+uma amostra tendenciosa para 
+conduzir a pesquisa. Como 
+a Gallup poderia selecionar 
+uma amostra que não seja 
+tendenciosa?
+Capítulo 1 Introdução à estatística 23
+M01_LARS0000_06_SE_C01.indd   23 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/

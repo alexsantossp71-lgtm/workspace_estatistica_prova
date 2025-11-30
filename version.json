@@ -1,0 +1,57 @@
+{
+  "version": "1.0.0",
+  "name": "Estatística Aplicada - Website Interativo",
+  "description": "Plataforma educacional interativa baseada no livro Estatística Aplicada de Larson & Farber",
+  "releaseDate": "2025-11-30",
+  "status": "stable",
+  "features": {
+    "completedChapters": ["chapter1", "chapter2"],
+    "totalChapters": 10,
+    "completionPercentage": 20,
+    "hasVisualizations": true,
+    "hasInteractiveCharts": true,
+    "isResponsive": true,
+    "hasDarkMode": false
+  },
+  "technologies": {
+    "html": "5",
+    "css": "3",
+    "javascript": "ES6+",
+    "chartjs": "latest",
+    "fonts": "Google Fonts (Outfit)"
+  },
+  "nextVersion": {
+    "version": "2.0.0",
+    "plannedFeatures": [
+      "Sistema de busca global",
+      "Modo escuro/claro",
+      "Sistema de favoritos",
+      "Progresso do usuário",
+      "Quiz interativo",
+      "Calculadora estatística",
+      "PWA offline",
+      "Capítulos 3-10 completos"
+    ],
+    "estimatedRelease": "2025-12-31"
+  },
+  "changelog": {
+    "1.0.0": {
+      "date": "2025-11-30",
+      "changes": [
+        "Estrutura completa de 10 capítulos",
+        "Design moderno com glassmorphism",
+        "Capítulos 1 e 2 com conteúdo completo",
+        "Visualizações interativas com Chart.js",
+        "Layout responsivo",
+        "Navegação intuitiva",
+        "Hero section animada"
+      ]
+    }
+  },
+  "metadata": {
+    "author": "Equipe de Desenvolvimento",
+    "license": "MIT",
+    "repository": "",
+    "documentation": "README.md"
+  }
+}

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 9 - Correlação e Regressão | Estatística Aplicada</title>
+    <meta name="description"
+        content="Aprenda sobre correlação linear, regressão linear simples e coeficiente de determinação R²">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 450px;
+            margin: 2rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .svg-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .correlation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .correlation-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .correlation-card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .correlation-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="chapter8.html" class="back-btn">← Capítulo Anterior</a>
+        <div class="nav-title">Capítulo 9</div>
+        <a href="chapter10.html" class="next-btn">Próximo Capítulo →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Capítulo 9</div>
+            <h1 class="chapter-title">Correlação e Regressão Linear</h1>
+            <p class="chapter-subtitle">Descobrindo e modelando relações entre variáveis</p>
+        </section>
+
+        <!-- SEÇÃO 9.1 -->
+        <section class="content-section">
+            <div class="section-icon">🔗</div>
+            <h2 id="section-9-1">9.1 Correlação Linear</h2>
+
+            <p class="lead-text">
+                A <strong>correlação</strong> mede a força e direção da relação linear entre duas variáveis
+                quantitativas.
+                O coeficiente de correlação de Pearson (r) varia de -1 a +1.
+            </p>
+
+            <!-- SVG: Tipos de Correlação -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1.5rem;">📊 Tipos de Correlação</h3>
+                <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Positive Correlation -->
+                    <g>
+                        <text x="150" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#10b981">r =
+                            +0.9 (Positiva Forte)</text>
+                        <rect x="50" y="50" width="200" height="200" fill="#f0fdf4" stroke="#10b981" stroke-width="2"
+                            rx="8" />
+                        <circle cx="80" cy="200" r="5" fill="#10b981" />
+                        <circle cx="100" cy="180" r="5" fill="#10b981" />
+                        <circle cx="120" cy="160" r="5" fill="#10b981" />
+                        <circle cx="140" cy="130" r="5" fill="#10b981" />
+                        <circle cx="160" cy="110" r="5" fill="#10b981" />
+                        <circle cx="180" cy="90" r="5" fill="#10b981" />
+                        <circle cx="200" cy="70" r="5" fill="#10b981" />
+                        <circle cx="220" cy="60" r="5" fill="#10b981" />
+                        <line x1="70" y1="210" x2="230" y2="50" stroke="#10b981" stroke-width="2" />
+                    </g>
+
+                    <!-- No Correlation -->
+                    <g>
+                        <text x="450" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#64748b">r ≈ 0
+                            (Sem Correlação)</text>
+                        <rect x="350" y="50" width="200" height="200" fill="#f8fafc" stroke="#64748b" stroke-width="2"
+                            rx="8" />
+                        <circle cx="380" cy="120" r="5" fill="#64748b" />
+                        <circle cx="400" cy="180" r="5" fill="#64748b" />
+                        <circle cx="420" cy="100" r="5" fill="#64748b" />
+                        <circle cx="440" cy="160" r="5" fill="#64748b" />
+                        <circle cx="460" cy="90" r="5" fill="#64748b" />
+                        <circle cx="480" cy="140" r="5" fill="#64748b" />
+                        <circle cx="500" cy="110" r="5" fill="#64748b" />
+                        <circle cx="520" cy="170" r="5" fill="#64748b" />
+                    </g>
+
+                    <!-- Negative Correlation -->
+                    <g>
+                        <text x="750" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#ef4444">r =
+                            -0.9 (Negativa Forte)</text>
+                        <rect x="650" y="50" width="200" height="200" fill="#fef2f2" stroke="#ef4444" stroke-width="2"
+                            rx="8" />
+                        <circle cx="680" cy="70" r="5" fill="#ef4444" />
+                        <circle cx="700" cy="90" r="5" fill="#ef4444" />
+                        <circle cx="720" cy="110" r="5" fill="#ef4444" />
+                        <circle cx="740" cy="140" r="5" fill="#ef4444" />
+                        <circle cx="760" cy="160" r="5" fill="#ef4444" />
+                        <circle cx="780" cy="180" r="5" fill="#ef4444" />
+                        <circle cx="800" cy="200" r="5" fill="#ef4444" />
+                        <circle cx="820" cy="210" r="5" fill="#ef4444" />
+                        <line x1="670" y1="60" x2="830" y2="220" stroke="#ef4444" stroke-width="2" />
+                    </g>
+                </svg>
+            </div>
+
+            <div class="correlation-grid">
+                <div class="correlation-card">
+                    <h4>r = +1</h4>
+                    <p>Correlação positiva perfeita</p>
+                </div>
+                <div class="correlation-card">
+                    <h4>+0.7 a +1</h4>
+                    <p>Correlação positiva forte</p>
+                </div>
+                <div class="correlation-card">
+                    <h4>+0.3 a +0.7</h4>
+                    <p>Correlação positiva moderada</p>
+                </div>
+                <div class="correlation-card">
+                    <h4>-0.3 a +0.3</h4>
+                    <p>Correlação fraca ou nula</p>
+                </div>
+                <div class="correlation-card">
+                    <h4>-0.7 a -0.3</h4>
+                    <p>Correlação negativa moderada</p>
+                </div>
+                <div class="correlation-card">
+                    <h4>-1 a -0.7</h4>
+                    <p>Correlação negativa forte</p>
+                </div>
+            </div>
+
+            <div class="formula-box">
+                r = Σ[(xᵢ - x̄)(yᵢ - ȳ)] / √[Σ(xᵢ - x̄)² × Σ(yᵢ - ȳ)²]
+            </div>
+
+            <div class="highlight-box">
+                <h3>⚠️ IMPORTANTE: Correlação ≠ Causalidade!</h3>
+                <p>
+                    Uma correlação forte <strong>não significa</strong> que uma variável causa a outra!
+                    Pode haver uma terceira variável influenciando ambas, ou a correlação pode ser apenas coincidência.
+                </p>
+                <p><strong>Exemplo:</strong> Vendas de sorvete e afogamentos têm correlação positiva, mas sorvete não
+                    causa afogamentos.
+                    Ambos aumentam no verão (temperatura é a variável oculta).</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 9.2 -->
+        <section class="content-section">
+            <div class="section-icon">📈</div>
+            <h2 id="section-9-2">9.2 Regressão Linear Simples</h2>
+
+            <p class="lead-text">
+                A <strong>regressão linear</strong> encontra a "melhor" reta que descreve a relação entre X (variável
+                independente)
+                e Y (variável dependente). Usamos essa reta para fazer previsões!
+            </p>
+
+            <div class="formula-box">
+                ŷ = a + bx
+            </div>
+            <p style="text-align: center; color: #64748b; margin-top: 0.5rem;">
+                Onde: <strong>ŷ</strong> = valor previsto, <strong>a</strong> = intercepto, <strong>b</strong> =
+                inclinação
+            </p>
+
+            <div class="highlight-box">
+                <h3>📐 Fórmulas para a e b</h3>
+                <p><strong>Inclinação (b):</strong></p>
+                <div class="formula-box" style="font-size: 1.1rem;">
+                    b = r × (sʏ / sₓ)
+                </div>
+                <p><strong>Intercepto (a):</strong></p>
+                <div class="formula-box" style="font-size: 1.1rem;">
+                    a = ȳ - b × x̄
+                </div>
+            </div>
+
+            <!-- Gráfico Chart.js: Scatter Plot com Regressão -->
+            <div class="chart-container">
+                <canvas id="regressionChart"></canvas>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo 1: Horas de Estudo vs Nota</h3>
+                <p><strong>Problema:</strong> Queremos prever a nota de um aluno com base nas horas de estudo.</p>
+
+                <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                    <thead style="background: #667eea; color: white;">
+                        <tr>
+                            <th style="padding: 0.75rem; border: 1px solid #ddd;">Horas (X)</th>
+                            <th style="padding: 0.75rem; border: 1px solid #ddd;">Nota (Y)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">2</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">65</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">4</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">75</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">6</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">85</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">8</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">90</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">10</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">95</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="step-by-step">
+                    <h4>Solução Passo a Passo:</h4>
+
+                    <p><strong>Passo 1:</strong> Calcular médias</p>
+                    <p>x̄ = (2+4+6+8+10)/5 = 6</p>
+                    <p>ȳ = (65+75+85+90+95)/5 = 82</p>
+
+                    <p><strong>Passo 2:</strong> Calcular r (correlação)</p>
+                    <p>r = 0,985 (correlação muito forte!)</p>
+
+                    <p><strong>Passo 3:</strong> Calcular desvios padrão</p>
+                    <p>sₓ = 3,16 | sʏ = 12,04</p>
+
+                    <p><strong>Passo 4:</strong> Calcular b (inclinação)</p>
+                    <p>b = 0,985 × (12,04 / 3,16) = 3,75</p>
+
+                    <p><strong>Passo 5:</strong> Calcular a (intercepto)</p>
+                    <p>a = 82 - 3,75 × 6 = 59,5</p>
+
+                    <p><strong>Equação de Regressão:</strong></p>
+                    <div class="formula-box">
+                        ŷ = 59,5 + 3,75x
+                    </div>
+
+                    <p><strong>Interpretação:</strong></p>
+                    <ul>
+                        <li>Cada hora adicional de estudo aumenta a nota em <strong>3,75 pontos</strong></li>
+                        <li>Um aluno que não estuda (x=0) teria nota prevista de 59,5</li>
+                    </ul>
+
+                    <p><strong>Previsão:</strong> Se um aluno estudar 7 horas:</p>
+                    <p>ŷ = 59,5 + 3,75(7) = 59,5 + 26,25 = <strong>85,75 pontos</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 9.3 -->
+        <section class="content-section">
+            <div class="section-icon">🎯</div>
+            <h2 id="section-9-3">9.3 Coeficiente de Determinação (R²)</h2>
+
+            <p class="lead-text">
+                O <strong>R²</strong> indica quanto da variação em Y é explicada por X.
+                É simplesmente o quadrado do coeficiente de correlação: R² = r²
+            </p>
+
+            <div class="formula-box">
+                R² = r²
+            </div>
+
+            <!-- SVG: Interpretação do R² -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1.5rem;">📊 Interpretação do R²</h3>
+                <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+                    <!-- R² = 0.97 -->
+                    <g>
+                        <rect x="50" y="50" width="200" height="150" fill="#10b981" rx="8" />
+                        <rect x="50" y="50" width="194" height="150" fill="#10b981" opacity="0.8" rx="8" />
+                        <rect x="244" y="50" width="6" height="150" fill="#ef4444" opacity="0.5" rx="2" />
+                        <text x="150" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">R² =
+                            0,97 (97%)</text>
+                        <text x="150" y="135" text-anchor="middle" font-size="14" fill="white"
+                            font-weight="bold">Explicado pelo modelo</text>
+                        <text x="150" y="220" text-anchor="middle" font-size="12" fill="#64748b">Excelente
+                            ajuste!</text>
+                    </g>
+
+                    <!-- R² = 0.50 -->
+                    <g>
+                        <rect x="300" y="50" width="200" height="150" fill="#3b82f6" rx="8" />
+                        <rect x="300" y="50" width="100" height="150" fill="#3b82f6" opacity="0.8" rx="8" />
+                        <rect x="400" y="50" width="100" height="150" fill="#ef4444" opacity="0.5" rx="8" />
+                        <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">R² =
+                            0,50 (50%)</text>
+                        <text x="350" y="130" text-anchor="middle" font-size="12" fill="white"
+                            font-weight="bold">Explicado</text>
+                        <text x="450" y="130" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Não
+                            explicado</text>
+                        <text x="400" y="220" text-anchor="middle" font-size="12" fill="#64748b">Ajuste moderado</text>
+                    </g>
+
+                    <!-- R² = 0.10 -->
+                    <g>
+                        <rect x="550" y="50" width="200" height="150" fill="#ef4444" rx="8" />
+                        <rect x="550" y="50" width="20" height="150" fill="#10b981" opacity="0.8" rx="8" />
+                        <rect x="570" y="50" width="180" height="150" fill="#ef4444" opacity="0.5" rx="8" />
+                        <text x="650" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">R² =
+                            0,10 (10%)</text>
+                        <text x="650" y="135" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Modelo
+                            explica pouco</text>
+                        <text x="650" y="220" text-anchor="middle" font-size="12" fill="#64748b">Ajuste fraco</text>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Interpretação do R²</h3>
+                <ul>
+                    <li><strong>R² = 0,97:</strong> 97% da variação em Y é explicada por X (excelente!)</li>
+                    <li><strong>R² = 0,50:</strong> 50% da variação é explicada (moderado)</li>
+                    <li><strong>R² = 0,10:</strong> Apenas 10% é explicada (fraco - modelo não é útil)</li>
+                </ul>
+                <p><strong>Regra geral:</strong> R² > 0,70 indica um bom modelo para previsões</p>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo 2: Interpretando R²</h3>
+                <p>No exemplo anterior (horas de estudo vs nota), tínhamos r = 0,985.</p>
+
+                <div class="step-by-step">
+                    <p><strong>Cálculo:</strong></p>
+                    <p>R² = (0,985)² = 0,970</p>
+
+                    <p><strong>Interpretação:</strong></p>
+                    <p>
+                        <strong>97%</strong> da variação nas notas dos alunos pode ser explicada pelas horas de estudo.
+                        Apenas 3% é devido a outros fatores (inteligência, qualidade do estudo, sorte, etc.).
+                    </p>
+
+                    <div class="tip-box">
+                        <p><strong>💡 Conclusão:</strong> Este é um modelo EXCELENTE para prever notas com base em horas
+                            de estudo!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráfico Chart.js: Diferentes Valores de R² -->
+            <div class="chart-container">
+                <canvas id="r2ComparisonChart"></canvas>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIOS RESOLVIDOS -->
+        <section class="content-section">
+            <div class="section-icon">✏️</div>
+            <h2>Exercícios Resolvidos</h2>
+
+            <div class="exercise-box">
+                <h3>Exercício 1: Temperatura e Vendas de Sorvete</h3>
+                <p><strong>Dados:</strong> Temperatura (°C) vs Vendas (R$)</p>
+
+                <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                    <thead style="background: #667eea; color: white;">
+                        <tr>
+                            <th style="padding: 0.75rem; border: 1px solid #ddd;">Temperatura (X)</th>
+                            <th style="padding: 0.75rem; border: 1px solid #ddd;">Vendas (Y)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">20°C</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">R$ 150</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">25°C</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">R$ 200</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">30°C</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">R$ 280</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">35°C</td>
+                            <td style="padding: 0.5rem; border: 1px solid #ddd; text-align: center;">R$ 350</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Calcule:</strong> (a) Correlação r, (b) Equação de regressão, (c) Previsão para 28°C</p>
+
+                <div class="step-by-step">
+                    <h4>Solução Completa:</h4>
+
+                    <p><strong>(a) Correlação:</strong></p>
+                    <p>r = 0,995 (correlação positiva muito forte!)</p>
+
+                    <p><strong>(b) Equação de Regressão:</strong></p>
+                    <p>x̄ = 27,5 | ȳ = 245</p>
+                    <p>b = 13,33 | a = -121,58</p>
+                    <div class="formula-box">
+                        ŷ = -121,58 + 13,33x
+                    </div>
+
+                    <p><strong>(c) Previsão para 28°C:</strong></p>
+                    <p>ŷ = -121,58 + 13,33(28)</p>
+                    <p>ŷ = -121,58 + 373,24</p>
+                    <p><strong>ŷ = R$ 251,66</strong></p>
+
+                    <p><strong>R²:</strong> (0,995)² = 0,99 → 99% da variação nas vendas é explicada pela temperatura!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUMO -->
+        <section class="content-section">
+            <div class="section-icon">📚</div>
+            <h2>Resumo do Capítulo</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>Correlação (r):</strong> Mede força e direção da relação linear (-1 a +1)</li>
+                    <li><strong>Regressão Linear:</strong> ŷ = a + bx (reta que melhor se ajusta aos dados)</li>
+                    <li><strong>R²:</strong> Proporção da variação explicada pelo modelo (0 a 1)</li>
+                    <li><strong>Correlação ≠ Causalidade:</strong> Sempre questione a relação!</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter8.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 8</div>
+                </div>
+            </a>
+            <a href="chapter10.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Próximo</div>
+                    <div class="nav-title">Capítulo 10</div>
+                </div>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Gráfico 1: Scatter Plot com Regressão
+        const regCtx = document.getElementById('regressionChart');
+        if (regCtx) {
+            const studyData = [
+                { x: 2, y: 65 },
+                { x: 4, y: 75 },
+                { x: 6, y: 85 },
+                { x: 8, y: 90 },
+                { x: 10, y: 95 }
+            ];
+
+            const regressionLine = [];
+            for (let x = 0; x <= 12; x += 0.5) {
+                regressionLine.push({ x: x, y: 59.5 + 3.75 * x });
+            }
+
+            new Chart(regCtx, {
+                type: 'scatter',
+                data: {
+                    datasets: [
+                        {
+                            label: 'Dados Observados',
+                            data: studyData,
+                            backgroundColor: '#667eea',
+                            pointRadius: 12,
+                            pointHoverRadius: 15
+                        },
+                        {
+                            label: 'Reta de Regressão: ŷ = 59,5 + 3,75x',
+                            data: regressionLine,
+                            type: 'line',
+                            borderColor: '#ff6b6b',
+                            borderWidth: 3,
+                            pointRadius: 0,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '📊 Horas de Estudo vs Nota (r = 0,985 | R² = 0,97)',
+                            font: { size: 20, weight: 'bold' },
+                            color: '#1e293b'
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            title: {
+                                display: true,
+                                text: 'Horas de Estudo',
+                                font: { size: 14, weight: 'bold' }
+                            },
+                            min: 0,
+                            max: 12
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Nota',
+                                font: { size: 14, weight: 'bold' }
+                            },
+                            min: 50,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: Comparação de R²
+        const r2Ctx = document.getElementById('r2ComparisonChart');
+        if (r2Ctx) {
+            // R² = 0.9
+            const highR2 = [];
+            for (let x = 0; x <= 10; x++) {
+                highR2.push({ x: x, y: 10 + 8 * x + (Math.random() - 0.5) * 5 });
+            }
+
+            // R² = 0.3
+            const lowR2 = [];
+            for (let x = 0; x <= 10; x++) {
+                lowR2.push({ x: x, y: 10 + 3 * x + (Math.random() - 0.5) * 20 });
+            }
+
+            new Chart(r2Ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [
+                        {
+                            label: 'R² Alto (≈0.9) - Bom Ajuste',
+                            data: highR2,
+                            backgroundColor: '#10b981',
+                            pointRadius: 8
+                        },
+                        {
+                            label: 'R² Baixo (≈0.3) - Ajuste Fraco',
+                            data: lowR2,
+                            backgroundColor: '#ef4444',
+                            pointRadius: 8
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '📈 Comparação Visual de Diferentes Valores de R²',
+                            font: { size: 20, weight: 'bold' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Variável X' }
+                        },
+                        y: {
+                            title: { display: true, text: 'Variável Y' }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

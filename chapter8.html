@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 8 - Teste de Hipótese (2 amostras) | Estatística Aplicada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .svg-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="chapter7.html" class="back-btn">← Capítulo Anterior</a>
+        <div class="nav-title">Capítulo 8</div>
+        <a href="chapter9.html" class="next-btn">Próximo Capítulo →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Capítulo 8</div>
+            <h1 class="chapter-title">Teste de Hipótese (2 Amostras)</h1>
+            <p class="chapter-subtitle">Comparando dois grupos</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">⚖️</div>
+            <h2>8.1 Teste t para Amostras Independentes</h2>
+
+            <p class="lead-text">
+                Usamos o <strong>teste t para duas amostras independentes</strong> quando queremos comparar as médias
+                de dois grupos diferentes (ex: tratamento vs controle).
+            </p>
+
+            <div class="formula-box">
+                t = (x̄₁ - x̄₂) / √(s₁²/n₁ + s₂²/n₂)
+            </div>
+
+            <!-- SVG: Comparação de Duas Distribuições -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1.5rem;">📊 Comparando Duas Populações
+                </h3>
+                <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="800" height="300" fill="#f8fafc" />
+
+                    <!-- Grupo 1 -->
+                    <path d="M 100 250 Q 100 150, 150 100 T 200 50 T 250 100 T 300 250" fill="#3b82f6" opacity="0.3"
+                        stroke="#3b82f6" stroke-width="3" />
+                    <line x1="200" y1="50" x2="200" y2="250" stroke="#3b82f6" stroke-width="3" />
+                    <text x="200" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#3b82f6">Grupo
+                        1</text>
+                    <text x="200" y="280" text-anchor="middle" font-size="14" fill="#3b82f6">μ₁ = 50</text>
+
+                    <!-- Grupo 2 -->
+                    <path d="M 500 250 Q 500 150, 550 100 T 600 50 T 650 100 T 700 250" fill="#10b981" opacity="0.3"
+                        stroke="#10b981" stroke-width="3" />
+                    <line x1="600" y1="50" x2="600" y2="250" stroke="#10b981" stroke-width="3" />
+                    <text x="600" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#10b981">Grupo
+                        2</text>
+                    <text x="600" y="280" text-anchor="middle" font-size="14" fill="#10b981">μ₂ = 60</text>
+
+                    <!-- Diferença -->
+                    <line x1="200" y1="150" x2="600" y2="150" stroke="#ef4444" stroke-width="3"
+                        marker-end="url(#arrow)" />
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#ef4444" />
+                        </marker>
+                    </defs>
+                    <text x="400" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#ef4444">μ₁ - μ₂
+                        = ?</text>
+
+                    <text x="400" y="30" text-anchor="middle" font-size="14" fill="#64748b">H₀: μ₁ = μ₂ | H₁: μ₁ ≠
+                        μ₂</text>
+                </svg>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Quando Usar?</h3>
+                <ul>
+                    <li>Comparar dois grupos <strong>diferentes</strong> (independentes)</li>
+                    <li>Exemplo: Homens vs Mulheres, Tratamento A vs Tratamento B</li>
+                    <li>Cada indivíduo pertence a apenas um grupo</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Comparando Dois Métodos de Ensino</h3>
+                <p><strong>Problema:</strong> Método A (n=30, x̄=75, s=10) vs Método B (n=30, x̄=82, s=12).
+                    Há diferença significativa? (α=0,05)</p>
+
+                <div class="step-by-step">
+                    <p><strong>Hipóteses:</strong> H₀: μ₁ = μ₂ | H₁: μ₁ ≠ μ₂</p>
+
+                    <p><strong>Estatística t:</strong></p>
+                    <p>t = (75 - 82) / √(10²/30 + 12²/30)</p>
+                    <p>t = -7 / √(3,33 + 4,8) = -7 / 2,85 = <strong>-2,46</strong></p>
+
+                    <p><strong>Graus de liberdade:</strong> gl ≈ 58</p>
+                    <p><strong>t crítico:</strong> ±2,00 (aproximadamente)</p>
+
+                    <p><strong>Decisão:</strong> |-2,46| > 2,00 → <strong>Rejeitamos H₀</strong></p>
+
+                    <p><strong>Conclusão:</strong> Há diferença significativa. O Método B é melhor (média 82 vs 75).</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="independentChart"></canvas>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">🔗</div>
+            <h2>8.2 Teste t para Amostras Pareadas</h2>
+
+            <p class="lead-text">
+                Usamos o <strong>teste t pareado</strong> quando as duas amostras estão relacionadas
+                (ex: antes vs depois no mesmo grupo de pessoas).
+            </p>
+
+            <div class="formula-box">
+                t = d̄ / (sᵈ / √n)
+            </div>
+            <p style="text-align: center; color: #64748b; margin-top: 0.5rem;">
+                Onde: <strong>d̄</strong> = média das diferenças, <strong>sᵈ</strong> = desvio padrão das diferenças
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Quando Usar?</h3>
+                <ul>
+                    <li>Mesmos indivíduos medidos <strong>duas vezes</strong></li>
+                    <li>Exemplo: Antes vs Depois de tratamento, Pré-teste vs Pós-teste</li>
+                    <li>Pares naturais (gêmeos, olho direito vs esquerdo)</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Dieta (Antes vs Depois)</h3>
+                <p><strong>Problema:</strong> 5 pessoas fizeram dieta. Pesos antes: 80, 75, 90, 85, 70.
+                    Depois: 78, 73, 87, 83, 68. A dieta funcionou? (α=0,05)</p>
+
+                <div class="step-by-step">
+                    <p><strong>Diferenças (d = antes - depois):</strong> 2, 2, 3, 2, 2</p>
+
+                    <p><strong>Média das diferenças:</strong> d̄ = (2+2+3+2+2)/5 = 2,2 kg</p>
+
+                    <p><strong>Desvio padrão:</strong> sᵈ = 0,45</p>
+
+                    <p><strong>Estatística t:</strong></p>
+                    <p>t = 2,2 / (0,45/√5) = 2,2 / 0,2 = <strong>11</strong></p>
+
+                    <p><strong>t crítico (gl=4, α=0,05, unilateral):</strong> 2,132</p>
+
+                    <p><strong>Decisão:</strong> 11 > 2,132 → <strong>Rejeitamos H₀</strong></p>
+
+                    <p><strong>Conclusão:</strong> A dieta funcionou! Perda média de 2,2 kg é significativa. 🎉</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="pairedChart"></canvas>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">📚</div>
+            <h2>Resumo do Capítulo</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>Amostras Independentes:</strong> Dois grupos diferentes</li>
+                    <li><strong>Amostras Pareadas:</strong> Mesmos indivíduos, duas medições</li>
+                    <li><strong>Teste t independente:</strong> Compara x̄₁ e x̄₂</li>
+                    <li><strong>Teste t pareado:</strong> Analisa as diferenças (d)</li>
+                    <li><strong>Escolha correta:</strong> Crucial para validade do teste!</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter7.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 7</div>
+                </div>
+            </a>
+            <a href="chapter9.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Próximo</div>
+                    <div class="nav-title">Capítulo 9</div>
+                </div>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Independent samples comparison
+        const indCtx = document.getElementById('independentChart');
+        if (indCtx) {
+            new Chart(indCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Método A', 'Método B'],
+                    datasets: [{
+                        label: 'Média das Notas',
+                        data: [75, 82],
+                        backgroundColor: ['#3b82f6', '#10b981'],
+                        borderColor: ['#1e40af', '#047857'],
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '📊 Comparação de Médias (Amostras Independentes)', font: { size: 20, weight: 'bold' } },
+                        subtitle: { display: true, text: 'Diferença significativa: p < 0,05', font: { size: 12 }, color: '#ef4444' }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: { display: true, text: 'Nota Média', font: { size: 14, weight: 'bold' } }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Paired samples (before/after)
+        const pairCtx = document.getElementById('pairedChart');
+        if (pairCtx) {
+            new Chart(pairCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Pessoa 1', 'Pessoa 2', 'Pessoa 3', 'Pessoa 4', 'Pessoa 5'],
+                    datasets: [
+                        {
+                            label: 'Antes da Dieta',
+                            data: [80, 75, 90, 85, 70],
+                            borderColor: '#ef4444',
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            borderWidth: 3,
+                            fill: false
+                        },
+                        {
+                            label: 'Depois da Dieta',
+                            data: [78, 73, 87, 83, 68],
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            borderWidth: 3,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '📉 Teste Pareado: Peso Antes vs Depois', font: { size: 20, weight: 'bold' } },
+                        subtitle: { display: true, text: 'Perda média: 2,2 kg (p < 0,001)', font: { size: 12 }, color: '#10b981' }
+                    },
+                    scales: {
+                        y: {
+                            title: { display: true, text: 'Peso (kg)', font: { size: 14, weight: 'bold' } },
+                            min: 65,
+                            max: 95
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

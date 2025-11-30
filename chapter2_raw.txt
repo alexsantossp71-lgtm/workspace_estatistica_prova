@@ -1,0 +1,3021 @@
+4Exemplo
+Identificando as técnicas de amostragem
+Você está realizando um estudo para determinar a opinião dos 
+estudantes em sua escola sobre a pesquisa de células-tronco. Identifi-
+que a técnica de amostragem que você usaria ao selecionar as amos -
+tras listadas.
+1. Você divide a população de estudantes com relação às graduações 
+e, aleatoriamente, seleciona e questiona alguns estudantes em cada 
+curso de graduação.
+2. Você designa um número para cada estudante e gera números alea-
+tórios. Então, você questiona cada estudante cujo número é selecio-
+nado aleatoriamente.
+3. Você seleciona estudantes que são da sua turma de biologia.
+Solução
+1. Como os estudantes são divididos em estratos (gr aduações) e uma 
+amostra é selecionada de cada graduação, esta é uma amostra 
+estratificada.
+2
+. Cada amostra de mesmo tamanho tem chances iguais de ser selecio-
+nada e cada estudante tem chances iguais de ser selecionado, então 
+esta é uma amostra aleatória simples. 
+3.
+ Uma vez que a amostra é tomada de estudantes que estão pr onta-
+mente disponíveis, esta é uma amostra por conveniência. A amostra 
+pode ser tendenciosa porque estudantes de biologia podem estar 
+mais familiarizados com pesquisa de células-tronco que os demais, e 
+possuir opiniões mais firmes.
+Tente você mesmo 4
+Você quer determinar a opinião dos estudantes com relação às cé-
+lulas-tronco. Identifique a técnica de amostragem que você usaria ao 
+selecionar as amostras listadas.
+1
+. Você seleciona uma turma aleatoriamente e questiona cada 
+estudante.
+2. Você designa um número para cada estudante e, depois de escolher 
+um número inicial, questiona cada 25º aluno.
+a. Determine como a amostra é selecionada e identifique a técnica de 
+amostragem correspondente.
+b. Discuta potenciais fontes de tendenciosidade (se aplicável). 
+Explique.
+1.3 Exercícios
+Construindo habilidades básicas e vocabulário
+ 1. Qual é a diferença entre um estudo observacional e um 
+experimento? 
+ 2. Qual é a diferença entre um censo e uma amostragem? 
+ 3. Qual é a diferença entre uma amostra aleatória e uma 
+amostra aleatória simples? 
+ 4. O que é a replicação em um experimento? Por que ela é 
+importante?
+Verdadeiro ou falso? Nos exercícios 5 a 10, deter -
+mine se a afirmação é verdadeira ou falsa. Se for falsa, 
+reescreva-a de forma que seja verdadeira.
+ 5. Um placebo é um tratamento real.
+24 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   24 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 6. Um experimento duplo-cego é usado para aumentar o 
+efeito placebo.
+ 7. Usar amostras sistemáticas garante que elementos de 
+cada grupo dentro de uma população serão amostrados.
+ 8. Um censo é uma contagem de parte de uma população.
+ 9. O método para seleção de uma amostra estratificada é 
+ordenar uma população de alguma maneira e, então, se-
+lecionar elementos da população em intervalos regulares.
+ 10. Para selecionar uma amostra por conglomerado, divi -
+de-se a população em grupos e, então, selecionam-se 
+todos os elementos em pelo menos um (mas não todos) 
+dos grupos.
+Estudo observacional ou experimento? Nos exer-
+cícios 11 a 14, determine se o estudo é observacional ou 
+um experimento. Explique.
+ 11. Em uma pesquisa com 177 .237 adultos americanos, 65% 
+afirmaram que visitaram um dentista nos últimos 12 me-
+ses. (Fonte: Gallup.)
+ 12. Pesquisadores demonstraram em pessoas com risco au-
+mentado para doenças cardiovasculares que 2.000 mi -
+ligramas por dia de acetil-L-carnitina, em um período 
+de 24 semanas, reduziram a pressão sanguínea e melho-
+raram a resistência à insulina.  (Fonte: American Heart 
+Association.)
+ 13. Para estudar os efeitos da música nos hábitos de dire-
+ção, oito motoristas (quatro homens e quatro mulheres) 
+dirigiram 500 milhas enquanto ouviam diferentes gêne-
+ros musicais. (Fonte: Confused.com.)
+ 14. Para estudar a relação predador-presa no Mar de Be -
+ring, pesquisadores observaram o comportamento ali -
+mentar de três espécies: gaivota-tridáctila, uria lomvia e 
+urso-do-mar. (Fonte: PLOS ONE.)
+Usando e interpretando conceitos
+ 15. Droga antialérgica Uma companhia farmacêutica quer 
+testar a eficácia de uma nova droga antialérgica. A empre-
+sa identifica 250 mulheres de 30 a 35 anos que sofrem de 
+alergias severas. Os indivíduos são aleatoriamente desig-
+nados em dois grupos. Um grupo recebe a nova droga e 
+outro recebe um placebo que parece com a nova droga. 
+Depois de seis meses, os sintomas dos indivíduos são es-
+tudados e comparados.
+(a) Identifique as unidades experimentais e tratamen -
+tos usados nesse experimento.
+(b) Identifique um problema em potencial com o plane-
+jamento experimental usado e sugira uma maneira 
+de melhorá-lo.
+(c) Como esse experimento poderia ser planejado para 
+ser duplo-cego?
+ 16. Tênis Uma companhia de calçados desenvolveu um 
+novo tipo de tênis criado para ajudar a retardar o prin -
+cípio da artrite no joelho. Oitenta pessoas com sinais 
+precoces de artrite foram voluntárias para o estudo. 
+Metade dos voluntários usou o novo tênis e a outra me-
+tade usou tênis comuns, que tinham a mesma aparência 
+dos tênis do experimento. Os indivíduos usaram os tênis 
+todos os dias. Na conclusão do estudo, seus sintomas fo-
+ram avaliados e uma ressonância magnética foi realiza-
+da em seus joelhos. (Fonte: Washington Post.)
+(a) Identifique as unidades experimentais e tratamen -
+tos usados nesse experimento.
+(b) Identifique um problema em potencial com o plane-
+jamento experimental usado e sugira uma maneira 
+de melhorá-lo.
+(c) O experimento é descrito como um estudo duplo-cego 
+controlado por placebo. Explique o que isso significa.
+(d) Dos 80 voluntários,  40 são homens e 40 são mulhe -
+res. Como os blocos poderiam ser usados no plane-
+jamento do experimento?
+ 17. Tabela de números aleatórios Use a sexta linha da T a-
+bela B.1 no Apêndice B para gerar 12 números aleató -
+rios entre 1 e 99.
+ 18. Tabela de números aleatórios  Use a décima linha 
+da Tabela B.1 para gerar 10 números aleatórios entre 
+1 e 920.
+Números aleatórios Nos exercícios 19 e 20, use a 
+tecnologia para gerar os números aleatórios.
+ 19. Quinze números entre 1 e 150.
+ 20. Dezenove números entre 1 e 1.000.
+ 21. Privação de sono  Um pesquisador quer estudar os 
+efeitos da privação de sono nas habilidades motoras. 
+Dezoito pessoas foram voluntárias para o experimen -
+to: Jake, Maria, Mike, Lucy, Ron, Adam, Bridget, Carlos, 
+Steve, Susan, Vanessa, Rick, Dan, Kate, Pete, Judy, Mary 
+e Connie. Use um gerador de números aleatórios para 
+escolher nove indivíduos para o grupo de tratamento. 
+Os outros nove farão parte do grupo controle. Liste os 
+indivíduos em cada grupo. Diga qual método foi utiliza-
+do para gerar os números aleatórios.
+ 22. Geração de números aleatórios Voluntários de um ex-
+perimento são numerados de 1 a 90, e devem ser aleato-
+riamente designados a dois grupos de tratamento dife -
+rentes. Use um gerador de números aleatórios, diferente 
+do utilizado no exercício 21, para escolher 45 indivíduos 
+para o grupo de tratamento. Os outros 45 farão parte do 
+grupo controle. Liste os indivíduos de acordo com o nú-
+mero, em cada grupo. Diga qual método foi usado para 
+gerar os números aleatórios.
+Identificando técnicas de amostragem  Nos 
+exercícios 23 a 30, identifique a técnica de amostragem 
+usada e discuta fontes potenciais de viés (se aplicável). 
+Explique.
+ 23. Usando discagem aleatória, pesquisadores ligaram para 
+1.400 pessoas e perguntaram quais obstáculos (tais 
+como cuidar de crianças) as afastavam da prática de 
+exercícios físicos.
+Capítulo 1 Introdução à estatística 25
+M01_LARS0000_06_SE_C01.indd   25 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 24. Escolhidas aleatoriamente, 500 pessoas da zona rural e 
+500 pessoas da zona urbana, com 65 anos ou mais, foram 
+questionadas sobre sua saúde e experiência com drogas 
+prescritas.
+ 25. Questionando estudantes ao saírem da biblioteca, um 
+pesquisador perguntou a 358 deles sobre seus hábitos 
+com relação à bebida.
+ 26. Depois de um furacão, a região do desastre foi dividida em 
+200 áreas iguais. Trinta das áreas são selecionadas, e cada 
+domicílio ocupado é entrevistado para ajudar a concentrar 
+os esforços de socorro que os residentes mais necessitam.
+ 27. Escolhidos aleatoriamente, 580 consumidores de uma con-
+cessionária de automóveis são contatados e perguntados 
+sobre sua opinião a respeito dos serviços que receberam.
+ 28. Cada décima pessoa que entra em um shopping é per -
+guntada sobre o nome da sua loja favorita.
+ 29. Sementes de soja são plantadas em um campo de 48 acres. 
+O campo é dividido em subáreas de um acre. Uma amos-
+tra é retirada de cada subárea para estimar a colheita.
+ 30. A partir de ligações feitas para números selecionados 
+aleatoriamente, 1.012 entrevistados foram questionados 
+se são locatários ou proprietários de suas residências.
+Escolhendo entre um censo e uma amostra -
+gem Nos exercícios 31 e 32, determine se você faria 
+um censo ou usaria amostragem. Se escolhesse amos -
+tragem, decida qual técnica usaria. Explique. 
+ 31. A idade média dos 115 residentes de uma comunidade 
+de aposentados. 
+ 32. O tipo de filme mais popular entre os 100.000 assinan -
+tes de aluguel de filmes on-line.
+Reconhecendo uma questão tendenciosa  Nos 
+exercícios de 33 a 36, determine se a pergunta da pes -
+quisa é tendenciosa. Se for, sugira uma redação melhor.
+ 33. Por que ingerir alimentos integrais melhora a sua saúde?
+ 34. Por que digitar no celular ao dirigir aumenta o risco de 
+acidente?
+ 35. Quanto você se exercita, em média, em uma semana?
+ 36. Por que a mídia tem um efeito negativo nos hábitos ali-
+mentares de adolescentes do sexo feminino?
+ 37. Escrita Uma amostra de medições de pr ogramas de tele-
+visão realizada pela The Nielsen Company está descrita na 
+seção Estudo de caso, vista anteriormente neste capítulo. 
+Discuta os estratos usados na amostra. Por que é impor-
+tante ter uma amostra estratificada para essas medições?
+Expandindo conceitos
+ 38. Experimentos naturais Estudos observacionais algu -
+mas vezes são chamados de experimentos naturais. Ex-
+plique, com suas próprias palavras, o que isso significa.
+ 39. Perguntas fechadas e abertas  Dois tipos de pergun -
+tas em uma pesquisa são as abertas e as fechadas. Uma 
+pergunta aberta permite qualquer tipo de resposta; 
+uma pergunta fechada permite somente uma respos -
+ta fixa. Uma pergunta aberta e uma pergunta fechada 
+com suas escolhas possíveis são dadas a seguir. Liste 
+uma vantagem e uma desvantagem de cada pergunta.
+Pergunta aberta
+  O que pode ser feito para que os 
+estudantes comam alimentos mais 
+saudáveis?
+Pergunta fechada   Como você faria para que os estu -
+dantes comessem alimentos mais 
+saudáveis?
+1.
+ Um curso de nutrição obrigatório.
+2.  Oferecer somente alimentos saudáveis na cafeteria 
+e retirar os alimentos não saudáveis.
+3.  Oferecer mais alimentos saudáveis na cafeteria e 
+aumentar os preços dos alimentos não saudáveis.
+ 40. Quem escolheu essas pessoas?  Algumas agências de 
+pesquisa pedem que as pessoas liguem para um telefone 
+e deem sua resposta a uma pergunta. (a) Liste uma van-
+tagem e uma desvantagem de uma pesquisa conduzida 
+dessa maneira. (b) Qual técnica de amostragem é usada 
+em tal pesquisa?
+ 41. Analisando um estudo  Encontre um artigo que des -
+creva um estudo estatístico.
+(a) Identifique a população e a amostra.
+(b) Classifique os dados como qualitativos ou quantita-
+tivos. Determine o nível de mensuração.
+(c) O estudo é observacional ou um experimento? Se 
+for um experimento, identifique o tratamento.
+(d) Identifique a técnica de amostragem usada par a co-
+letar os dados.
+O applet Random numbers é projetado para permitir a geração de núme-
+ros aleatórios a partir de um intervalo de valores. Você pode especificar valo-
+res inteiros para o valor máximo (maximum value), o valor mínimo (minimum 
+value) e o número de amostras (number of samples) nos campos apropriados 
+(veja a Figura 1.10). Você não deve usar vírgulas decimais ao preencher os 
+campos. Quando o botão SAMPLE (amostra) é clicado, o applet gera valores 
+aleatórios, que são mostrados como uma lista na área de texto.
+Atividade 1.3 – Números aleatórios
+Você encontra o applet interativo 
+para esta atividade na Sala Virtual.
+26 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   26 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Figura 1.10
+Minimum value:
+Maximum value:
+Number of samples:
+Sample
+Explore
+Passo 1 Especifique um valor mínimo (minimum value).
+Passo 2 Especifique um valor máximo (maximum value).
+Passo 3 Especifique o número de amostras (number of samples).
+Passo 4 Clique em SAMPLE para gerar uma lista de valores aleatórios.
+Conclua
+1. Especifique o valor mínimo, máximo e números de amostras como sen-
+do 1, 20 e 8, respectivamente, conforme mostrado na Figura 1.11. Execu-
+te o applet. Continue gerando listas até que você obtenha uma que mos-
+tre que a amostra aleatória é retirada com reposição. Escreva essa lista. 
+Como você sabe que a lista é uma amostra aleatória com reposição?
+Figura 1.11
+Minimum value:
+Maximum value:
+Number of samples:
+Sample
+1
+20
+82. Use o applet para repetir o Exemplo 3 da Seção 1.3. Quais valores você 
+usou para o mínimo, máximo e número de amostras? Qual método você 
+prefere? Explique.
+Usos
+Experimento com resultados favoráveis  Um ex-
+perimento estudou 321 mulheres com câncer de mama 
+em estágio avançado. Todas foram tratadas previamen-
+te com outras drogas, mas o câncer parou de respon-
+der às medicações. Então, a esse grupo de mulheres foi 
+dada a oportunidade de experimentar uma nova droga 
+combinada com um quimioterápico específico.
+Os indivíduos foram divididos em dois grupos, um 
+que tomou a nova droga combinada com a quimiote -
+rapia e outro que tomou somente a quimioterapia. De-
+Usos e abusos – Estatística no mundo real
+Capítulo 1 Introdução à estatística 27
+M01_LARS0000_06_SE_C01.indd   27 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+pois de três anos, os resultados mostraram que a nova 
+droga, em combinação com a quimioterapia, postergou 
+a progressão do câncer nos indivíduos. Os resultados 
+foram tão significativos que o estudo foi interrompido 
+e a nova droga foi oferecida para todas as mulheres 
+no estudo. O FDA ( Food and Drug Administration), 
+então, aprovou o uso da nova droga em conjunto com 
+a quimioterapia.
+Abusos
+Experimentos com resultados desfavorá-
+veis Por quatro anos, 180 mil adolescentes na No -
+ruega foram usados para testar uma nova vacina 
+contra a bactéria mortal meningococcus b. Uma car -
+tilha descrevendo os possíveis efeitos da vacina afir -
+mava: “é improvável que haja complicações sérias” , 
+enquanto informações fornecidas para o parlamento 
+norueguês afirmavam: “efeitos colaterais sérios não 
+podem ser excluídos” . A vacina experimental teve 
+alguns resultados desastrosos: mais de 500 efeitos 
+colaterais foram reportados, sendo alguns conside -
+rados sérios, e muitos indivíduos desenvolveram do -
+enças neurológicas graves. Os resultados mostraram 
+que a vacina forneceu imunidade em somente 57% 
+dos casos. Esse resultado não foi suficiente para que 
+a vacina fosse adicionada ao programa de vacinação 
+norueguês. Desde então, indenizações foram pagas 
+às vítimas da vacina.
+Ética
+Os experimentos nos ajudam a entender mais o 
+mundo que nos rodeia. Mas, em alguns casos, eles 
+podem causar mais mal do que bem. Nos experimen-
+tos na Noruega, surgem algumas questões éticas. O 
+experimento norueguês foi antiético se os interesses 
+dos indivíduos foram negligenciados? Quando o ex -
+perimento deveria ter parado? O experimento de -
+veria mesmo ter sido conduzido? Quando os efeitos 
+colaterais de um experimento não são reportados e 
+são escondidos dos indivíduos, não há o que ser dis-
+cutido sobre ética ele está simplesmente errado.
+Por outro lado, os pesquisadores do câncer de mama 
+não queriam negar a nova droga a um grupo de pacien-
+tes com uma doença fatal. Mas, novamente, questões sur-
+gem. Por quanto tempo um pesquisador deve manter um 
+experimento que mostra resultados melhores dos que os 
+esperados? Quando um pesquisador pode concluir que 
+uma droga é segura para os indivíduos envolvidos?
+Exercícios 
+ 1.  Resultados desfavoráveis Encontre um exemplo 
+de um experimento real que teve resultados des -
+favoráveis. O que poderia ter sido feito para evitar 
+o resultado do experimento?
+ 2. Parando um experimento Em sua opinião,  quais 
+são alguns dos problemas que podem surgir quando 
+as tentativas clínicas de uma nova droga experimen-
+tal ou vacina pararem mais cedo e forem distribuí-
+das a outros indivíduos ou pacientes?
+ Resumo do capítulo
+O que você aprendeu Exemplo(s)
+Exercícios 
+de revisão
+Seção 1.1
+ • Como distinguir entre uma população e uma amostra. 1 1–4
+ • Como distinguir entre um parâmetro e uma estatística. 2 5–8
+ • Como distinguir entre estatística descritiva e estatística inferencial. 3 9 e 10
+Seção 1.2
+ • Como distinguir entre dados qualitativos e quantitativos. 1 11–14
+ • Como classificar os dados com relação aos quatro níveis de mensuração: 
+nominal, ordinal, intervalar e de razão. 2 e 3 15–18
+28
+ Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   28 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Seção 1.3
+ • Como planejar um estudo estatístico e distinguir entre um estudo obser-
+vacional e um experimento. 1 19 e 20
+ • Como planejar um experimento. 2 21 e 22
+ • Como obter uma amostra usando amostragem aleatória, amostragem 
+alea tória simples,  amostragem estratificada, amostragem por conglomera-
+do e amostragem sistemática. Como identificar uma amostra tendenciosa.
+3 e 4 23–30
+ Exercícios de revisão
+Seção 1.1
+Nos exercícios 1 a 4, identifique a população e a amostra.
+ 1. Uma pesquisa com 1.503 adultos norte-americanos des-
+cobriu que 78% são a favor das políticas governamen -
+tais que requerem melhor eficiência dos combustíveis 
+para veículos. (Fonte: Pew Research Center.)
+ 2. Trinta e oito enfermeiras que trabalham na área de São 
+Francisco foram perguntadas a respeito da administra -
+ção de assistência médica.
+ 3. Uma pesquisa com 2.311 adultos norte-americanos 
+descobriu que 84% consultaram assistência médica 
+pelo menos uma vez no ano passado. ( Fonte: Harris 
+Interactive.)
+ 4. Uma pesquisa com 186 adultos norte-americanos com 
+idade de 25 a 29 anos descobriu que 76% leram um livro 
+nos últimos 12 meses. (Fonte: Pew Research Center.)
+Nos exercícios 5 a 8, determine se o valor numérico é um 
+parâmetro ou uma estatística. Explique seu raciocínio.
+ 5. Em 2012, a liga principal dos times de beisebol gastou 
+um total de US$ 2.940.657 .192 com salários de jogado-
+res. (Fonte: USA Today.)
+ 6. Em uma pesquisa com 1.000 adultos nos Estados Uni -
+dos, 65% planejam estar acordados à meia-noite para 
+saudar o ano novo. (Fonte: Rasmussen Reports.)
+ 7. Em um estudo recente com graduandos em matemáti -
+ca em uma universidade, 10 estudantes cursaram física 
+como habilitação secundária.
+ 8. Cinquenta por cento de uma amostra de 1.025 adultos 
+norte-americanos disseram que os melhores anos dos 
+Estados Unidos ficaram para trás. (Fonte: Gallup.)
+ 9. Que parte da pesquisa descrita no Exercício 3 represen-
+ta o ramo descritivo da estatística? Faça uma inferência 
+baseada nos resultados da pesquisa.
+ 10. Que parte da pesquisa descrita no Exercício 4 represen-
+ta o ramo descritivo da estatística? Faça uma inferência 
+baseada nos resultados da pesquisa.
+Seção 1.2
+Nos exercícios 11 a 14, determine se os dados são quali-
+tativos ou quantitativos. Explique seu raciocínio.
+ 11. As idades de uma amostra de 350 funcionários de uma 
+empresa de software.
+ 12. Os códigos postais de uma amostra de 200 clientes de 
+uma loja de artigos esportivos.
+ 13. As receitas das 500 maiores empresas na lista da Forbes.
+ 14. O estado civil de todos os jogadores profissionais de golfe.
+Nos exercícios 15 a 18, determine o nível de mensuração 
+dos conjuntos de dados. Explique seu raciocínio.
+ 15. As temperaturas máximas diárias (em graus Fahrenheit) 
+em Sacramento, Califórnia, para uma semana de julho 
+estão listadas a seguir. (Fonte: National Climatic Data 
+Center.)
+96 77 75 84 87 94 101
+ 16. As classes de tamanhos de automóveis para uma amos-
+tra de sedans estão listadas a seguir.
+minicompacto subcompacto compacto
+médio grande
+ 17. Os quatro departamentos de uma gráfica estão listados 
+a seguir.
+Administração Vendas Produção Faturamento
+ 18. As remunerações totais (em milhões de dólares) dos 
+dez maiores executivos nos Estados Unidos estão lista -
+das a seguir.
+131 67 64 61 56 52 50 49 44 43
+Seção 1.3 
+Nos exercícios 19 e 20, determine se o estudo é observa-
+cional ou um experimento.
+Capítulo 1 Introdução à estatística 29
+M01_LARS0000_06_SE_C01.indd   29 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 19. Pesquisadores conduzem um estudo para determinar 
+se uma droga usada para tratar hipotireoidismo funcio-
+na melhor quando ministrada pela manhã ou antes de 
+dormir. Para realizar o estudo, 90 pacientes receberam 
+uma pílula para tomar pela manhã e outra à noite (uma 
+contendo a droga e outra um placebo). Após 3 meses, os 
+pacientes são instruídos a trocar as pílulas. (Fonte: J A M 
+A Internal Medicine.)
+ 20. Pesquisadores conduzem um estudo para determinar 
+o número de quedas que as mulheres sofrem durante 
+a gravidez. Para realizar o estudo, os pesquisadores 
+contataram 3.997 mulheres que deram à luz recente -
+mente e perguntaram quantas vezes elas caíram du -
+rante a gravidez. (Fonte: Maternal and Child Health 
+Journal.)
+Nos exercícios 21 e 22, 200 estudantes são voluntários 
+em um experimento para testar os efeitos da privação 
+do sono na recuperação de memórias. Os estudantes 
+serão colocados em um dos cinco diferentes grupos de 
+tratamento, incluindo o grupo controle.
+ 21. Explique como você faria um experimento de modo que 
+ele usasse um planejamento em blocos aleatorizados.
+ 22. Explique como você faria um experimento de modo que 
+ele usasse um planejamento completamente aleatorizado.
+Nos exercícios 23 a 28, identifique as técnicas de amos -
+tragem usadas, e discuta fontes potenciais de tendencio-
+sidade (se aplicável). Explique.
+ 23. Ligando para números de telefone gerados aleato -
+riamente, pesquisadores perguntaram a 1.003 adultos 
+norte-americanos seus planos sobre trabalhar durante 
+a aposentadoria. (Fonte: Princeton Survey Research As-
+sociation International.)
+ 24. Um estudante pediu a 18 amigos para participarem em 
+um experimento psicológico.
+ 25. Um estudo sobre a gravidez em Cebu, Filipinas, sele -
+cionou aleatoriamente 33 comunidades da área metro -
+politana, então foram entrevistadas todas as mulheres 
+grávidas nessas comunidades. ( Fonte: Cebu Longitudi -
+nal Health and Nutrition Survey.)
+ 26. Oficiais de polícia param e checam o motorista de cada 
+terceiro veículo para verificar o teor de álcool no sangue. 
+ 27. Vinte e cinco estudantes são selecionados aleatoria -
+mente de cada ano em uma escola de ensino médio e 
+têm pesquisados os seus hábitos de estudo.
+ 28. Um jornalista entrevista 154 pessoas que esperam por 
+suas bagagens no aeroporto e pergunta o quão seguras 
+elas se sentem durante o voo.
+ 29. Use a quinta linha da Tabela B.1 do Apêndice B para 
+gerar 8 números aleatórios entre 1 e 650.
+ 30. Você deseja saber o destino favorito durante o reces -
+so escolar de 15.000 estudantes de uma universidade. 
+Determine se você realizaria um censo ou usaria uma 
+amostra. Se usar uma amostra, decida qual técnica de 
+amostragem aplicará. Explique seu raciocínio.
+ Problemas
+Solucione estas questões como se estivesse fazendo em 
+sala de aula. Depois, compare suas respostas com as 
+respostas dadas no final do livro.
+ 1. Identifique a população e a amostra no seguinte estudo.
+Um estudo dos hábitos alimentares de 20.000 homens 
+foi realizado para encontrar uma ligação entre a alta 
+ingestão de laticínios e câncer de próstata. (Fonte: Har-
+vard School of Public Health.)
+ 2. Determine se o valor numérico é um parâmetro ou uma 
+estatística. Explique seu raciocínio.
+(a) Uma pesquisa com 1.0 00 adultos norte-americanos 
+descobriu que 40% acham que a internet é a melhor 
+forma de obter notícias e informação. (Fonte: Ras-
+mussen Reports.)
+(b) Em uma faculdade,  90% dos membros do Conse -
+lho de Curadores aprovaram a contratação do novo 
+presidente.
+(c) Uma pesquisa com 733 pequenos empresários desco-
+briu que 17% têm uma vaga de trabalho em aberto. 
+(Fonte: National Federation of Independent Business.)
+ 3. Determine se os dados são qualitativos ou quantitativos. 
+Explique seu raciocínio.
+(a) Uma lista de números de código pin de cartões de 
+débito.
+(b) As pontuações finais em um jogo de videogame.
+ 4. Determine o nível de mensuração dos conjuntos de da-
+dos. Explique seu raciocínio.
+(a) Uma lista dos números dos distintivos de policiais 
+em um distrito policial.
+(b) A quantidade de cav alos-vapor (cv) dos motores de 
+carros de corrida.
+(c) Os 10 filmes de maior bilheteria lançados em deter-
+minado ano.
+(d) Os anos de nascimento dos corredor es da maratona 
+de Boston.
+ 5. Determine se o estudo é observacional ou um experi-
+mento. Explique.
+(a) Pesquisadores conduzem um estudo para determi -
+nar se o índice de massa corporal (IMC) influencia a 
+frequência de enxaquecas. Para conduzir os estudos, 
+os pesquisadores perguntaram a 162.576 pessoas 
+30 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   30 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+seu IMC e o número de enxaquecas que elas têm 
+por mês. (Fonte: JAMA Internal Medicine.)
+(b) Pesquisadores conduzem um estudo para deter -
+minar se a ingestão de um multivitamínico diaria -
+mente reduz o risco de incidentes cardiovasculares 
+sérios entre homens. Para realizar o estudo, os pes-
+quisadores acompanharam 14.641 homens e minis -
+traram, diariamente, o multivitamínico a um grupo 
+e um placebo a outro grupo.  (Fonte: The Journal of 
+the American Medical Association.)
+ 6. Um experimento é realizado para testar os efeitos de 
+uma nova droga para hipertensão arterial. O pesquisa-
+dor identifica 320 pessoas com idades entre 35 e 50 anos 
+com hipertensão para participar do experimento. Os in-
+divíduos são divididos em grupos iguais de acordo com 
+a idade. Dentro de cada grupo, eles são selecionados 
+aleatoriamente para o grupo controle ou para  o grupo 
+de tratamento. Que tipo de planejamento foi utilizado 
+nesse experimento?
+ 7. Identifique a técnica de amostragem usada em cada es-
+tudo. Explique seu raciocínio.
+(a) Um jornalista vai a um local de acampamento par a 
+perguntar às pessoas como se sentem em relação à 
+poluição do ar.
+(b) Para garantia de qualidade, cada décima peça de 
+uma máquina é selecionada de uma linha de mon -
+tagem e medida sua precisão.
+(c) Um estudo sobre a posição com r elação ao fumo 
+é conduzido em uma faculdade. Os estudantes são 
+divididos por classe (calouros, alunos do segundo, 
+terceiro e último anos). Então, uma amostra aleató-
+ria é selecionada de cada classe e entrevistada.
+ 8. Que técnica de amostragem usada no Exercício 7 poderia 
+levar a um estudo tendencioso? Explique seu raciocínio.
+ Teste do capítulo
+Faça este teste como se estivesse fazendo uma prova em 
+sala. 
+ 1. Determine se você faria um censo ou usaria uma amos-
+tra. Se fosse usar uma amostra, decida qual técnica você 
+empregaria. Explique seu raciocínio.
+(a) Os times esportivos mais populares entr e as pessoas 
+em Nova York.
+(b) O salário médio de 30 empregados de uma empr esa.
+ 2. Determine se o valor numérico é um parâmetro ou uma 
+estatística. Explique seu raciocínio.
+(a) Uma pesquisa com 478 adultos americanos com 
+idade entre 18 e 29 anos descobriu que 66% pos-
+suem um smartphone. (Fonte: Pew Research Center.)
+(b) Em um ano recente , a nota média de matemática 
+no SAT2 para todos os alunos foi 514.  (Fonte: The 
+College Board.)
+ 3. Identifique a técnica de amostragem usada em cada es-
+tudo, e discuta potenciais fontes de tendenciosidade (se 
+aplicável). Explique.
+(a) Escolhidos aleatoriamente,  200 rapazes e 200 moças 
+estudantes do ensino médio foram perguntados so -
+bre seus planos para após a conclusão dos estudos.
+(b) Escolhidos aleatoriamente,  625 consumidores de 
+uma loja de produtos eletrônicos são contatados e 
+perguntados sobre o serviço que receberam.
+(c) Questionando docentes enquanto saem da sala dos 
+professores, um pesquisador pergunta para 45 deles 
+sobre seu estilo de ensino.
+ 4. Determine se os dados são qualitativos ou quantitativos 
+e o nível de mensuração do conjunto de dados. Explique 
+seu raciocínio.
+(a) Os números de empr egados em restaurantes fast-
+food em uma cidade estão listados a seguir.
+20 11 6 31 17 23 12 18 40 22
+13 8 18 14 37 32 25 27 25 18
+(b) Os coeficientes de rendimento (CRs) dos alunos de 
+uma turma estão listados a seguir.
+3,6 3,2 2,0 3,8 3,0 3,5 1,7 3,2
+2,2 4,0 2,5 1,9 2,8 3,6 2,5
+ 5. Determine se as perguntas da pesquisa são tendencio -
+sas. Em caso afirmativo, sugira uma melhor redação.
+(a) Quantas horas você dorme em uma noite normal?
+(b) Você concorda que a proibição da prática de skate 
+em parques da cidade é injusta?
+ 6. Para estudar os médicos dos Estados Unidos, pesqui -
+sadores investigaram 24.216 deles e perguntaram as se -
+guintes informações. (Fonte: Medscape from WebMD.)
+•	 Sexo (masculino ou feminino).
+•	 Localidade (região dos Estados Unidos).
+•	 Idade (número).
+•	 Salário (número).
+•	 Local de trabalho (hospital, clínica, etc.).
+•	 Especialidade (cardiologia, medicina da família,  
+radiologia, etc.).
+•	 Horas assistindo pacientes por semana (número).
+•	 Número de pacientes assistidos por semana (número).
+2 N. do T .: SAT (Scholastic Aptitude Test) é um exame educacional utilizado como critério para admissão nas universidades norte-ame-
+ricanas que test
+a o raciocínio e as habilidades de leitura e escrita dos alunos.
+Capítulo 1 Introdução à estatística 31
+M01_LARS0000_06_SE_C01.indd   31 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+(a) Identifique a população e a amostra.
+(b) Os dados coletados são qualitativos,  quantitativos 
+ou ambos? Explique seu raciocínio.
+(c) Determine o nível de mensuração par a cada item acima.
+(d) Determine se o estudo é observacional ou um expe-
+rimento. Explique.
+Você trabalha em uma empresa de pesquisas. Sua empresa venceu 
+uma concorrência e realizará um estudo para uma publicação sobre tec-
+nologia. Os editores da publicação gostariam de saber a opinião de seus 
+leitores sobre o uso de smartphones para realizar e receber pagamentos, 
+resgatar cupons e ingressos para eventos. Eles também querem saber se 
+as pessoas estão interessadas em usar o smartphone como uma carteira 
+digital, que armazena dados da carteira de motorista, cartão do plano de 
+saúde, entre outros.
+Os editores forneceram seu banco de dados de leitores e 20 questões 
+que gostariam que fossem aplicadas (duas questões amostrais de um 
+estudo anterior são fornecidas nas tabelas 1.11 e 1.12). Você sabe que o 
+custo para contatar todos os leitores é muito alto. Então, você precisa 
+determinar uma maneira de contatar uma amostra representativa da 
+população inteira de leitores.
+T abela 1.11  Quando você acha que os pagamentos por smartphones vão 
+substituir transações por cartão para a maioria das compras?
+Resposta Percentual*
+No próximo ano 2%
+De 1 a menos de 3 anos 12%
+De 3 a menos de 5 anos 19%
+De 5 a menos de 10 anos 19%
+10 anos ou mais 15%
+Nunca 34%
+(Fonte: Harris Interactive.)
+* O total do percentual não é exatamente 100% em virtude de aproximações numéricas no cálculo dos 
+valores.
+T abela 1.12  Quão interessado você está em usar seu smartphone para realizar 
+pagamentos, em vez de usar dinheiro ou cartão?
+Resposta Percentual*
+Muito interessado 8%
+Um pouco interessado 19%
+Não muito interessado 12%
+Sem interesse 43%
+Não sabe ao certo 17%
+(Fonte: Harris Interactive.)
+* O total do percentual não é exatamente 100% em virtude de aproximações numéricas no cálculo dos 
+valores.
+Estatísticas reais – Decisões reais: juntando tudo
+32 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   32 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Exercícios
+ 1. Como você faria isso? 
+(a) Que técnica de amostragem você usaria par a sele-
+cionar uma amostra para o estudo? Por quê?
+(b) A técnica que você escolheu na questão anterior 
+fornece uma amostra representativa da população?
+(c) Descreva o método para coleta de dados.
+(d) Identifique possíveis falhas e vieses no seu estudo.
+ 2. Classificação de dados.
+(a) Que tipo de dados você esperaria coletar:  qualitati-
+vos, quantitativos ou ambos? Por quê?
+(b) Em quais níveis de mensuração você acha que os 
+dados do estudo estarão? Por quê?
+(c) Os dados coletados para o estudo r epresentam uma 
+população ou uma amostra?
+(d) As descrições numéricas dos dados serão parâme -
+tros ou estatísticas?
+ 3. Como eles fizeram isso.
+  Quando a Harris Interactive realizou um estudo similar, 
+utilizou uma pesquisa via internet.
+(a) Descreva alguns erros possíveis na coleta de dados 
+por meio de pesquisas via internet.
+(b) Compare seu método de coleta de dados no Exer cí-
+cio 1 com esse método.
+ História da estatística – Linha do tempo
+Contribuinte Período Contribuição
+John Graunt (1620–1674)
+Século XVII
+Estudou os registros de óbitos em Londres no início de 1600. Foi 
+o primeiro a realizar extensas observações estatísticas a partir de 
+grandes quantidades de dados (Capítulo 2); seu trabalho preparou a 
+fundação para a estatística moderna.
+Blaise Pascal (1623–1662)
+Pierre de Fermat (1601–1665)
+Pascal e Fermat trocaram correspondências sobre problemas bási -
+cos de probabilidade (Capítulo 3) — especialmente aqueles relacio-
+nados a apostas e jogos.
+Pierre Laplace (1749–1827)
+Século XVIII
+Estudou probabilidade (Capítulo 3) e é creditada a ele a inserção da 
+probabilidade em uma posição matemática.
+Carl Friedrich Gauss (1777–1855)
+Estudou regressão e método dos mínimos quadrados (Capítulo 9) 
+por meio da astronomia. Em sua honra, a distribuição normal (Ca -
+pítulo 5) é, às vezes, chamada de distribuição gaussiana
+Lambert Quetelet (1796–1874)
+Século XIX
+Usou estatística descritiva (Capítulo 2) para analisar dados de cri -
+mes e mortalidade e estudou técnicas de censo. Descreveu distribui-
+ções normais (Capítulo 5) em conexão com características humanas, 
+como altura.
+Francis Galton (1822–1911)
+Usou regressão e correlação (Capítulo 9) para estudar variação ge-
+nética em humanos. A ele é creditada a descoberta do Teorema do 
+Limite Central (Capítulo 5).
+Karl Pearson (1857–1936)
+Século XX 
+(Início)
+Estudou a seleção natural usando correlação (Capítulo 9). Formou 
+o primeiro departamento acadêmico de estatística e ajudou a desen-
+volver a análise de qui-quadrado (Capítulo 6). 
+William Gosset (1876–1937) 
+Estudou o processo de produção de cerveja e desenvolveu o teste-t 
+para corrigir problemas relacionados a amostras de tamanho peque-
+no (Capítulo 6).
+(continua)
+Capítulo 1 Introdução à estatística 33
+M01_LARS0000_06_SE_C01.indd   33 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Charles Spearman (1863–1945)
+Século XX 
+(Início)
+Psicólogo britânico que foi um dos primeiros a desenvolver testes 
+de inteligência usando análise de fator (Capítulo 10).
+Ronald Fisher (1890–1962)
+Estudou biologia e seleção natural, desenvolveu a ANOVA (Ca -
+pítulo 10), salientou a importância do planejamento experimental 
+(Capítulo 1) e foi o primeiro a identificar as hipóteses nula e alter -
+nativa (Capítulo 7).
+Frank Wilcoxon (1892–1965) 
+Século XX
+Bioquímico que usou estatística para estudar patologias de plantas. 
+Introduziu os testes de duas amostras (Capítulo 8), o que levou ao 
+desenvolvimento de estatísticas não paramétricas.
+John Tukey (1915–2000)
+Trabalhou em Princeton durante a Segunda Guerra Mundial. Apre-
+sentou técnicas de análise exploratória de dados, tais como o dia -
+grama de ramos e folhas (Capítulo 2). Além disso, trabalhou nos La-
+boratórios Bell e é mais conhecido por seu trabalho com estatística 
+inferencial (capítulos 6 a 11).
+David Kendall (1918–2007) Trabalhou em Princeton e Cambridge. É a autoridade principal em 
+probabilidade aplicada e análise de dados (capítulos 2 e 3).
+(continuação)
+Usando a tecnologia na estatística
+Com grandes conjuntos de dados, você descobrirá que calculadoras e 
+softwares de computador podem ajudar a realizar cálculos e criar gráficos. 
+Dos muitos programas de estatística e calculadoras que estão disponíveis, 
+escolhemos incorporar neste livro a calculadora gráfica TI-84 Plus, o Minitab 
+e o software Excel.
+O exemplo a seguir mostra como usar essas três ferramentas tecnoló -
+gicas para gerar uma lista de números aleatórios. Essa lista pode ser usada 
+para selecionar elementos da amostra ou realizar simulações.
+Exemplo
+Gerando uma lista de números aleatórios
+Um departamento de controle de qualidade inspeciona uma amos -
+tra aleatória de 15 dos 167 carros que são montados em uma fábrica de 
+automóveis. Como os carros devem ser escolhidos?
+Solução
+Uma maneira de selecionar a amostra é, primeiro, numerar os carros 
+de 1 a 167 . Então, você pode usar a tecnologia para formar uma lista de 
+números aleatórios de 1 a 167 . Cada uma das ferramentas tecnológicas 
+apresentadas ao lado requer diferentes passos para gerar a lista. Cada uma, 
+entretanto, exige que você identifique o valor mínimo como 1 e o valor 
+máximo como 167 . Cheque o manual do usuário para instruções específicas. 
+MINITAB
+A
+91
+58
+151
+36
+96
+154
+2
+113
+157
+103
+64
+135
+90
+41
+16
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+1
+2
+EXCEL
+randInt (1, 167, 15)
+{17 42 152 59 5 116
+ 
+125 64 122 55 58 60
+ 
+82 152 105}
+TI-84 PLUS
+Tecnologia MINITAB EXCEL TI-84 PLUS
+34 Estatística aplicada
+M01_LARS0000_06_SE_C01.indd   34 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Exercícios
+ 1. A SEC3 (Securities and Exchange Comission) está 
+investigando uma empresa de serviços financeiros 
+que tem 86 corretores. A SEC decide revisar os re-
+gistros de uma amostra aleatória de 10 corretores. 
+Descreva como essa investigação poderia ser feita. 
+Então, use a tecnologia para gerar uma lista de 10 
+números aleatórios de 1 a 86 e ordene a lista.
+ 2. Um departamento de controle de qualidade está 
+testando 25 smartphones de um carregamento de 
+300. Descreva como esse teste poderia ser feito. 
+Então, use a tecnologia para gerar uma lista de 25 
+números aleatórios de 1 a 300 e ordene a lista.
+ 3. Considere a população de dez dígitos: 0, 1, 2, 3, 4, 
+5, 6, 7 , 8 e 9. Selecione três amostras aleatórias de 
+cinco dígitos dessa lista. Encontre a média de cada 
+amostra. Compare seus resultados com a média da 
+população. Comente seus resultados. (Dica: para 
+encontrar a média, some os dados e divida o resul-
+tado pelo número de elementos.)
+ 4. Considere a população de 41 números inteiros de 
+0 a 40. Qual é a média desses números? Selecio-
+ne três amostras aleatórias de sete números dessa 
+lista. Encontre a média de cada amostra. Com -
+pare seus resultados com a média da população. 
+Comente seus resultados. (Dica: para encontrar a 
+média, some os dados e divida o resultado pelo nú-
+mero de elementos.)
+ 5. Use números aleatórios para simular a jogada 
+de um dado de seis faces 60 vezes. Quantas vezes 
+você obteve cada número de 1 a 6? Os resultados 
+são os que você esperava?
+ 6. Você jogou um dado de seis faces 60 vezes e obte-
+ve a seguinte contagem:
+ 20 uns
+ 20 dois
+ 15 três
+ 3 quatros
+ 2 cincos
+ 0 seis
+  Esse parece um resultado razoável? Que inferên -
+cias você pode fazer do resultado?
+ 7. Use números aleatórios para simular o lançamen-
+to de uma moeda 100 vezes, em que 0 representa 
+cara e 1 coroa. Quantas vezes você obteve cada 
+número? Os resultados são os que você esperava?
+ 8. Você jogou uma moeda 100 vezes e obteve 77 ca-
+ras e 23 coroas. Esse parece um resultado razoável? 
+Que inferências você pode fazer do resultado?
+ 9. Um analista político gostaria de pesquisar uma 
+amostra de eleitores registrados de uma região 
+que possui 47 zonas eleitorais. Como ele poderia 
+usar números aleatórios para obter uma amostra 
+por conglomerado?
+3 N. do E.: a SEC é equivalente à CVM (Comissão de Valores Mobiliários) no Brasil.
+Lembre-se de que, quando você gera uma lista de números aleatórios, 
+você deve decidir se é aceitável ter números que se repetem. Se for acei-
+tável, então o processo de amostragem é dito com reposição. Se não for, 
+então o processo é dito sem reposição.
+Com cada uma das três ferramentas tecnológicas mostradas no exemplo 
+anterior, você tem a capacidade de classificar a lista de modo que os núme-
+ros apareçam em ordem. A ordenação ajuda a ver se qualquer um dos nú-
+meros na lista se repete. Se não for aceitável ter repetições, você deve espe-
+cificar que a ferramenta gere mais números aleatórios do que você precisa.
+Soluções são apresentadas nos manuais de tecnologia presentes na Sala Virtual. Instruções técnicas são fornecidas por Minitab, Excel 
+e TI-84 Plus
+Capítulo 1 Introdução à estatística 35
+M01_LARS0000_06_SE_C01.indd   35 10/12/15   18:09
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+0
+Onde estamos
+No Capítulo 1 você aprendeu que há muitas maneiras 
+de coletar dados. Normalmente, os pesquisadores preci-
+sam trabalhar com dados amostrais a fim de analisar po-
+pulações, mas, algumas vezes, é possível coletar todos 
+os dados para certa população. Por exemplo, os dados 
+a seguir representam as idades das 50 mulheres mais 
+influentes do mundo, em 2012. (Fonte: Forbes.)
+26, 31, 35, 37 , 43, 43, 43, 44, 45, 47 , 48, 48, 49, 50, 51, 
+51, 51, 51, 52, 54, 54, 54, 54, 55, 55, 55, 56, 57 , 57 , 57 , 
+58, 58, 58, 58, 59. 59, 59, 62, 62, 63, 64, 65, 65, 65, 66, 
+66, 67 , 67 , 72, 86.
+Para onde vamos
+Neste capítulo você aprenderá maneiras de organizar e 
+descrever conjuntos de dados. O objetivo é tornar os dados 
+mais fáceis de serem entendidos descrevendo tendências, 
+medidas centrais e variações. Por exemplo, nos dados bru-
+tos que mostram as idades das 50 mulheres mais influen-
+tes do mundo em 2012, não é fácil ver um padrão ou carac-
+terística em especial. Na Tabela 2.1 e na Figura 2.1 estão 
+algumas maneiras de organizar e descrever os dados.
+2.1 Distribuições de frequência e seus gráficos
+2.2 Mais gráficos e representações
+2.3 Medidas de tendência central
+ • Atividade
+2.4 Medidas de variação
+ • Atividade
+ • Estudo de caso
+2.5 Medidas de posição
+ • Usos e abusos
+ • Estatísticas reais – Decisões reais
+ • Tecnologia
+Todo ano, o site de 
+negócios Forbes.com 
+publica uma lista das 
+mulheres mais 
+influentes do mundo. 
+As categorias usadas 
+para construir essa 
+lista são: bilionários, 
+negócios, estilo de 
+vida (incluindo entre-
+tenimento e moda), 
+mídia, organizações 
+sem fins lucrativos, 
+política e tecnologia. 
+Em 2012, a primeira- 
+-dama Michelle Obama 
+ocupava a sétima 
+posição.
+Estatística descritiva
+Classe Frequência, f Classe Frequência, f
+26 – 34 2 62 – 70 11
+35 – 43 5 71 – 79 1
+44 – 52 12 80 – 88 1
+53 – 61 18
+Faça uma distribuição de frequência.
+2
+25,5 34,5 43,5 52,5 61,5 70,5 79,5 88,5
+4
+6
+8
+10
+14
+12
+16
+18
+Idade
+Frequência
+Construa um 
+histograma.
+T abela 2.1 Figura 2.1
+2
+Ron Sachs/DPA/Picture-Alliance/Newscom.
+M02_LARS0000_06_SE_C02.indd   36 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+2.1  Distribuições de frequência 
+e seus gráficos
+Distribuições de frequência • Gráficos de distribuições de frequência
+Distribuições de frequência
+Você aprenderá que há muitas maneiras para se organizar e descrever 
+um conjunto de dados. Algumas características importantes que devem ser 
+consideradas quando organizamos e descrevemos um conjunto de dados 
+são seu centro, sua variabilidade (ou dispersão) e sua forma. As medidas 
+centrais e as formas das distribuições serão abordadas na Seção 2.3. As 
+medidas de variabilidade serão cobertas na Seção 2.4.
+Quando um conjunto de dados tem muitos valores, pode ser difícil de 
+observar padrões. Nesta seção, você aprenderá como organizar conjuntos 
+de dados agrupando-os em intervalos chamados de classes e formando 
+uma distribuição de frequência. Você também aprenderá como usar as dis-
+tribuições de frequência para a construção de gráficos.
+Definição 
+Uma distribuição de frequência é uma tabela que mostra classes ou in-
+tervalos dos valores com a contagem do número de ocorrências em cada 
+classe ou intervalo. A frequência f de uma classe é o número de ocorrências 
+de dados na classe. 
+Na distribuição de frequência mostrada na Tabela 2.2 há seis classes. As 
+frequências para cada uma das seis classes são 5, 8, 6, 8, 5 e 4. Cada classe 
+tem um limite inferior de classe, que é o menor número que pode pertencer 
+à classe, e um limite superior de classe , que é o maior número que pode 
+pertencer à classe. Na distribuição de frequência mostrada, os limites infe-
+riores de classe são 1, 6, 11, 16, 21 e 26 e os limites superiores de classe são 
+5, 10, 15, 20, 25 e 30. A amplitude de classe é a distância entre os limites in-
+feriores (ou superiores) de classes consecutivas. Por exemplo, a amplitude 
+de classe na distribuição de frequência mostrada é 6 – 1 = 5. Note que as 
+classes não se sobrepõem.
+A diferença entre os valores máximo e mínimo dos dados é chamada de 
+amplitude. Na tabela de frequência mostrada, suponha que o valor máximo 
+seja 29, e o mínimo seja 1. A amplitude é, então, 29 – 1 = 28. Você aprenderá 
+mais sobre amplitude na Seção 2.4.
+O que você deve aprender
+ • Como construir uma 
+distribuição de frequência 
+incluindo limites, pontos 
+médios, frequências relativ
+as, 
+frequências acumuladas e 
+limites reais ou fronteiras.
+ • Como construir histogramas
+ 
+de frequência, polígonos de 
+frequência, histogramas 
+de frequência relativa e ogivas.
+Dica de estudo
+Em uma distribuição de 
+frequência, é melhor quando 
+todas as classes têm a mesma 
+amplitude. Normalmente, utiliza-se 
+o valor mínimo dos dados para o 
+limite inferior da primeira classe. 
+Às vezes, pode ser mais 
+conveniente escolher um valor 
+que seja um pouco menor que o 
+valor mínimo. A distribuição de 
+frequência produzida irá variar 
+levemente.
+ 
+Amplitude = 86 - 26
+Média = 26 + 31 + 35 + 37 + 43 + % + 67 + 67 + 72 + 86
+50
+ = 2.732
+50
+ = 54,64 anos
+ = 60 anos
+Encontre a média.
+Descubra como os dados variam.
+Capítulo 2 Estatística descritiva 37
+M02_LARS0000_06_SE_C02.indd   37 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+T abela 2.2 Exemplo de uma distribuição de frequência.
+Classe Frequência, f
+1 – 5 5
+6 – 10 8
+11 – 15 6
+16 – 20 8
+21 – 25 5
+26 – 30 4
+Instruções
+Construindo uma distribuição de frequência com base em um conjun-
+to de dados
+1. Decida o número de classes para serem incluídas na distribuição de frequ-
+ência. O número de classes sít
+ua-se usualmente entre 5 e 20; caso contrá-
+rio, pode ser difícil detectar padrões.
+2. Encontre a amplitude de classe como a seguir
+. Determine a amplitude dos 
+dados, divida a amplitude pelo número de classes e arredonde para um 
+número próximo mais conveniente.
+3.
+ Encontre os 
+limites de classe. Você pode usar o menor valor dos dados como 
+o limite inferior da primeira classe. Para encontrar os demais limites inferiores, 
+adicione a amplitude de classe ao limite inferior da classe precedente. Então, 
+encontre o limite superior da primeira classe. Lembre-se de que as classes 
+não se sobrepõem. Encontre os limites superiores das classes restantes.
+4.
+ Faça uma marca de cont
+agem para cada registro na linha da classe apropriada.
+5. Conte as marcas para encontrar a frequência total 
+f para cada classe. 
+Entenda
+Se você obtiver um número 
+inteiro ao calcular a amplitude 
+de classe de uma distribuição de 
+frequência, analise a possibilidade 
+de utilizar o próximo número 
+inteiro como a amplitude de 
+classe. Fazer isso garante que 
+você terá espaço suficiente em 
+sua distribuição de frequência 
+para todos os dados.
+1Exemplo
+Construindo uma distribuição de frequência com base em um 
+conjunto de dados
+O conjunto de dados a seguir lista os preços (em dólares) de 30 apa-
+relhos GPS (global positioning system) portáteis. 
+Construa uma distribuição de frequência com sete classes.
+128 100 180 150 200 90 340 105 85 270
+200 65 230 150 150 120 130 80 230 200
+110 126 170 132 140 112 90 340 170 190
+Solução
+1. O número de classes (7) é dado no problema.
+2. O valor mínimo é 65 e o máximo é 340, então, a amplitude é 340 – 65 
+= 275. Divida a amplitude pelo número de classes e arredonde para 
+encontrar a amplitude de classe.
+ 
+ = 275
+7  Amplitude
+Número de classes
+ ≈ 39,29 
+Arredondar para um número
+próximo mais conveniente, 40
+Amplitude de classe
+38 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   38 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+3. O valor mínimo é um limite inferior conveniente para a primeira 
+classe. Para encontrar os limites inferiores das seis classes restantes, 
+adicione a amplitude de classe, 40, ao limite inferior de cada clas -
+se precedente. Logo, os limites inferiores das demais classes são: 65 
++ 40 = 105, 105 + 40 = 145, e assim por diante. O limite superior da 
+primeira classe é 104, que é uma unidade a menos que o limite infe-
+rior da segunda classe. Os limites superiores das outras classes são: 
+104 + 40 = 144, 144 + 40 = 184, e assim por diante. Os limites inferiores 
+e superiores para todas as sete classes são mostrados na Tabela 2.3.
+T abela 2.3 Limites das classes.
+Limite inferior Limite superior
+65 104
+105 144
+145 184
+185 224
+225 264
+265 304
+305 344
+4. Faça uma marca de contagem para cada registro de dados na classe 
+apropriada. Por exemplo, o valor 128 está na classe 105–144, então 
+faça uma marca de contagem nessa classe. Continue até que você 
+tenha feito uma marca para cada um dos 30 valores.
+5
+. O número de marcas de contagem para uma classe é a frequência 
+dessa classe.
+A distribuição de frequência é mostrada na Tabela 2.4. A primeira 
+classe, 65–104, tem seis marcas de contagem. Então, a frequência dessa 
+classe é 6. Note que a soma das frequências é 30, que é o número de 
+valores no conjunto de dados. A soma é denotada por Σf, em que Σ é a 
+letra grega maiúscula sigma.
+T abela 2.4  Distribuição de frequência para os preços (em dólares) de nave-
+gadores GPS.
+Classes Marcas Frequência, f
+65–104 6
+105–144 9
+145–184 6
+185–224 4
+225–264 2
+265–304 1
+305–344 2
+Σf = 30
+Tente você mesmo 1
+Construa uma distribuição de frequência usando as idades das 50 mu-
+lheres mais influentes listadas na abertura deste capítulo. Use sete classes.
+a. Estabeleça o número de classes .
+b. Encontre os valores mínimo e máximo e a amplitude das classes.
+c. Encontre os limites das classes.
+d. Faça as marcas de contagem.
+e. Escreva a frequência f para cada classe.
+Dica de estudo
+A letra grega maiúscula sigma 
+(Σ) é usada para indicar um 
+somatório de valores.
+Número de 
+navegadores GPSPreços
+Note que a soma 
+das frequências é 
+igual ao número 
+(tamanho) da 
+amostra.
+Capítulo 2 Estatística descritiva 39
+M02_LARS0000_06_SE_C02.indd   39 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Depois de construir uma distribuição de frequência padrão tal como a 
+do Exemplo 1, você pode incluir diversas características adicionais que aju-
+darão a fornecer um melhor entendimento dos dados. Essas características 
+(ponto médio, frequência relativa e frequência acumulada de cada classe) 
+podem ser incluídas como colunas adicionais em sua tabela.
+Definição 
+O ponto médio de uma classe é a soma dos limites inferior e superior da clas-
+se dividida por dois. O ponto médio é, às vezes, chamado de marca da classe 
+(representante da classe).
+Ponto médio = (limite inferior da classe) + (limite superior da classe)
+2
+A frequência relativa de uma classe é a fração, ou proporção, de dados que 
+está nessa classe. Para calcular a frequência relativa de uma classe, divida a 
+frequência f pelo tamanho n da amostra. Caso queira expressar em percenta-
+gem, basta multiplicar esse resultado por 100.
+Frequência relativa =
+frequência da classe
+tamanho da amostra =
+f
+n
+A frequência acumulada de uma classe é a soma das frequências dessa classe 
+com todas as anteriores. A frequência acumulada da última classe é igual ao 
+tamanho n da amostra.
+Você pode usar a fórmula mostrada anteriormente no quadro Defini -
+ção para determinar o ponto médio de cada classe ou, após determinar o 
+primeiro ponto médio, você pode encontrar os demais adicionando a am -
+plitude de classe aos pontos médios anteriores. Por exemplo, o ponto mé-
+dio da primeira classe no Exemplo 1 é:
+Ponto médio = 65 + 104
+2 = 84,5.
+Usando a amplitude de classe de 40, os pontos médios restantes são:
+84,5 + 40 = 124,5
+124,5 + 40 = 164,5
+164,5 + 40 = 204,5
+204,5 + 40 = 244,5
+e assim por diante.
+Você pode escrever a frequência relativa como uma fração, um decimal 
+ou percentagem. A soma das frequências relativas de todas as classes deve 
+ser igual a 1 ou 100%. Devido a arredondamentos, a soma pode ser ligei -
+ramente menor ou maior do que 1. Então, valores como 0,99 e 1,01 podem 
+ser encontrados.
+40
+ Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   40 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+2Exemplo
+Encontrando pontos médios, frequências relativas e frequências 
+acumuladas
+Usando a distribuição de frequência construída no Exemplo 1, de -
+termine o ponto médio e as frequências relativa e acumulada para cada 
+classe. Descreva quaisquer padrões.
+Solução
+Os pontos médios e as frequências relativas e acumuladas para as 
+três primeiras classes são:
+Classe ƒ Ponto médio Frequência 
+relativa
+Frequência 
+acumulada
+65–104 6
+65 + 104
+2 = 84,5 6
+30 = 0,2 6
+105–144 9
+105 + 144
+2  = 124,5 9
+30 = 0,3 6 + 9 = 15
+145–184 6
+145 + 184
+2  = 164,5 6
+30 = 0,2 15 + 6 = 21
+Os demais pontos médios e frequências relativas e acumuladas são 
+mostradas na distribuição de frequência expandida na Tabela 2.5.
+T abela 2.5  Distribuição de frequências e outras medidas para os preços 
+(em dólares) de navegadores GPS.
+Classe Frequência, f Ponto médio Frequência 
+relativa
+Frequência 
+acumulada
+65 – 104 6 84,5 0,2 6
+105 – 144 9 124,5 0,3 15
+145 – 184 6 164,5 0,2 21
+185 – 224 4 204,5 0,13 25
+225 – 264 2 244,5 0,07 27
+265 – 304 1 284,5 0,03 28
+305 – 344 2 324,5 0,07 30
+Σf = 30 Σ f
+n ≈ 1
+Interpretação Há diversos padrões no conjunto de dados . Por 
+exemplo, o preço mais comum de navegador GPS encontra-se no inter-
+valo de US$ 105 a US$ 144. Além disso, metade dos navegadores GPS 
+custa menos que US$ 145.
+Tente você mesmo 2
+Usando a distribuição de frequência construída no Tente você mes-
+mo 1, encontre o ponto médio e as frequências relativa e acumulada 
+para cada classe. Descreva quaisquer padrões.
+a.
+ Use as fórmulas para determinar cada ponto médio , a frequência 
+relativa e a frequência acumulada.
+b. Organize os resultados em uma distribuição de frequência.
+c. Descreva quaisquer padrões nos dados.
+Preços
+Proporção de 
+navegadores GPS
+Número de 
+navegadores GPS
+Capítulo 2 Estatística descritiva 41
+M02_LARS0000_06_SE_C02.indd   41 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Gráficos de distribuições de frequência
+Às vezes, é mais fácil identificar padrões de um conjunto de dados 
+olhando um gráfico da distribuição de frequência. Um desses gráficos é o 
+histograma de frequência.
+Definição 
+Um histograma de frequência é um diagrama de barras que representa a 
+distribuição de frequência de um conjunto de dados. Um histograma tem as 
+seguintes propriedades:
+1. A escala horizont
+al é quantitativa e indica os valores dos dados.
+2. A escala vertical indica as frequências das classes.
+3
+. Bar
+ras consecutivas devem estar encostadas umas nas outras.
+Em virtude de as barras consecutivas do histograma estarem encosta-
+das, elas devem começar e terminar nas fronteiras da classe ao invés de em 
+seus limites. As fronteiras das classes, também denominadas limites reais, 
+são os números que separam as classes sem formar lacunas entre elas. Para 
+valores de dados inteiros, subtrair 0,5 de cada limite inferior para encontrar 
+as fronteiras inferiores das classes. Para encontrar as fronteiras superiores 
+das classes, adicione 0,5 a cada limite superior. A fronteira superior de uma 
+classe será igual à fronteira inferior da classe seguinte.
+3Exemplo
+Construindo um histograma de frequência
+Faça um histograma de frequência para a distribuição de frequência 
+do Exemplo 2. Descreva qualquer padrão.
+Solução
+Primeiro, encontre as fronteiras das classes (limites reais). Uma vez 
+que os valores dos dados são inteiros, subtraia 0,5 de cada limite inferior 
+para achar as fronteiras inferiores das classes e adicione 0,5 em cada 
+limite superior para achar as fronteiras superiores das classes. Logo, as 
+fronteiras inferior e superior da primeira classe são as seguintes:
+Fronteira inferior da primeira classe = 65 – 0,5 = 64,5.
+Fronteira superior da primeira classe = 104 + 0,5 = 104,5.
+As fronteiras das classes são mostradas na Tabela 2.6. Para construir 
+o histograma, escolha valores de frequência adequados para graduar a 
+escala vertical. Você pode marcar a escala horizontal com os pontos mé-
+dios ou com as fronteiras das classes. Ambos os histogramas são mostra-
+dos nas figuras 2.2(a) e (b).
+T abela 2.6  Distribuição de frequências com limites aparentes e reais (fron-
+teiras).
+Classe Fronteiras das classes Frequência, f
+65 –104 64,5 –104,5 6
+105 –144 104,5 –144,5 9
+145 –184 144,5 –184,5 6
+185 –224 184,5 –224,5 4
+225 –264 224,5 –264,5 2
+(continua)
+42 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   42 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+265 –304 264,5 –304,5 1
+305 –344 304,5 –344,5 2
+Figura 2.2 Indicadores de preços de navegadores GPS.
+Frequência (número de
+navegadores GPS)2
+4
+6
+8
+10
+84,5124,5164,5204,5244,5284,5324,5
+Preço (em dólares)
+marcados com os pontos
+médios das classes.
+(a) marcados com as fronteiras
+das classes.
+(b)
+Eixo
+quebrado
+(sem observar
+a escala)
+6 6
+4
+2 2 2
+9
+Frequência (número de
+navegadores GPS)2
+4
+6
+8
+10
+Preço (em dólares)
+6 6
+4
+2 2
+64,5104,5144,5184,5224,5264,5304,5344,5
+9
+11
+Interpretação De qualquer histograma, podemos ver que cerca de 
+dois terços dos navegadores GPS custam abaixo de US$ 184,50.
+Tente você mesmo 3
+Use a distribuição de frequência do Tente você mesmo 2 para construir 
+um histograma de frequência que represente as idades das 50 mulheres 
+mais influentes, listadas na abertura deste capítulo. Descreva quaisquer 
+padrões.
+a
+. Determine as fronteir as das classes.
+b. Escolha as escalas horizontal e vertical apropriadas .
+c. Use a distribuição de frequência par a encontrar a altura de cada barra.
+d. Descreva quaisquer padrões nos dados.
+Outra maneira de representar graficamente uma distribuição de frequên-
+cia é usar um polígono de frequência. Um polígono de frequência  é um 
+gráfico de linha que enfatiza as mudanças contínuas nas frequências.
+4Exemplo
+Construindo um polígono de frequência
+Faça um polígono de frequência para a distribuição de frequência do 
+Exemplo 2. Descreva quaisquer padrões.
+Solução
+Para construir o polígono de frequência, use as mesmas escalas hori-
+zontal e vertical que foram usadas no histograma com os pontos médios 
+na Figura 2.2 do Exemplo 3. Então, assinale pontos que representam o 
+ponto médio e a frequência de cada classe e conecte-os em ordem, da 
+esquerda para a direita, com segmentos lineares. Já que o gráfico deve 
+começar e terminar no eixo horizontal, assinale do lado esquerdo um 
+ponto distante a uma amplitude do ponto médio da primeira classe e 
+no lado direito marque um ponto a uma amplitude de classe depois do 
+ponto médio da última classe (veja a Figura 2.3).
+Entenda
+É costumeiro, em diagramas de 
+barras, deixar espaços entre 
+as barras; já em histogramas, 
+costuma-se não deixar esses 
+espaços.
+(continuação)
+Capítulo 2 Estatística descritiva 43
+M02_LARS0000_06_SE_C02.indd   43 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Figura 2.3 Número de navegadores GPS em função do preço.
+Frequência (número de
+navegadores GPS)2
+4
+6
+8
+10
+44,5 84,5 124,5 164,5 204,5 244,5 284,5 324,5 364,5
+Preço (em dólares)
+Interpretação Podemos ver que a frequência de navegadores GPS 
+aumenta até o preço de US$ 124,50 e depois decresce.
+Tente você mesmo 4
+Use a distribuição de frequência do Tente você mesmo 2 para construir 
+um polígono de frequência que represente as idades das 50 mulheres mais 
+influentes, listadas na abertura deste capítulo. Descreva quaisquer padrões.
+a. Escolha as escalas horizontal e vertical apropriadas.
+b. Assinale pontos que repr esentem o ponto médio e a frequência de 
+cada classe.
+c. Conecte os pontos e estenda os lados o quanto for necessário.
+d. Descreva quaisquer padrões nos dados.
+Um histograma de frequência relativa tem a mesma forma e a mesma esca-
+la horizontal do correspondente histograma de frequência. A diferença é que a 
+escala vertical indica as frequências relativas, e não as frequências (absolutas).
+5Exemplo
+Construindo um histograma de frequência relativa
+Faça um histograma de frequência relativa para a distribuição de 
+frequência do Exemplo 2.
+Solução
+O histograma de frequência relativa é mostrado na Figura 2.4. Note 
+que a forma do histograma é a mesma do histograma de frequência 
+construído no Exemplo 3. A única diferença é que a escala vertical indi-
+ca as frequências relativas.
+Figura 2.4 Percentagem de navegadores GPS em função do preço.
+0,05
+64,5 104,5 144,5 184,5 224,5 264,5 304,5 344,5
+0,10
+0,15
+0,20
+0,25
+0,30
+Preço (em dólares)
+Frequência (númerode navegadores GPS)
+Dica de estudo
+Um histograma e seu polígono 
+de frequência correspondente 
+costumam ser feitos juntos. 
+Primeiro, construa o polígono 
+de frequência escolhendo as 
+escalas horizontal e vertical 
+apropriadas. A escala horizontal 
+deve consistir nos pontos médios 
+de cada classe, e a escala 
+vertical deve consistir nos valores 
+de frequência apropriados. 
+Então, assinale os pontos que 
+representam o ponto médio e 
+a frequência de cada classe. 
+Após conectar os pontos com 
+segmentos lineares, conclua 
+desenhando as barras para o 
+histograma.
+44 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   44 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Interpretação Deste gráfico , podemos rapidamente verificar 
+que 0,3 ou 30% dos navegadores GPS têm preços entre US$ 104,50 e 
+US$ 144,50, informação que não é imediatamente óbvia no histograma 
+de frequência no Exemplo 3.
+Tente você mesmo 5
+Use a distribuição de frequência do Tente você mesmo 2 para cons-
+truir um histograma de frequência relativa que represente as idades das 
+50 mulheres mais influentes, listadas na página de abertura deste capitulo.
+a.
+ Use a mesma escala horizontal empregada no histogr ama de frequência 
+da Figura 2.1.
+b. Revise a escala vertical para refletir as frequências relativas.
+c. Use as frequências relativas para encontrar a altura de cada barra.
+Para descrever o número de registros de dados que são menores que ou 
+iguais a certo valor, construa um gráfico de frequência acumulada.
+Definição 
+Um gráfico de frequência acumulada ou ogiva é um gráfico de linhas que 
+mostra a frequência acumulada até cada classe em sua fronteira superior. 
+As fronteiras superiores são marcadas no eixo horizontal e as frequências 
+acumuladas são marcadas no eixo vertical.
+Instruções
+Construindo uma ogiva (gráfico de frequência acumulada)
+1. Construa uma distribuição de frequência que inclua uma coluna com as 
+frequências acumuladas.
+2
+. Especifique as escalas horizont
+al e vertical. A escala horizontal consiste nas 
+fronteiras superiores das classes e a escala vertical indica as frequências 
+acumuladas.
+3.
+ Assinale os pontos que represent
+am as fronteiras superiores das classes e 
+as frequências acumuladas correspondentes.
+4. Conecte os pontos em ordem da esquerda para a direita com segmentos 
+lineares.
+5
+. O gráfico 
+deve começar na fronteira inferior da primeira classe (a frequência 
+acumulada é zero) e deve terminar na fronteira superior da última classe (a 
+frequência acumulada é igual ao tamanho da amostra).
+Dica de estudo
+Outro tipo de ogiva usa 
+percentual no eixo vertical em 
+vez da frequência absoluta 
+(veja o Exemplo 5 na Seção 2.5).
+6Exemplo
+Construindo uma ogiva
+Desenhe uma ogiva para a distribuição de frequência do Exemplo 2.
+Solução
+Usando as frequências acumuladas, podemos construir a ogiva mos-
+trada na Figura 2.5. As fronteiras superiores das classes, as frequências 
+e as frequências acumuladas são mostradas na Tabela 2.7 . Note que o 
+gráfico começa em 64,5, em que a frequência acumulada é 0, e termina 
+em 344,5, em que a frequência acumulada é 30.
+Retratando o mundo
+O Old Faithful, um gêiser no 
+parque nacional de Y ellowstone, 
+entra em erupção regularmente. 
+Os tempos de duração das 
+erupções de uma amostra são 
+mostrados no histograma de 
+frequência relativa.
+(Fonte: Y ellowstone National Park.)
+0,40
+0,30
+0,20
+0,10
+Duração da erupção
+(em minutos)
+Frequência relativa
+2,0 2,6 3,2 3,8 4,4
+Erupções do Old Faithful
+Cerca de 50% das erupções 
+duram menos do que quantos 
+minutos?
+Capítulo 2 Estatística descritiva 45
+M02_LARS0000_06_SE_C02.indd   45 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+T abela 2.7  Fronteiras (limites reais) superiores, frequências absolutas 
+e frequências acumuladas relativas aos preços de GPS.
+Fronteira superior 
+da classe f frequência 
+acumulada
+104,5 6 6
+144,5 9 15
+184,5 6 21
+224,5 4 25
+264,5 2 27
+304,5 1 28
+344,5 2 30
+Figura 2.5  Ogiva mostrando as frequências acumuladas em função dos 
+preços de navegadores GPS.
+5
+64,5 104,5 144,5 184,5 224,5 264,5 304,5 344,5
+10
+15
+20
+25
+30
+Preço (em dólares)
+Frequência acumulada
+(número de navegadores GPS)
+Preço de navegadores GPS
+Interpretação Com base na ogiva,  podemos ver que 25 navegado-
+res GPS custam US$ 224,50 ou menos. Além disso, o maior aumento na 
+frequência acumulada ocorre entre US$ 104,50 e US$ 144,50, uma vez 
+que a linha do segmento é mais inclinada entre essas duas fronteiras 
+de classe.
+Tente você mesmo 6
+Use a distribuição de frequência do Tente você mesmo 2 para cons-
+truir uma ogiva que represente as idades das 50 mulheres mais influen-
+tes, listadas na abertura deste capítulo.
+a. Especifique as escalas horizontal e vertical.
+b. Assinale os pontos que repr esentam as fronteiras superiores das 
+classes e as frequências acumuladas.
+c. Construa o gráfico e interpr ete os resultados.
+Se você tem acesso a ferramentas tecnológicas como Excel ou a TI-84 
+Plus, você pode utilizá-las para construir os gráficos discutidos nesta seção.
+7Exemplo
+Usando a tecnologia para construir histogramas
+Use a tecnologia para construir um histograma para a distribuição 
+de frequência do Exemplo 2.
+46 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   46 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Solução
+Minitab, Excel e TI-84 Plus, cada uma dessas ferramentas tem recur-
+sos próprios para construir histogramas. Tente usá-los para desenhar os 
+histogramas conforme mostrados nas figuras 2.6(a) a (c).
+Figura 2.6 Exemplos de histogramas construídos por tecnologias.
+84,5
+0
+4
+2
+10
+8
+6
+324,5284,5244,5204,5164,5124,5
+Preço (em dólares)
+Frequência
+EXCEL
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+84,5 124,5 164,5 204,5 244,5 284,5 324,5
+Frequência
+Preço (em dólares)
+TI-84 PLUS
+MINITAB(a)
+(b)
+(c)
+Tente você mesmo 7
+Use a tecnologia e a distribuição de frequência do Tente você mesmo 2 
+para construir um histograma de frequência que represente as idades das 
+50 mulheres mais influentes, listadas na página de abertura deste capítulo.
+a. Digite os dados.
+b. Construa o histograma.
+Dica de estudo
+Instruções detalhadas sobre o 
+uso do Minitab, do Excel e da 
+TI-84 Plus são mostradas nos 
+manuais de tecnologia disponíveis 
+na Sala Virtual. Por exemplo, aqui 
+temos instruções para criar um 
+histograma na TI-84 Plus.
+STAT  ENTER
+Digite os pontos médios em L1 .
+Digite as frequências em L2.
+2nd  STAT PLOT
+Ligue o Plot 1 .
+Destaque histograma.
+Xlist: L1
+Freq: L2
+ZOOM  9
+WINDOW
+Ymin=0
+GRAPH
+2.1 Exercícios
+Construindo habilidades básicas e vocabulário
+ 1. Quais são os benefícios de representar conjuntos de da-
+dos usando as distribuições de frequência?
+  Quais são os benefícios de usar gráficos de distribuições 
+de frequência?
+ 2. Por que o número de classes em uma distribuição de 
+frequência deve estar preferencialmente entre 5 e 20?
+ 3. Qual é a diferença entre limites de classe e fronteiras de 
+classe?
+ 4. Qual é a diferença entre frequência relativa e frequên -
+cia acumulada?
+Capítulo 2 Estatística descritiva 47
+M02_LARS0000_06_SE_C02.indd   47 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 5. Após construir uma distribuição de frequência expandida, 
+qual deve ser a soma das frequências relativas? Explique.
+ 6. Qual é a diferença entre um polígono de frequência e 
+uma ogiva?
+Verdadeiro ou falso? Nos exercícios 7 a 10, determi-
+ne se a frase é verdadeira ou falsa. Se for falsa, reescre-
+va-a de forma que seja verdadeira.
+ 7. Em uma distribuição de frequência, a amplitude de clas-
+se é a distância entre os limites superior e inferior de 
+uma classe.
+ 8. O ponto médio de uma classe é a soma de seus limites 
+superior e inferior dividida por 2.
+ 9. Uma ogiva é um gráfico que mostra a frequências relativas.
+ 10. As fronteiras de classes garantem que as barras conse -
+cutivas de um histograma se encostem.
+Nos exercícios 11 a 14, use os valores mínimo e máximo 
+e o número de classes para determinar a amplitude da 
+classe e os limites inferiores e superiores.
+ 11. Mínimo = 9, máximo = 64, 7 classes.
+ 12. Mínimo = 12, máximo = 88, 6 classes.
+ 13. Mínimo = 17 , máximo = 135, 8 classes.
+ 14. Mínimo = 54, máximo = 247 , 10 classes.
+Lendo uma distribuição de frequência Nos exercí-
+cios 15 e 16, use a distribuição de frequência dada para 
+determinar (a) a amplitude das classes , (b) os pontos 
+médios das classes e (c) as fronteiras das classes.
+ 15. Temperaturas altas (ºF) em Cleveland, Ohio.
+Classe Frequência, f
+20 – 30 19
+31 – 41 43
+42 – 52 68
+53 – 63 69
+64 – 74 74
+75 – 85 68
+86 – 96 24
+ 16. Tempo de deslocamento até o trabalho (em minutos).
+Classe Frequência, f
+0 – 9 188
+10 – 19 372
+20 – 29 264
+30 – 39 205
+40 – 49 83
+50 – 59 76
+60 – 69 32
+ 17. Use a distribuição de frequência do Exercício 15 para 
+construir uma distribuição de frequência expandida, 
+como mostrada no Exemplo 2.
+ 18. Use a distribuição de frequência do Exercício 16 para 
+construir uma distribuição de frequência expandida, 
+como mostrada no Exemplo 2.
+Análise gráfica Nos exercícios 19 e 20, use o histogra-
+ma de frequência para (a) determinar o número de clas-
+ses, (b) estimar a frequência da classe com a menor fre-
+quência, (c) estimar a frequência da classe com a maior 
+frequência e (d) determinar a amplitude de classe.
+ 19. Salário de funcionários.
+Frequência
+50
+100
+150
+200
+250
+300
+24,5
+44,5
+54,5
+Salário (em milhares de dólares)
+34,5
+64,5
+74,5
+84,5
+ 20. Altura de montanhas-russas.
+Frequência
+5
+10
+15
+20
+25
+72
+178
+231
+Altura (em pés)125
+284
+337
+390
+Análise gráfica Nos exercícios 21 e 22, use a ogiva 
+para aproximar (a) o tamanho da amostra e (b) a loca-
+lização do maior aumento na frequência.
+ 21. Gorilas machos .
+Peso (em libras)
+Frequência acumulada5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+285,5
+305,5
+325,5
+345,5
+365,5
+385,5
+405,5
+425,5
+445,5
+48 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   48 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 22. Mulheres adultas com idade entr e 20 e 29 anos.
+Frequência acumulada5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+Altura (em polegadas)
+58 60 62 64 66 68 70 72 74
+ 23. Use a ogiva do Exercício 21 para aproximar:
+(a) A frequência acumulada para um peso de 345,5 libras.
+(b) O peso para o qual a fr equência acumulada é 35.
+(c) O número de gorilas que pesa entre 325,5 e 365,5 libras.
+(d) O número de gorilas que pesa mais que 405,5 libr as.
+ 24. Use a ogiva do Exercício 22 para obter aproximadamente:
+(a) A frequência acumulada para uma altura de 72 
+polegadas.
+(b) A altura em que a frequência acumulada é 25.
+(c) O número de mulher es adultas que mede entre 62 e 
+66 polegadas.
+(d) O número de mulher es adultas que mede mais que 
+70 polegadas.
+Análise gráfica Nos exercícios 25 e 26, use o histograma 
+de frequência relativa para (a) identificar as classes com 
+maior e menor frequência relativa, (b) obter aproximada-
+mente a maior e a menor frequência relativa e (c) obter 
+aproximadamente a frequência relativa da segunda classe.
+ 25. Comprimento do fêmur de mulher es.
+Frequência relativa0,05
+0,10
+0,15
+0,20
+0,25
+Comprimento (em centímetros)
+34,5
+35,5
+36,5
+37,5
+38,5
+39,5
+40,5
+41,5
+42,5
+ 26. Tempos de resposta da emergência.
+Frequência relativa10%
+20%
+30%
+40%
+Tempo (em minutos)
+17,5 18,5 19,5 20,5 21,5
+Análise gráfica Nos exercícios 27 e 28, use o polígo-
+no de frequência para identificar as classes com a maior 
+e a menor frequência.
+ 27. Notas do MCA T1 de 60 candidatos.
+Frequência
+4
+8
+12
+16
+14
+10
+6
+2
+Notas
+10 13 16 19 22 25 28 31 34 37 40 43
+ 28. Tamanho do sapato de 50 mulheres no padrão norte 
+americanoFrequência
+5
+10
+15
+20
+Tamanho
+6,0 7,0 8,0 9,0 10,0
+Usando e interpretando conceitos
+Construindo uma distribuição de frequência Nos 
+exercícios 29 e 30, construa uma distribuição de frequên-
+cia para o conjunto de dados, usando o número de clas-
+ses indicado. Na tabela, inclua os pontos médios e as 
+frequências relativas e acumuladas. Qual classe tem a 
+maior frequência e qual tem a menor?
+ 29. Tempo de leitura em um blog político.
+Número de classes: 5
+Conjunto de dados: tempos (em minutos) gastos na 
+leitura de um blog político em um dia:
+7 39 13 9 25 8 22 0 2 18 2 30 7
+35 12 15 8 6 5 29 0 11 39 16 15
+1  N. do T .: MCAT (Medical College Admission Test ) é um teste para admissão em faculdades de medicina nos Estados Unidos, Austrália 
+e Canadá.
+ Indica que o conjunto de dados para este exercício está disponível na Sala Virtual.
+Capítulo 2 Estatística descritiva 49
+M02_LARS0000_06_SE_C02.indd   49 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 30. Gasto com livros.
+Número de classes: 6
+Conjunto de dados: quantias (em dólares) gastas em 
+livros por um semestre:
+91 472 279 249 530 376 188 341 266 199
+142 273 189 130 489 266 248 101 375 486
+190 398 188 269 43 30 127 354 84
+Construindo uma distribuição de frequência e um 
+histograma de frequência Nos exercícios 31 a 34, 
+construa uma distribuição de frequência e um histogra-
+ma de frequência para o conjunto de dados usando o nú-
+mero de classes indicado. Descreva quaisquer padrões.
+ 31. V endas.
+Número de classes: 6
+Conjunto de dados: vendas em julho (em dólares) de 
+todos os representantes de vendas em uma empresa:
+2.114 2.468 7 .119 1.876 4.105 3.183
+1.932 1.355 4.278 1.030 2.000 1.077
+5.835 1.512 1.697 2.478 3.981 1.643
+1.858 1.500 4.608 1 .000
+ 32. Ardência de pimentas.
+Número de classes: 5
+Conjunto de dados: níveis de ardência (em milhares 
+de unidades na escala de Scoville) de 24 pimentas do 
+tipo tabasco:
+35 51 44 42 37 38 36 39
+44 43 40 40 32 39 41 38
+42 39 40 46 37 35 41 39
+ 33. Tempos de reação.
+Número de classes: 8
+Conjunto de dados: tempos de reação (em milis -
+segundos) de 30 mulheres adultas a um estímulo 
+auditivo:
+507 389 305 291 336 310 514 442
+373 428 387 454 323 441 388 426
+411 382 320 450 309 416 359 388
+307 337 469 351 422 413
+ 34. Tempos de prova.
+Número de classes: 8
+Conjunto de dados: tempos de prova (em segundos) 
+de todos os participantes masculinos, com idade  
+de 25 a 29 anos, em uma corrida de 5 quilômetros:
+1.595 1.472 1.820 1.580 1.804 1.635
+1.959 2.020 1.480 1.250 2.083 1.522
+1.306 1.572 1.778 2.296 1.445 1.716
+1.618 1.824
+Construindo uma distribuição de frequência e um 
+histograma de frequência relativa  Nos exercícios 
+35 a 38, construa uma distribuição de frequência e um 
+histograma de frequência relativa para os conjuntos de 
+dados usando 5 classes. Qual classe tem a maior frequên-
+cia relativa e qual tem a menor?
+ 35. Teste de paladar.
+Conjunto de dados: pontuações de 1 (mais baixa) a 
+10 (mais alta) dadas por 24 pessoas após testar o sa -
+bor de um novo refrigerante:
+5 7 4 5 7 8 10 6 9 5 7 6
+8 2 9 7 8 1 3 10 8 8 7 9
+ 36. Anos de serviço.
+Conjunto de dados: anos de serviço de 26 soldados da 
+cavalaria do estado de Nova York:
+12 7 9 8 9 8 12 10 9
+10 6 8 13 12 10 11 7 14
+12 9 8 10 9 11 13 8
+ 37. Morcegos frugívor os de Mariana.
+Conjunto de dados: peso (em gramas) de 25 morce -
+gos frugívoros de Mariana machos:
+466 469 501 516 520 453 445
+417 422 463 526 419 525 497
+489 441 547 438 489 481 495
+545 538 518 479
+ 38. Níveis de triglicerídeos.
+Conjunto de dados: níveis de triglicerídeos (em mili-
+gramas por decilitro de sangue) de 26 pacientes:
+209 140 155 170 265 138 180 295 250
+320 270 225 215 390 420 462 150 200
+400 295 240 200 190 145 160 175
+Construindo uma distribuição de frequência acumu-
+lada e uma ogiva  Nos exercícios 39 e 40, construa 
+uma distribuição de frequência acumulada e uma ogi -
+va para os conjuntos de dados usando 6 classes. Então, 
+descreva a localização do maior aumento na frequência.
+ 39. Idades para aposentadoria.
+Conjunto de dados: idades para aposentadoria de 24 
+médicos:
+70 54 55 71 57 58 63 65
+60 66 57 62 63 60 63 60
+66 60 67 69 69 52 61 73
+ 40. Ingestão de gordura saturada.
+Conjunto de dados: ingestões diárias de gordura satu-
+rada (em gramas) de 20 pessoas:
+38 32 34 39 40 54 32 17 29 33
+57 40 25 36 33 24 42 16 31 33
+Construindo uma distribuição de frequência e um 
+polígono de frequência Nos exercícios 41 e 42, cons-
+trua uma distribuição de frequência e um polígono de 
+50 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   50 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+frequência para os conjuntos de dados usando os nú -
+meros de classes indicados. Descreva quaisquer padrões.
+ 41. Filhos de presidentes .
+Número de classes: 6
+Conjunto de dados: números de filhos de presidentes 
+norte-americanos. (Fonte: presidentschildren.com.)
+0 5 6 0 3 4 0 4 10 15 0 6 2 3 0
+4 5 4 8 7 3 5 3 2 6 3 3 1 2
+2 6 1 2 3 2 2 4 4 4 6 1 2 2
+ 42. Declaração de Independência.
+Número de classes: 5
+Conjunto de dados: idades dos signatários da Decla -
+ração de Independência. (Fonte: The U.S. National 
+Archives & Records Administration.)
+40 53 46 39 38 35 50 37 48 41
+70 32 41 52 40 50 65 46 30 34
+69 38 45 33 41 44 63 60 26 42
+34 50 42 52 37 35 45 36 42 47
+46 30 26 55 57 45 33 60 62 35
+46 45 33 53 49 50
+Nos exercícios 43 e 44, use os conjuntos de dados e os 
+números de classes indicados para construir (a) uma 
+distribuição de frequência expandida, (b) um histogra-
+ma de frequência, (c) um polígono de frequência, (d) 
+um histograma de frequência relativa e (e) uma ogiva.
+ 43. Pulsação.
+Número de classes: 6
+Conjunto de dados: pulsações de todos os estudantes 
+de uma turma:
+68 105 95 80 90 100 75 70 84 98 102 70
+65 88 90 75 78 94 110 120 95 80 76 108
+ 44. Hospitais.
+Número de classes: 8
+Conjunto de dados: número de hospitais em cada es-
+tado. (Fonte: American Hospital Directory.)
+12 100 52 73 354 52 34 8 212 116
+13 40 17 142 99 61 76 114 81 50
+22 109 56 88 72 16 103 11 28 14
+75 37 28 203 156 103 36 176 12 65
+27 116 377 35 89 7 62 75 39 13
+Expandindo conceitos
+ 45. O que você faria?  Você trabalha em um banco e 
+deve recomendar a quantia de dinheiro que será colo-
+cada em um caixa eletrônico a cada dia. Você não quer 
+colocar dinheiro em excesso (por segurança) ou pou-
+co dinheiro (por problemas com clientes). As quantias 
+retiradas diariamente (em centenas de dólares) em 
+um período de 30 dias são mostradas a seguir.
+72 84 61 76 104 76 86 92 80 88 98 76 97 82 84
+67 70 81 82 89 74 73 86 81 85 78 82 80 91 83
+(a) Construa um histograma de frequência relativa 
+para os dados. Use 8 classes.
+(b) Se você colocar US$  9.0 00 no caixa eletrônico a 
+cada dia, qual é a percentagem de dias em um mês 
+que você espera ficar sem dinheiro? Explique.
+(c) Se você está disposto a ficar sem dinheiro em 
+10% dos dias, quanto dinheiro você deveria colo-
+car no caixa eletrônico a cada dia? Explique.
+ 46. O que você faria? Você trabalha no departamento de 
+admissão de uma faculdade e deve recomendar as no-
+tas mínimas no vestibular que a faculdade aceitará para 
+uma vaga de estudante em tempo integral. A seguir, 
+temos as notas do vestibular de 50 candidatos.
+1.760 1.500 1.370 1.310 1.600 1.940 1.380 2.210 1.620 1.770
+1.150 1.350 1.680 1.610 2.050 1.740 1.460 1.390 1.860 1.910
+1.880 1.990 1.520 1.510 2.120 1.700 1.810 1.860 1.440 1.230
+970 1.510 1.790 2.250 2.100 1.900 1.970 1.580 1.420 1.730
+2.170 1.930 1.960 1.650 2.000 2.120 1.260 1.560 1.630 1.620
+(a) Construa um histograma de frequência relativa 
+para os dados. Use 10 classes.
+(b) Se você decidir por uma nota mínima de 1.610,  
+qual é a percentagem de candidatos que cumpri -
+rão essa exigência? Explique.
+(c) Se você quiser aceitar o máximo de 88% dos 
+candidatos, qual deveria ser a nota mínima? 
+Explique.
+ 47. Escrito. Use o conjunto de dados a seguir e uma ferra-
+menta tecnológica para criar histogramas de frequência 
+com 5, 10 e 20 classes. Qual gráfico melhor representa 
+os dados? Explique.
+2 7 3 2 11 3 15 8 4 9 10 13 9
+7 11 10 1 2 12 5 6 4 2 9 15
+Capítulo 2 Estatística descritiva 51
+M02_LARS0000_06_SE_C02.indd   51 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+2.2 Mais gráficos e representações
+Representando graficamente conjuntos de dados quantitativos • Representando 
+graficamente conjuntos de dados qualitativos • Representando graficamente conjuntos 
+de dados emparelhados
+Representando graficamente conjuntos de dados 
+quantitativos
+Na Seção 2.1 você aprendeu diversas maneiras tradicionais de repre -
+sentar graficamente dados quantitativos. Nesta seção, você aprenderá uma 
+nova maneira de representar dados quantitativos chamada diagrama de 
+ramo e folha. Diagramas de ramo e folha são recursos da análise explora-
+tória de dados (AED), que foi desenvolvida por John Turkey em 1977 .
+Em um diagrama de ramo e folha, cada número é separado em um ramo 
+(por exemplo, se o número é 155, os dígitos mais à esquerda do número 
+formam o ramal 15) e uma folha (por exemplo, o dígito mais à direita: 5). 
+Você deve ter tantas folhas quanto a quantidade de valores no conjunto de 
+dados original e estas devem ter um único dígito. Um diagrama de ramo e 
+folha é similar a um histograma, mas tem a vantagem de que o gráfico ainda 
+contém os valores originais dos dados. Outra vantagem de um diagrama 
+de ramo e folha é que ele fornece uma maneira fácil de ordenar os dados.
+1Exemplo
+Construindo um diagrama de ramo e folha
+O conjunto de dados a seguir lista os números de mensagens de tex-
+to enviadas, na semana passada, por usuários de telefonia celular em 
+um andar de um dormitório universitário. Coloque os dados em um 
+diagrama de ramo e folha. Descreva quaisquer padrões.
+155 159 144 129 105 145 126 116 130 114
+122 112 112 142 126 118 118 108 122 121
+109 140 126 119 113 117 118 109 109 119
+139 139 122 78 133 126 123 145 121 134
+124 119 132 133 124 129 112 126 148 147
+Solução
+Em razão dos dados variarem de um mínimo de 78 a um máximo 
+de 159, você deve usar valores de ramo de 7 a 15 (veja a Figura 2.7). 
+Para construir o diagrama, liste esses ramos à esquerda de uma linha 
+vertical. Para cada valor de dado, liste uma folha à direita de seu ramo. 
+Por exemplo, o valor 155 tem um ramo de 15 e uma folha de 5. Faça o 
+diagrama com as folhas em ordem crescente, da esquerda para a direita. 
+Certifique-se de incluir uma chave.
+Figura 2.7 Número de mensagens de texto enviadas.
+7 8 Chave: 15|5 = 155
+8
+9
+10 5 8 9 9 9
+11 2 2 2 3 4 6 7 8 8 8 9 9 9
+12 1 1 2 2 2 3 4 4 6 6 6 6 6 9 9
+13 0 2 3 3 4 9 9
+14 0 2 4 5 5 7 8
+15 5 9
+O que você deve aprender
+ • Como representar graficamente 
+e interpretar conjuntos de 
+dados quantitativos usando 
+diagrama de ramo e folha e 
+diagrama de pontos.
+ • Como representar 
+graficamente e interpretar 
+conjuntos de dados 
+qualitativos usando gráficos 
+setoriais (gráfico de pizza) 
+e gráficos de Pareto.
+ • Como representar 
+graficamente e interpretar 
+conjuntos de dados 
+emparelhados usando 
+diagramas de dispersão e 
+gráficos da série temporal.
+52 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   52 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Interpretação Do gráfico mostrado, podemos perceber que mais 
+de 50% dos usuários de telefone celular enviaram entre 110 e 130 men-
+sagens de texto.
+Tente você mesmo 1
+Use um diagrama de ramo e folha para organizar as idades das 50 
+mulheres mais influentes listadas na abertura deste capítulo. Descreva 
+quaisquer padrões.
+a. Liste todos os ramos possíveis .
+b. Liste as folhas de cada valor de dados à dir eita de seu ramo e inclua 
+uma chave. Certifique-se de que as folhas estão na ordem crescente 
+da esquerda para a direita.
+c. Descreva quaisquer padrões nos dados.
+2Exemplo
+Construindo variações do diagrama de ramo e folha
+Organize o conjunto de dados do Exemplo 1 usando um diagrama 
+de ramo e folha que tenha duas fileiras para cada ramo. Descreva quais-
+quer padrões.
+Solução
+Construa o diagrama de ramo e folha do Exemplo 1, mas agora liste 
+cada ramo duas vezes. Use as folhas 0, 1, 2, 3 e 4 na primeira fileira do ramo 
+e as folhas 5, 6, 7 , 8 e 9 na segunda fileira do ramo. O diagrama de ramo e 
+folha revisado é exibido na Figura 2.8. Note que, ao usar duas fileiras por 
+ramo, obtemos um retrato mais detalhado dos dados.
+Figura 2.8 Número de mensagens de texto enviadas.
+7  Chave: 15|5 = 155
+7 8
+8
+8
+9
+9
+10
+10
+5 8 9 9 9
+11 2 2 2 3 4
+11 6 7 8 8 8 9 9 9
+12 1 1 2 2 2 3 4 4
+12 6 6 6 6 6 9 9 
+13 0 2 3 3 4
+13 9 9
+14 0 2 4 
+14 5 5 7 8
+15
+15 5 9
+Interpretação Do gráfico mostrado, podemos perceber que a 
+maioria dos usuários de telefone celular enviou entre 105 e 135 men -
+sagens de texto.
+Tente você mesmo 2
+Usando duas fileiras para cada ramo, revise o diagrama de ramo e folha 
+que você construiu no Tente você mesmo 1. Descreva quaisquer padrões.
+Dica de estudo
+É importante incluir uma chave para 
+o diagrama de ramo e folha 
+para identificar os valores dos 
+dados. Isso é feito mostrando 
+um valor representado por um 
+ramo e uma folha.
+Entenda
+Você pode usar os diagramas 
+de ramo e folha para identificar 
+valores de dados incomuns 
+chamados de outliers. Nos 
+exemplos 1 e 2, o valor 78 é 
+um outlier (valor extremo). Você 
+aprenderá mais sobre outliers na 
+Seção 2.3.
+Capítulo 2 Estatística descritiva 53
+M02_LARS0000_06_SE_C02.indd   53 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+a. Liste cada ramo duas vezes .
+b. Liste todas as folhas usando a fileira do r amo apropriada.
+c. Descreva quaisquer padrões nos dados.
+Você também pode usar um diagrama de pontos para representar gra -
+ficamente dados quantitativos. Em um diagrama de pontos, cada valor de 
+dado é representado usando um ponto acima do eixo horizontal. Como no 
+diagrama de ramo e folha, um diagrama de pontos permite ver como os 
+dados estão distribuídos, identificar valores específicos e valores incomuns 
+extremos nos dados.
+3Exemplo
+Construindo um diagrama de pontos
+Use um diagrama de pontos para organizar o conjunto de dados do 
+Exemplo 1. Descreva quaisquer padrões.
+155 159 144 129 105 145 126 116 130 114
+122 112 112 142 126 118 118 108 122 121
+109 140 126 119 113 117 118 109 109 119
+139 139 122 78 133 126 123 145 121 134
+124 119 132 133 124 129 112 126 148 147
+Solução
+A fim de que todos os dados sejam incluídos no diagrama de pontos, 
+o eixo horizontal pode iniciar em 75 e terminar em 160 (veja a Figura 
+2.9). Para representar um dado, assinale um ponto acima da posição do 
+seu valor no eixo. Quando um valor for repetido, assinale outro ponto 
+acima do anterior.
+Figura 2.9 Número de mensagens de texto enviadas. 
+75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160
+Interpretação No diagrama de pontos, podemos ver que a maioria 
+dos valores se agrupa entre 105 e 148, e o valor que ocorre com maior 
+frequência é 126. Você também pode ver que 78 é um valor incomum.
+Tente você mesmo 3
+Use um diagrama de pontos para organizar as idades das 50 mulhe-
+res mais influentes listadas na abertura deste capítulo. Descreva quais -
+quer padrões.
+a. Escolha uma escala apropriada par a o eixo horizontal.
+b. Represente cada valor de dado assinalando um ponto.
+c. Descreva quaisquer padrões nos dados.
+A tecnologia pode ser usada para construir diagramas de ramo e folha e 
+de pontos. Por exemplo, a Figura 2.10 mostra um diagrama de pontos feito 
+com Minitab para os dados das mensagens de texto.
+54 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   54 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Figura 2.10 Número de mensagens de texto enviadas. 
+1601501401301201101009080
+MINITAB
+Representando graficamente conjuntos de dados 
+qualitativos
+Gráficos de pizza (setoriais) fornecem uma maneira conveniente de 
+apresentar graficamente dados qualitativos como percentagens de um 
+todo. Um gráfico de pizza é um círculo dividido em setores que represen-
+tam categorias. A área de cada setor é proporcional à frequência de cada 
+categoria. Na maioria dos casos, você interpretará um gráfico de pizza ou 
+irá construí-lo usando tecnologia. O Exemplo 4 mostra como construir um 
+gráfico de pizza à mão.
+4Exemplo
+Construindo um gráfico de pizza
+Os números de títulos conferidos (em milhares) em 2011 nos Esta-
+dos Unidos constam na Tabela 2.8. Use um gráfico de pizza para organi-
+zar os dados. (Fonte: U.S. National Center for Education Statistics.)
+T abela 2.8 Títulos conferidos em 2011 .
+Tipo de título Número (em milhares)
+Tecnólogo 942
+Bacharelado 1.716
+Mestrado 731
+Doutorado 164
+Solução
+Comece encontrando a frequência relativa, ou percentagem, de cada 
+categoria, como mostra a Tabela 2.9. Então, construa um gráfico de pizza 
+usando o ângulo central que corresponda a cada categoria, como mos -
+tra a Figura 2.11. Para determinar o ângulo central, multiplique 360º 
+pela frequência relativa da categoria. Por exemplo, o ângulo central 
+para o título de tecnólogo é 360º (0,265) ≈ 95º.
+T abela 2.9  Tipos de titulação, frequências absolutas, frequências relativas 
+e medidas de ângulo.
+Tipo de título f frequência relativa Ângulo
+Tecnólogo 942 0,265 95º
+Bacharelado 1.716 0,483 174º
+Mestrado 731 0,206 74º
+Doutorado 164 0,046 17º
+Capítulo 2 Estatística descritiva 55
+M02_LARS0000_06_SE_C02.indd   55 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Figura 2.11 Títulos conferidos em 2011 .
+26,5%
+48,3%
+20,6%
+Doutorado
+4,6%
+Tecnólogo
+Mestrado
+Bacharelado
+Interpretação No diagrama de pizza da Figura 2.11, podemos ver 
+que quase a metade dos títulos conferidos em 2011 foi de bacharel.
+Tente você mesmo 4
+Os números de títulos conferidos (em milhares) em 1990 são mos -
+trados na Tabela 2.10. Use um gráfico de pizza para organizar os dados. 
+Compare os dados de 1990 com os dados de 2011. (Fonte: U. S. National 
+Center for Education Statistics.)
+T abela 2.10 Títulos conferidos em 1990.
+Tipo de título Número (em milhares)
+Tecnólogo 455
+Bacharelado 1.051
+Mestrado 330
+Doutorado 104
+a. Encontre a frequência relativa e o ângulo central de cada categoria.
+b. Construa o gráfico de pizza.
+c. Compare os dados de 1990 com os dados de 2011.
+Outra maneira de representar graficamente dados qualitativos é usando 
+um gráfico de Pareto. Um gráfico de Pareto é um gráfico de barras verticais 
+no qual a altura de cada barra representa a frequência ou a frequência 
+relativa. As barras são posicionadas em ordem decrescente de altura, com 
+a barra mais alta posicionada à esquerda. Tal posicionamento ajuda a des-
+tacar dados importantes e é frequentemente usado em negócios.
+5Exemplo
+Construindo um gráfico de Pareto
+Recentemente, a indústria de varejo perdeu US$ 34,5 bilhões com 
+redução nos estoques. A redução de estoque é uma perda de estoque 
+por meio de quebra, roubo de carga, roubo em lojas e assim por dian -
+te. As principais causas da redução de estoque são erro administrativo 
+(US$ 4,2 bilhões), roubo por funcionários (US$ 15,1 bilhões), roubo em 
+lojas (US$ 12,3 bilhões), desconhecida (US$ 1,1 bilhão) e fraude nas 
+vendas (US$ 1,7 bilhão). Use um gráfico de Pareto para organizar os 
+dados. Qual causa de redução de estoque os varejistas deveriam tratar 
+primeiro? (Adaptado de: National Retail Federation and The Education, 
+University of Florida.)
+56 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   56 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Solução
+Usando frequências relativas para o eixo vertical, podemos construir 
+o gráfico de Pareto como mostrado na Figura 2.12.
+Figura 2.12 Principais causas de redução de estoque.
+Causas
+Bilhões de dólares
+Roubo por
+funcionários
+Roubo
+em lojas
+Erro
+administrativo
+Fraude
+nas vendas
+Desconhecida
+2
+4
+6
+8
+10
+12
+14
+16
+Interpretação No gráfico, é fácil ver que as causas da redução de 
+estoque que devem ser tratadas primeiro são roubo por funcionários e 
+roubo em lojas.
+Tente você mesmo 5
+A cada ano, o Better Business Bureau 2 (BBB) recebe reclamações 
+de clientes. Em anos recentes, o BBB recebeu as seguintes reclamações:
+14.156 reclamações sobre mecânicas de automóveis.
+8.568 reclamações sobre seguradoras.
+6.712 reclamações sobre corretores de hipoteca.
+15.394 reclamações sobre empresas de telefonia.
+5.841 reclamações sobre agências de viagens.
+Use um gráfico de Pareto para organizar os dados. Que fonte é a maior 
+causa de reclamações? (Fonte: Council of Better Business Bureaus.)
+a
+. Encontre a frequência ou a frequência relativa para cada valor  
+de dado.
+b. Posicione as barras em ordem decrescente de acordo com a frequên-
+cia ou a frequência relativa.
+c. Interprete os resultados no contexto dos dados.
+Representando graficamente conjuntos de dados 
+emparelhados
+Quando cada valor em um conjunto de dados corresponde a um valor 
+em um segundo conjunto de dados, tais conjuntos são chamados de conjun-
+tos de dados emparelhados. Por exemplo, um conjunto de dados contém os 
+custos de um item e um segundo conjunto de dados contém as quantidades 
+de vendas correspondentes. Já que cada custo corresponde a uma quanti -
+dade de vendas, os conjuntos de dados são emparelhados. Uma maneira de 
+representar graficamente conjuntos de dados emparelhados é usando um 
+gráfico de dispersão, no qual os pares ordenados são representados como 
+pontos em um plano coordenado (plano cartesiano). Um gráfico de disper-
+são é usado para mostrar a relação entre duas variáveis quantitativas.
+2 O BBB é uma organização sem fins lucrativos que at ua em prol de melhores práticas de negócio.
+Retratando o mundo
+Um instituto de pesquisa 
+perguntou a 9.317 consumidores 
+quanto eles planejam gastar com 
+presentes no Dia dos Namorados 
+para vários destinatários. 
+Os resultados são mostrados 
+no gráfico de Pareto. (Fonte: 
+BIGInsight.)
+Destinatário
+Quantia (em dólares)
+10
+20
+30
+40
+50
+60
+70
+80
+Quanto você planeja gastar
+no Dia dos Namorados
+com presentes para:
+7 6 5
+10
+25
+74
+Cônjuge Amigos
+Animais de estimação
+Colegas de classe/professores
+Outros
+Outro membro da família
+Qual é maior, a quantia gasta 
+com cônjuge ou o total gasto nas 
+demais cinco categorias?
+Capítulo 2 Estatística descritiva 57
+M02_LARS0000_06_SE_C02.indd   57 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+6Exemplo
+Interpretando um gráfico de dispersão
+O estatístico britânico Ronald Fisher (ver p. 34) apresentou um 
+famoso conjunto de dados chamado de conjunto de dados de Íris de 
+Fisher. Esse conjunto de dados descreve várias características físicas, 
+tais como o comprimento e a largura das pétalas (em milímetros), para 
+três espécies da flor íris. No gráfico de dispersão da Figura 2.13, o com-
+primento das pétalas forma o primeiro conjunto de dados e a largura 
+forma o segundo. Conforme o comprimento da pétala aumenta, o que 
+tende a acontecer com a largura? (Fonte: Fisher, R. A., 1936.)
+Figura 2.13 Conjunto de dados de Íris de Fisher.
+10 20 30 40 50 60 70
+5
+10
+15
+20
+25
+Comprimento da pétala (em milímetros)
+Largura da pétala (em milímetros)
+Solução
+O eixo horizontal representa o comprimento da pétala e o vertical, 
+a largura. Cada ponto no gráfico de dispersão corresponde ao compri-
+mento e a largura da pétala de uma flor. 
+Interpretação Com base no gráfico de dispersão, você pode ver 
+que, conforme o comprimento da pétala aumenta, a largura também 
+tende a aumentar.
+Tente você mesmo 6
+O tempo de serviço e os salários de 10 funcionários estão listados 
+na Tabela 2.11. Faça um gráfico de dispersão para os dados. Descreva 
+quaisquer tendências.
+a
+. Classifique os eixos horizontal e vertical.
+b. Assinale os dados emparelhados .
+c. Descreva quaisquer tendências.
+Você aprenderá mais sobre gráficos de dispersão e como analisá-los no 
+Capítulo 9. 
+Um conjunto de dados quantitativos cujos valores são obtidos em inter-
+valos regulares, durante um período de tempo, é chamado de série tempo-
+ral. Por exemplo, a quantidade de precipitação medida a cada dia por um 
+mês é uma série temporal. Você pode usar um gráfico de série temporal 
+para representar uma série desse tipo.
+T abela 2.11  Comportamento de 
+salários em função do 
+tempo de serviço.
+Tempo de 
+serviço 
+(em anos)
+Salário 
+(em dólares)
+5 32.000
+4 32.500
+8 40.000
+4 27 .350
+2 25.000
+10 43.000
+7 41.650
+6 39.225
+9 45.100
+3 28.000
+58 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   58 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+7Exemplo
+Construindo um gráfico de série temporal
+A Tabela 2.12 lista o número de assinantes de telefonia celular (em 
+milhões) e o valor médio mensal da conta dos assinantes pelo serviço 
+(em dólares) para os anos de 2002 a 2012. Construa um gráfico de série 
+temporal para o número de assinantes de celular. Descreva quaisquer 
+tendências. (Fonte: Cellular Telecommunications & Internet Association.)
+T abela 2.12  Assinantes de telefonia celular e valor médio mensal da conta 
+no período de 2002 a 2012.
+Ano Assinantes (em milhões) Conta média (em dólares)
+2002 134,6 47 ,42
+2003 148,1 49,46
+2004 169,5 49,49
+2005 194,5 49,52
+2006 219,7 49,30
+2007 243,4 49,94
+2008 262,7 48,54
+2009 276,6 49,57
+2010 292,8 47 ,47
+2011 306,3 47 ,23
+2012 321,7 47 ,16
+Solução
+Faça o eixo horizontal representar os anos e o vertical, o número 
+de assinantes (em milhões). Então, assinale os dados emparelhados e 
+conecte-os com segmentos de reta (veja a Figura 2.14).
+Figura 2.14  Comportamento do número de assinantes de telefonia celular 
+no período de 2002 a 2012.
+Ano
+Assinantes (em milhões)
+2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012
+25
+75
+50
+100
+125
+150
+175
+200
+225
+250
+275
+Assinantes de telefonia celular
+300
+325
+Interpretação O gráfico mostra que o número de assinantes tem 
+aumentado desde 2002.
+Veja o passo a passo da 
+TI-84 Plus na página 120 e 121 .
+Capítulo 2 Estatística descritiva 59
+M02_LARS0000_06_SE_C02.indd   59 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+Tente você mesmo 7
+Use a Tabela 2.12 para construir um gráfico de série temporal para 
+o valor médio mensal da conta de celular dos assinantes, para os anos 
+de 2002 a 2012.
+a. Classifique os eixos horizontal e vertical.
+b. Assinale os dados emparelhados e conecte-os com segmentos de r eta.
+c. Descreva quaisquer tendências.
+2.2 Exercícios
+Construindo habilidades básicas e vocabulário
+ 1. Cite algumas maneiras de representar graficamente da-
+dos quantitativos e qualitativos.
+ 2. Qual é a vantagem de se usar um diagrama de ramo e 
+folha em vez de um histograma? Qual é a desvantagem?
+ 3. Em termos de representação de dados, como um diagrama 
+de ramo e folha se assemelha a um diagrama de pontos?
+ 4. Como um gráfico de Pareto difere de um gráfico de bar-
+ras verticais padrão?
+Contextualizando os gráficos Nos exercícios 5 a 8, 
+relacione o gráfico com a descrição da amostra.
+ 5.  0 8 Chave:  0|8 = 0,8
+1 5 6 8
+2 1 3 4 5
+3 0 9
+4 0 0
+ 6. 6 7 8 Chave:  6|7 = 67
+7 4 5 5 8 8 8
+8 1 3 5 5 8 8 9
+9 0 0 0 2 4
+ 7. 
+5 10 15 20 25 30 35 40
+ 8. 
+200 205 210 215 220
+(a) Tempos (em minutos) que uma amostra de funcio -
+nários leva para chegar ao trabalho.
+(b) Coeficientes de rendimento de uma amostr a de es-
+tudantes com graduação em finanças.
+(c) Velocidades máximas (em milhas por hora) de uma 
+amostra de carros esportivos de alto desempenho.
+(d) Idades (em anos) de uma amostra de r esidentes em 
+um asilo.
+Análise gráfica Nos exercícios 9 a 12, use um dia -
+grama de ramo e folha ou um diagrama de pontos para 
+listar os valores dos dados. Qual é o valor máximo? E 
+o mínimo?
+ 9. 2 7 Chave:  2|7 = 2,7
+3 2
+4 1 3 3 4 7 7 8
+5 0 1 1 2 3 3 3 4 4 4 4 5 6 6 8 9
+6 8 8 8
+7 3 8 8
+8
+5
+ 10. 12  Chave:  12|9 = 12,9
+12 9
+13 3
+13 6
+ 7 7
+14 1 1 1 1 3 4 4
+14 6 9 9
+15 0 0 0 1 2 4
+15 6 7 8 8 8 9
+16 1
+16 6 7
+ 11. 
+13 14 15 16 17 18 19
+ 12. 
+215 220 225 230 235
+Usando e interpretando conceitos
+Análise gráfica Nos exercícios 13 a 16, faça três ob -
+servações a partir da análise dos gráficos.
+60 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   60 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 13. Tempo médio gasto por visitante em 5 redes sociais, 
+durante um mês.
+(Fonte: comScore.)
+Tempo médio (em minutos)
+50
+100
+150
+200
+250
+300
+350
+400
+450
+Site
+TumblrPinterestFacebook LinkedInTwitter
+ 14. Roubo de veículos nos EUA.
+Roubos (em milhões)
+0,2
+0,4
+0,6
+0,8
+1,0
+1,2
+1,4
+Ano
+2006 2007 2008 2009 2010 2011
+(Fonte: Federal Bureau of Investigation.)
+ 15. Como outros mot oristas nos irritam.
+Ocupam
+duas vagas
+4%
+Ignoram a sinalização
+3%
+Cuidadosos demais 2%
+Outros
+10%
+Dirigem colados
+no veículo da frente 
+23%
+Usam celular 
+21%Dirigem devagar
+13%
+Não sinalizam
+13%
+Alta velocidade 
+7%
+Faróis 
+4%
+(Adaptado de: Reuters/Zogby.)
+ 16. Valor gasto com animal de estimação.
+Valor gasto (em bilhões)
+5
+10
+15
+20
+25
+Tipo de cuidado
+Acessórios/
+medicamentos
+VeterinárioAlimentação
+Compra
+Banho e tosa
+(Fonte: American Pet Products Association.)
+Representando graficamente conjuntos de da-
+dos Nos exercícios 17 a 32, organize os dados usando 
+o tipo de gráfico indicado. Descreva quaisquer padrões.
+ 17. Notas de pro vas Use um diagrama de ramo e folha 
+para retratar os dados. Os dados representam as notas 
+de uma turma de biologia em um teste.
+75 85 90 80 87 67 82 88 95 91 73 80
+83 92 94 68 75 91 79 95 87 76 91 85
+ 18. Enfermagem Use um diagrama de ramo e folha 
+para retratar os dados. Os dados representam o núme-
+ro de horas que 24 enfermeiras trabalham por 
+semana.
+40 40 35 48 38 40 36 50 32 36 40 35
+30 24 40 36 40 36 40 39 33 40 32 38
+ 19. Espessura do gelo Use um diagrama de ramo e fo-
+lha para retratar os dados. Os dados representam as 
+espessuras (em centímetros) do gelo medidas em 20 
+locais diferentes em um lago congelado.
+5,8 6,4 6,9 7, 2 5,1 4,9 4,3 5,8 7, 0 6,8
+8,1 7, 5 7, 2 6,9 5,8 7, 2 8,0 7, 0 6,9 5,9
+ 20. Preços de maçãs Use um diagrama de ramo e folha 
+para retratar os dados mostrados na tabela a seguir. 
+Os dados representam os preços (em centavos por li-
+bra) pagos por maçãs a 28 fazendeiros.
+Preços de maçãs (em centavos por libra)
+28,2 28,6 25,4 26,1 28,0 26,4
+26,3 29,1 28,0 26,5 26,6 27 ,6
+27 ,4 26,7 28,5 27 ,4 27 ,9 26,5
+28,3 29,8 28,3 27 ,6 27 ,6 27 ,3
+26,1 27 ,1 25,8 26,9
+ 21. Presidentes de empresas mais bem pagos  Use um 
+diagrama de ramo e folha com duas fileiras para cada 
+ramo para retratar os dados. Os dados representam as 
+idades dos 30 presidentes de empresas mais bem pa -
+gos. (Fonte: Forbes.)
+53 72 55 67 59 57 55 59 61 60 59 56 63 58 58
+52 61 65 61 50 65 59 58 66 57 64 58 59 66 56
+ 22. Super Bowl Use um diagrama de ramo e folha com 
+duas fileiras para cada ramo para retratar os dados. Os 
+dados representam as pontuações dos vencedores do 
+Super Bowl I ao Super Bowl XL VII. (Fonte: National 
+Football League.)
+35 33 16 23 16 24 14 24 16 21 32 27
+35 31 27 26 27 38 38 46 39 42 20 55
+20 37 52 30 49 27 35 31 34 23 34 20
+48 32 24 21 29 17 27 31 31 21 34
+ 23. Pressão arterial sistólica Use um gráfico de pontos 
+para representar os dados. Os dados correspondem às 
+pressões arteriais sistólicas (em milímetros de mercú-
+rio) de 30 pacientes em um consultório médico.
+Capítulo 2 Estatística descritiva 61
+M02_LARS0000_06_SE_C02.indd   61 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+120 135 140 145 130 150 120 170 145 125
+130 110 160 180 200 150 200 135 140 120
+120 130 140 170 120 165 150 130 135 140
+ 24. Tempo de vida de moscas-domésticas  Use um dia-
+grama de pontos para retratar os dados. Os dados re-
+presentam os tempos de vida (em dias) de 30 
+moscas-domésticas.
+9 9 4 11 10 5 13 9 7 11 6 8 14 10 6
+10 10 7 14 11 7 8 6 13 10 14 14 8 13 10
+ 25. Investimentos Use um gráfico de pizza par a retratar 
+os dados. Eles representam o resultado de uma pesquisa 
+que perguntou a adultos como eles investiriam seu di -
+nheiro em 2013. (Adaptado de: CNN.)
+Investir mais em ações 562 Não investir 288
+Investir mais em títulos 144 Investir o mesmo 
+que no ano passado
+461
+ 26. Maratona da cidade de Nova York Use um gráfico de 
+pizza para retratar os dados. Os dados representam o 
+número de vencedores masculinos da maratona da ci -
+dade de Nova York, de cada país, até 2012. (Fonte: New 
+York Road Runners.)
+Estados Unidos 15 México 4
+Itália 4 Marrocos 1
+Etiópia 2 Grã-Bretanha 1
+África do Sul 2 Brasil 2
+Tanzânia 1 Nova Zelândia 1
+Quênia 9
+ 27. Olimpíadas Use um gráfico de P areto para retratar os 
+dados. Eles representam a contagem de medalhas para 
+cinco países nos Jogos Olímpicos de Verão de 2012.  
+(Fonte: ESPN.)
+Alemanha Grã-Bretanha Estados Unidos Rússia China
+44 65 104 82 88
+ 28. Erros na medicação Use um gráfico de P areto para re-
+tratar os dados. Eles representam o número de vezes que 
+foram detectados erros na composição de medicamentos, 
+durante um estudo de 2 meses. (Fonte: PubMed Central.)
+Drogas não autorizadas 27 Omissão 54
+Forma incorreta da droga 2 Período incorreto 37
+Dose inadequada 57 Droga deteriorada 2
+ 29. Salário por hora Use um gráfico de dispersão para 
+retratar os dados da tabela. Os dados representam o 
+número de horas trabalhadas e o salário por hora (em 
+dólares) de 12 trabalhadores.
+Horas Salário por hora
+33 12,16
+37 9,98
+34 10,79
+40 11,71
+Horas Salário por hora
+35 11,80
+33 11,51
+40 13,65
+33 12.05
+28 10,54
+45 10,33
+37 11,57
+28 10,17
+ 30. Salários Use um diagrama de dispersão para retratar 
+os dados mostrados na tabela. Os dados representam o 
+número de alunos, por professor, e o salário médio dos 
+professores (em milhares de dólares) em 10 escolas.
+Número de alunos 
+por professor
+Salário médio 
+dos professores
+1 7, 1 28,7
+1 7, 5 47 ,5
+18,9 31,8
+1 7, 1 28,1
+20,0 40,3
+18,6 33,8
+14,4 49,8
+16,5 37 ,5
+13,3 42,5
+18,4 31,9
+ 31. Registro de motocicletas  Use um gráfico de série 
+temporal para retratar os dados mostrados nas tabelas 
+a seguir. Os dados representam o número de motoci-
+cletas (em milhões) registradas no período de 2000 a 
+2011, nos Estados Unidos.  (Fonte: U.S. Federal Hi -
+ghway Administration.)
+Ano 2000 2001 2002 2003 2004 2005
+Registros 4,3 4,9 5,0 5,4 5,8 6,2
+Ano 2006 2007 2008 2009 2010 2011
+Registros 6,7 7, 1 7, 8 7, 9 8,2 8,3
+ 32. Indústria Use um gráfico de série temporal para re-
+tratar os dados mostrados nas tabelas a seguir. Os da-
+dos representam o percentual do produto interno bruto 
+(PIB) dos Estados Unidos relativo ao setor industrial. 
+(Fonte: U.S. Bureau of Economic Analysis.)
+Ano 2000 2001 2002 2003 2004 2005
+Percentagem 14,2% 13,1% 12,7% 12,3% 12,5% 12,4%
+Ano 2006 2007 2008 2009 2010 2011
+Percentagem 12,3% 12,1% 11,4% 11,0% 11,2% 11,5%
+62 Estatística aplicada
+M02_LARS0000_06_SE_C02.indd   62 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+ 33. Filmadoras Repr
+esente os dados a seguir em um diagra-
+ma de pontos
+. Descreva as diferenças de como o diagrama 
+de ramo e folha e o diagrama de pontos exibem padrões 
+dos dados.
+Tamanho da tela de filmadoras (em polegadas)
+1  Chave:
+ 1|8 = 1,8
+1 8
+2 0
+2 5 5 7 7 7 7 7 7 7 7 7
+3 0 0 0 0 0 2 2
+3
+ 34. Basquete Repr
+esente os dados a seguir em um diagra-
+ma de r
+amo e folha. Descreva as diferenças de como 
+diagrama de pontos e o diagrama de ramo e folha exi -
+bem padrões nos dados. (Fonte: ESPN.)
+70 72 74 76 78 80 82
+Altura dos jogadores do
+Sacramento Kings em 2012-2013
+Poleg
+adas
+ 35. Estação do ano fa
+vorita Repr
+esente os dados a se -
+guir em um gr áfico de P
+areto. Descreva as diferenças 
+de como o gráfico de pizza e o gráfico de Pareto exibem 
+padrões nos dados. (Fonte: Gallup.)
+24%
+21%37%
+18%
+Estação do ano fav
+orita
+de adultos norte-americanos
+com idade de 18 a 29 anos
+Inv
+erno Primavera
+Verão Outono
+ 36. Dia fav
+orito da semana Repr
+esente os dados a seguir 
+em um gráfico de pizza. Descreva as diferenças de como 
+o gráfico de Pareto e o gráfico de pizza exibem padrões 
+nos dados.
+Número de pessoas
+3
+6
+9
+12
+15
+Sexta-feiraDomingo
+Quinta-feira
+Dia
+Sábado
+Quarta-feiraTerça-feira
+Se
+gunda-feira
+Dia da semana fav
+orito
+Expandindo conceitos
+Um gr
+áfico enganoso? Um gr
+áfico enganoso é um 
+gráfico estatístico que não está representado adequada-
+mente. Esse tipo de gráfico pode distorcer os dados e 
+levar a conclusões equivocadas. Nos exercícios 37 a 40, 
+(a) explique por que o gráfico é enganoso, e (b) redese-
+nhe o gráfico de modo que ele não seja enganoso.
+ 37. Vendas da Companhia 
+A.
+Trimestre
+1º 2º 3º 4º
+90
+100
+110
+120
+Vendas (em milhares
+de dólares)
+ 38. Resultados de uma pesquisa.
+Tipo de estudante
+Ensino
+médio
+Ensino
+fundamental
+Ensino
+superior
+56
+60
+64
+68
+72
+Percentual querespondeu “sim”
+ 39. Vendas da Companhia B
+.
+1o Trimestre4o Trimestre 
+3o Trimestre 2o Trimestre 
+4%
+38%20%
+38%
+ 40. Importações americanas 
+de óleo cru por país de origem 
+em 2012.
+Países fora
+da OPEP
+P
+aíses
+da OPEP
+500
+1.000
+1.500
+2.000
+Barris (em milhões)
+(Fonte: U
+.S. Energy Information Administration.)
+ 41. Salários de 
+escritório de advocacia  Um diagrama de 
+ramo e folha lado a lado
+ compara dois conjuntos de da-
+dos usando os mesmos ramos para cada conjunto. As 
+folhas para o primeiro conjunto estão em um lado e as 
+folhas para o segundo conjunto estão do outro lado. O 
+Capítulo 2 Estatística descritiv
+a 63
+M02_LARS0000_06_SE_C02.indd   63 10/12/15   18:12
+https://livros-pdf-ciencias-exatas.blogspot.com.br/
+https://livros-pdf-ciencias-exatas.blogspot.com.br/

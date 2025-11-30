@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com Visualizações - Estatística</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">← Voltar</a>
+        <div class="nav-title">Exemplo com Visualizações</div>
+        <a href="chapter1.html" class="next-btn">Capítulo 1 →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Demonstração</div>
+            <h1 class="chapter-title">Visualizações em Estatística</h1>
+            <p class="chapter-subtitle">Exemplos de como adicionar gráficos e imagens</p>
+        </section>
+
+        <!-- EXEMPLO 1: Distribuição Normal com Chart.js -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-number">1</span>
+                <h2>Distribuição Normal (Gráfico Interativo)</h2>
+            </div>
+
+            <p class="section-intro">
+                A curva em sino da distribuição normal pode ser visualizada interativamente:
+            </p>
+
+            <div class="chart-container" style="position: relative; height: 400px; margin: 2rem 0;">
+                <canvas id="normalDistChart"></canvas>
+            </div>
+
+            <div class="highlight-box">
+                <h3>📊 Características da Curva:</h3>
+                <ul>
+                    <li>Simétrica em torno da média (μ = 0)</li>
+                    <li>68% dos dados entre ±1σ</li>
+                    <li>95% dos dados entre ±2σ</li>
+                    <li>99,7% dos dados entre ±3σ</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EXEMPLO 2: Comparação de Distribuições -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-number">2</span>
+                <h2>Comparação: Normal vs t de Student</h2>
+            </div>
+
+            <div class="chart-container" style="position: relative; height: 400px; margin: 2rem 0;">
+                <canvas id="normalVsTChart"></canvas>
+            </div>
+
+            <div class="insight">
+                💡 <strong>Observe:</strong> A distribuição t (linha vermelha) tem caudas mais pesadas
+                que a normal (linha azul). Quanto menor os graus de liberdade, mais achatada é a curva t.
+            </div>
+        </section>
+
+        <!-- EXEMPLO 3: Gráfico de Dispersão e Regressão -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-number">3</span>
+                <h2>Regressão Linear (Scatter Plot)</h2>
+            </div>
+
+            <div class="chart-container" style="position: relative; height: 400px; margin: 2rem 0;">
+                <canvas id="regressionChart"></canvas>
+            </div>
+
+            <div class="formula-box">
+                <strong>Equação da Reta:</strong> ŷ = 59,5 + 3,75x<br>
+                <strong>Correlação:</strong> r = 0,985 (muito forte!)<br>
+                <strong>R²:</strong> 97% da variação explicada
+            </div>
+        </section>
+
+        <!-- EXEMPLO 4: Gráfico de Barras (Qui-Quadrado) -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-number">4</span>
+                <h2>Teste Qui-Quadrado (Observado vs Esperado)</h2>
+            </div>
+
+            <div class="chart-container" style="position: relative; height: 400px; margin: 2rem 0;">
+                <canvas id="chiSquareChart"></canvas>
+            </div>
+
+            <div class="calculation">
+                χ² = Σ[(O - E)² / E] = 9,09<br>
+                Valor crítico (α=0,05): 3,841<br>
+                <strong>Conclusão: Rejeitar H₀ (há associação!)</strong>
+            </div>
+        </section>
+
+        <!-- EXEMPLO 5: Box Plot -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-number">5</span>
+                <h2>Box Plot (Comparação de Grupos)</h2>
+            </div>
+
+            <div class="chart-container" style="position: relative; height: 400px; margin: 2rem 0;">
+                <canvas id="boxPlotChart"></canvas>
+            </div>
+
+            <div class="highlight-box">
+                <h3>📦 Interpretação do Box Plot:</h3>
+                <ul>
+                    <li><strong>Linha central:</strong> Mediana</li>
+                    <li><strong>Caixa:</strong> Intervalo interquartil (Q1 a Q3)</li>
+                    <li><strong>Bigodes:</strong> Valores mínimo e máximo (sem outliers)</li>
+                    <li><strong>Pontos:</strong> Outliers</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EXEMPLO 6: Diagrama SVG (Regra 68-95-99.7) -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-number">6</span>
+                <h2>Regra 68-95-99,7 (Diagrama SVG)</h2>
+            </div>
+
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                <svg viewBox="0 0 800 400" style="width: 100%; height: auto;">
+                    <!-- Curva Normal -->
+                    <path d="M 50 350 Q 400 50, 750 350" fill="none" stroke="#667eea" stroke-width="3" />
+
+                    <!-- Áreas coloridas -->
+                    <!-- 68% (±1σ) -->
+                    <rect x="250" y="100" width="300" height="250" fill="rgba(102, 126, 234, 0.2)" stroke="#667eea"
+                        stroke-width="2" stroke-dasharray="5,5" />
+
+                    <!-- 95% (±2σ) -->
+                    <rect x="150" y="100" width="500" height="250" fill="rgba(118, 75, 162, 0.1)" stroke="#764ba2"
+                        stroke-width="2" stroke-dasharray="5,5" />
+
+                    <!-- Linha central (média) -->
+                    <line x1="400" y1="50" x2="400" y2="350" stroke="#ff6b6b" stroke-width="2"
+                        stroke-dasharray="10,5" />
+
+                    <!-- Labels -->
+                    <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">μ</text>
+
+                    <text x="250" y="380" text-anchor="middle" font-size="14" fill="#667eea">μ - σ</text>
+                    <text x="400" y="380" text-anchor="middle" font-size="14" fill="#ff6b6b">μ</text>
+                    <text x="550" y="380" text-anchor="middle" font-size="14" fill="#667eea">μ + σ</text>
+
+                    <text x="150" y="380" text-anchor="middle" font-size="14" fill="#764ba2">μ - 2σ</text>
+                    <text x="650" y="380" text-anchor="middle" font-size="14" fill="#764ba2">μ + 2σ</text>
+
+                    <!-- Percentuais -->
+                    <text x="400" y="200" text-anchor="middle" font-size="20" font-weight="bold"
+                        fill="#667eea">68%</text>
+                    <text x="400" y="150" text-anchor="middle" font-size="20" font-weight="bold"
+                        fill="#764ba2">95%</text>
+                </svg>
+            </div>
+        </section>
+
+        <!-- EXEMPLO 7: Teste de Hipótese Visual -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-number">7</span>
+                <h2>Teste de Hipótese (Regiões Críticas)</h2>
+            </div>
+
+            <div class="chart-container" style="position: relative; height: 400px; margin: 2rem 0;">
+                <canvas id="hypothesisTestChart"></canvas>
+            </div>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo de Teste</th>
+                            <th>Região de Rejeição</th>
+                            <th>Cor no Gráfico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bilateral</td>
+                            <td>Ambas as caudas</td>
+                            <td>🔴 Vermelho</td>
+                        </tr>
+                        <tr>
+                            <td>Unilateral Direita</td>
+                            <td>Cauda direita</td>
+                            <td>🟠 Laranja</td>
+                        </tr>
+                        <tr>
+                            <td>Unilateral Esquerda</td>
+                            <td>Cauda esquerda</td>
+                            <td>🟡 Amarelo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="highlight-box" style="margin: 3rem 0;">
+            <h2>💡 Como Adicionar Visualizações aos Capítulos</h2>
+            <h3>Opção 1: Chart.js (Recomendado) ✅</h3>
+            <ul>
+                <li>✅ Gráficos interativos e bonitos</li>
+                <li>✅ Fácil de implementar</li>
+                <li>✅ Responsivo</li>
+                <li>✅ Muitos tipos: linha, barra, scatter, etc.</li>
+                <li>✅ Apenas adicionar CDN no HTML</li>
+            </ul>
+
+            <h3>Opção 2: SVG Inline ✅</h3>
+            <ul>
+                <li>✅ Leve e rápido</li>
+                <li>✅ Escalável</li>
+                <li>✅ Controle total</li>
+                <li>✅ Não precisa de bibliotecas externas</li>
+            </ul>
+
+            <h3>Opção 3: Imagens Geradas com IA 🎨</h3>
+            <ul>
+                <li>✅ Conceitos visuais complexos</li>
+                <li>✅ Ilustrações didáticas</li>
+                <li>✅ Exemplos do mundo real</li>
+                <li>❌ Precisa gerar cada imagem</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 1. DISTRIBUIÇÃO NORMAL
+        const normalCtx = document.getElementById('normalDistChart').getContext('2d');
+
+        // Gerar dados da curva normal
+        function normalPDF(x, mu = 0, sigma = 1) {
+            return (1 / (sigma * Math.sqrt(2 * Math.PI))) *
+                Math.exp(-0.5 * Math.pow((x - mu) / sigma, 2));
+        }
+
+        const xValues = [];
+        const yValues = [];
+        for (let x = -4; x <= 4; x += 0.1) {
+            xValues.push(x);
+            yValues.push(normalPDF(x));
+        }
+
+        new Chart(normalCtx, {
+            type: 'line',
+            data: {
+                labels: xValues,
+                datasets: [{
+                    label: 'Distribuição Normal (μ=0, σ=1)',
+                    data: yValues,
+                    borderColor: '#667eea',
+                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: true },
+                    title: {
+                        display: true,
+                        text: 'Curva Normal Padrão (Z)',
+                        font: { size: 16 }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Z (desvios padrão)' }
+                    },
+                    y: {
+                        title: { display: true, text: 'Densidade' }
+                    }
+                }
+            }
+        });
+
+        // 2. NORMAL VS T
+        const tCtx = document.getElementById('normalVsTChart').getContext('2d');
+
+        const yNormal = xValues.map(x => normalPDF(x));
+        const yT5 = xValues.map(x => normalPDF(x, 0, 1.2)); // Aproximação t com gl=5
+
+        new Chart(tCtx, {
+            type: 'line',
+            data: {
+                labels: xValues,
+                datasets: [
+                    {
+                        label: 'Normal',
+                        data: yNormal,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 0
+                    },
+                    {
+                        label: 't (gl=5)',
+                        data: yT5,
+                        borderColor: '#ff6b6b',
+                        backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                        fill: false,
+                        tension: 0.4,
+                        pointRadius: 0,
+                        borderDash: [5, 5]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Comparação: Normal vs t de Student',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
+
+        // 3. REGRESSÃO LINEAR
+        const regCtx = document.getElementById('regressionChart').getContext('2d');
+
+        const studyData = [
+            { x: 2, y: 65 },
+            { x: 4, y: 75 },
+            { x: 6, y: 85 },
+            { x: 8, y: 90 },
+            { x: 10, y: 95 }
+        ];
+
+        const regressionLine = [];
+        for (let x = 0; x <= 12; x += 0.5) {
+            regressionLine.push({ x: x, y: 59.5 + 3.75 * x });
+        }
+
+        new Chart(regCtx, {
+            type: 'scatter',
+            data: {
+                datasets: [
+                    {
+                        label: 'Dados Observados',
+                        data: studyData,
+                        backgroundColor: '#667eea',
+                        pointRadius: 8
+                    },
+                    {
+                        label: 'Reta de Regressão',
+                        data: regressionLine,
+                        type: 'line',
+                        borderColor: '#ff6b6b',
+                        borderWidth: 2,
+                        pointRadius: 0,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Horas de Estudo vs Nota',
+                        font: { size: 16 }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Horas de Estudo' },
+                        min: 0,
+                        max: 12
+                    },
+                    y: {
+                        title: { display: true, text: 'Nota' },
+                        min: 50,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // 4. QUI-QUADRADO
+        const chiCtx = document.getElementById('chiSquareChart').getContext('2d');
+
+        new Chart(chiCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Masc/Prod A', 'Masc/Prod B', 'Fem/Prod A', 'Fem/Prod B'],
+                datasets: [
+                    {
+                        label: 'Observado',
+                        data: [30, 20, 15, 35],
+                        backgroundColor: '#667eea'
+                    },
+                    {
+                        label: 'Esperado',
+                        data: [22.5, 27.5, 22.5, 27.5],
+                        backgroundColor: '#ff6b6b'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Gênero vs Preferência de Produto',
+                        font: { size: 16 }
+                    }
+                },
+                scales: {
+                    y: {
+                        title: { display: true, text: 'Frequência' },
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // 5. BOX PLOT
+        const boxCtx = document.getElementById('boxPlotChart').getContext('2d');
+
+        new Chart(boxCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Método A', 'Método B', 'Método C'],
+                datasets: [{
+                    label: 'Média',
+                    data: [88.75, 78.75, 83.75],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Comparação de Médias (ANOVA)',
+                        font: { size: 16 }
+                    }
+                },
+                scales: {
+                    y: {
+                        title: { display: true, text: 'Nota Média' },
+                        min: 70,
+                        max: 95
+                    }
+                }
+            }
+        });
+
+        // 6. TESTE DE HIPÓTESE
+        const hypCtx = document.getElementById('hypothesisTestChart').getContext('2d');
+
+        const criticalValue = 1.96;
+        const testStatistic = 2.47;
+
+        new Chart(hypCtx, {
+            type: 'line',
+            data: {
+                labels: xValues,
+                datasets: [
+                    {
+                        label: 'Distribuição sob H₀',
+                        data: yNormal,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 0
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Teste Bilateral (α = 0.05)',
+                        font: { size: 16 }
+                    },
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                xMin: criticalValue,
+                                xMax: criticalValue,
+                                borderColor: 'red',
+                                borderWidth: 2,
+                                label: {
+                                    content: 'z = 1.96',
+                                    enabled: true
+                                }
+                            },
+                            line2: {
+                                type: 'line',
+                                xMin: -criticalValue,
+                                xMax: -criticalValue,
+                                borderColor: 'red',
+                                borderWidth: 2,
+                                label: {
+                                    content: 'z = -1.96',
+                                    enabled: true
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+  "title": "Capítulo 2",
+  "summary": "Este capítulo apresenta conceitos fundamentais sobre estatística descritiva, incluindo amplitude de classe, ponto médio, frequência relativa e medidas de tendência central.",
+  "introduction": "A estatística descritiva é uma área fundamental da estatística que se refere à descrição e análise dos dados. Nesse capítulo, vamos explorar conceitos importantes para a compreensão e interpretação de dados.",
+  "sections": [
+    {
+      "title": "Tipos de Dados",
+      "content": "Os tipos de dados incluem amplitude de classe, ponto médio, frequência relativa e medidas de tendência central. A amplitude de classe é o intervalo entre o valor máximo e o valor mínimo dos dados."
+    },
+    {
+      "title": "Medidas de Tendência Central",
+      "content": "As medidas de tendência central incluem média populacional, média amostral e média ponderada. A média populacional é a medida mais comum e se refere à média de todos os dados na população."
+    }
+  ],
+  "keyPoints": [
+    "A amplitude de classe é o intervalo entre o valor máximo e o valor mínimo dos dados.",
+    "O ponto médio é o valor que divide a distribuição em duas partes iguais.",
+    "A frequência relativa é a proporção de cada classe em relação ao tamanho da amostra.",
+    "As medidas de tendência central incluem média populacional, média amostral e média ponderada."
+  ],
+  "exercises": [
+    "Calcule a amplitude de classe de um conjunto de dados com valor máximo 10 e valor mínimo 2.",
+    "Calcule a média populacional de um conjunto de dados com valores 1, 3, 5, 7 e 9."
+  ],
+  "image_ideas": [
+    {
+      "name": "concept_visualization",
+      "description": "Uma imagem que represente a amplitude de classe com um histograma de distribuição de dados."
+    },
+    {
+      "name": "real_world_example",
+      "description": "Uma imagem que mostre como a média populacional é usada em uma aplicação real, como por exemplo, na estatística de uma empresa."
+    }
+  ],
+  "chapter_number": 2
+}

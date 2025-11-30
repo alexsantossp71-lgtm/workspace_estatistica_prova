@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatística Aplicada - v2.0 BETA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_v2.css">
+</head>
+
+<body>
+    <!-- Theme Toggle & Search Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="version-badge-top">v2.0 BETA</div>
+
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="🔍 Buscar capítulos..." autocomplete="off">
+                <div id="search-results" class="search-results hidden"></div>
+            </div>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Estatística Aplicada</h1>
+                <p class="hero-description">Explore o conteúdo completo do livro de forma interativa, com explicações
+                    detalhadas, exercícios resolvidos e exemplos do mundo real.</p>
+
+                <!-- Progress Section -->
+                <div class="progress-widget">
+                    <div class="progress-header">
+                        <span>📊 Seu Progresso</span>
+                        <span id="progress-percentage">0%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span id="chapters-read">0</span> de 10 capítulos lidos
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-icon">📚</div>
+                    <div class="card-title">10 Capítulos</div>
+                    <div class="card-subtitle">Conteúdo Completo</div>
+                </div>
+                <div class="floating-card" style="animation-delay: 0.2s;">
+                    <div class="card-icon">📊</div>
+                    <div class="card-title">Visualizações</div>
+                    <div class="card-subtitle">Gráficos Interativos</div>
+                </div>
+                <div class="floating-card" style="animation-delay: 0.4s;">
+                    <div class="card-icon">🎯</div>
+                    <div class="card-title">Exercícios</div>
+                    <div class="card-subtitle">Prática Guiada</div>
+                </div>
+            </div>
+        </header>
+
+        <main id="content-section" class="content-section visible">
+            <div class="container">
+                <!-- New Features Banner -->
+                <div class="features-banner">
+                    <h3>🚀 Novidades da v2.0</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <span class="feature-icon">🔍</span>
+                            <span>Busca Rápida</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🌓</span>
+                            <span>Modo Escuro</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📈</span>
+                            <span>Rastreamento</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">⚡</span>
+                            <span>Mais Rápido</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title">📚 Todos os Capítulos</h2>
+                <div id="chapters-grid" class="chapters-grid">
+                    <!-- Capítulo 1 -->
+                    <a href="chapter1.html" class="chapter-card" data-chapter="1">
+                        <div class="chapter-status">✅</div>
+                        <span class="chapter-number">Capítulo 1</span>
+                        <h3 class="chapter-title">🎯 Introdução à Estatística</h3>
+                        <p class="chapter-excerpt">População vs amostra, tipos de dados, níveis de mensuração e técnicas
+                            de amostragem. <strong>✅ Conteúdo completo!</strong></p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 1)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 2 -->
+                    <a href="chapter2.html" class="chapter-card" data-chapter="2">
+                        <div class="chapter-status">✅</div>
+                        <span class="chapter-number">Capítulo 2</span>
+                        <h3 class="chapter-title">📊 Estatística Descritiva</h3>
+                        <p class="chapter-excerpt">Distribuições de frequência, medidas de tendência central, dispersão
+                            e posição. <strong>✅ Conteúdo completo!</strong></p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 2)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 3 -->
+                    <a href="chapter3.html" class="chapter-card" data-chapter="3">
+                        <div class="chapter-status">📋</div>
+                        <span class="chapter-number">Capítulo 3</span>
+                        <h3 class="chapter-title">🎲 Probabilidade</h3>
+                        <p class="chapter-excerpt">Conceitos básicos de probabilidade, regras de contagem, probabilidade
+                            condicional e teorema de Bayes.</p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 3)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 4 -->
+                    <a href="chapter4.html" class="chapter-card" data-chapter="4">
+                        <div class="chapter-status">📋</div>
+                        <span class="chapter-number">Capítulo 4</span>
+                        <h3 class="chapter-title">📈 Distribuições Discretas</h3>
+                        <p class="chapter-excerpt">Variáveis aleatórias discretas, distribuição binomial, distribuição
+                            de Poisson e outras distribuições importantes.</p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 4)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 5 -->
+                    <a href="chapter5.html" class="chapter-card" data-chapter="5">
+                        <div class="chapter-status">📋</div>
+                        <span class="chapter-number">Capítulo 5</span>
+                        <h3 class="chapter-title">🔔 Distribuição Normal</h3>
+                        <p class="chapter-excerpt">A curva em sino, distribuição normal padrão, aplicações e
+                            aproximações normais para distribuições binomiais.</p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 5)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 6 -->
+                    <a href="chapter6.html" class="chapter-card" data-chapter="6">
+                        <div class="chapter-status">📋</div>
+                        <span class="chapter-number">Capítulo 6</span>
+                        <h3 class="chapter-title">🎯 Intervalos de Confiança</h3>
+                        <p class="chapter-excerpt">Estimação de parâmetros populacionais, intervalos de confiança para
+                            média, proporção e variância.</p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 6)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 7 -->
+                    <a href="chapter7.html" class="chapter-card" data-chapter="7">
+                        <div class="chapter-status">📋</div>
+                        <span class="chapter-number">Capítulo 7</span>
+                        <h3 class="chapter-title">⚖️ Teste de Hipótese (1 Amostra)</h3>
+                        <p class="chapter-excerpt">Fundamentos de testes de hipótese, testes para média, proporção e
+                            variância com uma amostra.</p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 7)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 8 -->
+                    <a href="chapter8.html" class="chapter-card" data-chapter="8">
+                        <div class="chapter-status">📋</div>
+                        <span class="chapter-number">Capítulo 8</span>
+                        <h3 class="chapter-title">🔬 Teste de Hipótese (2 Amostras)</h3>
+                        <p class="chapter-excerpt">Comparação de duas médias, duas proporções e amostras dependentes vs
+                            independentes.</p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 8)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 9 -->
+                    <a href="chapter9.html" class="chapter-card" data-chapter="9">
+                        <div class="chapter-status">📋</div>
+                        <span class="chapter-number">Capítulo 9</span>
+                        <h3 class="chapter-title">📉 Correlação e Regressão</h3>
+                        <p class="chapter-excerpt">Correlação linear, regressão linear simples, coeficiente de
+                            determinação e análise de resíduos.</p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 9)">Marcar como lido</button>
+                        </div>
+                    </a>
+
+                    <!-- Capítulo 10 -->
+                    <a href="chapter10.html" class="chapter-card" data-chapter="10">
+                        <div class="chapter-status">📋</div>
+                        <span class="chapter-number">Capítulo 10</span>
+                        <h3 class="chapter-title">χ² Qui-Quadrado e F</h3>
+                        <p class="chapter-excerpt">Teste de qualidade do ajuste, teste de independência, comparação de
+                            variâncias e ANOVA.</p>
+                        <div class="chapter-footer">
+                            <button class="mark-read-btn" onclick="toggleRead(event, 10)">Marcar como lido</button>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="info-box">
+                    <h3>📖 Sobre a Versão 2.0</h3>
+                    <p>
+                        Esta é a <strong>versão 2.0 BETA</strong> do site com novas funcionalidades:
+                    </p>
+                    <ul>
+                        <li>🔍 <strong>Sistema de Busca</strong> - Encontre capítulos rapidamente</li>
+                        <li>🌓 <strong>Modo Escuro/Claro</strong> - Escolha seu tema preferido</li>
+                        <li>📈 <strong>Rastreamento de Progresso</strong> - Acompanhe seu aprendizado</li>
+                        <li>⚡ <strong>Interface Melhorada</strong> - Mais rápida e intuitiva</li>
+                    </ul>
+                    <p>
+                        <strong>Novidades em breve:</strong> Quiz interativo, calculadora estatística e PWA!
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>📊 Estatística Aplicada</h4>
+                <p>Versão 2.0 BETA</p>
+            </div>
+            <div class="footer-section">
+                <h4>🚀 Novidades v2.0</h4>
+                <ul>
+                    <li>✅ Sistema de busca</li>
+                    <li>✅ Modo escuro</li>
+                    <li>✅ Rastreamento de progresso</li>
+                    <li>🔜 Quiz interativo</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>📚 Recursos</h4>
+                <ul>
+                    <li><a href="#chapters-grid">Todos os Capítulos</a></li>
+                    <li><a href="CHANGELOG.md">Changelog</a></li>
+                    <li><a href="README.md">Documentação</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>ℹ️ Informações</h4>
+                <p>© 2025 - Todos os direitos reservados</p>
+                <p>Desenvolvido com ❤️ e ☕</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>🎯 Status: <span class="status-beta">BETA</span> | 📅 Release: 30/11/2025</p>
+        </div>
+    </footer>
+
+    <script src="js/app_v2.js"></script>
+</body>
+
+</html>

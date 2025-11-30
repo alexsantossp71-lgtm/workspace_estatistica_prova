@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 1 - Introdução à Estatística | Estatística Aplicada</title>
+    <meta name="description"
+        content="Conceitos fundamentais de estatística, tipos de dados, população vs amostra e níveis de mensuração">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .svg-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .data-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-card h4 {
+            margin: 0 0 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        .data-card ul {
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">← Início</a>
+        <div class="nav-title">Capítulo 1</div>
+        <a href="chapter2.html" class="next-btn">Próximo Capítulo →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Capítulo 1</div>
+            <h1 class="chapter-title">Introdução à Estatística</h1>
+            <p class="chapter-subtitle">Fundamentos e conceitos essenciais</p>
+        </section>
+
+        <!-- SEÇÃO 1.1 -->
+        <section class="content-section">
+            <div class="section-icon">📊</div>
+            <h2 id="section-1-1">1.1 O que é Estatística?</h2>
+
+            <p class="lead-text">
+                <strong>Estatística</strong> é a ciência de coletar, organizar, analisar e interpretar dados para
+                tomar decisões informadas. Ela está presente em todas as áreas: medicina, negócios, esportes, ciência, e
+                muito mais!
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Ramos da Estatística</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+                    <div>
+                        <h4 style="color: #667eea;">📈 Estatística Descritiva</h4>
+                        <p>Organiza e resume dados usando:</p>
+                        <ul>
+                            <li>Gráficos e tabelas</li>
+                            <li>Medidas de tendência central (média, mediana, moda)</li>
+                            <li>Medidas de dispersão (desvio padrão, variância)</li>
+                        </ul>
+                        <p><strong>Exemplo:</strong> "A média de idade da turma é 22 anos"</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #ef4444;">🔬 Estatística Inferencial</h4>
+                        <p>Faz inferências sobre populações baseadas em amostras:</p>
+                        <ul>
+                            <li>Testes de hipótese</li>
+                            <li>Intervalos de confiança</li>
+                            <li>Previsões e correlações</li>
+                        </ul>
+                        <p><strong>Exemplo:</strong> "Com 95% de confiança, a média populacional está entre 20 e 24
+                            anos"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SVG: População vs Amostra -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1.5rem;">👥 População vs Amostra</h3>
+                <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background -->
+                    <rect width="800" height="350" fill="#f8fafc" />
+
+                    <!-- População (grande círculo) -->
+                    <circle cx="250" cy="175" r="140" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-width="3" />
+
+                    <!-- Pessoas na população -->
+                    <g fill="#3b82f6">
+                        <circle cx="200" cy="120" r="8" />
+                        <circle cx="230" cy="140" r="8" />
+                        <circle cx="260" cy="130" r="8" />
+                        <circle cx="290" cy="150" r="8" />
+                        <circle cx="180" cy="170" r="8" />
+                        <circle cx="220" cy="190" r="8" />
+                        <circle cx="270" cy="200" r="8" />
+                        <circle cx="310" cy="180" r="8" />
+                        <circle cx="190" cy="220" r="8" />
+                        <circle cx="240" cy="240" r="8" />
+                        <circle cx="280" cy="220" r="8" />
+                        <circle cx="250" cy="170" r="8" />
+                    </g>
+
+                    <text x="250" y="340" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">
+                        POPULAÇÃO (N)
+                    </text>
+                    <text x="250" y="50" text-anchor="middle" font-size="14" fill="#64748b">
+                        Todos os elementos de interesse
+                    </text>
+
+                    <!-- Seta -->
+                    <path d="M 390 175 L 460 175" stroke="#10b981" stroke-width="4" marker-end="url(#arrowhead)" />
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#10b981" />
+                        </marker>
+                    </defs>
+                    <text x="425" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#10b981">
+                        Amostragem
+                    </text>
+
+                    <!-- Amostra (círculo menor) -->
+                    <circle cx="600" cy="175" r="80" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="3" />
+
+                    <!-- Pessoas na amostra -->
+                    <g fill="#10b981">
+                        <circle cx="570" cy="150" r="8" />
+                        <circle cx="600" cy="160" r="8" />
+                        <circle cx="630" cy="155" r="8" />
+                        <circle cx="580" cy="190" r="8" />
+                        <circle cx="620" cy="195" r="8" />
+                    </g>
+
+                    <text x="600" y="340" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">
+                        AMOSTRA (n)
+                    </text>
+                    <text x="600" y="50" text-anchor="middle" font-size="14" fill="#64748b">
+                        Subconjunto representativo
+                    </text>
+                </svg>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: População vs Amostra</h3>
+                <p><strong>Cenário:</strong> Queremos saber a altura média dos brasileiros adultos.</p>
+                <ul>
+                    <li><strong>População:</strong> TODOS os 150 milhões de brasileiros adultos</li>
+                    <li><strong>Amostra:</strong> 1.000 brasileiros selecionados aleatoriamente</li>
+                    <li><strong>Parâmetro:</strong> Altura média da população (μ) - desconhecida</li>
+                    <li><strong>Estatística:</strong> Altura média da amostra (x̄) = 1,70m - usamos para estimar μ</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 1.2 -->
+        <section class="content-section">
+            <div class="section-icon">🔢</div>
+            <h2 id="section-1-2">1.2 Tipos de Dados</h2>
+
+            <p class="lead-text">
+                Entender o tipo de dado é crucial para escolher a análise estatística correta!
+            </p>
+
+            <!-- SVG: Árvore de Tipos de Dados -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1.5rem;">🌳 Classificação dos Dados</h3>
+                <svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background -->
+                    <rect width="900" height="400" fill="#f8fafc" />
+
+                    <!-- Root: DADOS -->
+                    <rect x="375" y="20" width="150" height="50" fill="#667eea" rx="8" />
+                    <text x="450" y="50" text-anchor="middle" font-size="18" font-weight="bold"
+                        fill="white">DADOS</text>
+
+                    <!-- Level 1: Qualitativos e Quantitativos -->
+                    <line x1="450" y1="70" x2="250" y2="120" stroke="#1e293b" stroke-width="2" />
+                    <line x1="450" y1="70" x2="650" y2="120" stroke="#1e293b" stroke-width="2" />
+
+                    <rect x="150" y="120" width="200" height="60" fill="#3b82f6" rx="8" />
+                    <text x="250" y="145" text-anchor="middle" font-size="16" font-weight="bold"
+                        fill="white">QUALITATIVOS</text>
+                    <text x="250" y="165" text-anchor="middle" font-size="12" fill="white">(Categóricos)</text>
+
+                    <rect x="550" y="120" width="200" height="60" fill="#10b981" rx="8" />
+                    <text x="650" y="145" text-anchor="middle" font-size="16" font-weight="bold"
+                        fill="white">QUANTITATIVOS</text>
+                    <text x="650" y="165" text-anchor="middle" font-size="12" fill="white">(Numéricos)</text>
+
+                    <!-- Level 2: Subtipos -->
+                    <!-- Qualitativos -->
+                    <line x1="200" y1="180" x2="150" y2="240" stroke="#1e293b" stroke-width="2" />
+                    <line x1="300" y1="180" x2="350" y2="240" stroke="#1e293b" stroke-width="2" />
+
+                    <rect x="50" y="240" width="200" height="70" fill="#60a5fa" rx="8" />
+                    <text x="150" y="265" text-anchor="middle" font-size="14" font-weight="bold"
+                        fill="white">NOMINAIS</text>
+                    <text x="150" y="285" text-anchor="middle" font-size="11" fill="white">Sem ordem</text>
+                    <text x="150" y="300" text-anchor="middle" font-size="10" fill="white" opacity="0.9">Ex: Cor,
+                        Gênero</text>
+
+                    <rect x="270" y="240" width="200" height="70" fill="#60a5fa" rx="8" />
+                    <text x="370" y="265" text-anchor="middle" font-size="14" font-weight="bold"
+                        fill="white">ORDINAIS</text>
+                    <text x="370" y="285" text-anchor="middle" font-size="11" fill="white">Com ordem</text>
+                    <text x="370" y="300" text-anchor="middle" font-size="10" fill="white" opacity="0.9">Ex:
+                        Escolaridade</text>
+
+                    <!-- Quantitativos -->
+                    <line x1="600" y1="180" x2="550" y2="240" stroke="#1e293b" stroke-width="2" />
+                    <line x1="700" y1="180" x2="750" y2="240" stroke="#1e293b" stroke-width="2" />
+
+                    <rect x="450" y="240" width="200" height="70" fill="#34d399" rx="8" />
+                    <text x="550" y="265" text-anchor="middle" font-size="14" font-weight="bold"
+                        fill="white">DISCRETOS</text>
+                    <text x="550" y="285" text-anchor="middle" font-size="11" fill="white">Contáveis</text>
+                    <text x="550" y="300" text-anchor="middle" font-size="10" fill="white" opacity="0.9">Ex: Nº filhos,
+                        Carros</text>
+
+                    <rect x="670" y="240" width="200" height="70" fill="#34d399" rx="8" />
+                    <text x="770" y="265" text-anchor="middle" font-size="14" font-weight="bold"
+                        fill="white">CONTÍNUOS</text>
+                    <text x="770" y="285" text-anchor="middle" font-size="11" fill="white">Mensuráveis</text>
+                    <text x="770" y="300" text-anchor="middle" font-size="10" fill="white" opacity="0.9">Ex: Altura,
+                        Peso</text>
+                </svg>
+            </div>
+
+            <div class="data-types-grid">
+                <div class="data-card">
+                    <h4>📛 Qualitativos Nominais</h4>
+                    <p>Categorias sem ordem natural</p>
+                    <ul>
+                        <li>Cor dos olhos</li>
+                        <li>Estado civil</li>
+                        <li>Marca de carro</li>
+                        <li>Tipo sanguíneo</li>
+                    </ul>
+                </div>
+
+                <div class="data-card">
+                    <h4>📊 Qualitativos Ordinais</h4>
+                    <p>Categorias com ordem</p>
+                    <ul>
+                        <li>Escolaridade (fundamental, médio, superior)</li>
+                        <li>Classe social (A, B, C, D, E)</li>
+                        <li>Satisfação (ruim, regular, bom, ótimo)</li>
+                    </ul>
+                </div>
+
+                <div class="data-card">
+                    <h4>🔢 Quantitativos Discretos</h4>
+                    <p>Números inteiros (contagem)</p>
+                    <ul>
+                        <li>Número de filhos</li>
+                        <li>Quantidade de carros</li>
+                        <li>Número de alunos</li>
+                        <li>Gols em uma partida</li>
+                    </ul>
+                </div>
+
+                <div class="data-card">
+                    <h4>📏 Quantitativos Contínuos</h4>
+                    <p>Números com decimais (medição)</p>
+                    <ul>
+                        <li>Altura (1,75m)</li>
+                        <li>Peso (68,5kg)</li>
+                        <li>Temperatura (36,5°C)</li>
+                        <li>Tempo (12,34s)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 1.3 -->
+        <section class="content-section">
+            <div class="section-icon">📐</div>
+            <h2 id="section-1-3">1.3 Níveis de Mensuração</h2>
+
+            <p class="lead-text">
+                Os níveis de mensuração determinam quais operações matemáticas e testes estatísticos podemos aplicar aos
+                dados.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Os 4 Níveis de Mensuração</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead style="background: #667eea; color: white;">
+                        <tr>
+                            <th style="padding: 1rem; text-align: left;">Nível</th>
+                            <th style="padding: 1rem; text-align: left;">Características</th>
+                            <th style="padding: 1rem; text-align: left;">Exemplo</th>
+                            <th style="padding: 1rem; text-align: left;">Operações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #f8fafc;">
+                            <td style="padding: 0.75rem;"><strong>Nominal</strong></td>
+                            <td style="padding: 0.75rem;">Apenas categorias</td>
+                            <td style="padding: 0.75rem;">Cor (azul, verde, vermelho)</td>
+                            <td style="padding: 0.75rem;">=, ≠</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem;"><strong>Ordinal</strong></td>
+                            <td style="padding: 0.75rem;">Categorias + ordem</td>
+                            <td style="padding: 0.75rem;">Medalhas (ouro, prata, bronze)</td>
+                            <td style="padding: 0.75rem;">=, ≠, <,>
+                            </td>
+                        </tr>
+                        <tr style="background: #f8fafc;">
+                            <td style="padding: 0.75rem;"><strong>Intervalar</strong></td>
+                            <td style="padding: 0.75rem;">Ordem + intervalos iguais<br>(sem zero absoluto)</td>
+                            <td style="padding: 0.75rem;">Temperatura (°C, °F)</td>
+                            <td style="padding: 0.75rem;">=, ≠, <,>, +, -</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem;"><strong>Razão</strong></td>
+                            <td style="padding: 0.75rem;">Tudo + zero absoluto</td>
+                            <td style="padding: 0.75rem;">Altura, Peso, Idade</td>
+                            <td style="padding: 0.75rem;">=, ≠, <,>, +, -, ×, ÷</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Por que isso importa?</h3>
+                <div class="step-by-step">
+                    <p><strong>Temperatura:</strong> Escala Intervalar (não tem zero absoluto)</p>
+                    <ul>
+                        <li>✅ Podemos dizer: "20°C é 10°C mais quente que 10°C"</li>
+                        <li>❌ NÃO podemos dizer: "20°C é duas vezes mais quente que 10°C"</li>
+                        <li>Por quê? 0°C não significa "ausência de temperatura"</li>
+                    </ul>
+
+                    <p><strong>Altura:</strong> Escala de Razão (tem zero absoluto)</p>
+                    <ul>
+                        <li>✅ Podemos dizer: "2m é o dobro de 1m"</li>
+                        <li>✅ 0m significa "ausência de altura"</li>
+                        <li>Todas as operações matemáticas são válidas!</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIOS -->
+        <section class="content-section">
+            <div class="section-icon">✏️</div>
+            <h2>Exercícios Resolvidos</h2>
+
+            <div class="exercise-box">
+                <h3>Exercício 1: Classificar Variáveis</h3>
+                <p><strong>Classifique cada variável:</strong></p>
+
+                <div class="step-by-step">
+                    <p><strong>a) Número de irmãos</strong></p>
+                    <p>✅ <strong>Quantitativa Discreta</strong> (contagem: 0, 1, 2, 3...)</p>
+
+                    <p><strong>b) Marca de smartphone</strong></p>
+                    <p>✅ <strong>Qualitativa Nominal</strong> (categorias sem ordem: Apple, Samsung, Xiaomi...)</p>
+
+                    <p><strong>c) Nível de satisfação (1 a 5)</strong></p>
+                    <p>✅ <strong>Qualitativa Ordinal</strong> (tem ordem: 1 < 2 < 3 < 4 < 5)</p>
+
+                            <p><strong>d) Peso em kg</strong></p>
+                            <p>✅ <strong>Quantitativa Contínua</strong> (medição com decimais: 68,5kg)</p>
+
+                            <p><strong>e) CEP</strong></p>
+                            <p>✅ <strong>Qualitativa Nominal</strong> (apesar de ser número, é apenas código/categoria)
+                            </p>
+                </div>
+            </div>
+
+            <div class="exercise-box">
+                <h3>Exercício 2: População vs Amostra</h3>
+                <p><strong>Cenário:</strong> Uma pesquisa quer saber a renda média dos moradores de São Paulo.</p>
+
+                <div class="step-by-step">
+                    <p><strong>a) Qual é a população?</strong></p>
+                    <p>✅ Todos os moradores de São Paulo (≈12 milhões de pessoas)</p>
+                    <div class="nav-title">Início</div>
+                </div>
+                </a>
+                <a href="chapter2.html" class="nav-btn next-btn">
+                    <div>
+                        <div class="nav-label">Próximo</div>
+                        <div class="nav-title">Capítulo 2</div>
+                    </div>
+                    <span>→</span>
+                </a>
+            </div>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 0,
+        "title": "Capítulo 1 - Introdução à Estatística (Exemplo)",
+        "summary": "Este é um resumo de exemplo enquanto o conteúdo real está sendo extraído do PDF. O capítulo aborda conceitos fundamentais de estatística descritiva e inferencial.",
+        "keyPoints": [
+            "Definição de Estatística",
+            "População vs Amostra",
+            "Tipos de Dados",
+            "Planejamento de Experimentos"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Capítulo 2 - Estatística Descritiva (Exemplo)",
+        "summary": "Resumo temporário. O capítulo foca em medidas de tendência central e dispersão.",
+        "keyPoints": [
+            "Média, Mediana e Moda",
+            "Variância e Desvio Padrão",
+            "Quartis e Percentis",
+            "Boxplot"
+        ]
+    }
+]

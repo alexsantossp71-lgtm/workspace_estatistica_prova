@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 4 - Distribuições Discretas | Estatística Aplicada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="chapter3.html" class="back-btn">← Capítulo Anterior</a>
+        <div class="nav-title">Capítulo 4</div>
+        <a href="chapter5.html" class="next-btn">Próximo Capítulo →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Capítulo 4</div>
+            <h1 class="chapter-title">Distribuições de Probabilidade Discretas</h1>
+            <p class="chapter-subtitle">Binomial e Poisson</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">🎯</div>
+            <h2>4.1 Distribuição Binomial</h2>
+
+            <p class="lead-text">
+                A <strong>distribuição binomial</strong> modela o número de sucessos em n tentativas independentes,
+                cada uma com probabilidade p de sucesso.
+            </p>
+
+            <div class="formula-box">
+                P(X = k) = C(n,k) × p^k × (1-p)^(n-k)
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Características da Binomial</h3>
+                <ul>
+                    <li>Número fixo de tentativas (n)</li>
+                    <li>Cada tentativa tem apenas 2 resultados (sucesso/fracasso)</li>
+                    <li>Probabilidade constante (p) em cada tentativa</li>
+                    <li>Tentativas independentes</li>
+                    <li><strong>Média:</strong> μ = n × p</li>
+                    <li><strong>Desvio padrão:</strong> σ = √(n × p × (1-p))</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Lançamento de Moeda</h3>
+                <p><strong>Problema:</strong> Lançamos uma moeda 10 vezes. Qual a probabilidade de obter exatamente 6
+                    caras?</p>
+
+                <div class="step-by-step">
+                    <p><strong>Dados:</strong> n = 10, p = 0,5, k = 6</p>
+                    <p>P(X=6) = C(10,6) × 0,5^6 × 0,5^4</p>
+                    <p>= 210 × 0,015625 × 0,0625</p>
+                    <p>= <strong>0,205 ou 20,5%</strong></p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="binomialChart"></canvas>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">⚡</div>
+            <h2>4.2 Distribuição de Poisson</h2>
+
+            <p class="lead-text">
+                A <strong>distribuição de Poisson</strong> modela o número de eventos raros que ocorrem
+                em um intervalo fixo de tempo ou espaço.
+            </p>
+
+            <div class="formula-box">
+                P(X = k) = (λ^k × e^(-λ)) / k!
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Quando Usar Poisson?</h3>
+                <ul>
+                    <li>Número de chamadas telefônicas por hora</li>
+                    <li>Acidentes de trânsito por dia</li>
+                    <li>Defeitos em um produto</li>
+                    <li>Clientes chegando em uma fila</li>
+                    <li><strong>Média = Variância = λ</strong></li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Chamadas Telefônicas</h3>
+                <p><strong>Problema:</strong> Em média, chegam 3 chamadas por hora. Qual a probabilidade de chegar
+                    exatamente 5 chamadas na próxima hora?</p>
+
+                <div class="step-by-step">
+                    <p><strong>Dados:</strong> λ = 3, k = 5</p>
+                    <p>P(X=5) = (3^5 × e^(-3)) / 5!</p>
+                    <p>= (243 × 0,0498) / 120</p>
+                    <p>= <strong>0,101 ou 10,1%</strong></p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="poissonChart"></canvas>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">📚</div>
+            <h2>Resumo do Capítulo</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>Binomial:</strong> n tentativas, 2 resultados, p constante</li>
+                    <li><strong>Poisson:</strong> Eventos raros em intervalo fixo</li>
+                    <li><strong>Binomial → Poisson:</strong> Quando n grande e p pequeno</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter3.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 3</div>
+                </div>
+            </a>
+            <a href="chapter5.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Próximo</div>
+                    <div class="nav-title">Capítulo 5</div>
+                </div>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Binomial Distribution
+        const binCtx = document.getElementById('binomialChart');
+        if (binCtx) {
+            const n = 10, p = 0.5;
+            const binomialData = [];
+            for (let k = 0; k <= n; k++) {
+                const comb = factorial(n) / (factorial(k) * factorial(n - k));
+                const prob = comb * Math.pow(p, k) * Math.pow(1 - p, n - k);
+                binomialData.push(prob);
+            }
+
+            new Chart(binCtx, {
+                type: 'bar',
+                data: {
+                    labels: Array.from({ length: 11 }, (_, i) => i),
+                    datasets: [{
+                        label: 'P(X=k)',
+                        data: binomialData,
+                        backgroundColor: '#667eea'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '📊 Distribuição Binomial (n=10, p=0.5)', font: { size: 20, weight: 'bold' } }
+                    },
+                    scales: {
+                        y: { title: { display: true, text: 'Probabilidade' } },
+                        x: { title: { display: true, text: 'Número de Sucessos (k)' } }
+                    }
+                }
+            });
+        }
+
+        // Poisson Distribution
+        const poisCtx = document.getElementById('poissonChart');
+        if (poisCtx) {
+            const lambda = 3;
+            const poissonData = [];
+            for (let k = 0; k <= 10; k++) {
+                const prob = (Math.pow(lambda, k) * Math.exp(-lambda)) / factorial(k);
+                poissonData.push(prob);
+            }
+
+            new Chart(poisCtx, {
+                type: 'bar',
+                data: {
+                    labels: Array.from({ length: 11 }, (_, i) => i),
+                    datasets: [{
+                        label: 'P(X=k)',
+                        data: poissonData,
+                        backgroundColor: '#10b981'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '⚡ Distribuição de Poisson (λ=3)', font: { size: 20, weight: 'bold' } }
+                    },
+                    scales: {
+                        y: { title: { display: true, text: 'Probabilidade' } },
+                        x: { title: { display: true, text: 'Número de Eventos (k)' } }
+                    }
+                }
+            });
+        }
+
+        function factorial(n) {
+            if (n <= 1) return 1;
+            return n * factorial(n - 1);
+        }
+    </script>
+</body>
+
+</html>
