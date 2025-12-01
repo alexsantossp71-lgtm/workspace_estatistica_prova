@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 7 - Teste de Hipótese (1 amostra) | Estatística Aplicada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .svg-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+    <link rel="stylesheet" href="css/style_v2.css">
+    <link rel="stylesheet" href="css/chapter_v2_overrides.css">
+    <script src="js/app_v2.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mark this chapter as read
+            if (window.app && window.app.progressTracker) {
+                window.app.progressTracker.markAsRead(7);
+            }
+        });
+    </script>
+        
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+                <span>←</span> Voltar
+            </a>
+            
+            <div class="version-badge-top">v2.0 BETA</div>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+    
+    <nav class="top-nav">
+        <a href="chapter6_v2.html" class="back-btn">← Capítulo Anterior</a>
+        <div class="nav-title">Capítulo 7</div>
+        <button id="theme-toggle-chapter" class="theme-toggle-chapter" aria-label="Alternar tema">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <a href="chapter8_v2.html" class="next-btn">Próximo Capítulo →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Capítulo 7</div>
+            <h1 class="chapter-title">Teste de Hipótese (1 Amostra)</h1>
+            <p class="chapter-subtitle">Tomando decisões com dados</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">⚖️</div>
+            <h2>7.1 Conceitos de Teste de Hipótese</h2>
+
+            <p class="lead-text">
+                Um <strong>teste de hipótese</strong> é um procedimento para decidir se uma afirmação sobre um parâmetro
+                populacional
+                é suportada pelos dados da amostra.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Hipóteses</h3>
+                <ul>
+                    <li><strong>H₀ (Hipótese Nula):</strong> Afirmação de "nenhum efeito" ou "status quo"</li>
+                    <li><strong>H₁ (Hipótese Alternativa):</strong> Afirmação que queremos evidenciar</li>
+                </ul>
+                <p><strong>Exemplo:</strong></p>
+                <ul>
+                    <li>H₀: μ = 100 (a média é 100)</li>
+                    <li>H₁: μ ≠ 100 (a média é diferente de 100) → <strong>Bilateral</strong></li>
+                    <li>H₁: μ > 100 (a média é maior que 100) → <strong>Unilateral à direita</strong></li>
+                    <li>H₁: μ < 100 (a média é menor que 100) → <strong>Unilateral à esquerda</strong></li>
+                </ul>
+            </div>
+
+            <!-- SVG: Regiões Críticas -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1.5rem;">📊 Regiões Críticas (α = 0,05)
+                </h3>
+                <svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="900" height="450" fill="#f8fafc" />
+
+                    <!-- Teste Bilateral -->
+                    <g>
+                        <text x="150" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">Teste
+                            Bilateral (H₁: μ ≠ μ₀)</text>
+                        <path d="M 50 150 Q 50 100, 100 80 T 150 60 T 200 80 T 250 150" fill="#3b82f6" opacity="0.3"
+                            stroke="#3b82f6" stroke-width="2" />
+
+                        <!-- Região de rejeição esquerda -->
+                        <path d="M 50 150 Q 50 100, 70 90 L 70 150 Z" fill="#ef4444" opacity="0.5" />
+                        <!-- Região de rejeição direita -->
+                        <path d="M 230 90 Q 250 100, 250 150 L 230 150 Z" fill="#ef4444" opacity="0.5" />
+
+                        <line x1="150" y1="60" x2="150" y2="150" stroke="#10b981" stroke-width="2"
+                            stroke-dasharray="5,5" />
+                        <text x="150" y="180" text-anchor="middle" font-size="12" fill="#10b981">μ₀</text>
+                        <text x="60" y="170" text-anchor="middle" font-size="10" fill="#ef4444">2,5%</text>
+                        <text x="240" y="170" text-anchor="middle" font-size="10" fill="#ef4444">2,5%</text>
+                    </g>
+
+                    <!-- Teste Unilateral Direita -->
+                    <g>
+                        <text x="450" y="30" text-anchor="middle" font-size="16" font-weight="bold"
+                            fill="#1e293b">Unilateral Direita (H₁: μ > μ₀)</text>
+                        <path d="M 350 150 Q 350 100, 400 80 T 450 60 T 500 80 T 550 150" fill="#3b82f6" opacity="0.3"
+                            stroke="#3b82f6" stroke-width="2" />
+
+                        <!-- Região de rejeição direita -->
+                        <path d="M 520 75 Q 550 100, 550 150 L 520 150 Z" fill="#ef4444" opacity="0.5" />
+
+                        <line x1="450" y1="60" x2="450" y2="150" stroke="#10b981" stroke-width="2"
+                            stroke-dasharray="5,5" />
+                        <text x="450" y="180" text-anchor="middle" font-size="12" fill="#10b981">μ₀</text>
+                        <text x="535" y="170" text-anchor="middle" font-size="10" fill="#ef4444">5%</text>
+                    </g>
+
+                    <!-- Teste Unilateral Esquerda -->
+                    <g>
+                        <text x="750" y="30" text-anchor="middle" font-size="16" font-weight="bold"
+                            fill="#1e293b">Unilateral Esquerda (H₁: μ < μ₀)</text>
+                                <path d="M 650 150 Q 650 100, 700 80 T 750 60 T 800 80 T 850 150" fill="#3b82f6"
+                                    opacity="0.3" stroke="#3b82f6" stroke-width="2" />
+
+                                <!-- Região de rejeição esquerda -->
+                                <path d="M 650 150 Q 650 100, 680 75 L 680 150 Z" fill="#ef4444" opacity="0.5" />
+
+                                <line x1="750" y1="60" x2="750" y2="150" stroke="#10b981" stroke-width="2"
+                                    stroke-dasharray="5,5" />
+                                <text x="750" y="180" text-anchor="middle" font-size="12" fill="#10b981">μ₀</text>
+                                <text x="665" y="170" text-anchor="middle" font-size="10" fill="#ef4444">5%</text>
+                    </g>
+
+                    <!-- Legenda -->
+                    <rect x="300" y="220" width="300" height="100" fill="white" stroke="#64748b" stroke-width="2"
+                        rx="8" />
+                    <rect x="320" y="240" width="30" height="20" fill="#ef4444" opacity="0.5" />
+                    <text x="360" y="255" font-size="14" fill="#1e293b">Região de Rejeição (α)</text>
+                    <rect x="320" y="270" width="30" height="20" fill="#3b82f6" opacity="0.3" />
+                    <text x="360" y="285" font-size="14" fill="#1e293b">Região de Não Rejeição</text>
+                </svg>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Teste para Média</h3>
+                <p><strong>Problema:</strong> Uma fábrica afirma que seus parafusos têm comprimento médio de 10 cm.
+                    Uma amostra de 36 parafusos tem média 9,8 cm e σ = 0,6 cm. Teste a afirmação com α = 0,05.</p>
+
+                <div class="step-by-step">
+                    <p><strong>Passo 1: Hipóteses</strong></p>
+                    <p>H₀: μ = 10 | H₁: μ ≠ 10 (bilateral)</p>
+
+                    <p><strong>Passo 2: Estatística de teste</strong></p>
+                    <p>z = (x̄ - μ₀) / (σ/√n) = (9,8 - 10) / (0,6/√36) = -0,2 / 0,1 = <strong>-2</strong></p>
+
+                    <p><strong>Passo 3: Valor crítico</strong></p>
+                    <p>z crítico (bilateral, α=0,05) = ±1,96</p>
+
+                    <p><strong>Passo 4: Decisão</strong></p>
+                    <p>Como |-2| = 2 > 1,96, <strong>rejeitamos H₀</strong></p>
+
+                    <p><strong>Conclusão:</strong> Há evidências de que o comprimento médio é diferente de 10 cm (é
+                        menor).</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="hypothesisChart"></canvas>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">⚠️</div>
+            <h2>7.2 Tipos de Erro</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Erros em Testes de Hipótese</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead style="background: #667eea; color: white;">
+                        <tr>
+                            <th style="padding: 1rem;"></th>
+                            <th style="padding: 1rem;">H₀ é Verdadeira</th>
+                            <th style="padding: 1rem;">H₀ é Falsa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #f8fafc;">
+                            <td style="padding: 0.75rem;"><strong>Rejeitamos H₀</strong></td>
+                            <td style="padding: 0.75rem; background: #fee2e2;"><strong>Erro Tipo I</strong><br>P = α
+                                (5%)</td>
+                            <td style="padding: 0.75rem; background: #d1fae5;">✅ Decisão Correta</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem;"><strong>Não Rejeitamos H₀</strong></td>
+                            <td style="padding: 0.75rem; background: #d1fae5;">✅ Decisão Correta</td>
+                            <td style="padding: 0.75rem; background: #fef3c7;"><strong>Erro Tipo II</strong><br>P = β
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul style="margin-top: 1rem;">
+                    <li><strong>Erro Tipo I:</strong> Rejeitar H₀ quando é verdadeira (falso positivo)</li>
+                    <li><strong>Erro Tipo II:</strong> Não rejeitar H₀ quando é falsa (falso negativo)</li>
+                    <li><strong>Poder do teste:</strong> 1 - β (probabilidade de rejeitar H₀ quando é falsa)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">📚</div>
+            <h2>Resumo do Capítulo</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>H₀:</strong> Hipótese nula (status quo)</li>
+                    <li><strong>H₁:</strong> Hipótese alternativa (o que queremos provar)</li>
+                    <li><strong>α:</strong> Nível de significância (geralmente 0,05)</li>
+                    <li><strong>p-valor:</strong> Se p < α, rejeitamos H₀</li>
+                    <li><strong>Bilateral:</strong> μ ≠ μ₀ | <strong>Unilateral:</strong> μ > μ₀ ou μ < μ₀</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter6_v2.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 6</div>
+                </div>
+            </a>
+            <a href="chapter8_v2.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Próximo</div>
+                    <div class="nav-title">Capítulo 8</div>
+                </div>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const hypCtx = document.getElementById('hypothesisChart');
+        if (hypCtx) {
+            const zValues = [];
+            const normalCurve = [];
+            for (let z = -4; z <= 4; z += 0.1) {
+                zValues.push(z);
+                normalCurve.push((1 / Math.sqrt(2 * Math.PI)) * Math.exp(-0.5 * z * z));
+            }
+
+            new Chart(hypCtx, {
+                type: 'line',
+                data: {
+                    labels: zValues,
+                    datasets: [{
+                        label: 'Distribuição Normal Padrão',
+                        data: normalCurve,
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        fill: true,
+                        borderWidth: 2,
+                        pointRadius: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '📊 Teste de Hipótese: Regiões Críticas (α=0,05 bilateral)', font: { size: 20, weight: 'bold' } },
+                        annotation: {
+                            annotations: {
+                                line1: { type: 'line', xMin: -1.96, xMax: -1.96, borderColor: '#ef4444', borderWidth: 3, label: { content: 'z = -1,96', enabled: true } },
+                                line2: { type: 'line', xMin: 1.96, xMax: 1.96, borderColor: '#ef4444', borderWidth: 3, label: { content: 'z = 1,96', enabled: true } }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: 'Estatística z', font: { size: 14, weight: 'bold' } } },
+                        y: { title: { display: true, text: 'Densidade', font: { size: 14, weight: 'bold' } } }
+                    }
+                }
+            });
+        }
+    </script>
+
+    <!-- Floating Home Button -->
+    <a href="index_v2.html" class="floating-home-btn" aria-label="Voltar ao Início" title="Voltar ao Início">🏠</a>
+</body>
+
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 10 - Qui-Quadrado e ANOVA | Estatística Aplicada</title>
+    <meta name="description"
+        content="Aprenda sobre teste Qui-Quadrado de independência e aderência, e ANOVA para comparar múltiplos grupos">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .svg-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contingency-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contingency-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            font-weight: 600;
+        }
+
+        .contingency-table td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .contingency-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="css/style_v2.css">
+    <link rel="stylesheet" href="css/chapter_v2_overrides.css">
+    <script src="js/app_v2.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mark this chapter as read
+            if (window.app && window.app.progressTracker) {
+                window.app.progressTracker.markAsRead(10);
+            }
+        });
+    </script>
+        
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+                <span>←</span> Voltar
+            </a>
+            
+            <div class="version-badge-top">v2.0 BETA</div>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+    
+    <nav class="top-nav">
+        <a href="chapter9_v2.html" class="back-btn">← Capítulo Anterior</a>
+        <div class="nav-title">Capítulo 10</div>
+        <button id="theme-toggle-chapter" class="theme-toggle-chapter" aria-label="Alternar tema">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <a href="index_v2.html" class="next-btn">Voltar ao Início →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Capítulo 10</div>
+            <h1 class="chapter-title">Qui-Quadrado e ANOVA</h1>
+            <p class="chapter-subtitle">Testes para variáveis categóricas e comparação de múltiplos grupos</p>
+        </section>
+
+        <!-- SEÇÃO 10.1 -->
+        <section class="content-section">
+            <div class="section-icon">🎲</div>
+            <h2 id="section-10-1">10.1 Teste Qui-Quadrado de Independência</h2>
+
+            <p class="lead-text">
+                O <strong>teste Qui-Quadrado (χ²) de independência</strong> verifica se existe associação entre duas
+                variáveis categóricas. Por exemplo: há relação entre gênero e preferência de produto?
+            </p>
+
+            <div class="formula-box">
+                χ² = Σ [(O - E)² / E]
+            </div>
+            <p style="text-align: center; color: #64748b; margin-top: 0.5rem;">
+                Onde: <strong>O</strong> = frequência observada, <strong>E</strong> = frequência esperada
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Quando Usar?</h3>
+                <ul>
+                    <li>Testar se duas variáveis categóricas são independentes</li>
+                    <li>Dados organizados em <strong>tabela de contingência</strong></li>
+                    <li>Frequências esperadas ≥ 5 em cada célula</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo 1: Gênero vs Preferência de Produto</h3>
+                <p><strong>Problema:</strong> Uma empresa quer saber se a preferência por produtos A, B ou C depende do
+                    gênero.</p>
+
+                <h4 style="text-align: center; color: #667eea; margin-top: 1.5rem;">Frequências Observadas (O)</h4>
+                <table class="contingency-table">
+                    <thead>
+                        <tr>
+                            <th>Gênero</th>
+                            <th>Produto A</th>
+                            <th>Produto B</th>
+                            <th>Produto C</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Masculino</strong></td>
+                            <td>30</td>
+                            <td>20</td>
+                            <td>10</td>
+                            <td><strong>60</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Feminino</strong></td>
+                            <td>15</td>
+                            <td>25</td>
+                            <td>20</td>
+                            <td><strong>60</strong></td>
+                        </tr>
+                        <tr style="background: #e0e7ff;">
+                            <td><strong>Total</strong></td>
+                            <td><strong>45</strong></td>
+                            <td><strong>45</strong></td>
+                            <td><strong>30</strong></td>
+                            <td><strong>120</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="step-by-step">
+                    <h4>Solução Passo a Passo:</h4>
+
+                    <p><strong>Passo 1:</strong> Calcular frequências esperadas (E)</p>
+                    <p>E = (Total da linha × Total da coluna) / Total geral</p>
+
+                    <p>Exemplo: E(Masculino, Produto A) = (60 × 45) / 120 = 22,5</p>
+
+                    <h4 style="text-align: center; color: #667eea; margin-top: 1rem;">Frequências Esperadas (E)</h4>
+                    <table class="contingency-table">
+                        <thead>
+                            <tr>
+                                <th>Gênero</th>
+                                <th>Produto A</th>
+                                <th>Produto B</th>
+                                <th>Produto C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Masculino</strong></td>
+                                <td>22,5</td>
+                                <td>22,5</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Feminino</strong></td>
+                                <td>22,5</td>
+                                <td>22,5</td>
+                                <td>15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><strong>Passo 2:</strong> Calcular χ²</p>
+                    <p>χ² = (30-22,5)²/22,5 + (20-22,5)²/22,5 + (10-15)²/15 + (15-22,5)²/22,5 + (25-22,5)²/22,5 +
+                        (20-15)²/15</p>
+                    <p>χ² = 2,5 + 0,28 + 1,67 + 2,5 + 0,28 + 1,67</p>
+                    <p><strong>χ² = 8,9</strong></p>
+
+                    <p><strong>Passo 3:</strong> Graus de liberdade</p>
+                    <p>gl = (linhas - 1) × (colunas - 1) = (2-1) × (3-1) = 2</p>
+
+                    <p><strong>Passo 4:</strong> Valor crítico (α = 0,05, gl = 2)</p>
+                    <p>χ²crítico = 5,991</p>
+
+                    <p><strong>Decisão:</strong></p>
+                    <p>Como χ² = 8,9 > 5,991, <strong>rejeitamos H₀</strong></p>
+
+                    <p><strong>Conclusão:</strong> Há evidências de que a preferência de produto <strong>depende do
+                            gênero</strong>!
+                        Homens preferem mais o Produto A, enquanto mulheres preferem B e C.</p>
+                </div>
+            </div>
+
+            <!-- Gráfico Chart.js: Comparação Observado vs Esperado -->
+            <div class="chart-container">
+                <canvas id="chiSquareChart"></canvas>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 10.2 -->
+        <section class="content-section">
+            <div class="section-icon">🎯</div>
+            <h2 id="section-10-2">10.2 Teste Qui-Quadrado de Aderência</h2>
+
+            <p class="lead-text">
+                O <strong>teste de aderência</strong> verifica se os dados observados seguem uma distribuição esperada
+                específica.
+                Exemplo: um dado é justo?
+            </p>
+
+            <div class="example-box">
+                <h3>📝 Exemplo 2: Dado Justo?</h3>
+                <p><strong>Problema:</strong> Lançamos um dado 120 vezes. Os resultados estão abaixo. O dado é justo?
+                </p>
+
+                <table class="contingency-table">
+                    <thead>
+                        <tr>
+                            <th>Face</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Observado (O)</strong></td>
+                            <td>25</td>
+                            <td>18</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr style="background: #fef3c7;">
+                            <td><strong>Esperado (E)</strong></td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="step-by-step">
+                    <h4>Solução:</h4>
+
+                    <p><strong>H₀:</strong> O dado é justo (todas as faces têm P = 1/6)</p>
+                    <p><strong>H₁:</strong> O dado não é justo</p>
+
+                    <p><strong>Frequência esperada:</strong> E = 120/6 = 20 para cada face</p>
+
+                    <p><strong>Cálculo de χ²:</strong></p>
+                    <p>χ² = (25-20)²/20 + (18-20)²/20 + (20-20)²/20 + (22-20)²/20 + (17-20)²/20 + (18-20)²/20</p>
+                    <p>χ² = 1,25 + 0,2 + 0 + 0,2 + 0,45 + 0,2</p>
+                    <p><strong>χ² = 2,3</strong></p>
+
+                    <p><strong>Graus de liberdade:</strong> gl = 6 - 1 = 5</p>
+                    <p><strong>Valor crítico (α = 0,05):</strong> χ²crítico = 11,07</p>
+
+                    <p><strong>Decisão:</strong> Como χ² = 2,3 < 11,07, <strong>não rejeitamos H₀</strong></p>
+
+                    <p><strong>Conclusão:</strong> Não há evidências de que o dado seja viciado. Os dados são
+                        consistentes com um dado justo! ✅</p>
+                </div>
+            </div>
+
+            <!-- Gráfico Chart.js: Dado Justo -->
+            <div class="chart-container">
+                <canvas id="diceChart"></canvas>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 10.3 -->
+        <section class="content-section">
+            <div class="section-icon">📊</div>
+            <h2 id="section-10-3">10.3 ANOVA (Análise de Variância)</h2>
+
+            <p class="lead-text">
+                <strong>ANOVA</strong> (Analysis of Variance) compara as médias de <strong>três ou mais grupos</strong>
+                simultaneamente.
+                É uma extensão do teste t para múltiplos grupos.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Por que ANOVA em vez de múltiplos testes t?</h3>
+                <p>
+                    Se compararmos 3 grupos com testes t (A vs B, A vs C, B vs C), fazemos 3 testes.
+                    Isso <strong>aumenta a chance de erro Tipo I</strong> (rejeitar H₀ quando é verdadeira).
+                </p>
+                <p><strong>ANOVA resolve isso fazendo UM ÚNICO teste!</strong></p>
+            </div>
+
+            <div class="formula-box">
+                F = MST / MSE
+            </div>
+            <p style="text-align: center; color: #64748b; margin-top: 0.5rem;">
+                Onde: <strong>MST</strong> = variância entre grupos, <strong>MSE</strong> = variância dentro dos grupos
+            </p>
+
+            <!-- SVG: Conceito de ANOVA -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1.5rem;">📊 ANOVA: Comparando Variâncias
+                </h3>
+                <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background -->
+                    <rect width="800" height="300" fill="#f8fafc" />
+
+                    <!-- Grupo 1 -->
+                    <g>
+                        <rect x="50" y="100" width="200" height="150" fill="#3b82f6" opacity="0.2" rx="8" />
+                        <circle cx="150" cy="120" r="8" fill="#3b82f6" />
+                        <circle cx="140" cy="150" r="8" fill="#3b82f6" />
+                        <circle cx="160" cy="140" r="8" fill="#3b82f6" />
+                        <circle cx="150" cy="170" r="8" fill="#3b82f6" />
+                        <line x1="50" y1="145" x2="250" y2="145" stroke="#3b82f6" stroke-width="3" />
+                        <text x="150" y="280" text-anchor="middle" font-size="16" font-weight="bold"
+                            fill="#1e293b">Grupo 1</text>
+                        <text x="150" y="90" text-anchor="middle" font-size="14" fill="#3b82f6">μ₁</text>
+                    </g>
+
+                    <!-- Grupo 2 -->
+                    <g>
+                        <rect x="300" y="80" width="200" height="150" fill="#10b981" opacity="0.2" rx="8" />
+                        <circle cx="400" cy="100" r="8" fill="#10b981" />
+                        <circle cx="390" cy="130" r="8" fill="#10b981" />
+                        <circle cx="410" cy="120" r="8" fill="#10b981" />
+                        <circle cx="400" cy="150" r="8" fill="#10b981" />
+                        <line x1="300" y1="125" x2="500" y2="125" stroke="#10b981" stroke-width="3" />
+                        <text x="400" y="280" text-anchor="middle" font-size="16" font-weight="bold"
+                            fill="#1e293b">Grupo 2</text>
+                        <text x="400" y="70" text-anchor="middle" font-size="14" fill="#10b981">μ₂</text>
+                    </g>
+
+                    <!-- Grupo 3 -->
+                    <g>
+                        <rect x="550" y="120" width="200" height="150" fill="#ef4444" opacity="0.2" rx="8" />
+                        <circle cx="650" cy="140" r="8" fill="#ef4444" />
+                        <circle cx="640" cy="170" r="8" fill="#ef4444" />
+                        <circle cx="660" cy="160" r="8" fill="#ef4444" />
+                        <circle cx="650" cy="190" r="8" fill="#ef4444" />
+                        <line x1="550" y1="165" x2="750" y2="165" stroke="#ef4444" stroke-width="3" />
+                        <text x="650" y="280" text-anchor="middle" font-size="16" font-weight="bold"
+                            fill="#1e293b">Grupo 3</text>
+                        <text x="650" y="110" text-anchor="middle" font-size="14" fill="#ef4444">μ₃</text>
+                    </g>
+
+                    <!-- Question -->
+                    <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1e293b">
+                        H₀: μ₁ = μ₂ = μ₃ ?
+                    </text>
+                </svg>
+                <p style="text-align: center; color: #64748b; margin-top: 1rem;">
+                    <strong>ANOVA testa:</strong> As médias dos grupos são todas iguais?
+                </p>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo 3: Comparando 3 Métodos de Ensino</h3>
+                <p><strong>Problema:</strong> Três métodos de ensino foram testados. As notas finais foram:</p>
+
+                <table class="contingency-table">
+                    <thead>
+                        <tr>
+                            <th>Método A</th>
+                            <th>Método B</th>
+                            <th>Método C</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>85, 88, 90, 87</td>
+                            <td>78, 82, 80, 79</td>
+                            <td>92, 95, 93, 94</td>
+                        </tr>
+                        <tr style="background: #e0e7ff;">
+                            <td><strong>Média: 87,5</strong></td>
+                            <td><strong>Média: 79,75</strong></td>
+                            <td><strong>Média: 93,5</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="step-by-step">
+                    <h4>Solução Passo a Passo:</h4>
+
+                    <p><strong>Hipóteses:</strong></p>
+                    <p>H₀: μ₁ = μ₂ = μ₃ (métodos têm mesma eficácia)</p>
+                    <p>H₁: Pelo menos uma média é diferente</p>
+
+                    <p><strong>Passo 1:</strong> Calcular média geral</p>
+                    <p>x̄ = (87,5 + 79,75 + 93,5) / 3 = 86,92</p>
+
+                    <p><strong>Passo 2:</strong> Calcular SST (variação entre grupos)</p>
+                    <p>SST = 4[(87,5-86,92)² + (79,75-86,92)² + (93,5-86,92)²]</p>
+                    <p>SST = 377,5</p>
+
+                    <p><strong>Passo 3:</strong> Calcular SSE (variação dentro dos grupos)</p>
+                    <p>SSE = 38 (soma dos quadrados dentro de cada grupo)</p>
+
+                    <p><strong>Passo 4:</strong> Calcular estatística F</p>
+                    <p>MST = SST / (k-1) = 377,5 / 2 = 188,75</p>
+                    <p>MSE = SSE / (n-k) = 38 / 9 = 4,22</p>
+                    <p><strong>F = 188,75 / 4,22 = 44,7</strong></p>
+
+                    <p><strong>Passo 5:</strong> Valor crítico (α = 0,05, gl₁ = 2, gl₂ = 9)</p>
+                    <p>Fcrítico = 4,26</p>
+
+                    <p><strong>Decisão:</strong> Como F = 44,7 > 4,26, <strong>rejeitamos H₀</strong></p>
+
+                    <p><strong>Conclusão:</strong> Há diferença significativa entre os métodos!
+                        O Método C parece ser o mais eficaz (média = 93,5). 🎓</p>
+                </div>
+            </div>
+
+            <!-- Gráfico Chart.js: Box Plot ANOVA -->
+            <div class="chart-container">
+                <canvas id="anovaChart"></canvas>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIOS RESOLVIDOS -->
+        <section class="content-section">
+            <div class="section-icon">✏️</div>
+            <h2>Exercícios Resolvidos</h2>
+
+            <div class="exercise-box">
+                <h3>Exercício 1: Fumante vs Doença Cardíaca</h3>
+                <p><strong>Problema:</strong> Há associação entre fumar e doença cardíaca?</p>
+
+                <table class="contingency-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Doença</th>
+                            <th>Sem Doença</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fumante</strong></td>
+                            <td>40</td>
+                            <td>60</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Não Fumante</strong></td>
+                            <td>20</td>
+                            <td>80</td>
+                            <td>100</td>
+                        </tr>
+                        <tr style="background: #e0e7ff;">
+                            <td><strong>Total</strong></td>
+                            <td>60</td>
+                            <td>140</td>
+                            <td>200</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="step-by-step">
+                    <h4>Solução:</h4>
+                    <p>E(Fumante, Doença) = (100 × 60) / 200 = 30</p>
+                    <p>χ² = (40-30)²/30 + (60-70)²/70 + (20-30)²/30 + (80-70)²/70</p>
+                    <p><strong>χ² = 9,52</strong></p>
+                    <p>χ²crítico (gl=1, α=0,05) = 3,84</p>
+                    <p><strong>Conclusão:</strong> Rejeitamos H₀. Há associação significativa entre fumar e doença
+                        cardíaca! ⚠️</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUMO -->
+        <section class="content-section">
+            <div class="section-icon">📚</div>
+            <h2>Resumo do Capítulo</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>Qui-Quadrado de Independência:</strong> Testa associação entre variáveis categóricas
+                    </li>
+                    <li><strong>Qui-Quadrado de Aderência:</strong> Testa se dados seguem distribuição esperada</li>
+                    <li><strong>ANOVA:</strong> Compara médias de 3+ grupos simultaneamente</li>
+                    <li><strong>Estatística F:</strong> Razão entre variância entre grupos e dentro dos grupos</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>💡 Quando Usar Cada Teste?</h3>
+                <ul>
+                    <li><strong>Qui-Quadrado:</strong> Variáveis categóricas (nominal ou ordinal)</li>
+                    <li><strong>ANOVA:</strong> Variável dependente quantitativa, independente categórica (3+ grupos)
+                    </li>
+                    <li><strong>Teste t:</strong> Apenas 2 grupos (use ANOVA para 3+)</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter9_v2.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 9</div>
+                </div>
+            </a>
+            <a href="index_v2.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Concluído!</div>
+                    <div class="nav-title">Voltar ao Início</div>
+                </div>
+                <span>🎉</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Gráfico 1: Qui-Quadrado - Observado vs Esperado
+        const chiCtx = document.getElementById('chiSquareChart');
+        if (chiCtx) {
+            new Chart(chiCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Masc-A', 'Masc-B', 'Masc-C', 'Fem-A', 'Fem-B', 'Fem-C'],
+                    datasets: [
+                        {
+                            label: 'Frequência Observada',
+                            data: [30, 20, 10, 15, 25, 20],
+                            backgroundColor: '#667eea',
+                            borderColor: '#667eea',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Frequência Esperada',
+                            data: [22.5, 22.5, 15, 22.5, 22.5, 15],
+                            backgroundColor: '#ff6b6b',
+                            borderColor: '#ff6b6b',
+                            borderWidth: 2,
+                            borderDash: [5, 5]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '📊 Qui-Quadrado: Observado vs Esperado',
+                            font: { size: 20, weight: 'bold' }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Frequência',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Categoria',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: Dado Justo
+        const diceCtx = document.getElementById('diceChart');
+        if (diceCtx) {
+            new Chart(diceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Face 1', 'Face 2', 'Face 3', 'Face 4', 'Face 5', 'Face 6'],
+                    datasets: [
+                        {
+                            label: 'Frequência Observada',
+                            data: [25, 18, 20, 22, 17, 18],
+                            backgroundColor: '#3b82f6'
+                        },
+                        {
+                            label: 'Frequência Esperada (Dado Justo)',
+                            data: [20, 20, 20, 20, 20, 20],
+                            backgroundColor: '#10b981',
+                            borderColor: '#10b981',
+                            borderWidth: 2,
+                            type: 'line'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '🎲 Teste de Aderência: Dado Justo?',
+                            font: { size: 20, weight: 'bold' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Frequência' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 3: ANOVA - Comparação de Grupos
+        const anovaCtx = document.getElementById('anovaChart');
+        if (anovaCtx) {
+            new Chart(anovaCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Método A', 'Método B', 'Método C'],
+                    datasets: [{
+                        label: 'Média das Notas',
+                        data: [87.5, 79.75, 93.5],
+                        backgroundColor: ['#3b82f6', '#ef4444', '#10b981'],
+                        borderColor: ['#1e40af', '#b91c1c', '#047857'],
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '📊 ANOVA: Comparação de 3 Métodos de Ensino',
+                            font: { size: 20, weight: 'bold' }
+                        },
+                        subtitle: {
+                            display: true,
+                            text: 'F = 44,7 (p < 0,001) - Diferença significativa!',
+                            font: { size: 14 },
+                            color: '#ef4444'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: 'Nota Média',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+    <!-- Floating Home Button -->
+    <a href="index_v2.html" class="floating-home-btn" aria-label="Voltar ao Início" title="Voltar ao Início">🏠</a>
+</body>
+
+</html>

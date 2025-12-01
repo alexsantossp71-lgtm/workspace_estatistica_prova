@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 6 - Intervalos de Confiança | Estatística Aplicada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .svg-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+    <link rel="stylesheet" href="css/style_v2.css">
+    <link rel="stylesheet" href="css/chapter_v2_overrides.css">
+    <script src="js/app_v2.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mark this chapter as read
+            if (window.app && window.app.progressTracker) {
+                window.app.progressTracker.markAsRead(6);
+            }
+        });
+    </script>
+        
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+                <span>←</span> Voltar
+            </a>
+            
+            <div class="version-badge-top">v2.0 BETA</div>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+    
+    <nav class="top-nav">
+        <a href="chapter5_v2.html" class="back-btn">← Capítulo Anterior</a>
+        <div class="nav-title">Capítulo 6</div>
+        <button id="theme-toggle-chapter" class="theme-toggle-chapter" aria-label="Alternar tema">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <a href="chapter7_v2.html" class="next-btn">Próximo Capítulo →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Capítulo 6</div>
+            <h1 class="chapter-title">Intervalos de Confiança</h1>
+            <p class="chapter-subtitle">Estimando parâmetros populacionais</p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">📏</div>
+            <h2>6.1 Intervalo de Confiança para Média</h2>
+
+            <p class="lead-text">
+                Um <strong>intervalo de confiança</strong> fornece um intervalo de valores plausíveis para um parâmetro
+                populacional,
+                com um nível de confiança especificado (geralmente 95%).
+            </p>
+
+            <div class="formula-box">
+                IC = x̄ ± z × (σ/√n)
+            </div>
+
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1.5rem;">📊 Interpretação do Intervalo de
+                    Confiança</h3>
+                <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="800" height="300" fill="#f8fafc" />
+
+                    <!-- Normal curve -->
+                    <path d="M 100 250 Q 100 150, 200 100 T 400 50 T 600 100 T 700 250" fill="#3b82f6" opacity="0.2"
+                        stroke="#3b82f6" stroke-width="2" />
+
+                    <!-- Center line (sample mean) -->
+                    <line x1="400" y1="50" x2="400" y2="250" stroke="#ef4444" stroke-width="3" />
+                    <text x="400" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#ef4444">x̄</text>
+
+                    <!-- Confidence interval -->
+                    <line x1="250" y1="200" x2="550" y2="200" stroke="#10b981" stroke-width="5" />
+                    <line x1="250" y1="190" x2="250" y2="210" stroke="#10b981" stroke-width="5" />
+                    <line x1="550" y1="190" x2="550" y2="210" stroke="#10b981" stroke-width="5" />
+
+                    <text x="250" y="230" text-anchor="middle" font-size="14" font-weight="bold"
+                        fill="#10b981">LI</text>
+                    <text x="550" y="230" text-anchor="middle" font-size="14" font-weight="bold"
+                        fill="#10b981">LS</text>
+                    <text x="400" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#10b981">IC
+                        95%</text>
+
+                    <text x="400" y="280" text-anchor="middle" font-size="14" fill="#64748b">
+                        "Estamos 95% confiantes que μ está entre LI e LS"
+                    </text>
+                </svg>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Níveis de Confiança Comuns</h3>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                    <thead style="background: #667eea; color: white;">
+                        <tr>
+                            <th style="padding: 1rem;">Nível de Confiança</th>
+                            <th style="padding: 1rem;">Valor z</th>
+                            <th style="padding: 1rem;">Uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #f8fafc;">
+                            <td style="padding: 0.75rem; text-align: center;">90%</td>
+                            <td style="padding: 0.75rem; text-align: center;">1,645</td>
+                            <td style="padding: 0.75rem;">Estimativas rápidas</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; text-align: center;"><strong>95%</strong></td>
+                            <td style="padding: 0.75rem; text-align: center;"><strong>1,96</strong></td>
+                            <td style="padding: 0.75rem;"><strong>Padrão em pesquisas</strong></td>
+                        </tr>
+                        <tr style="background: #f8fafc;">
+                            <td style="padding: 0.75rem; text-align: center;">99%</td>
+                            <td style="padding: 0.75rem; text-align: center;">2,576</td>
+                            <td style="padding: 0.75rem;">Alta precisão</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: IC para Altura Média</h3>
+                <p><strong>Problema:</strong> Uma amostra de 100 pessoas tem altura média de 170 cm com σ = 10 cm.
+                    Construa um IC de 95% para a altura média populacional.</p>
+
+                <div class="step-by-step">
+                    <p><strong>Dados:</strong> x̄ = 170, σ = 10, n = 100, z = 1,96</p>
+                    <p><strong>Margem de erro:</strong> E = 1,96 × (10/√100) = 1,96 × 1 = 1,96</p>
+                    <p><strong>IC:</strong> 170 ± 1,96 = <strong>[168,04 ; 171,96]</strong></p>
+                    <p><strong>Interpretação:</strong> Estamos 95% confiantes que a altura média populacional está entre
+                        168,04 e 171,96 cm.</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="confidenceChart"></canvas>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">📚</div>
+            <h2>Resumo do Capítulo</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>IC:</strong> Intervalo que provavelmente contém o parâmetro</li>
+                    <li><strong>Nível de confiança:</strong> 95% significa que 95% dos ICs conterão μ</li>
+                    <li><strong>Margem de erro:</strong> E = z × (σ/√n)</li>
+                    <li><strong>↑ n → ↓ E:</strong> Amostras maiores = intervalos mais estreitos</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter5_v2.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 5</div>
+                </div>
+            </a>
+            <a href="chapter7_v2.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Próximo</div>
+                    <div class="nav-title">Capítulo 7</div>
+                </div>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const confCtx = document.getElementById('confidenceChart');
+        if (confCtx) {
+            const sampleSizes = [25, 50, 100, 200, 400];
+            const margins = sampleSizes.map(n => 1.96 * (10 / Math.sqrt(n)));
+
+            new Chart(confCtx, {
+                type: 'line',
+                data: {
+                    labels: sampleSizes,
+                    datasets: [{
+                        label: 'Margem de Erro (cm)',
+                        data: margins,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: '📉 Margem de Erro vs Tamanho da Amostra', font: { size: 20, weight: 'bold' } },
+                        subtitle: { display: true, text: 'Quanto maior a amostra, menor a margem de erro', font: { size: 12 }, color: '#64748b' }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: 'Tamanho da Amostra (n)', font: { size: 14, weight: 'bold' } } },
+                        y: { title: { display: true, text: 'Margem de Erro (cm)', font: { size: 14, weight: 'bold' } } }
+                    }
+                }
+            });
+        }
+    </script>
+
+    <!-- Floating Home Button -->
+    <a href="index_v2.html" class="floating-home-btn" aria-label="Voltar ao Início" title="Voltar ao Início">🏠</a>
+</body>
+
+</html>

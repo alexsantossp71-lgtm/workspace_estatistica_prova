@@ -12,18 +12,20 @@ class ThemeManager {
 
     init() {
         this.applyTheme(this.theme);
-        this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        if (this.themeToggle) {
+            this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        }
     }
 
     applyTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         this.theme = theme;
         localStorage.setItem('theme', theme);
-        
+
         // Update icon
         const icon = this.themeToggle.querySelector('.theme-icon');
         icon.textContent = theme === 'dark' ? '☀️' : '🌙';
-        
+
         console.log(`🌓 Tema alterado para: ${theme}`);
     }
 
@@ -118,14 +120,15 @@ class SearchEngine {
     }
 
     init() {
-        this.searchInput.addEventListener('input', (e) => this.handleSearch(e.target.value));
-        
-        // Close results when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!this.searchInput.contains(e.target) && !this.searchResults.contains(e.target)) {
-                this.searchResults.classList.add('hidden');
-            }
-        });
+        if (this.searchInput) {
+            this.searchInput.addEventListener('input', (e) => this.handleSearch(e.target.value));
+
+            document.addEventListener('click', (e) => {
+                if (!this.searchInput.contains(e.target) && !this.searchResults.contains(e.target)) {
+                    this.searchResults.classList.add('hidden');
+                }
+            });
+        }
     }
 
     handleSearch(query) {
@@ -165,7 +168,7 @@ class SearchEngine {
                 </div>
             </a>
         `).join('');
-        
+
         this.searchResults.classList.remove('hidden');
     }
 }
@@ -203,7 +206,7 @@ class ProgressTracker {
         this.saveProgress();
         this.updateUI();
         this.markChapterCard(chapterId, true);
-        
+
         console.log(`✅ Capítulo ${chapterId} marcado como lido!`);
     }
 
@@ -212,7 +215,7 @@ class ProgressTracker {
         this.saveProgress();
         this.updateUI();
         this.markChapterCard(chapterId, false);
-        
+
         console.log(`📋 Capítulo ${chapterId} marcado como não lido.`);
     }
 
@@ -228,7 +231,7 @@ class ProgressTracker {
     updateUI() {
         const percentage = this.getProgress();
         const read = Object.keys(this.progress).length;
-        
+
         this.progressBar.style.width = `${percentage}%`;
         this.progressPercentage.textContent = `${percentage}%`;
         this.chaptersRead.textContent = read;
@@ -266,15 +269,19 @@ class App {
     }
 
     init() {
-        this.setupStartButton();
-        this.setupChapterCards();
+        if (document.getElementById('start-btn')) {
+            this.setupStartButton();
+        }
+        if (document.querySelector('.chapter-card')) {
+            this.setupChapterCards();
+        }
         this.logWelcome();
     }
 
     setupStartButton() {
         const startBtn = document.getElementById('start-btn');
         const contentSection = document.getElementById('content-section');
-        
+
         startBtn.addEventListener('click', () => {
             contentSection.classList.remove('hidden');
             setTimeout(() => {
@@ -304,9 +311,9 @@ class App {
 function toggleRead(event, chapterId) {
     event.preventDefault();
     event.stopPropagation();
-    
+
     const tracker = window.app.progressTracker;
-    
+
     if (tracker.isRead(chapterId)) {
         tracker.markAsUnread(chapterId);
     } else {

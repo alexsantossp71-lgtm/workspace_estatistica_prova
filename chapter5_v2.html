@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 5 - Distribuição Normal | Estatística Aplicada</title>
+    <meta name="description"
+        content="Aprenda sobre a distribuição normal, curva em sino, escore Z e a regra empírica 68-95-99.7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chapter.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .svg-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem 0;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .example-box {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .step-by-step {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="css/style_v2.css">
+    <link rel="stylesheet" href="css/chapter_v2_overrides.css">
+    <script src="js/app_v2.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mark this chapter as read
+            if (window.app && window.app.progressTracker) {
+                window.app.progressTracker.markAsRead(5);
+            }
+        });
+    </script>
+        
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+                <span>←</span> Voltar
+            </a>
+            
+            <div class="version-badge-top">v2.0 BETA</div>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+    
+    <nav class="top-nav">
+        <a href="chapter4_v2.html" class="back-btn">← Capítulo Anterior</a>
+        <div class="nav-title">Capítulo 5</div>
+        <button id="theme-toggle-chapter" class="theme-toggle-chapter" aria-label="Alternar tema">
+            <span class="theme-icon">🌙</span>
+        </button>
+        <a href="chapter6_v2.html" class="next-btn">Próximo Capítulo →</a>
+    </nav>
+
+    <div class="chapter-container">
+        <section class="chapter-hero">
+            <div class="hero-badge">Capítulo 5</div>
+            <h1 class="chapter-title">Distribuição Normal</h1>
+            <p class="chapter-subtitle">A curva em sino mais importante da estatística</p>
+        </section>
+
+        <!-- SEÇÃO 5.1 -->
+        <section class="content-section">
+            <div class="section-icon">🔔</div>
+            <h2 id="section-5-1">5.1 Introdução à Distribuição Normal</h2>
+
+            <p class="lead-text">
+                A <strong>distribuição normal</strong> (ou distribuição de Gauss) é a distribuição de probabilidade
+                mais importante em estatística. Ela aparece naturalmente em inúmeros fenômenos: alturas de pessoas,
+                notas de exames, erros de medição, e muito mais!
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Características da Distribuição Normal</h3>
+                <ul>
+                    <li><strong>Simétrica:</strong> Perfeitamente equilibrada em torno da média</li>
+                    <li><strong>Forma de sino:</strong> Valores próximos à média são mais frequentes</li>
+                    <li><strong>Média = Mediana = Moda:</strong> Todas no centro</li>
+                    <li><strong>Assíntotas:</strong> As caudas nunca tocam o eixo X</li>
+                    <li><strong>Área total = 1:</strong> Representa 100% da probabilidade</li>
+                </ul>
+            </div>
+
+            <!-- SVG: Curva Normal com Regra Empírica -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1rem;">📊 Regra Empírica 68-95-99.7</h3>
+                <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background -->
+                    <rect width="800" height="400" fill="#f8fafc" />
+
+                    <!-- Grid lines -->
+                    <line x1="100" y1="350" x2="700" y2="350" stroke="#cbd5e1" stroke-width="2" />
+
+                    <!-- 99.7% area (3σ) -->
+                    <path d="M 150 350 Q 150 100, 400 50 T 650 350 Z" fill="#dbeafe" opacity="0.4" />
+
+                    <!-- 95% area (2σ) -->
+                    <path d="M 200 350 Q 200 120, 400 70 T 600 350 Z" fill="#93c5fd" opacity="0.5" />
+
+                    <!-- 68% area (1σ) -->
+                    <path d="M 250 350 Q 250 150, 400 100 T 550 350 Z" fill="#3b82f6" opacity="0.6" />
+
+                    <!-- Normal curve -->
+                    <path d="M 100 350 Q 100 200, 150 150 T 250 100 T 400 50 T 550 100 T 650 150 T 700 350" fill="none"
+                        stroke="#1e40af" stroke-width="3" />
+
+                    <!-- Vertical lines for standard deviations -->
+                    <line x1="250" y1="100" x2="250" y2="350" stroke="#ef4444" stroke-width="2"
+                        stroke-dasharray="5,5" />
+                    <line x1="400" y1="50" x2="400" y2="350" stroke="#10b981" stroke-width="3" />
+                    <line x1="550" y1="100" x2="550" y2="350" stroke="#ef4444" stroke-width="2"
+                        stroke-dasharray="5,5" />
+
+                    <!-- Labels -->
+                    <text x="250" y="370" text-anchor="middle" font-size="16" fill="#1e293b"
+                        font-weight="bold">-1σ</text>
+                    <text x="400" y="370" text-anchor="middle" font-size="18" fill="#10b981" font-weight="bold">μ</text>
+                    <text x="550" y="370" text-anchor="middle" font-size="16" fill="#1e293b"
+                        font-weight="bold">+1σ</text>
+
+                    <text x="200" y="385" text-anchor="middle" font-size="14" fill="#64748b">-2σ</text>
+                    <text x="600" y="385" text-anchor="middle" font-size="14" fill="#64748b">+2σ</text>
+
+                    <text x="150" y="385" text-anchor="middle" font-size="14" fill="#64748b">-3σ</text>
+                    <text x="650" y="385" text-anchor="middle" font-size="14" fill="#64748b">+3σ</text>
+
+                    <!-- Percentage labels -->
+                    <text x="400" y="250" text-anchor="middle" font-size="20" fill="#1e40af"
+                        font-weight="bold">68%</text>
+                    <text x="400" y="200" text-anchor="middle" font-size="18" fill="#1e40af"
+                        font-weight="bold">95%</text>
+                    <text x="400" y="150" text-anchor="middle" font-size="16" fill="#1e40af"
+                        font-weight="bold">99.7%</text>
+                </svg>
+                <p style="text-align: center; color: #64748b; margin-top: 1rem;">
+                    <strong>Regra Empírica:</strong> 68% dos dados estão a ±1σ da média, 95% a ±2σ, e 99,7% a ±3σ
+                </p>
+            </div>
+
+            <div class="formula-box">
+                f(x) = (1 / (σ√(2π))) × e^(-(x-μ)²/(2σ²))
+            </div>
+            <p style="text-align: center; color: #64748b;">
+                Onde: <strong>μ</strong> = média, <strong>σ</strong> = desvio padrão
+            </p>
+        </section>
+
+        <!-- SEÇÃO 5.2 -->
+        <section class="content-section">
+            <div class="section-icon">📏</div>
+            <h2 id="section-5-2">5.2 Escore Z (Padronização)</h2>
+
+            <p class="lead-text">
+                O <strong>escore Z</strong> transforma qualquer distribuição normal em uma <strong>distribuição normal
+                    padrão</strong>
+                (com média 0 e desvio padrão 1). Isso permite comparar valores de diferentes distribuições!
+            </p>
+
+            <div class="formula-box">
+                Z = (X - μ) / σ
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 Interpretação do Escore Z</h3>
+                <ul>
+                    <li><strong>Z = 0:</strong> O valor está exatamente na média</li>
+                    <li><strong>Z = 1:</strong> O valor está 1 desvio padrão acima da média</li>
+                    <li><strong>Z = -2:</strong> O valor está 2 desvios padrão abaixo da média</li>
+                    <li><strong>|Z| > 3:</strong> Valor extremamente raro (outlier)</li>
+                </ul>
+            </div>
+
+            <!-- Gráfico Chart.js: Distribuição Normal Padrão -->
+            <div class="chart-container">
+                <canvas id="normalChart"></canvas>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo 1: Calculando Escore Z</h3>
+                <p><strong>Problema:</strong> Em um exame, a média foi 75 e o desvio padrão 10. João tirou 90. Qual seu
+                    escore Z?</p>
+
+                <div class="step-by-step">
+                    <h4>Solução Passo a Passo:</h4>
+                    <p><strong>Dados:</strong></p>
+                    <ul>
+                        <li>X = 90 (nota de João)</li>
+                        <li>μ = 75 (média da turma)</li>
+                        <li>σ = 10 (desvio padrão)</li>
+                    </ul>
+
+                    <p><strong>Cálculo:</strong></p>
+                    <p>Z = (X - μ) / σ</p>
+                    <p>Z = (90 - 75) / 10</p>
+                    <p>Z = 15 / 10</p>
+                    <p><strong>Z = 1,5</strong></p>
+
+                    <p><strong>Interpretação:</strong> João está 1,5 desvios padrão <strong>acima</strong> da média.
+                        Sua nota é melhor que aproximadamente 93% dos alunos! 🎉</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5.3 -->
+        <section class="content-section">
+            <div class="section-icon">📊</div>
+            <h2 id="section-5-3">5.3 Tabela Z e Probabilidades</h2>
+
+            <p class="lead-text">
+                A <strong>Tabela Z</strong> nos dá a probabilidade (área) à esquerda de qualquer valor Z.
+                Com ela, podemos calcular probabilidades para qualquer distribuição normal!
+            </p>
+
+            <!-- SVG: Área sob a curva -->
+            <div class="svg-container">
+                <h3 style="text-align: center; color: #667eea; margin-bottom: 1rem;">📈 Área sob a Curva Normal</h3>
+                <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background -->
+                    <rect width="800" height="350" fill="#f8fafc" />
+
+                    <!-- Axis -->
+                    <line x1="100" y1="300" x2="700" y2="300" stroke="#1e293b" stroke-width="2" />
+                    <line x1="400" y1="300" x2="400" y2="50" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3,3" />
+
+                    <!-- Normal curve -->
+                    <path d="M 100 300 Q 100 200, 150 150 T 250 100 T 400 50 T 550 100 T 650 150 T 700 300" fill="none"
+                        stroke="#1e40af" stroke-width="3" />
+
+                    <!-- Shaded area (P(Z < 1)) -->
+                    <path d="M 100 300 Q 100 200, 150 150 T 250 100 T 400 50 T 520 110 L 520 300 Z" fill="#3b82f6"
+                        opacity="0.5" />
+
+                    <!-- Z value line -->
+                    <line x1="520" y1="110" x2="520" y2="300" stroke="#ef4444" stroke-width="3" />
+
+                    <!-- Labels -->
+                    <text x="400" y="325" text-anchor="middle" font-size="18" fill="#10b981" font-weight="bold">Z =
+                        0</text>
+                    <text x="520" y="325" text-anchor="middle" font-size="18" fill="#ef4444" font-weight="bold">Z =
+                        1</text>
+
+                    <!-- Probability label -->
+                    <text x="300" y="200" text-anchor="middle" font-size="24" fill="#1e40af" font-weight="bold">P(Z <
+                            1)=0,8413</text>
+                            <text x="300" y="230" text-anchor="middle" font-size="16" fill="#64748b">84,13% dos
+                                dados</text>
+                </svg>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo 2: Usando a Tabela Z</h3>
+                <p><strong>Problema:</strong> Alturas de homens adultos têm média 175 cm e desvio padrão 7 cm.
+                    Qual a probabilidade de um homem ter mais de 182 cm?</p>
+
+                <div class="step-by-step">
+                    <h4>Solução Passo a Passo:</h4>
+
+                    <p><strong>Passo 1:</strong> Calcular o escore Z</p>
+                    <p>Z = (182 - 175) / 7 = 7 / 7 = 1</p>
+
+                    <p><strong>Passo 2:</strong> Consultar a Tabela Z</p>
+                    <p>P(Z < 1)=0,8413 (84,13%)</p>
+
+                            <p><strong>Passo 3:</strong> Calcular P(Z > 1)</p>
+                            <p>P(Z > 1) = 1 - P(Z < 1)</p>
+                                    <p>P(Z > 1) = 1 - 0,8413</p>
+                                    <p><strong>P(Z > 1) = 0,1587 = 15,87%</strong></p>
+
+                                    <p><strong>Resposta:</strong> Aproximadamente <strong>15,87%</strong> dos homens têm
+                                        mais de 182 cm de altura.</p>
+                </div>
+            </div>
+
+            <!-- Gráfico Chart.js: Comparação Normal vs t-Student -->
+            <div class="chart-container">
+                <canvas id="comparisonChart"></canvas>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIOS RESOLVIDOS -->
+        <section class="content-section">
+            <div class="section-icon">✏️</div>
+            <h2>Exercícios Resolvidos</h2>
+
+            <div class="exercise-box">
+                <h3>Exercício 1: QI e Distribuição Normal</h3>
+                <p><strong>Problema:</strong> Os escores de QI seguem distribuição normal com μ = 100 e σ = 15.
+                    Qual a probabilidade de uma pessoa ter QI entre 85 e 115?</p>
+
+                <div class="step-by-step">
+                    <h4>Solução Completa:</h4>
+
+                    <p><strong>Passo 1:</strong> Calcular Z para X = 85</p>
+                    <p>Z₁ = (85 - 100) / 15 = -15 / 15 = -1</p>
+
+                    <p><strong>Passo 2:</strong> Calcular Z para X = 115</p>
+                    <p>Z₂ = (115 - 100) / 15 = 15 / 15 = 1</p>
+
+                    <p><strong>Passo 3:</strong> Usar a Regra Empírica</p>
+                    <p>P(-1 < Z < 1)=68%</p>
+
+                            <p><strong>Resposta:</strong> Aproximadamente <strong>68%</strong> das pessoas têm QI entre
+                                85 e 115.</p>
+
+                            <div class="tip-box">
+                                <p><strong>💡 Dica:</strong> Observe que 85 e 115 estão exatamente a ±1σ da média (100).
+                                    Pela regra empírica, sabemos que 68% dos dados estão nesse intervalo!</p>
+                            </div>
+                </div>
+            </div>
+
+            <div class="exercise-box">
+                <h3>Exercício 2: Tempo de Produção</h3>
+                <p><strong>Problema:</strong> O tempo para produzir uma peça segue distribuição normal com média 50
+                    minutos
+                    e desvio padrão 5 minutos. Qual a probabilidade de produzir uma peça em menos de 45 minutos?</p>
+
+                <div class="step-by-step">
+                    <h4>Solução Completa:</h4>
+
+                    <p><strong>Passo 1:</strong> Identificar os dados</p>
+                    <ul>
+                        <li>μ = 50 minutos</li>
+                        <li>σ = 5 minutos</li>
+                        <li>X = 45 minutos</li>
+                    </ul>
+
+                    <p><strong>Passo 2:</strong> Calcular o escore Z</p>
+                    <p>Z = (45 - 50) / 5 = -5 / 5 = -1</p>
+
+                    <p><strong>Passo 3:</strong> Consultar Tabela Z</p>
+                    <p>P(Z < -1)=0,1587</p>
+
+                            <p><strong>Resposta:</strong> A probabilidade é <strong>15,87%</strong> ou aproximadamente
+                                <strong>16%</strong>.</p>
+
+                            <div class="tip-box">
+                                <p><strong>💡 Interpretação:</strong> Em média, apenas 1 em cada 6 peças será produzida
+                                    em menos de 45 minutos.</p>
+                            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUMO DO CAPÍTULO -->
+        <section class="content-section">
+            <div class="section-icon">📚</div>
+            <h2>Resumo do Capítulo</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>Distribuição Normal:</strong> Curva em sino, simétrica, média = mediana = moda</li>
+                    <li><strong>Regra Empírica:</strong> 68% (±1σ), 95% (±2σ), 99,7% (±3σ)</li>
+                    <li><strong>Escore Z:</strong> Z = (X - μ) / σ → padroniza qualquer distribuição normal</li>
+                    <li><strong>Tabela Z:</strong> Fornece P(Z < z) para calcular probabilidades</li>
+                    <li><strong>Aplicações:</strong> Alturas, notas, QI, erros de medição, etc.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>💡 Dicas para Sucesso</h3>
+                <ul>
+                    <li>Sempre desenhe a curva normal para visualizar o problema</li>
+                    <li>Identifique se quer P(Z < z), P(Z> z) ou P(z₁ < Z < z₂)</li>
+                    <li>Lembre-se: a área total sob a curva = 1 (100%)</li>
+                    <li>Use a simetria: P(Z < -a)=P(Z> a)</li>
+                    <li>Pratique com a Tabela Z até se sentir confortável!</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter4_v2.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 4</div>
+                </div>
+            </a>
+            <a href="chapter6_v2.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Próximo</div>
+                    <div class="nav-title">Capítulo 6</div>
+                </div>
+                <span>→</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Gráfico 1: Distribuição Normal Padrão
+        const normalCtx = document.getElementById('normalChart');
+        if (normalCtx) {
+            const normalData = [];
+            for (let z = -4; z <= 4; z += 0.1) {
+                const y = (1 / Math.sqrt(2 * Math.PI)) * Math.exp(-0.5 * z * z);
+                normalData.push({ x: z, y: y });
+            }
+
+            new Chart(normalCtx, {
+                type: 'line',
+                data: {
+                    datasets: [{
+                        label: 'Distribuição Normal Padrão (μ=0, σ=1)',
+                        data: normalData,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        fill: true,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '📊 Curva Normal Padrão Interativa',
+                            font: { size: 20, weight: 'bold' },
+                            color: '#1e293b'
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return `Z = ${context.parsed.x.toFixed(2)}, f(Z) = ${context.parsed.y.toFixed(4)}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            title: {
+                                display: true,
+                                text: 'Escore Z',
+                                font: { size: 14, weight: 'bold' }
+                            },
+                            grid: {
+                                color: '#e2e8f0'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Densidade de Probabilidade',
+                                font: { size: 14, weight: 'bold' }
+                            },
+                            grid: {
+                                color: '#e2e8f0'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: Comparação Normal vs t-Student
+        const compCtx = document.getElementById('comparisonChart');
+        if (compCtx) {
+            const normalComp = [];
+            const tStudent = [];
+
+            for (let x = -4; x <= 4; x += 0.1) {
+                // Normal
+                const yNormal = (1 / Math.sqrt(2 * Math.PI)) * Math.exp(-0.5 * x * x);
+                normalComp.push({ x: x, y: yNormal });
+
+                // t-Student (df=5 aproximação)
+                const df = 5;
+                const yT = Math.pow(1 + (x * x) / df, -(df + 1) / 2) / (Math.sqrt(df) * 2.015);
+                tStudent.push({ x: x, y: yT });
+            }
+
+            new Chart(compCtx, {
+                type: 'line',
+                data: {
+                    datasets: [
+                        {
+                            label: 'Normal Padrão',
+                            data: normalComp,
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            borderWidth: 3,
+                            pointRadius: 0,
+                            tension: 0.4
+                        },
+                        {
+                            label: 't-Student (df=5)',
+                            data: tStudent,
+                            borderColor: '#ef4444',
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            borderWidth: 3,
+                            pointRadius: 0,
+                            tension: 0.4,
+                            borderDash: [5, 5]
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '📈 Comparação: Normal vs t-Student',
+                            font: { size: 20, weight: 'bold' },
+                            color: '#1e293b'
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        subtitle: {
+                            display: true,
+                            text: 'Note que a t-Student tem caudas mais pesadas (maior variabilidade)',
+                            font: { size: 12 },
+                            color: '#64748b'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            title: {
+                                display: true,
+                                text: 'Valor',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Densidade',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+    <!-- Floating Home Button -->
+    <a href="index_v2.html" class="floating-home-btn" aria-label="Voltar ao Início" title="Voltar ao Início">🏠</a>
+</body>
+
+</html>
