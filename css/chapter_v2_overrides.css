@@ -100,12 +100,121 @@ tbody tr:hover {
 .nav-btn:hover {
     border-color: var(--primary-color);
     background: var(--glass-bg);
-}
+    /* Overrides for Chapter V2 pages */
 
-.nav-label {
-    color: var(--text-secondary);
-}
+    /* Hide V1 Navigation */
+    .top-nav {
+        display: none !important;
+    }
 
-.nav-title {
-    color: var(--primary-color);
-}
+    /* Hide V1 Floating Home Button if present */
+    .floating-home-btn {
+        display: none !important;
+    }
+
+    /* Adjust Container for V2 Fixed Header */
+    .chapter-container {
+        padding-top: 6rem !important;
+        /* Space for top-bar */
+    }
+
+    /* Reset Body to allow V2 theme to take over */
+    body {
+        background-image: none !important;
+        /* Override chapter.css background */
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+    }
+
+    /* Ensure V2 Theme Variables are used for content */
+    .chapter-title {
+        background: linear-gradient(to right, var(--text-primary), var(--text-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .chapter-subtitle {
+        color: var(--text-secondary);
+    }
+
+    .content-section,
+    .toc-section,
+    .exercise-block {
+        background: var(--bg-card);
+        border-color: var(--border-color);
+    }
+
+    .section-header h2 {
+        color: var(--text-primary);
+    }
+
+    .lead-text {
+        color: var(--text-primary);
+    }
+
+    .section-intro {
+        color: var(--text-secondary);
+    }
+
+    /* Fix SVG Container background in dark mode */
+    [data-theme="dark"] .svg-container {
+        background: rgba(255, 255, 255, 0.9);
+        /* Keep SVGs on light bg or adjust */
+        /* Many SVGs might be designed for light bg, so keeping it light is safer */
+    }
+
+    /* Adjust Highlight Box colors */
+    .highlight-box {
+        background: var(--glass-bg);
+        border-left-color: var(--primary-color);
+    }
+
+    .highlight-box h3 {
+        color: var(--primary-color);
+    }
+
+    /* Adjust Table colors */
+    table {
+        background: var(--bg-card);
+        color: var(--text-primary);
+    }
+
+    th {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    td {
+        border-bottom-color: var(--border-color);
+    }
+
+    tbody tr:hover {
+        background: var(--glass-bg);
+    }
+
+    /* Adjust Back/Next buttons at bottom if they exist */
+    .nav-btn {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+    }
+
+    .nav-btn:hover {
+        border-color: var(--primary-color);
+        background: var(--glass-bg);
+    }
+
+    .nav-label {
+        color: var(--text-secondary);
+    }
+
+    .nav-title {
+        color: var(--primary-color);
+    }
+
+    /* Force Content Visibility on Chapter Pages */
+    .content-section {
+        opacity: 1 !important;
+        transform: none !important;
+        display: block !important;
+    }
