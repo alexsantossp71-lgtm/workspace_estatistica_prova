@@ -29,7 +29,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -41,17 +41,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -59,7 +60,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="chapter6_v2.html" class="back-btn">← Capítulo Anterior</a>
         <div class="nav-title">Capítulo 7</div>
@@ -234,6 +235,87 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 7.3 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">📊</div>
+            <h2 id="section-7-3">7.3 Teste para Proporção</h2>
+
+            <p class="lead-text">
+                Usado para testar afirmações sobre porcentagens ou proporções populacionais.
+            </p>
+
+            <div class="formula-box">
+                z = (p̂ - p) / √(pq/n)
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Satisfação do Cliente</h3>
+                <p><strong>Problema:</strong> Uma empresa afirma que 85% dos clientes estão satisfeitos. Em uma amostra
+                    de 100 clientes, 80 disseram estar satisfeitos. Teste a afirmação com α = 0,05.</p>
+
+                <div class="step-by-step">
+                    <p><strong>Passo 1: Hipóteses</strong></p>
+                    <p>H₀: p = 0,85 | H₁: p ≠ 0,85</p>
+
+                    <p><strong>Passo 2: Estatística de teste</strong></p>
+                    <p>p̂ = 0,80</p>
+                    <p>z = (0,80 - 0,85) / √(0,85×0,15/100) = -0,05 / 0,0357 ≈ <strong>-1,40</strong></p>
+
+                    <p><strong>Passo 3: Decisão</strong></p>
+                    <p>Z crítico = ±1,96. Como |-1,40| < 1,96, <strong>não rejeitamos H₀</strong>.</p>
+
+                    <p><strong>Conclusão:</strong> Não há evidências suficientes para dizer que a satisfação é diferente
+                        de 85%.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 7.4 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">📉</div>
+            <h2 id="section-7-4">7.4 O Valor P (P-valor)</h2>
+
+            <p class="lead-text">
+                O <strong>P-valor</strong> é a probabilidade de obter um resultado tão extremo quanto o observado,
+                assumindo que H₀ é verdadeira.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Regra de Decisão do P-valor</h3>
+                <ul>
+                    <li><strong>Se P-valor ≤ α:</strong> Rejeite H₀ (Resultado estatisticamente significativo)</li>
+                    <li><strong>Se P-valor > α:</strong> Não rejeite H₀ (Resultado não significativo)</li>
+                </ul>
+                <p style="margin-top: 1rem; font-style: italic;">"Se o P é baixo, H₀ deve ir para baixo!"</p>
+            </div>
+        </section>
+
+        <!-- VISUALIZADOR DE P-VALOR -->
+        <section class="content-section">
+            <div class="section-icon">👁️</div>
+            <h2>Visualizador de P-valor</h2>
+            <div class="example-box" style="background: white; border: 2px solid #e2e8f0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Estatística Z:</label>
+                        <input type="number" id="pValueZ" value="1.96" step="0.1"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+                    </div>
+                    <div style="display: flex; align-items: end;">
+                        <button onclick="updatePValueChart()"
+                            style="width: 100%; background: #667eea; color: white; border: none; padding: 0.5rem; border-radius: 6px; font-weight: bold; cursor: pointer;">Atualizar
+                            Gráfico</button>
+                    </div>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="pValueChart"></canvas>
+                </div>
+                <p id="pValueResult"
+                    style="text-align: center; font-weight: bold; font-size: 1.1rem; margin-top: 1rem;">P-valor
+                    (bilateral): 0.0500</p>
+            </div>
+        </section>
+
         <section class="content-section">
             <div class="section-icon">📚</div>
             <h2>Resumo do Capítulo</h2>
@@ -266,53 +348,268 @@
                 <span>→</span>
             </a>
         </div>
-    
+
         <!-- SAIBA MAIS -->
         <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
             <div class="section-icon">🎥</div>
             <h2>Saiba Mais</h2>
-            
+
             <p class="lead-text">
                 Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste de Hipótese</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Alex Santos</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Hipótese nula vs alternativa</p>
-            <a href="https://www.youtube.com/results?search_query=Teste+de+Hipótese+Prof.+Alex+Santos+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Entendendo o P-valor</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan Academy</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Interpretação intuitiva da significância</p>
-            <a href="https://www.youtube.com/results?search_query=Entendendo+o+P-valor+Khan+Academy+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Erros Tipo I e II</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Fernanda Maciel</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Consequências das decisões estatísticas</p>
-            <a href="https://www.youtube.com/results?search_query=Erros+Tipo+I+e+II+Prof.+Fernanda+Maciel+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste de Hipótese</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Alex Santos</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Hipótese nula vs
+                        alternativa</p>
+                    <a href="https://www.youtube.com/results?search_query=Teste+de+Hipótese+Prof.+Alex+Santos+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Entendendo o P-valor</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan
+                        Academy</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Interpretação
+                        intuitiva da significância</p>
+                    <a href="https://www.youtube.com/results?search_query=Entendendo+o+P-valor+Khan+Academy+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Erros Tipo I e II</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Fernanda Maciel</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Consequências das
+                        decisões estatísticas</p>
+                    <a href="https://www.youtube.com/results?search_query=Erros+Tipo+I+e+II+Prof.+Fernanda+Maciel+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
             </div>
 
             <div class="tip-box" style="margin-top: 2rem;">
                 <h3>💡 Dica de Estudo</h3>
                 <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
+                </p>
+                (5%)</td>
+                <td style="padding: 0.75rem; background: #d1fae5;">✅ Decisão Correta</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem;"><strong>Não Rejeitamos H₀</strong></td>
+                    <td style="padding: 0.75rem; background: #d1fae5;">✅ Decisão Correta</td>
+                    <td style="padding: 0.75rem; background: #fef3c7;"><strong>Erro Tipo II</strong><br>P = β
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+                <ul style="margin-top: 1rem;">
+                    <li><strong>Erro Tipo I:</strong> Rejeitar H₀ quando é verdadeira (falso positivo)</li>
+                    <li><strong>Erro Tipo II:</strong> Não rejeitar H₀ quando é falsa (falso negativo)</li>
+                    <li><strong>Poder do teste:</strong> 1 - β (probabilidade de rejeitar H₀ quando é falsa)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 7.3 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">📊</div>
+            <h2 id="section-7-3">7.3 Teste para Proporção</h2>
+
+            <p class="lead-text">
+                Usado para testar afirmações sobre porcentagens ou proporções populacionais.
+            </p>
+
+            <div class="formula-box">
+                z = (p̂ - p) / √(pq/n)
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Satisfação do Cliente</h3>
+                <p><strong>Problema:</strong> Uma empresa afirma que 85% dos clientes estão satisfeitos. Em uma amostra
+                    de 100 clientes, 80 disseram estar satisfeitos. Teste a afirmação com α = 0,05.</p>
+
+                <div class="step-by-step">
+                    <p><strong>Passo 1: Hipóteses</strong></p>
+                    <p>H₀: p = 0,85 | H₁: p ≠ 0,85</p>
+
+                    <p><strong>Passo 2: Estatística de teste</strong></p>
+                    <p>p̂ = 0,80</p>
+                    <p>z = (0,80 - 0,85) / √(0,85×0,15/100) = -0,05 / 0,0357 ≈ <strong>-1,40</strong></p>
+
+                    <p><strong>Passo 3: Decisão</strong></p>
+                    <p>Z crítico = ±1,96. Como |-1,40| < 1,96, <strong>não rejeitamos H₀</strong>.</p>
+
+                    <p><strong>Conclusão:</strong> Não há evidências suficientes para dizer que a satisfação é diferente
+                        de 85%.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 7.4 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">📉</div>
+            <h2 id="section-7-4">7.4 O Valor P (P-valor)</h2>
+
+            <p class="lead-text">
+                O <strong>P-valor</strong> é a probabilidade de obter um resultado tão extremo quanto o observado,
+                assumindo que H₀ é verdadeira.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Regra de Decisão do P-valor</h3>
+                <ul>
+                    <li><strong>Se P-valor ≤ α:</strong> Rejeite H₀ (Resultado estatisticamente significativo)</li>
+                    <li><strong>Se P-valor > α:</strong> Não rejeite H₀ (Resultado não significativo)</li>
+                </ul>
+                <p style="margin-top: 1rem; font-style: italic;">"Se o P é baixo, H₀ deve ir para baixo!"</p>
+            </div>
+        </section>
+
+        <!-- VISUALIZADOR DE P-VALOR -->
+        <section class="content-section">
+            <div class="section-icon">👁️</div>
+            <h2>Visualizador de P-valor</h2>
+            <div class="example-box" style="background: white; border: 2px solid #e2e8f0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Estatística Z:</label>
+                        <input type="number" id="pValueZ" value="1.96" step="0.1"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+                    </div>
+                    <div style="display: flex; align-items: end;">
+                        <button onclick="updatePValueChart()"
+                            style="width: 100%; background: #667eea; color: white; border: none; padding: 0.5rem; border-radius: 6px; font-weight: bold; cursor: pointer;">Atualizar
+                            Gráfico</button>
+                    </div>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="pValueChart"></canvas>
+                </div>
+                <p id="pValueResult"
+                    style="text-align: center; font-weight: bold; font-size: 1.1rem; margin-top: 1rem;">P-valor
+                    (bilateral): 0.0500</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-icon">📚</div>
+            <h2>Resumo do Capítulo</h2>
+
+            <div class="highlight-box">
+                <h3>🎯 Conceitos-Chave</h3>
+                <ul>
+                    <li><strong>H₀:</strong> Hipótese nula (status quo)</li>
+                    <li><strong>H₁:</strong> Hipótese alternativa (o que queremos provar)</li>
+                    <li><strong>α:</strong> Nível de significância (geralmente 0,05)</li>
+                    <li><strong>p-valor:</strong> Se p < α, rejeitamos H₀</li>
+                    <li><strong>Bilateral:</strong> μ ≠ μ₀ | <strong>Unilateral:</strong> μ > μ₀ ou μ < μ₀</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter6_v2.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 6</div>
+                </div>
+            </a>
+            <a href="chapter8_v2.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Próximo</div>
+                    <div class="nav-title">Capítulo 8</div>
+                </div>
+                <span>→</span>
+            </a>
+        </div>
+
+        <!-- SAIBA MAIS -->
+        <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
+            <div class="section-icon">🎥</div>
+            <h2>Saiba Mais</h2>
+
+            <p class="lead-text">
+                Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
+            </p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste de Hipótese</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Alex Santos</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Hipótese nula vs
+                        alternativa</p>
+                    <a href="https://www.youtube.com/results?search_query=Teste+de+Hipótese+Prof.+Alex+Santos+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Entendendo o P-valor</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan
+                        Academy</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Interpretação
+                        intuitiva da significância</p>
+                    <a href="https://www.youtube.com/results?search_query=Entendendo+o+P-valor+Khan+Academy+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Erros Tipo I e II</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Fernanda Maciel</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Consequências das
+                        decisões estatísticas</p>
+                    <a href="https://www.youtube.com/results?search_query=Erros+Tipo+I+e+II+Prof.+Fernanda+Maciel+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+            </div>
+
+            <div class="tip-box" style="margin-top: 2rem;">
+                <h3>💡 Dica de Estudo</h3>
+                <p>
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
                 </p>
             </div>
         </section>
-        
-</div>
+
+    </div>
 
     <script>
         const hypCtx = document.getElementById('hypothesisChart');
@@ -357,6 +654,79 @@
                 }
             });
         }
+
+        // P-Value Visualizer
+        let pChart;
+        function updatePValueChart() {
+            const ctx = document.getElementById('pValueChart');
+            if (!ctx) return;
+
+            const zInput = parseFloat(document.getElementById('pValueZ').value);
+            const zScore = isNaN(zInput) ? 1.96 : zInput;
+
+            // Calculate P-value (approximate)
+            // Using a simple approximation for CDF
+            function normalCDF(x) {
+                var t = 1 / (1 + .2316419 * Math.abs(x));
+                var d = .3989423 * Math.exp(-x * x / 2);
+                var prob = d * t * (.3193815 + t * (-.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+                if (x > 0) prob = 1 - prob;
+                return prob;
+            }
+
+            const pValueOneTail = 1 - normalCDF(Math.abs(zScore));
+            const pValueTwoTail = pValueOneTail * 2;
+
+            document.getElementById('pValueResult').textContent = `P-valor (bilateral): ${pValueTwoTail.toFixed(4)}`;
+
+            const labels = [];
+            const data = [];
+            const backgroundColors = [];
+
+            for (let x = -4; x <= 4; x += 0.1) {
+                labels.push(x.toFixed(1));
+                const y = (1 / Math.sqrt(2 * Math.PI)) * Math.exp(-0.5 * x * x);
+                data.push(y);
+
+                if (x <= -Math.abs(zScore) || x >= Math.abs(zScore)) {
+                    backgroundColors.push('rgba(239, 68, 68, 0.6)'); // Red for tail
+                } else {
+                    backgroundColors.push('rgba(59, 130, 246, 0.2)'); // Blue for center
+                }
+            }
+
+            if (pChart) pChart.destroy();
+
+            pChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Distribuição Normal',
+                        data: data,
+                        backgroundColor: backgroundColors,
+                        barPercentage: 1.0,
+                        categoryPercentage: 1.0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        title: { display: true, text: `Área do P-valor para Z = ${zScore}` },
+                        tooltip: { enabled: false }
+                    },
+                    scales: {
+                        x: { display: false },
+                        y: { display: false }
+                    }
+                }
+            });
+        }
+
+        // Initialize P-value chart
+        document.addEventListener('DOMContentLoaded', updatePValueChart);
     </script>
 
     <!-- Floating Home Button -->

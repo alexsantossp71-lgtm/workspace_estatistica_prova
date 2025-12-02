@@ -46,7 +46,7 @@
             padding-left: 1.2rem;
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -58,17 +58,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -76,7 +77,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="index_v2.html" class="back-btn">← Início</a>
         <div class="nav-title">Capítulo 1</div>
@@ -202,9 +203,35 @@
                 <ul>
                     <li><strong>População:</strong> TODOS os 150 milhões de brasileiros adultos</li>
                     <li><strong>Amostra:</strong> 1.000 brasileiros selecionados aleatoriamente</li>
-                    <li><strong>Parâmetro:</strong> Altura média da população (μ) - desconhecida</li>
-                    <li><strong>Estatística:</strong> Altura média da amostra (x̄) = 1,70m - usamos para estimar μ</li>
                 </ul>
+            </div>
+
+            <div class="highlight-box"
+                style="background: linear-gradient(135deg, #fff1eb 0%, #ace0f9 100%); border-left: 5px solid #3b82f6;">
+                <h3>🔑 Parâmetro vs Estatística</h3>
+                <p>É fundamental distinguir entre os números que descrevem uma população e os que descrevem uma amostra:
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                    <div style="background: rgba(255,255,255,0.6); padding: 1rem; border-radius: 8px;">
+                        <strong style="color: #3b82f6;">Parâmetro</strong>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Descrição numérica de uma característica da
+                            <strong>POPULAÇÃO</strong>.
+                        </p>
+                        <p style="font-size: 0.85rem; color: #64748b;">Ex: A altura média de <strong>todos</strong> os
+                            brasileiros é 1,70m (μ).</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.6); padding: 1rem; border-radius: 8px;">
+                        <strong style="color: #10b981;">Estatística</strong>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Descrição numérica de uma característica da
+                            <strong>AMOSTRA</strong>.
+                        </p>
+                        <p style="font-size: 0.85rem; color: #64748b;">Ex: A altura média de <strong>1000</strong>
+                            brasileiros selecionados é 1,71m (x̄).</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; text-align: center;"><em><strong>Dica de
+                            Memorização:</strong> <strong>P</strong>arâmetro com <strong>P</strong>opulação,
+                        <strong>E</strong>statística com a <strong>E</strong>stimativa (da amostra).</em></p>
             </div>
         </section>
 
@@ -396,6 +423,115 @@
                         <li>Todas as operações matemáticas são válidas!</li>
                     </ul>
                 </div>
+                <div
+                    style="margin-top: 1rem; padding: 0.5rem; background: #e0f2fe; border-radius: 6px; font-size: 0.9rem;">
+                    <strong>🌟 O Teste do "Zero Natural":</strong> Para saber se é Razão ou Intervalar, pergunte: "O
+                    zero significa 'nada'?" Se sim, é Razão. Se o zero for apenas um ponto arbitrário (como no
+                    termômetro ou no ano 0), é Intervalar.
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 1.4 -->
+        <section class="content-section">
+            <div class="section-icon">📋</div>
+            <h2 id="section-1-4">1.4 Planejamento e Coleta de Dados</h2>
+
+            <p class="lead-text">
+                Dados ruins levam a decisões ruins! O modo como coletamos os dados é tão importante quanto a análise em
+                si.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🔬 Tipos de Estudo</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+                    <div>
+                        <h4 style="color: #667eea;">👀 Estudo Observacional</h4>
+                        <p>O pesquisador apenas <strong>observa</strong> e mede características, sem modificar nada.</p>
+                        <p style="font-size: 0.9rem; color: #64748b;">Ex: Observar o comportamento de leões na savana ou
+                            registrar a preferência de voto dos eleitores.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #ef4444;">🧪 Experimento</h4>
+                        <p>O pesquisador aplica um <strong>tratamento</strong> a um grupo e observa a resposta.
+                            Geralmente há um grupo de controle.</p>
+                        <p style="font-size: 0.9rem; color: #64748b;">Ex: Dar um novo remédio para um grupo e um placebo
+                            para outro para testar a eficácia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box"
+                style="margin-top: 2rem; background: linear-gradient(to right, #f8fafc, #eef2ff); border-left: 5px solid #8b5cf6;">
+                <h3>🏗️ Os 3 Pilares de um Bom Experimento</h3>
+                <p>Para que um experimento científico seja válido, ele precisa seguir três princípios básicos:</p>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div
+                        style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <strong style="color: #8b5cf6;">1. Controle</strong>
+                        <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Controlar variáveis externas
+                            para garantir que o resultado venha apenas do tratamento. Uso de grupo controle e placebo.
+                        </p>
+                    </div>
+                    <div
+                        style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <strong style="color: #8b5cf6;">2. Aleatorização</strong>
+                        <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Distribuir os participantes
+                            aleatoriamente entre os grupos para evitar tendências e equilibrar as diferenças.</p>
+                    </div>
+                    <div
+                        style="background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <strong style="color: #8b5cf6;">3. Replicação</strong>
+                        <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.5rem;">Repetir o experimento com um
+                            número grande de sujeitos para garantir que os resultados não foram sorte.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem; font-size: 0.9rem;">
+                    <strong>🕵️‍♂️ Cuidado com o Efeito Placebo!</strong>
+                    <p style="font-size: 0.85rem; margin-top: 0.2rem;">Às vezes, apenas o fato de <em>achar</em> que
+                        está sendo tratado faz a pessoa melhorar. Por isso usamos o "Cegamento" (o paciente não sabe o
+                        que está tomando) ou "Duplo-Cego" (nem o paciente nem o médico sabem).</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 2rem; color: #1e293b;">🎲 Técnicas de Amostragem</h3>
+            <p>Como escolher quem vai participar da sua pesquisa? Não pode ser "quem aparecer na frente"!</p>
+
+            <div class="data-types-grid">
+                <div class="data-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                    <h4>🎲 Aleatória Simples</h4>
+                    <p>Sorteio puro. Todo mundo tem a mesma chance.</p>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Ex: Sortear nomes de um chapéu ou usar um gerador de
+                        números aleatórios.</p>
+                </div>
+
+                <div class="data-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                    <h4>🍰 Estratificada</h4>
+                    <p>Divide a população em grupos (estratos) e sorteia de cada grupo.</p>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Ex: Garantir que a amostra tenha 50% homens e 50%
+                        mulheres, sorteando dentro de cada gênero.</p>
+                </div>
+
+                <div class="data-card" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                    <h4>🍇 Conglomerado</h4>
+                    <p>Divide em grupos (conglomerados) e escolhe ALGUNS grupos inteiros.</p>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Ex: Escolher aleatoriamente 5 escolas de uma cidade e
+                        entrevistar TODOS os alunos dessas escolas.</p>
+                </div>
+
+                <div class="data-card" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
+                    <h4>📏 Sistemática</h4>
+                    <p>Escolhe seguindo um sistema ou regra.</p>
+                    <p style="font-size: 0.85rem; opacity: 0.9;">Ex: Escolher cada 3ª pessoa que entra no shopping.</p>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h3>⚠️ Cuidado com Amostras Tendenciosas!</h3>
+                <p>Uma amostra é <strong>tendenciosa</strong> se não representa bem a população. Exemplo: Fazer uma
+                    pesquisa sobre "hábitos de leitura" apenas dentro de uma livraria. Você vai achar que todo mundo lê
+                    muito!</p>
             </div>
         </section>
 
@@ -434,8 +570,35 @@
                 <div class="step-by-step">
                     <p><strong>a) Qual é a população?</strong></p>
                     <p>✅ Todos os moradores de São Paulo (≈12 milhões de pessoas)</p>
-                    <div class="nav-title">Início</div>
+
+                    <p><strong>b) Qual é a amostra?</strong></p>
+                    <p>✅ O grupo de pessoas que foi efetivamente entrevistado (ex: 2.000 pessoas).</p>
+
+                    <p><strong>c) A renda média calculada na amostra é um Parâmetro ou Estatística?</strong></p>
+                    <p>✅ <strong>Estatística</strong>, pois vem da amostra.</p>
                 </div>
+            </div>
+
+            <div class="exercise-box">
+                <h3>Exercício 3: Identificar o Tipo de Estudo</h3>
+                <p><strong>Classifique como Observacional ou Experimento:</strong></p>
+                <div class="step-by-step">
+                    <p><strong>a) Um cientista dá vitamina C para um grupo e pílula de farinha para outro para ver quem
+                            pega menos gripe.</strong></p>
+                    <p>✅ <strong>Experimento</strong> (houve intervenção/tratamento).</p>
+
+                    <p><strong>b) Um pesquisador anota a cor dos carros que passam em um cruzamento.</strong></p>
+                    <p>✅ <strong>Estudo Observacional</strong> (apenas observou, não interferiu).</p>
+                </div>
+            </div>
+
+            <div class="nav-buttons-container">
+                <a href="index_v2.html" class="nav-btn back-btn">
+                    <span>←</span>
+                    <div>
+                        <div class="nav-label">Voltar</div>
+                        <div class="nav-title">Início</div>
+                    </div>
                 </a>
                 <a href="chapter2_v2.html" class="nav-btn next-btn">
                     <div>
@@ -445,53 +608,75 @@
                     <span>→</span>
                 </a>
             </div>
-    
+        </section>
+
         <!-- SAIBA MAIS -->
         <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
             <div class="section-icon">🎥</div>
             <h2>Saiba Mais</h2>
-            
+
             <p class="lead-text">
                 Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 População e Amostra</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Enildo Barbosa</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Conceitos de população, amostra e tipos de amostras</p>
-            <a href="https://www.youtube.com/results?search_query=População+e+Amostra+Prof.+Enildo+Barbosa+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Tipos de Dados em Estatística</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Alexandre Patriota</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Dados qualitativos e quantitativos</p>
-            <a href="https://www.youtube.com/results?search_query=Tipos+de+Dados+em+Estatística+Prof.+Alexandre+Patriota+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Introdução à Estatística</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">UNIVESP</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Termos estatísticos principais e conceitos fundamentais</p>
-            <a href="https://www.youtube.com/results?search_query=Introdução+à+Estatística+UNIVESP+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 População e Amostra</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Enildo Barbosa</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Conceitos de
+                        população, amostra e tipos de amostras</p>
+                    <a href="https://www.youtube.com/results?search_query=População+e+Amostra+Prof.+Enildo+Barbosa+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Tipos de Dados em Estatística
+                    </h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Alexandre Patriota</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Dados qualitativos
+                        e quantitativos</p>
+                    <a href="https://www.youtube.com/results?search_query=Tipos+de+Dados+em+Estatística+Prof.+Alexandre+Patriota+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Introdução à Estatística</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        UNIVESP</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Termos estatísticos
+                        principais e conceitos fundamentais</p>
+                    <a href="https://www.youtube.com/results?search_query=Introdução+à+Estatística+UNIVESP+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
             </div>
 
             <div class="tip-box" style="margin-top: 2rem;">
                 <h3>💡 Dica de Estudo</h3>
                 <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
                 </p>
             </div>
         </section>
-        
-</div>
+
+    </div>
 
     <script>
         // Smooth scrolling

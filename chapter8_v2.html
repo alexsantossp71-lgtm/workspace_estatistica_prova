@@ -29,7 +29,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -41,17 +41,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -59,7 +60,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="chapter7_v2.html" class="back-btn">← Capítulo Anterior</a>
         <div class="nav-title">Capítulo 8</div>
@@ -216,6 +217,84 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 8.3 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">📈</div>
+            <h2 id="section-8-3">8.3 Teste para Duas Proporções</h2>
+
+            <p class="lead-text">
+                Usado para comparar frequências ou porcentagens entre dois grupos (ex: Teste A/B em marketing).
+            </p>
+
+            <div class="formula-box">
+                z = (p̂₁ - p̂₂) / √(p̄q̄(1/n₁ + 1/n₂))
+            </div>
+            <p style="text-align: center; color: #64748b; margin-top: 0.5rem;">
+                Onde <strong>p̄</strong> é a proporção combinada (total de sucessos / total de observações).
+            </p>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Taxa de Conversão (Teste A/B)</h3>
+                <p><strong>Problema:</strong> Site A: 1000 visitas, 50 vendas (5%). Site B: 1000 visitas, 70 vendas
+                    (7%). A diferença é real? (α=0,05)</p>
+
+                <div class="step-by-step">
+                    <p><strong>Proporção combinada (p̄):</strong> (50+70) / (1000+1000) = 120/2000 = 0,06</p>
+                    <p><strong>q̄:</strong> 1 - 0,06 = 0,94</p>
+
+                    <p><strong>Estatística z:</strong></p>
+                    <p>z = (0,05 - 0,07) / √(0,06×0,94 × (1/1000 + 1/1000))</p>
+                    <p>z = -0,02 / √(0,0564 × 0,002) = -0,02 / 0,0106 ≈ <strong>-1,88</strong></p>
+
+                    <p><strong>Decisão:</strong> |-1,88| < 1,96 (z crítico). <strong>Não rejeitamos H₀</strong>.</p>
+
+                    <p><strong>Conclusão:</strong> A diferença de 2% não é estatisticamente significativa com este
+                        tamanho de amostra.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIMULADOR DE TESTE A/B -->
+        <section class="content-section">
+            <div class="section-icon">🧪</div>
+            <h2>Simulador de Teste A/B</h2>
+            <div class="example-box" style="background: white; border: 2px solid #e2e8f0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <h4 style="color: #3b82f6; margin-bottom: 0.5rem;">Grupo A (Controle)</h4>
+                        <label style="display: block; font-size: 0.9rem;">Visitantes:</label>
+                        <input type="number" id="abVisA" value="1000"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 0.5rem;">
+                        <label style="display: block; font-size: 0.9rem;">Conversões:</label>
+                        <input type="number" id="abConvA" value="50"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+                    </div>
+                    <div>
+                        <h4 style="color: #10b981; margin-bottom: 0.5rem;">Grupo B (Teste)</h4>
+                        <label style="display: block; font-size: 0.9rem;">Visitantes:</label>
+                        <input type="number" id="abVisB" value="1000"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 0.5rem;">
+                        <label style="display: block; font-size: 0.9rem;">Conversões:</label>
+                        <input type="number" id="abConvB" value="80"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+                    </div>
+                </div>
+                <button onclick="runABTest()"
+                    style="width: 100%; background: #667eea; color: white; border: none; padding: 0.75rem; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem;">🚀
+                    Calcular Resultado</button>
+
+                <div id="abResult"
+                    style="margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border-radius: 8px; text-align: center; display: none;">
+                    <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;" id="abVerdict"></p>
+                    <p style="font-size: 0.9rem; color: #64748b;" id="abStats"></p>
+                </div>
+
+                <div class="chart-container" style="height: 300px; margin-top: 1.5rem;">
+                    <canvas id="abChart"></canvas>
+                </div>
+            </div>
+        </section>
+
         <section class="content-section">
             <div class="section-icon">📚</div>
             <h2>Resumo do Capítulo</h2>
@@ -248,53 +327,75 @@
                 <span>→</span>
             </a>
         </div>
-    
+
         <!-- SAIBA MAIS -->
         <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
             <div class="section-icon">🎥</div>
             <h2>Saiba Mais</h2>
-            
+
             <p class="lead-text">
                 Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste de Hipótese 2 Amostras</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Estatística Fácil</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Comparando duas médias populacionais</p>
-            <a href="https://www.youtube.com/results?search_query=Teste+de+Hipótese+2+Amostras+Estatística+Fácil+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Amostras Dependentes vs Independentes</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Me Salva!</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Diferenças e testes pareados</p>
-            <a href="https://www.youtube.com/results?search_query=Amostras+Dependentes+vs+Independentes+Me+Salva!+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste para Proporções</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Grings</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Comparação de duas proporções</p>
-            <a href="https://www.youtube.com/results?search_query=Teste+para+Proporções+Prof.+Grings+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste de Hipótese 2 Amostras
+                    </h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        Estatística Fácil</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Comparando duas
+                        médias populacionais</p>
+                    <a href="https://www.youtube.com/results?search_query=Teste+de+Hipótese+2+Amostras+Estatística+Fácil+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Amostras Dependentes vs
+                        Independentes</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Me
+                        Salva!</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Diferenças e testes
+                        pareados</p>
+                    <a href="https://www.youtube.com/results?search_query=Amostras+Dependentes+vs+Independentes+Me+Salva!+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste para Proporções</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Grings</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Comparação de duas
+                        proporções</p>
+                    <a href="https://www.youtube.com/results?search_query=Teste+para+Proporções+Prof.+Grings+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
             </div>
 
             <div class="tip-box" style="margin-top: 2rem;">
                 <h3>💡 Dica de Estudo</h3>
                 <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
                 </p>
             </div>
         </section>
-        
-</div>
+
+    </div>
 
     <script>
         // Independent samples comparison
@@ -369,6 +470,76 @@
                             min: 65,
                             max: 95
                         }
+                    }
+                }
+            });
+        }
+
+        // A/B Test Simulator
+        let abChart;
+        function runABTest() {
+            const nA = parseInt(document.getElementById('abVisA').value);
+            const xA = parseInt(document.getElementById('abConvA').value);
+            const nB = parseInt(document.getElementById('abVisB').value);
+            const xB = parseInt(document.getElementById('abConvB').value);
+
+            if (!nA || !nB) return;
+
+            const pA = xA / nA;
+            const pB = xB / nB;
+            const pPool = (xA + xB) / (nA + nB);
+            const qPool = 1 - pPool;
+
+            const se = Math.sqrt(pPool * qPool * (1 / nA + 1 / nB));
+            const z = (pA - pB) / se;
+            const pValue = 2 * (1 - normalCDF(Math.abs(z)));
+
+            // Simple normalCDF 
+            function normalCDF(x) {
+                var t = 1 / (1 + .2316419 * Math.abs(x));
+                var d = .3989423 * Math.exp(-x * x / 2);
+                var prob = d * t * (.3193815 + t * (-.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+                if (x > 0) prob = 1 - prob;
+                return prob;
+            }
+
+            const resultDiv = document.getElementById('abResult');
+            const verdict = document.getElementById('abVerdict');
+            const stats = document.getElementById('abStats');
+
+            resultDiv.style.display = 'block';
+
+            const isSig = pValue < 0.05;
+            verdict.innerHTML = isSig
+                ? `<span style="color: #10b981;">✅ Diferença Significativa!</span>`
+                : `<span style="color: #ef4444;">❌ Diferença Não Significativa</span>`;
+
+            stats.innerHTML = `Taxa A: ${(pA * 100).toFixed(2)}% | Taxa B: ${(pB * 100).toFixed(2)}%<br>Z-score: ${z.toFixed(2)} | P-valor: ${pValue.toFixed(4)}`;
+
+            // Chart
+            const ctx = document.getElementById('abChart');
+            if (abChart) abChart.destroy();
+
+            abChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Grupo A', 'Grupo B'],
+                    datasets: [{
+                        label: 'Taxa de Conversão (%)',
+                        data: [(pA * 100).toFixed(2), (pB * 100).toFixed(2)],
+                        backgroundColor: ['#3b82f6', '#10b981'],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        title: { display: true, text: 'Comparação de Taxas de Conversão' }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, title: { display: true, text: 'Conversão (%)' } }
                     }
                 }
             });

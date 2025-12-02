@@ -55,7 +55,7 @@
             background: #f8fafc;
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -67,17 +67,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -85,7 +86,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="chapter9_v2.html" class="back-btn">← Capítulo Anterior</a>
         <div class="nav-title">Capítulo 10</div>
@@ -457,6 +458,52 @@
             </div>
         </section>
 
+        <!-- SIMULADOR INTERATIVO -->
+        <section class="content-section">
+            <div class="section-icon">🎲</div>
+            <h2>Simulador: O Dado é Honesto?</h2>
+            <p class="lead-text">
+                Simule lançamentos de um dado e veja como a estatística Qui-Quadrado muda.
+                Se o valor de χ² for alto, o dado pode estar "viciado" (ou foi apenas sorte/azar)!
+            </p>
+
+            <div class="example-box" style="background: white; border: 2px solid #e2e8f0;">
+                <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <button onclick="rollDice(10)"
+                        style="background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">🎲
+                        Lançar 10x</button>
+                    <button onclick="rollDice(50)"
+                        style="background: #6366f1; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">🎲
+                        Lançar 50x</button>
+                    <button onclick="rollDice(100)"
+                        style="background: #8b5cf6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: bold;">🎲
+                        Lançar 100x</button>
+                    <button onclick="resetDice()"
+                        style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">🗑️
+                        Resetar</button>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Total de Lançamentos</p>
+                        <p style="margin: 0; font-size: 1.5rem; font-weight: bold; color: #1e293b;" id="totalRolls">0
+                        </p>
+                    </div>
+                    <div style="background: #f8fafc; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Valor de Qui-Quadrado (χ²)</p>
+                        <p style="margin: 0; font-size: 1.5rem; font-weight: bold; color: #ef4444;" id="chiValue">0.00
+                        </p>
+                        <p style="margin: 0; font-size: 0.8rem; color: #64748b;" id="chiVerdict">Crítico (α=0.05): 11.07
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chart-container" style="height: 350px;">
+                    <canvas id="simDiceChart"></canvas>
+                </div>
+            </div>
+        </section>
+
         <!-- EXERCÍCIOS RESOLVIDOS -->
         <section class="content-section">
             <div class="section-icon">✏️</div>
@@ -552,53 +599,73 @@
                 <span>🎉</span>
             </a>
         </div>
-    
+
         <!-- SAIBA MAIS -->
         <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
             <div class="section-icon">🎥</div>
             <h2>Saiba Mais</h2>
-            
+
             <p class="lead-text">
                 Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste Qui-Quadrado</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">PsicoEstatística</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Teste de independência e aderência</p>
-            <a href="https://www.youtube.com/results?search_query=Teste+Qui-Quadrado+PsicoEstatística+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 ANOVA de um fator</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Bolfarine</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Comparação de múltiplas médias</p>
-            <a href="https://www.youtube.com/results?search_query=ANOVA+de+um+fator+Prof.+Bolfarine+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição F</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan Academy</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Entendendo a razão de variâncias</p>
-            <a href="https://www.youtube.com/results?search_query=Distribuição+F+Khan+Academy+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teste Qui-Quadrado</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        PsicoEstatística</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Teste de
+                        independência e aderência</p>
+                    <a href="https://www.youtube.com/results?search_query=Teste+Qui-Quadrado+PsicoEstatística+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 ANOVA de um fator</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Bolfarine</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Comparação de
+                        múltiplas médias</p>
+                    <a href="https://www.youtube.com/results?search_query=ANOVA+de+um+fator+Prof.+Bolfarine+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição F</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan
+                        Academy</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Entendendo a razão
+                        de variâncias</p>
+                    <a href="https://www.youtube.com/results?search_query=Distribuição+F+Khan+Academy+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
             </div>
 
             <div class="tip-box" style="margin-top: 2rem;">
                 <h3>💡 Dica de Estudo</h3>
                 <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
                 </p>
             </div>
         </section>
-        
-</div>
+
+    </div>
 
     <script>
         // Gráfico 1: Qui-Quadrado - Observado vs Esperado
@@ -749,6 +816,97 @@
                 }
             });
         }
+
+        // Interactive Dice Simulator
+        let simDiceChart;
+        let observedCounts = [0, 0, 0, 0, 0, 0];
+        let totalRolls = 0;
+
+        function initDiceSim() {
+            const ctx = document.getElementById('simDiceChart');
+            if (!ctx) return;
+
+            simDiceChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['1', '2', '3', '4', '5', '6'],
+                    datasets: [
+                        {
+                            label: 'Observado',
+                            data: observedCounts,
+                            backgroundColor: '#3b82f6',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Esperado (Teórico)',
+                            data: [0, 0, 0, 0, 0, 0],
+                            type: 'line',
+                            borderColor: '#10b981',
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            pointRadius: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: 'Distribuição dos Lançamentos' }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        function rollDice(n) {
+            for (let i = 0; i < n; i++) {
+                const roll = Math.floor(Math.random() * 6); // 0-5
+                observedCounts[roll]++;
+            }
+            totalRolls += n;
+            updateDiceSim();
+        }
+
+        function resetDice() {
+            observedCounts = [0, 0, 0, 0, 0, 0];
+            totalRolls = 0;
+            updateDiceSim();
+        }
+
+        function updateDiceSim() {
+            const expected = totalRolls / 6;
+            let chiSq = 0;
+
+            // Update chart data
+            simDiceChart.data.datasets[0].data = observedCounts;
+            simDiceChart.data.datasets[1].data = Array(6).fill(expected);
+
+            // Calculate Chi-Square
+            if (totalRolls > 0) {
+                for (let i = 0; i < 6; i++) {
+                    chiSq += Math.pow(observedCounts[i] - expected, 2) / expected;
+                }
+            }
+
+            simDiceChart.update();
+
+            // Update UI
+            document.getElementById('totalRolls').innerText = totalRolls;
+            document.getElementById('chiValue').innerText = chiSq.toFixed(2);
+
+            const verdict = document.getElementById('chiVerdict');
+            if (chiSq > 11.07) {
+                verdict.innerHTML = `<span style="color: #ef4444; font-weight: bold;">Rejeita H₀ (Não parece justo)</span>`;
+            } else {
+                verdict.innerHTML = `<span style="color: #10b981; font-weight: bold;">Aceita H₀ (Parece justo)</span>`;
+            }
+        }
+
+        // Initialize
+        initDiceSim();
     </script>
 
     <!-- Floating Home Button -->

@@ -29,7 +29,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -41,17 +41,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -59,7 +60,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="chapter5_v2.html" class="back-btn">← Capítulo Anterior</a>
         <div class="nav-title">Capítulo 6</div>
@@ -171,6 +172,73 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 6.2 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">📊</div>
+            <h2 id="section-6-2">6.2 Intervalo de Confiança para Proporção</h2>
+
+            <p class="lead-text">
+                Usado para estimar porcentagens (como em pesquisas eleitorais).
+            </p>
+
+            <div class="formula-box">
+                IC = p̂ ± z × √(p̂(1-p̂)/n)
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Pesquisa Eleitoral</h3>
+                <p><strong>Problema:</strong> Em uma pesquisa com 1000 eleitores, 520 disseram votar no candidato A.
+                    Construa um IC de 95%.</p>
+
+                <div class="step-by-step">
+                    <p><strong>Dados:</strong> n = 1000, x = 520</p>
+                    <p><strong>Proporção amostral (p̂):</strong> 520/1000 = 0,52 (52%)</p>
+                    <p><strong>q̂ (1-p̂):</strong> 0,48</p>
+                    <p><strong>Erro Padrão:</strong> √(0,52×0,48/1000) ≈ 0,0158</p>
+                    <p><strong>Margem de Erro:</strong> 1,96 × 0,0158 ≈ 0,031 (3,1%)</p>
+                    <p><strong>IC:</strong> 0,52 ± 0,031 = <strong>[48,9% ; 55,1%]</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 6.3 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">👥</div>
+            <h2 id="section-6-3">6.3 Tamanho da Amostra</h2>
+
+            <p class="lead-text">
+                Quantas pessoas preciso entrevistar para ter uma margem de erro específica?
+            </p>
+
+            <div class="formula-box">
+                n = (z × σ / E)²
+            </div>
+
+            <div class="tip-box">
+                <h3>💡 Dica Prática</h3>
+                <p>Para proporções, se você não sabe p̂, use p̂ = 0,5 (pior caso), o que maximiza o tamanho da amostra
+                    necessário.</p>
+            </div>
+        </section>
+
+        <!-- SIMULADOR DE IC -->
+        <section class="content-section">
+            <div class="section-icon">🎰</div>
+            <h2>Simulador de Intervalos de Confiança</h2>
+            <p>
+                Abaixo, geramos 20 amostras aleatórias de uma população com média μ=100.
+                Veja quantos intervalos realmente capturam a média verdadeira (linha vermelha).
+                Com 95% de confiança, esperamos que ~19 intervalos capturem a média.
+            </p>
+            <div class="chart-container" style="height: 500px;">
+                <canvas id="simulationChart"></canvas>
+            </div>
+            <button onclick="runSimulation()"
+                style="margin-top: 1rem; padding: 0.75rem 1.5rem; background: #667eea; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%;">
+                🔄 Gerar Novas Amostras
+            </button>
+        </section>
+
         <section class="content-section">
             <div class="section-icon">📚</div>
             <h2>Resumo do Capítulo</h2>
@@ -202,53 +270,165 @@
                 <span>→</span>
             </a>
         </div>
-    
+
         <!-- SAIBA MAIS -->
         <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
             <div class="section-icon">🎥</div>
             <h2>Saiba Mais</h2>
-            
+
             <p class="lead-text">
                 Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Intervalos de Confiança</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">The Friendly Statistician</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Como calcular e interpretar</p>
-            <a href="https://www.youtube.com/results?search_query=Intervalos+de+Confiança+The+Friendly+Statistician+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Intervalo de Confiança para Média</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Statplace</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Exemplos práticos passo a passo</p>
-            <a href="https://www.youtube.com/results?search_query=Intervalo+de+Confiança+para+Média+Statplace+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição T de Student</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan Academy</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Quando usar T em vez de Z</p>
-            <a href="https://www.youtube.com/results?search_query=Distribuição+T+de+Student+Khan+Academy+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Intervalos de Confiança</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">The
+                        Friendly Statistician</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Como calcular e
+                        interpretar</p>
+                    <a href="https://www.youtube.com/results?search_query=Intervalos+de+Confiança+The+Friendly+Statistician+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Intervalo de Confiança para
+                        Média</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        Statplace</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Exemplos práticos
+                        passo a passo</p>
+                    <a href="https://www.youtube.com/results?search_query=Intervalo+de+Confiança+para+Média+Statplace+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição T de Student</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan
+                        Academy</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Quando usar T em
+                        vez de Z</p>
+                    <a href="https://www.youtube.com/results?search_query=Distribuição+T+de+Student+Khan+Academy+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
             </div>
 
             <div class="tip-box" style="margin-top: 2rem;">
                 <h3>💡 Dica de Estudo</h3>
                 <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
+                </p>
+                <div class="highlight-box">
+                    <h3>🎯 Conceitos-Chave</h3>
+                    <ul>
+                        <li><strong>IC:</strong> Intervalo que provavelmente contém o parâmetro</li>
+                        <li><strong>Nível de confiança:</strong> 95% significa que 95% dos ICs conterão μ</li>
+                        <li><strong>Margem de erro:</strong> E = z × (σ/√n)</li>
+                        <li><strong>↑ n → ↓ E:</strong> Amostras maiores = intervalos mais estreitos</li>
+                    </ul>
+                </div>
+        </section>
+
+        <div class="chapter-nav-footer">
+            <a href="chapter5_v2.html" class="nav-btn prev-btn">
+                <span>←</span>
+                <div>
+                    <div class="nav-label">Anterior</div>
+                    <div class="nav-title">Capítulo 5</div>
+                </div>
+            </a>
+            <a href="chapter7_v2.html" class="nav-btn next-btn">
+                <div>
+                    <div class="nav-label">Próximo</div>
+                    <div class="nav-title">Capítulo 7</div>
+                </div>
+                <span>→</span>
+            </a>
+        </div>
+
+        <!-- SAIBA MAIS -->
+        <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
+            <div class="section-icon">🎥</div>
+            <h2>Saiba Mais</h2>
+
+            <p class="lead-text">
+                Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
+            </p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Intervalos de Confiança</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">The
+                        Friendly Statistician</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Como calcular e
+                        interpretar</p>
+                    <a href="https://www.youtube.com/results?search_query=Intervalos+de+Confiança+The+Friendly+Statistician+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Intervalo de Confiança para
+                        Média</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        Statplace</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Exemplos práticos
+                        passo a passo</p>
+                    <a href="https://www.youtube.com/results?search_query=Intervalo+de+Confiança+para+Média+Statplace+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição T de Student</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan
+                        Academy</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Quando usar T em
+                        vez de Z</p>
+                    <a href="https://www.youtube.com/results?search_query=Distribuição+T+de+Student+Khan+Academy+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+            </div>
+
+            <div class="tip-box" style="margin-top: 2rem;">
+                <h3>💡 Dica de Estudo</h3>
+                <p>
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
                 </p>
             </div>
         </section>
-        
-</div>
+
+    </div>
 
     <script>
         const confCtx = document.getElementById('confidenceChart');
@@ -284,6 +464,102 @@
                 }
             });
         }
+
+        // IC Simulation
+        let simChart;
+        function runSimulation() {
+            const ctx = document.getElementById('simulationChart');
+            if (!ctx) return;
+
+            const trueMean = 100;
+            const sigma = 15;
+            const n = 30;
+            const numSamples = 20;
+            const z = 1.96; // 95%
+
+            const intervals = [];
+            const labels = [];
+            const backgroundColors = [];
+
+            for (let i = 0; i < numSamples; i++) {
+                // Generate sample mean
+                let sampleSum = 0;
+                for (let j = 0; j < n; j++) {
+                    // Box-Muller transform for normal distribution
+                    const u1 = Math.random();
+                    const u2 = Math.random();
+                    const zNorm = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
+                    sampleSum += trueMean + zNorm * sigma;
+                }
+                const sampleMean = sampleSum / n;
+                const marginOfError = z * (sigma / Math.sqrt(n));
+
+                const lower = sampleMean - marginOfError;
+                const upper = sampleMean + marginOfError;
+
+                intervals.push([lower, upper]);
+                labels.push(`Amostra ${i + 1}`);
+
+                // Check if interval captures true mean
+                if (lower <= trueMean && upper >= trueMean) {
+                    backgroundColors.push('#10b981'); // Green (Success)
+                } else {
+                    backgroundColors.push('#ef4444'); // Red (Fail)
+                }
+            }
+
+            if (simChart) simChart.destroy();
+
+            simChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Intervalo de Confiança (95%)',
+                        data: intervals,
+                        backgroundColor: backgroundColors,
+                        borderWidth: 1,
+                        borderSkipped: false,
+                        barPercentage: 0.4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        annotation: {
+                            annotations: {
+                                line1: {
+                                    type: 'line',
+                                    xMin: trueMean,
+                                    xMax: trueMean,
+                                    borderColor: '#ef4444',
+                                    borderWidth: 2,
+                                    label: {
+                                        content: 'Média Verdadeira (μ=100)',
+                                        enabled: true,
+                                        position: 'top'
+                                    }
+                                }
+                            }
+                        },
+                        legend: { display: false },
+                        title: { display: true, text: '20 Intervalos de Confiança Simulados', font: { size: 16 } }
+                    },
+                    scales: {
+                        x: {
+                            min: 85,
+                            max: 115,
+                            title: { display: true, text: 'Valor Estimado' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Run simulation on load
+        document.addEventListener('DOMContentLoaded', runSimulation);
     </script>
 
     <!-- Floating Home Button -->

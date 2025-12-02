@@ -31,7 +31,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -43,17 +43,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -61,7 +62,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="chapter2_v2.html" class="back-btn">← Capítulo Anterior</a>
         <div class="nav-title">Capítulo 3</div>
@@ -148,6 +149,20 @@
                     <p><strong>Cálculo:</strong></p>
                     <p>P(par) = 3/6 = 1/2 = <strong>0,5 ou 50%</strong></p>
                 </div>
+            </div>
+
+            <div class="tip-box">
+                <h3>🎩 O Paradoxo de Monty Hall</h3>
+                <p>
+                    Em um programa de TV, você escolhe uma de 3 portas (uma tem um carro, duas têm cabras).
+                    O apresentador abre uma das outras portas mostrando uma cabra. <strong>Você deve trocar de
+                        porta?</strong>
+                </p>
+                <p>
+                    <strong>Resposta: SIM!</strong> Ao trocar, sua chance de ganhar dobra de 1/3 (33%) para 2/3 (67%).
+                    Isso acontece porque a escolha inicial tinha 2/3 de chance de estar errada, e o apresentador
+                    "concentra" essa chance na porta restante.
+                </p>
             </div>
         </section>
 
@@ -252,6 +267,25 @@
                     </tbody>
                 </table>
             </div>
+
+
+            <div class="highlight-box">
+                <h3>🔄 Independentes vs Dependentes</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <h4 style="color: #667eea;">Independentes</h4>
+                        <p>O resultado de um não afeta o outro.</p>
+                        <p><em>Ex: Lançar uma moeda duas vezes.</em></p>
+                        <p><strong>P(A e B) = P(A) × P(B)</strong></p>
+                    </div>
+                    <div>
+                        <h4 style="color: #ef4444;">Dependentes</h4>
+                        <p>O primeiro resultado altera a chance do segundo.</p>
+                        <p><em>Ex: Tirar cartas sem reposição.</em></p>
+                        <p><strong>P(A e B) = P(A) × P(B|A)</strong></p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- SEÇÃO 3.3 -->
@@ -355,6 +389,59 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 3.4 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">🔢</div>
+            <h2 id="section-3-4">3.4 Técnicas de Contagem</h2>
+
+            <p class="lead-text">
+                Para calcular probabilidades, muitas vezes precisamos saber o <strong>número total de
+                    possibilidades</strong>.
+                As técnicas de contagem nos ajudam a contar grandes quantidades de forma rápida.
+            </p>
+
+            <div class="measures-grid">
+                <div class="measure-card">
+                    <h3 style="font-size: 2rem; margin: 0;">n!</h3>
+                    <h4>FATORIAL</h4>
+                    <p>Multiplicação decrescente</p>
+                    <p style="font-size: 0.85rem;">5! = 5×4×3×2×1 = 120</p>
+                </div>
+
+                <div class="measure-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                    <h3 style="font-size: 2rem; margin: 0;">P(n,k)</h3>
+                    <h4>PERMUTAÇÃO</h4>
+                    <p>A ordem <strong>IMPORTA</strong></p>
+                    <p style="font-size: 0.85rem;">Senhas, Podiums, Filas</p>
+                </div>
+
+                <div class="measure-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                    <h3 style="font-size: 2rem; margin: 0;">C(n,k)</h3>
+                    <h4>COMBINAÇÃO</h4>
+                    <p>A ordem <strong>NÃO IMPORTA</strong></p>
+                    <p style="font-size: 0.85rem;">Mega-Sena, Equipes, Cartas</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Permutação vs Combinação</h3>
+                <p>Temos 4 pessoas (A, B, C, D) e queremos escolher 2.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                    <div>
+                        <h4 style="color: #10b981;">Permutação (Cargos: Pres. e Vice)</h4>
+                        <p>AB ≠ BA (Presidente A é diferente de Presidente B)</p>
+                        <p><strong>12 possibilidades</strong></p>
+                    </div>
+                    <div>
+                        <h4 style="color: #f59e0b;">Combinação (Dupla de Vôlei)</h4>
+                        <p>AB = BA (A mesma dupla)</p>
+                        <p><strong>6 possibilidades</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- EXERCÍCIOS -->
         <section class="content-section">
             <div class="section-icon">✏️</div>
@@ -389,6 +476,8 @@
                     <li><strong>União:</strong> P(A∪B) = P(A) + P(B) - P(A∩B)</li>
                     <li><strong>Interseção (Independentes):</strong> P(A∩B) = P(A) × P(B)</li>
                     <li><strong>Condicional:</strong> P(A|B) = P(A∩B) / P(B)</li>
+                    <li><strong>Permutação:</strong> Ordem importa (n!)</li>
+                    <li><strong>Combinação:</strong> Ordem não importa</li>
                 </ul>
             </div>
         </section>
@@ -409,53 +498,77 @@
                 <span>→</span>
             </a>
         </div>
-    
+
         <!-- SAIBA MAIS -->
         <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
             <div class="section-icon">🎥</div>
             <h2>Saiba Mais</h2>
-            
+
             <p class="lead-text">
                 Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Probabilidade Condicional</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Aplicadas Descomplicadas</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Definição, fórmulas e exercícios</p>
-            <a href="https://www.youtube.com/results?search_query=Probabilidade+Condicional+Aplicadas+Descomplicadas+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teorema de Bayes</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Responde Aí</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Relação com probabilidade condicional e aplicações</p>
-            <a href="https://www.youtube.com/results?search_query=Teorema+de+Bayes+Responde+Aí+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Probabilidade e Árvores</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan Academy</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Diagramas de árvore e exemplos práticos</p>
-            <a href="https://www.youtube.com/results?search_query=Probabilidade+e+Árvores+Khan+Academy+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Probabilidade Condicional</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        Aplicadas
+                        Descomplicadas</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Definição, fórmulas
+                        e
+                        exercícios</p>
+                    <a href="https://www.youtube.com/results?search_query=Probabilidade+Condicional+Aplicadas+Descomplicadas+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Teorema de Bayes</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        Responde
+                        Aí</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Relação com
+                        probabilidade condicional e aplicações</p>
+                    <a href="https://www.youtube.com/results?search_query=Teorema+de+Bayes+Responde+Aí+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Probabilidade e Árvores</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan
+                        Academy</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Diagramas de árvore
+                        e
+                        exemplos práticos</p>
+                    <a href="https://www.youtube.com/results?search_query=Probabilidade+e+Árvores+Khan+Academy+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
             </div>
 
             <div class="tip-box" style="margin-top: 2rem;">
                 <h3>💡 Dica de Estudo</h3>
                 <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
                 </p>
             </div>
         </section>
-        
-</div>
+
+    </div>
 
     <script>
         // Gráfico: Simulação de Lançamentos de Moeda

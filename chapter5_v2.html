@@ -58,7 +58,7 @@
             border-radius: 8px;
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -70,17 +70,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -88,7 +89,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="chapter4_v2.html" class="back-btn">← Capítulo Anterior</a>
         <div class="nav-title">Capítulo 5</div>
@@ -323,6 +324,80 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 5.4 (NOVA) -->
+        <section class="content-section">
+            <div class="section-icon">🎲</div>
+            <h2 id="section-5-4">5.4 Teorema Central do Limite (TCL)</h2>
+
+            <p class="lead-text">
+                O <strong>Teorema Central do Limite</strong> é a "mágica" da estatística. Ele diz que, se você pegar
+                amostras grandes o suficiente (n ≥ 30), a distribuição das <strong>médias amostrais</strong> será
+                normal, não importa a forma da distribuição original!
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 O que diz o TCL?</h3>
+                <ul>
+                    <li><strong>Média das Médias:</strong> μₓ̄ = μ (A média das amostras é igual à média da população)
+                    </li>
+                    <li><strong>Erro Padrão:</strong> σₓ̄ = σ / √n (O desvio padrão diminui conforme n aumenta)</li>
+                    <li><strong>Condição:</strong> Funciona bem para n ≥ 30 ou se a população já for normal.</li>
+                </ul>
+            </div>
+
+            <div class="example-box">
+                <h3>📝 Exemplo: Elevador de Carga</h3>
+                <p><strong>Problema:</strong> O peso de homens tem média 80kg e desvio padrão 10kg. Um elevador suporta
+                    900kg e cabe 10 pessoas. Qual a probabilidade de 10 homens aleatórios excederem o peso?</p>
+
+                <div class="step-by-step">
+                    <p><strong>Dados:</strong> μ = 80, σ = 10, n = 10</p>
+                    <p>Média máxima permitida por pessoa = 900 / 10 = 90kg</p>
+
+                    <p><strong>Erro Padrão:</strong> σₓ̄ = 10 / √10 ≈ 3,16</p>
+
+                    <p><strong>Z-Score:</strong> Z = (90 - 80) / 3,16 ≈ 3,16</p>
+
+                    <p><strong>Probabilidade:</strong> P(Z > 3,16) ≈ 0,0008 (Muito baixa!)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULADORA Z-SCORE -->
+        <section class="content-section">
+            <div class="section-icon">🧮</div>
+            <h2>Calculadora de Escore Z</h2>
+            <div class="example-box" style="background: white; border: 2px solid #e2e8f0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Valor (X):</label>
+                        <input type="number" id="calc-x" placeholder="Ex: 90"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Média (μ):</label>
+                        <input type="number" id="calc-mu" placeholder="Ex: 75"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Desvio Padrão
+                            (σ):</label>
+                        <input type="number" id="calc-sigma" placeholder="Ex: 10"
+                            style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e1; border-radius: 6px;">
+                    </div>
+                    <div style="display: flex; align-items: end;">
+                        <button onclick="calculateZ()"
+                            style="width: 100%; background: #667eea; color: white; border: none; padding: 0.5rem; border-radius: 6px; font-weight: bold; cursor: pointer;">Calcular
+                            Z</button>
+                    </div>
+                </div>
+                <div id="calc-result"
+                    style="margin-top: 1rem; padding: 1rem; background: #f8fafc; border-radius: 6px; text-align: center; font-weight: bold; display: none;">
+                    Z = <span id="z-value" style="color: #667eea; font-size: 1.5rem;">0.00</span>
+                </div>
+            </div>
+        </section>
+
         <!-- EXERCÍCIOS RESOLVIDOS -->
         <section class="content-section">
             <div class="section-icon">✏️</div>
@@ -378,7 +453,8 @@
                     <p>P(Z < -1)=0,1587</p>
 
                             <p><strong>Resposta:</strong> A probabilidade é <strong>15,87%</strong> ou aproximadamente
-                                <strong>16%</strong>.</p>
+                                <strong>16%</strong>.
+                            </p>
 
                             <div class="tip-box">
                                 <p><strong>💡 Interpretação:</strong> Em média, apenas 1 em cada 6 peças será produzida
@@ -432,53 +508,73 @@
                 <span>→</span>
             </a>
         </div>
-    
+
         <!-- SAIBA MAIS -->
         <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
             <div class="section-icon">🎥</div>
             <h2>Saiba Mais</h2>
-            
+
             <p class="lead-text">
                 Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição Normal</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Estatística para Todos</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">A curva em sino e suas propriedades</p>
-            <a href="https://www.youtube.com/results?search_query=Distribuição+Normal+Estatística+para+Todos+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Como usar a Tabela Z</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Guru</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Encontrando probabilidades na tabela normal</p>
-            <a href="https://www.youtube.com/results?search_query=Como+usar+a+Tabela+Z+Prof.+Guru+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Regra Empírica 68-95-99.7</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan Academy</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Entendendo os desvios padrão na normal</p>
-            <a href="https://www.youtube.com/results?search_query=Regra+Empírica+68-95-99.7+Khan+Academy+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição Normal</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        Estatística para Todos</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">A curva em sino e
+                        suas propriedades</p>
+                    <a href="https://www.youtube.com/results?search_query=Distribuição+Normal+Estatística+para+Todos+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Como usar a Tabela Z</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Guru</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Encontrando
+                        probabilidades na tabela normal</p>
+                    <a href="https://www.youtube.com/results?search_query=Como+usar+a+Tabela+Z+Prof.+Guru+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Regra Empírica 68-95-99.7</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan
+                        Academy</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Entendendo os
+                        desvios padrão na normal</p>
+                    <a href="https://www.youtube.com/results?search_query=Regra+Empírica+68-95-99.7+Khan+Academy+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
             </div>
 
             <div class="tip-box" style="margin-top: 2rem;">
                 <h3>💡 Dica de Estudo</h3>
                 <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
                 </p>
             </div>
         </section>
-        
-</div>
+
+    </div>
 
     <script>
         // Gráfico 1: Distribuição Normal Padrão
@@ -635,6 +731,25 @@
                     }
                 }
             });
+        }
+
+        // Z-Score Calculator
+        function calculateZ() {
+            const x = parseFloat(document.getElementById('calc-x').value);
+            const mu = parseFloat(document.getElementById('calc-mu').value);
+            const sigma = parseFloat(document.getElementById('calc-sigma').value);
+
+            if (isNaN(x) || isNaN(mu) || isNaN(sigma) || sigma === 0) {
+                alert("Por favor, insira valores válidos. O desvio padrão não pode ser zero.");
+                return;
+            }
+
+            const z = (x - mu) / sigma;
+            const resultDiv = document.getElementById('calc-result');
+            const zValueSpan = document.getElementById('z-value');
+
+            zValueSpan.textContent = z.toFixed(2);
+            resultDiv.style.display = 'block';
         }
 
         // Smooth scrolling

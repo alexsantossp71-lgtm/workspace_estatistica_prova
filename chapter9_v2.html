@@ -57,7 +57,7 @@
             opacity: 0.9;
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -69,17 +69,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -87,7 +88,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="chapter8_v2.html" class="back-btn">← Capítulo Anterior</a>
         <div class="nav-title">Capítulo 9</div>
@@ -417,6 +418,35 @@
             </div>
         </section>
 
+        <!-- SIMULADOR INTERATIVO -->
+        <section class="content-section">
+            <div class="section-icon">🧪</div>
+            <h2>Simulador Interativo de Regressão</h2>
+            <p class="lead-text">
+                Clique no gráfico abaixo para adicionar pontos e veja a reta de regressão se ajustar automaticamente!
+            </p>
+
+            <div class="example-box" style="background: white; border: 2px solid #e2e8f0;">
+                <div style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <p style="margin: 0; font-weight: bold; color: #3b82f6;" id="simEquation">Equação: y = 0 + 0x
+                        </p>
+                        <p style="margin: 0; font-weight: bold; color: #10b981;" id="simR">Correlação (r): 0</p>
+                    </div>
+                    <button onclick="resetSimulator()"
+                        style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">🗑️
+                        Limpar Pontos</button>
+                </div>
+
+                <div class="chart-container" style="height: 400px; cursor: crosshair;">
+                    <canvas id="interactiveRegressionChart"></canvas>
+                </div>
+                <p style="text-align: center; font-size: 0.9rem; color: #64748b; margin-top: 0.5rem;">
+                    (Clique na área do gráfico para adicionar pontos)
+                </p>
+            </div>
+        </section>
+
         <!-- EXERCÍCIOS RESOLVIDOS -->
         <section class="content-section">
             <div class="section-icon">✏️</div>
@@ -511,53 +541,73 @@
                 <span>→</span>
             </a>
         </div>
-    
+
         <!-- SAIBA MAIS -->
         <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
             <div class="section-icon">🎥</div>
             <h2>Saiba Mais</h2>
-            
+
             <p class="lead-text">
                 Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Correlação Linear</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Estatística com R</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Força e direção da associação (Pearson)</p>
-            <a href="https://www.youtube.com/results?search_query=Correlação+Linear+Estatística+com+R+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Regressão Linear Simples</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Aquino</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Modelagem e previsão com reta de ajuste</p>
-            <a href="https://www.youtube.com/results?search_query=Regressão+Linear+Simples+Prof.+Aquino+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Coeficiente R²</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan Academy</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">O que o R-quadrado nos diz sobre o modelo</p>
-            <a href="https://www.youtube.com/results?search_query=Coeficiente+R²+Khan+Academy+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Correlação Linear</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                        Estatística com R</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Força e direção da
+                        associação (Pearson)</p>
+                    <a href="https://www.youtube.com/results?search_query=Correlação+Linear+Estatística+com+R+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Regressão Linear Simples</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof.
+                        Aquino</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Modelagem e
+                        previsão com reta de ajuste</p>
+                    <a href="https://www.youtube.com/results?search_query=Regressão+Linear+Simples+Prof.+Aquino+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                    onmouseover="this.style.transform='translateY(-5px)'"
+                    onmouseout="this.style.transform='translateY(0)'">
+                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Coeficiente R²</h4>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Khan
+                        Academy</p>
+                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">O que o R-quadrado
+                        nos diz sobre o modelo</p>
+                    <a href="https://www.youtube.com/results?search_query=Coeficiente+R²+Khan+Academy+estatistica"
+                        target="_blank"
+                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                        ▶️ Assistir no YouTube
+                    </a>
+                </div>
             </div>
 
             <div class="tip-box" style="margin-top: 2rem;">
                 <h3>💡 Dica de Estudo</h3>
                 <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode
+                    ajudar a consolidar os conceitos apresentados neste capítulo.
                 </p>
             </div>
         </section>
-        
-</div>
+
+    </div>
 
     <script>
         // Gráfico 1: Scatter Plot com Regressão
@@ -692,6 +742,115 @@
                 }
             });
         }
+
+        // Interactive Regression Simulator
+        let simChart;
+        let simPoints = [];
+
+        function initSimulator() {
+            const ctx = document.getElementById('interactiveRegressionChart');
+            if (!ctx) return;
+
+            simChart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [
+                        {
+                            label: 'Pontos',
+                            data: simPoints,
+                            backgroundColor: '#3b82f6',
+                            pointRadius: 8
+                        },
+                        {
+                            label: 'Regressão',
+                            data: [],
+                            type: 'line',
+                            borderColor: '#ef4444',
+                            borderWidth: 2,
+                            pointRadius: 0,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: (e) => {
+                        const x = simChart.scales.x.getValueForPixel(e.x);
+                        const y = simChart.scales.y.getValueForPixel(e.y);
+
+                        if (x !== undefined && y !== undefined && x >= 0 && x <= 100 && y >= 0 && y <= 100) {
+                            addPoint(x, y);
+                        }
+                    },
+                    scales: {
+                        x: { min: 0, max: 100, title: { display: true, text: 'X' } },
+                        y: { min: 0, max: 100, title: { display: true, text: 'Y' } }
+                    },
+                    plugins: {
+                        tooltip: { enabled: false },
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        function addPoint(x, y) {
+            simPoints.push({ x, y });
+            updateRegression();
+        }
+
+        function resetSimulator() {
+            simPoints = [];
+            updateRegression();
+        }
+
+        function updateRegression() {
+            if (simPoints.length < 2) {
+                simChart.data.datasets[0].data = simPoints;
+                simChart.data.datasets[1].data = [];
+                document.getElementById('simEquation').innerText = "Equação: Adicione mais pontos";
+                document.getElementById('simR').innerText = "Correlação (r): -";
+                simChart.update();
+                return;
+            }
+
+            let n = simPoints.length;
+            let sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0, sumY2 = 0;
+
+            simPoints.forEach(p => {
+                sumX += p.x;
+                sumY += p.y;
+                sumXY += p.x * p.y;
+                sumX2 += p.x * p.x;
+                sumY2 += p.y * p.y;
+            });
+
+            let denominator = (n * sumX2 - sumX * sumX);
+            if (denominator === 0) return; // Avoid division by zero
+
+            let slope = (n * sumXY - sumX * sumY) / denominator;
+            let intercept = (sumY - slope * sumX) / n;
+
+            let rNumerator = (n * sumXY - sumX * sumY);
+            let rDenominator = Math.sqrt((n * sumX2 - sumX * sumX) * (n * sumY2 - sumY * sumY));
+            let r = rDenominator === 0 ? 0 : rNumerator / rDenominator;
+
+            let lineData = [
+                { x: 0, y: intercept },
+                { x: 100, y: slope * 100 + intercept }
+            ];
+
+            document.getElementById('simEquation').innerText = `Equação: y = ${intercept.toFixed(2)} + ${slope.toFixed(2)}x`;
+            document.getElementById('simR').innerText = `Correlação (r): ${r.toFixed(4)}`;
+
+            simChart.data.datasets[0].data = simPoints;
+            simChart.data.datasets[1].data = lineData;
+            simChart.update();
+        }
+
+        // Initialize Simulator
+        initSimulator();
     </script>
 
     <!-- Floating Home Button -->

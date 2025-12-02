@@ -21,7 +21,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
-    
+
     <link rel="stylesheet" href="css/style_v2.css">
     <link rel="stylesheet" href="css/chapter_v2_overrides.css">
     <script src="js/app_v2.js" defer></script>
@@ -33,17 +33,18 @@
             }
         });
     </script>
-        
+
 </head>
 
 <body>
 
     <div class="top-bar">
         <div class="top-bar-content">
-            <a href="index_v2.html" class="back-btn-v2" style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+            <a href="index_v2.html" class="back-btn-v2"
+                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
                 <span>←</span> Voltar
             </a>
-            
+
             <div class="version-badge-top">v2.0 BETA</div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -51,7 +52,7 @@
             </button>
         </div>
     </div>
-    
+
     <nav class="top-nav">
         <a href="chapter3_v2.html" class="back-btn">← Capítulo Anterior</a>
         <div class="nav-title">Capítulo 4</div>
@@ -125,190 +126,436 @@
             </div>
 
             <div class="highlight-box">
-                <h3>🎯 Quando Usar Poisson?</h3>
-                <ul>
-                    <li>Número de chamadas telefônicas por hora</li>
-                    <li>Acidentes de trânsito por dia</li>
-                    <li>Defeitos em um produto</li>
-                    <li>Clientes chegando em uma fila</li>
-                    <li><strong>Média = Variância = λ</strong></li>
-                </ul>
-            </div>
+                <!DOCTYPE html>
+                <html lang="pt-BR">
 
-            <div class="example-box">
-                <h3>📝 Exemplo: Chamadas Telefônicas</h3>
-                <p><strong>Problema:</strong> Em média, chegam 3 chamadas por hora. Qual a probabilidade de chegar
-                    exatamente 5 chamadas na próxima hora?</p>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Capítulo 4 - Distribuições Discretas | Estatística Aplicada</title>
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+                        rel="stylesheet">
+                    <link rel="stylesheet" href="css/chapter.css">
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <style>
+                        .chart-container {
+                            position: relative;
+                            height: 400px;
+                            margin: 2rem 0;
+                            background: white;
+                            padding: 1.5rem;
+                            border-radius: 12px;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        }
+                    </style>
 
-                <div class="step-by-step">
-                    <p><strong>Dados:</strong> λ = 3, k = 5</p>
-                    <p>P(X=5) = (3^5 × e^(-3)) / 5!</p>
-                    <p>= (243 × 0,0498) / 120</p>
-                    <p>= <strong>0,101 ou 10,1%</strong></p>
-                </div>
-            </div>
+                    <link rel="stylesheet" href="css/style_v2.css">
+                    <link rel="stylesheet" href="css/chapter_v2_overrides.css">
+                    <script src="js/app_v2.js" defer></script>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            // Mark this chapter as read
+                            if (window.app && window.app.progressTracker) {
+                                window.app.progressTracker.markAsRead(4);
+                            }
+                        });
+                    </script>
 
-            <div class="chart-container">
-                <canvas id="poissonChart"></canvas>
-            </div>
-        </section>
+                </head>
 
-        <section class="content-section">
-            <div class="section-icon">📚</div>
-            <h2>Resumo do Capítulo</h2>
+                <body>
 
-            <div class="highlight-box">
-                <h3>🎯 Conceitos-Chave</h3>
-                <ul>
-                    <li><strong>Binomial:</strong> n tentativas, 2 resultados, p constante</li>
-                    <li><strong>Poisson:</strong> Eventos raros em intervalo fixo</li>
-                    <li><strong>Binomial → Poisson:</strong> Quando n grande e p pequeno</li>
-                </ul>
-            </div>
-        </section>
+                    <div class="top-bar">
+                        <div class="top-bar-content">
+                            <a href="index_v2.html" class="back-btn-v2"
+                                style="text-decoration: none; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-weight: 600;">
+                                <span>←</span> Voltar
+                            </a>
 
-        <div class="chapter-nav-footer">
-            <a href="chapter3_v2.html" class="nav-btn prev-btn">
-                <span>←</span>
-                <div>
-                    <div class="nav-label">Anterior</div>
-                    <div class="nav-title">Capítulo 3</div>
-                </div>
-            </a>
-            <a href="chapter5_v2.html" class="nav-btn next-btn">
-                <div>
-                    <div class="nav-label">Próximo</div>
-                    <div class="nav-title">Capítulo 5</div>
-                </div>
-                <span>→</span>
-            </a>
-        </div>
-    
-        <!-- SAIBA MAIS -->
-        <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
-            <div class="section-icon">🎥</div>
-            <h2>Saiba Mais</h2>
-            
-            <p class="lead-text">
-                Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas deste capítulo:
-            </p>
+                            <div class="version-badge-top">v2.0 BETA</div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-                
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição Binomial</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Estatística Básica</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Definição e aplicação dos 4 critérios</p>
-            <a href="https://www.youtube.com/results?search_query=Distribuição+Binomial+Estatística+Básica+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição de Poisson</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">Prof. Grings</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Definição, fórmula e exercícios resolvidos</p>
-            <a href="https://www.youtube.com/results?search_query=Distribuição+de+Poisson+Prof.+Grings+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-        <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-            <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Variáveis Aleatórias Discretas</h4>
-            <p style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">USP</p>
-            <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">Conceitos fundamentais e distribuições</p>
-            <a href="https://www.youtube.com/results?search_query=Variáveis+Aleatórias+Discretas+USP+estatistica" target="_blank" style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
-                ▶️ Assistir no YouTube
-            </a>
-        </div>
-            </div>
+                            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                                <span class="theme-icon">🌙</span>
+                            </button>
+                        </div>
+                    </div>
 
-            <div class="tip-box" style="margin-top: 2rem;">
-                <h3>💡 Dica de Estudo</h3>
-                <p>
-                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
-                </p>
-            </div>
-        </section>
-        
-</div>
+                    <nav class="top-nav">
+                        <a href="chapter3_v2.html" class="back-btn">← Capítulo Anterior</a>
+                        <div class="nav-title">Capítulo 4</div>
+                        <button id="theme-toggle-chapter" class="theme-toggle-chapter" aria-label="Alternar tema">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                        <a href="chapter5_v2.html" class="next-btn">Próximo Capítulo →</a>
+                    </nav>
 
-    <script>
-        // Binomial Distribution
-        const binCtx = document.getElementById('binomialChart');
-        if (binCtx) {
-            const n = 10, p = 0.5;
-            const binomialData = [];
-            for (let k = 0; k <= n; k++) {
-                const comb = factorial(n) / (factorial(k) * factorial(n - k));
-                const prob = comb * Math.pow(p, k) * Math.pow(1 - p, n - k);
-                binomialData.push(prob);
-            }
+                    <div class="chapter-container">
+                        <section class="chapter-hero">
+                            <div class="hero-badge">Capítulo 4</div>
+                            <h1 class="chapter-title">Distribuições de Probabilidade Discretas</h1>
+                            <p class="chapter-subtitle">Binomial e Poisson</p>
+                        </section>
 
-            new Chart(binCtx, {
-                type: 'bar',
-                data: {
-                    labels: Array.from({ length: 11 }, (_, i) => i),
-                    datasets: [{
-                        label: 'P(X=k)',
-                        data: binomialData,
-                        backgroundColor: '#667eea'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: { display: true, text: '📊 Distribuição Binomial (n=10, p=0.5)', font: { size: 20, weight: 'bold' } }
-                    },
-                    scales: {
-                        y: { title: { display: true, text: 'Probabilidade' } },
-                        x: { title: { display: true, text: 'Número de Sucessos (k)' } }
-                    }
-                }
-            });
-        }
+                        <section class="content-section">
+                            <div class="section-icon">🎯</div>
+                            <h2>4.1 Distribuição Binomial</h2>
 
-        // Poisson Distribution
-        const poisCtx = document.getElementById('poissonChart');
-        if (poisCtx) {
-            const lambda = 3;
-            const poissonData = [];
-            for (let k = 0; k <= 10; k++) {
-                const prob = (Math.pow(lambda, k) * Math.exp(-lambda)) / factorial(k);
-                poissonData.push(prob);
-            }
+                            <p class="lead-text">
+                                A <strong>distribuição binomial</strong> modela o número de sucessos em n tentativas
+                                independentes,
+                                cada uma com probabilidade p de sucesso.
+                            </p>
 
-            new Chart(poisCtx, {
-                type: 'bar',
-                data: {
-                    labels: Array.from({ length: 11 }, (_, i) => i),
-                    datasets: [{
-                        label: 'P(X=k)',
-                        data: poissonData,
-                        backgroundColor: '#10b981'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: { display: true, text: '⚡ Distribuição de Poisson (λ=3)', font: { size: 20, weight: 'bold' } }
-                    },
-                    scales: {
-                        y: { title: { display: true, text: 'Probabilidade' } },
-                        x: { title: { display: true, text: 'Número de Eventos (k)' } }
-                    }
-                }
-            });
-        }
+                            <div class="formula-box">
+                                P(X = k) = C(n,k) × p^k × (1-p)^(n-k)
+                            </div>
 
-        function factorial(n) {
-            if (n <= 1) return 1;
-            return n * factorial(n - 1);
-        }
-    </script>
+                            <div class="highlight-box">
+                                <h3>🎯 Características da Binomial</h3>
+                                <ul>
+                                    <li>Número fixo de tentativas (n)</li>
+                                    <li>Cada tentativa tem apenas 2 resultados (sucesso/fracasso)</li>
+                                    <li>Probabilidade constante (p) em cada tentativa</li>
+                                    <li>Tentativas independentes</li>
+                                    <li><strong>Média:</strong> μ = n × p</li>
+                                    <li><strong>Desvio padrão:</strong> σ = √(n × p × (1-p))</li>
+                                </ul>
+                            </div>
 
-    <!-- Floating Home Button -->
-    <a href="index_v2.html" class="floating-home-btn" aria-label="Voltar ao Início" title="Voltar ao Início">🏠</a>
-</body>
+                            <div class="example-box">
+                                <h3>📝 Exemplo: Lançamento de Moeda</h3>
+                                <p><strong>Problema:</strong> Lançamos uma moeda 10 vezes. Qual a probabilidade de obter
+                                    exatamente 6
+                                    caras?</p>
 
-</html>
+                                <div class="step-by-step">
+                                    <p><strong>Dados:</strong> n = 10, p = 0,5, k = 6</p>
+                                    <p>P(X=6) = C(10,6) × 0,5^6 × 0,5^4</p>
+                                    <p>= 210 × 0,015625 × 0,0625</p>
+                                    <p>= <strong>0,205 ou 20,5%</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="chart-container">
+                                <canvas id="binomialChart"></canvas>
+                            </div>
+                        </section>
+
+                        <section class="content-section">
+                            <div class="section-icon">⚡</div>
+                            <h2>4.2 Distribuição de Poisson</h2>
+
+                            <p class="lead-text">
+                                A <strong>distribuição de Poisson</strong> modela o número de eventos raros que ocorrem
+                                em um intervalo fixo de tempo ou espaço.
+                            </p>
+
+                            <div class="formula-box">
+                                P(X = k) = (λ^k × e^(-λ)) / k!
+                            </div>
+
+                            <div class="highlight-box">
+                                <h3>🎯 Quando Usar Poisson?</h3>
+                                <ul>
+                                    <li>Número de chamadas telefônicas por hora</li>
+                                    <li>Acidentes de trânsito por dia</li>
+                                    <li>Defeitos em um produto</li>
+                                    <li>Clientes chegando em uma fila</li>
+                                    <li><strong>Média = Variância = λ</strong></li>
+                                </ul>
+                            </div>
+
+                            <div class="tip-box">
+                                <h3>🐎 Curiosidade Histórica: Coices de Cavalo</h3>
+                                <p>
+                                    A distribuição de Poisson foi usada pela primeira vez para modelar o número de
+                                    soldados do exército prussiano mortos por coices de cavalo a cada ano!
+                                    É um exemplo clássico de "evento raro".
+                                </p>
+                            </div>
+
+                            <div class="example-box">
+                                <h3>📝 Exemplo: Chamadas Telefônicas</h3>
+                                <p><strong>Problema:</strong> Em média, chegam 3 chamadas por hora. Qual a probabilidade
+                                    de chegar
+                                    exatamente 5 chamadas na próxima hora?</p>
+
+                                <div class="step-by-step">
+                                    <p><strong>Dados:</strong> λ = 3, k = 5</p>
+                                    <p>P(X=5) = (3^5 × e^(-3)) / 5!</p>
+                                    <p>= (243 × 0,0498) / 120</p>
+                                    <p>= <strong>0,101 ou 10,1%</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="chart-container">
+                                <canvas id="poissonChart"></canvas>
+                            </div>
+                        </section>
+
+                        <!-- SEÇÃO 4.3 (NOVA) -->
+                        <section class="content-section">
+                            <div class="section-icon">🎯</div>
+                            <h2 id="section-4-3">4.3 Distribuição Geométrica</h2>
+
+                            <p class="lead-text">
+                                A <strong>distribuição geométrica</strong> modela o número de tentativas necessárias até
+                                obter o <strong>primeiro sucesso</strong>.
+                            </p>
+
+                            <div class="formula-box">
+                                P(X = n) = (1-p)^(n-1) × p
+                            </div>
+
+                            <div class="highlight-box">
+                                <h3>🎯 Características</h3>
+                                <ul>
+                                    <li>Tentativas independentes</li>
+                                    <li>Probabilidade p constante</li>
+                                    <li>X = número da tentativa do 1º sucesso</li>
+                                    <li><strong>Média:</strong> 1/p</li>
+                                    <li><strong>"Sem Memória":</strong> O passado não afeta o futuro.</li>
+                                </ul>
+                            </div>
+
+                            <div class="example-box">
+                                <h3>📝 Exemplo: Arremesso de Basquete</h3>
+                                <p><strong>Problema:</strong> Um jogador tem 40% de chance (p=0,4) de acertar. Qual a
+                                    chance de ele acertar apenas no 3º arremesso?</p>
+
+                                <div class="step-by-step">
+                                    <p><strong>Dados:</strong> p = 0,4, n = 3</p>
+                                    <p>P(X=3) = (1-0,4)^(3-1) × 0,4</p>
+                                    <p>= 0,6^2 × 0,4</p>
+                                    <p>= 0,36 × 0,4 = <strong>0,144 ou 14,4%</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="chart-container">
+                                <canvas id="geometricChart"></canvas>
+                            </div>
+                        </section>
+
+                        <section class="content-section">
+                            <div class="section-icon">📚</div>
+                            <h2>Resumo do Capítulo</h2>
+
+                            <div class="highlight-box">
+                                <h3>🎯 Conceitos-Chave</h3>
+                                <ul>
+                                    <li><strong>Binomial:</strong> n tentativas, 2 resultados, p constante</li>
+                                    <li><strong>Poisson:</strong> Eventos raros em intervalo fixo</li>
+                                    <li><strong>Binomial → Poisson:</strong> Quando n grande e p pequeno</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <div class="chapter-nav-footer">
+                            <a href="chapter3_v2.html" class="nav-btn prev-btn">
+                                <span>←</span>
+                                <div>
+                                    <div class="nav-label">Anterior</div>
+                                    <div class="nav-title">Capítulo 3</div>
+                                </div>
+                            </a>
+                            <a href="chapter5_v2.html" class="nav-btn next-btn">
+                                <div>
+                                    <div class="nav-label">Próximo</div>
+                                    <div class="nav-title">Capítulo 5</div>
+                                </div>
+                                <span>→</span>
+                            </a>
+                        </div>
+
+                        <!-- SAIBA MAIS -->
+                        <section id="saiba-mais-section" class="content-section" style="margin-top: 3rem;">
+                            <div class="section-icon">🎥</div>
+                            <h2>Saiba Mais</h2>
+
+                            <p class="lead-text">
+                                Aprofunde seus conhecimentos com estes vídeos educativos selecionados sobre os temas
+                                deste capítulo:
+                            </p>
+
+                            <div
+                                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+
+                                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                                    onmouseover="this.style.transform='translateY(-5px)'"
+                                    onmouseout="this.style.transform='translateY(0)'">
+                                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição
+                                        Binomial</h4>
+                                    <p
+                                        style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                                        Estatística Básica</p>
+                                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">
+                                        Definição e aplicação dos 4 critérios</p>
+                                    <a href="https://www.youtube.com/results?search_query=Distribuição+Binomial+Estatística+Básica+estatistica"
+                                        target="_blank"
+                                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                                        ▶️ Assistir no YouTube
+                                    </a>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                                    onmouseover="this.style.transform='translateY(-5px)'"
+                                    onmouseout="this.style.transform='translateY(0)'">
+                                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Distribuição
+                                        de Poisson</h4>
+                                    <p
+                                        style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                                        Prof. Grings</p>
+                                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">
+                                        Definição, fórmula e exercícios resolvidos</p>
+                                    <a href="https://www.youtube.com/results?search_query=Distribuição+de+Poisson+Prof.+Grings+estatistica"
+                                        target="_blank"
+                                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                                        ▶️ Assistir no YouTube
+                                    </a>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 1.5rem; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease;"
+                                    onmouseover="this.style.transform='translateY(-5px)'"
+                                    onmouseout="this.style.transform='translateY(0)'">
+                                    <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: white;">📺 Variáveis
+                                        Aleatórias Discretas</h4>
+                                    <p
+                                        style="margin: 0 0 1rem 0; font-size: 0.9rem; opacity: 0.9; color: rgba(255,255,255,0.9);">
+                                        USP</p>
+                                    <p style="margin: 0 0 1rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.8);">
+                                        Conceitos fundamentais e distribuições</p>
+                                    <a href="https://www.youtube.com/results?search_query=Variáveis+Aleatórias+Discretas+USP+estatistica"
+                                        target="_blank"
+                                        style="display: inline-block; background: white; color: #333; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: background 0.2s;">
+                                        ▶️ Assistir no YouTube
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="tip-box" style="margin-top: 2rem;">
+                                <h3>💡 Dica de Estudo</h3>
+                                <p>
+                                    Assista aos vídeos para reforçar o aprendizado! Cada professor tem uma abordagem
+                                    diferente que pode ajudar a consolidar os conceitos apresentados neste capítulo.
+                                </p>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <script>
+                        // Binomial Distribution
+                        const binCtx = document.getElementById('binomialChart');
+                        if (binCtx) {
+                            const n = 10, p = 0.5;
+                            const binomialData = [];
+                            for (let k = 0; k <= n; k++) {
+                                const comb = factorial(n) / (factorial(k) * factorial(n - k));
+                                const prob = comb * Math.pow(p, k) * Math.pow(1 - p, n - k);
+                                binomialData.push(prob);
+                            }
+
+                            new Chart(binCtx, {
+                                type: 'bar',
+                                data: {
+                                    labels: Array.from({ length: 11 }, (_, i) => i),
+                                    datasets: [{
+                                        label: 'P(X=k)',
+                                        data: binomialData,
+                                        backgroundColor: '#667eea'
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    plugins: {
+                                        title: { display: true, text: '📊 Distribuição Binomial (n=10, p=0.5)', font: { size: 20, weight: 'bold' } }
+                                    },
+                                    scales: {
+                                        y: { title: { display: true, text: 'Probabilidade' } },
+                                        x: { title: { display: true, text: 'Número de Sucessos (k)' } }
+                                    }
+                                }
+                            });
+                        }
+
+                        // Poisson Distribution
+                        const poisCtx = document.getElementById('poissonChart');
+                        if (poisCtx) {
+                            const lambda = 3;
+                            const poissonData = [];
+                            for (let k = 0; k <= 10; k++) {
+                                const prob = (Math.pow(lambda, k) * Math.exp(-lambda)) / factorial(k);
+                                poissonData.push(prob);
+                            }
+
+                            new Chart(poisCtx, {
+                                type: 'bar',
+                                data: {
+                                    labels: Array.from({ length: 11 }, (_, i) => i),
+                                    datasets: [{
+                                        label: 'P(X=k)',
+                                        data: poissonData,
+                                        backgroundColor: '#10b981'
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    plugins: {
+                                        title: { display: true, text: '⚡ Distribuição de Poisson (λ=3)', font: { size: 20, weight: 'bold' } }
+                                    },
+                                    scales: {
+                                        y: { title: { display: true, text: 'Probabilidade' } },
+                                        x: { title: { display: true, text: 'Número de Eventos (k)' } }
+                                    }
+                                }
+                            });
+                        }
+
+                        // Geometric Distribution
+                        const geoCtx = document.getElementById('geometricChart');
+                        if (geoCtx) {
+                            const p = 0.4;
+                            const geoData = [];
+                            for (let n = 1; n <= 10; n++) {
+                                const prob = Math.pow(1 - p, n - 1) * p;
+                                geoData.push(prob);
+                            }
+
+                            new Chart(geoCtx, {
+                                type: 'bar',
+                                data: {
+                                    labels: Array.from({ length: 10 }, (_, i) => i + 1),
+                                    datasets: [{
+                                        label: 'P(X=n)',
+                                        data: geoData,
+                                        backgroundColor: '#f59e0b'
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    plugins: {
+                                        title: { display: true, text: '🎯 Distribuição Geométrica (p=0.4)', font: { size: 20, weight: 'bold' } }
+                                    },
+                                    scales: {
+                                        y: { title: { display: true, text: 'Probabilidade' } },
+                                        x: { title: { display: true, text: 'Tentativa do 1º Sucesso (n)' } }
+                                    }
+                                }
+                            });
+                        }
+
+                        function factorial(n) {
+                            if (n <= 1) return 1;
+                            return n * factorial(n - 1);
+                        }
+                    </script>
+
+                    <!-- Floating Home Button -->
+                    <a href="index_v2.html" class="floating-home-btn" aria-label="Voltar ao Início"
+                        title="Voltar ao Início">🏠</a>
+                </body>
+
+                </html>
